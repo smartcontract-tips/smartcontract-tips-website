@@ -1,0 +1,53 @@
+---
+layout: wp_template
+title: Tutti gli archivi
+date: 2023-11-01 11:04:15.000000000 +01:00
+type: wp_template
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  origin: theme
+  ppma_authors_name: Redazione
+author:
+  login: redazione
+  email: dcarboni+redazione@gmail.com
+  display_name: Redazione
+  first_name: Redazione
+  last_name: ''
+permalink: "/articoli/archive/"
+excerpt: Visualizza qualsiasi archivio, inclusi gli articoli di un singolo autore,
+  categoria, tag, tassonomia, tipo di contenuto personalizzato e data. Questo template
+  funzionerà come riserva quando non è possibile trovarne di più specifici (ad es.
+  categoria o tag).
+---
+<p><!-- wp:template-part {"slug":"header","theme":"iotix","tagName":"header"} /--></p>
+<p><!-- wp:query {"queryId":38,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":true},"layout":{"type":"default"}} --></p>
+<div class="wp-block-query"><!-- wp:group {"align":"wide","layout":{"type":"constrained"}} --></p>
+<div class="wp-block-group alignwide"><!-- wp:query-title {"type":"archive","align":"wide","style":{"spacing":{"margin":{"bottom":"100px"}}}} /--></div>
+<p><!-- /wp:group --></p>
+<p><!-- wp:group {"layout":{"type":"constrained"}} --></p>
+<div class="wp-block-group"><!-- wp:post-template {"align":"wide","layout":{"type":"grid","columnCount":2}} --><br />
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|70","right":"var:preset|spacing|70","bottom":"var:preset|spacing|70","left":"var:preset|spacing|70"}},"border":{"radius":"30px"}},"backgroundColor":"tertiary"} --></p>
+<div class="wp-block-group has-tertiary-background-color has-background" style="border-radius:30px;padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--70)"><!-- wp:post-featured-image {"isLink":true,"style":{"border":{"radius":"0px"}}} /--></p>
+<p><!-- wp:post-date /--></p>
+<p><!-- wp:post-title {"isLink":true,"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}}} /--></p>
+<p><!-- wp:post-excerpt {"moreText":"Read article →"} /--></p>
+<p><!-- wp:spacer {"height":"40px"} --></p>
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+<p><!-- /wp:spacer --></div>
+<p><!-- /wp:group --><br />
+<!-- /wp:post-template --></p>
+<p><!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"inherit":true,"type":"constrained"},"fontSize":"medium"} --></p>
+<div class="wp-block-group alignwide has-medium-font-size" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:query-pagination {"align":"wide","layout":{"type":"flex","justifyContent":"space-between"}} --><br />
+<!-- wp:query-pagination-previous /--></p>
+<p><!-- wp:query-pagination-numbers /--></p>
+<p><!-- wp:query-pagination-next /--><br />
+<!-- /wp:query-pagination --></div>
+<p><!-- /wp:group --></div>
+<p><!-- /wp:group --></p>
+<p><!-- wp:template-part {"slug":"footer","theme":"iotix","tagName":"footer"} /--></div>
+<p><!-- /wp:query --></p>

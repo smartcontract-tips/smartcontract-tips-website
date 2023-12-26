@@ -1,0 +1,157 @@
+---
+layout: post
+title: Introduzione a ERC-4337, la specifica per l'Account Abstraction
+date: 2023-11-05 18:05:45.000000000 +01:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Approfondimenti
+tags: []
+meta:
+  ppma_authors_name: Redazione, Antonio Moriconi
+  _last_editor_used_jetpack: block-editor
+  footnotes: ''
+  _edit_last: '48926058'
+  _aioseo_title: ''
+  _aioseo_description: ''
+  _aioseo_keywords: ''
+  _aioseo_og_title: ''
+  _aioseo_og_description: ''
+  _aioseo_og_article_section: ''
+  _aioseo_og_article_tags: ''
+  _aioseo_twitter_title: ''
+  _aioseo_twitter_description: ''
+  ppma_disable_author_box: '0'
+  BS_author_type: BS_author_is_user
+  BS_guest_author_name: antonio-moriconi
+  BS_guest_author_url: ''
+  BS_guest_author_description: ''
+  BS_guest_author_image_id: ''
+  _thumbnail_id: '6546'
+author:
+  login: redazione
+  email: dcarboni+redazione@gmail.com
+  display_name: Redazione
+  first_name: Redazione
+  last_name: ''
+permalink: "/articoli/erc-4337-account-abstraction/"
+---
+<p><!-- wp:paragraph {"className":"is-style-info"} --></p>
+<p class="is-style-info">Questo è un articolo introduttivo allo standard ERC4337. Se cerchi una guida tecnica più avanzata leggi <a href="https://smartcontract.tips/articoli/erc-4337-tutorial-a-step-by-step-guide-to-implementing-ethereums-account-abstraction/" title="ERC-4337 Tutorial: A Step-by-Step Guide to Implementing Ethereum’s Account Abstraction">il nostro tutorial step-by-step</a>.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Attualmente, Ethereum ospita due tipi principali di account: account di proprietà esterni, detti Externally Owned Account (EOA) e account contrattuali o Contract Account (CA). </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Gli EOA sono sotto il controllo di un indirizzo pubblico e una chiave privata, concedendo agli utenti la capacità di avviare transazioni e interagire con smart contract. Tuttavia, il rischio di perdere la chiave privata, insieme alla difficoltà per gli utenti poco esperti di procurarsi ether per il gas delle transazioni, solleva preoccupazioni sulla sicurezza e sull'usabilità. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Al contrario, i CA sono governati da <a href="https://smartcontract.tips/articoli/cosa-sono-gli-smart-contract-definizione-ed-esempi/" title="Cosa sono gli smart contract, definizione ed esempi">codice di uno smart contract</a> eseguito sulla Ethereum Virtual Machine (EVM) e<strong> non dipendono dalle chiavi private</strong>. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Per migliorare la situazione attuale e migliorare l'usabilità, c'è una proposta per una nuova funzionalità all'interno del protocollo Ethereum chiamata "Account abstraction o ERC-4337". </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Questo cambiamento proposto consentirebbe agli utenti di interagire con smart contract tramite portafogli smart contract anziché account di proprietà esterni. Questa transizione promette maggiore flessibilità, una maggiore sicurezza nella gestione degli account degli utenti e il potenziale per sbloccare esperienze utente innovative e semplificate.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>&nbsp;La proposta di miglioramento Ethereum 4337 (ERC-4337) introduce introduce "account intelligenti," offrendo un consenso condizionato per l'avvio del pagamento, migliorando l'efficienza dei costi e l'esperienza dell'utente. L'astrazione dell'account promette una maggiore scalabilità, flessibilità ed efficienza, influenzando settori come DeFi e marketplace NFT.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Cos'è esattamente l'astrazione dell'account (Account Abstraction)</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Prima di approfondire la nostra analisi, vorrei esaminare i termini chiave correlati agli account di Ethereum:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Astrazione: </h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>L'astrazione semplifica informazioni o processi complessi nascondendo i dettagli sottostanti. Consente agli utenti di interagire con la tecnologia senza comprenderne le complessità, risparmiando tempo ed sforzi. Per gli sviluppatori, l'astrazione suddivide il software in componenti gestibili, migliorando l'affidabilità e facilitando la risoluzione dei problemi. In ultima analisi, l'astrazione mira a rendere le cose più facili per tutti, semplificando la tecnologia e ottimizzando l'efficienza.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Account: </h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Un account nel contesto della blockchain è come la presenza di un utente sulla piattaforma. Permette loro di inviare o ricevere transazioni e interagire con altri account sulla blockchain. Ethereum, una popolare rete blockchain, ha due tipi principali di account: account di proprietà esterni (EOA) e account contrattuali, noti anche come "smart contract."</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Quindi, cos'è l'astrazione dell'account ERC-4337? </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>ERC-4337 è una proposta di miglioramento Ethereum che non richiede un fork del protocollo di consenso e che introduce la funzionalità che permette ai portafogli non custodial di funzionare come smart contract programmabili con logica integrata. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Tale implementazione permetterebbe di gestire gli asset esclusivamente tramite smart contract, anziché essere controllati da account di proprietà esterni (EOA). </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Lo standard ERC-4337 sblocca il potenziale dei portafogli cripto basati su smart contract sulla blockchain Ethereum. Con questa proposta, l'ecosistema di Ethereum acquisisce la capacità di transazioni senza soluzione di continuità da account utente tradizionali a account intelligenti più versatili, migliorando l'esperienza dell'utente, l'efficienza dei costi e ampliando le possibilità delle applicazioni decentralizzate. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Quindi, ERC-4337 ha aperto la strada agli sviluppatori per offrire un'esperienza utente molto più semplice per l'iniziazione delle transazioni e il trasferimento dei fondi. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Attrverso questo nuovo protocollo le app chiedono chiaramente e trasparentemente il consenso condizionato degli utenti per avviare i pagamenti a loro nome, mettendo gli smart contract al centro del processo. Allo stesso tempo, le commissioni di transazione associate possono essere raggruppate e trasmesse a pagatori designati, migliorando l'efficienza dei costi e l'esperienza utente. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Un'analogia che illustra bene questo concetto è che gli account intelligenti offrono agli utenti lo stesso livello di servizio e comodità che potrebbero aspettarsi da una banca tradizionale, tutto senza la necessità di una banca.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Quali problemi risolve esattamente ERC4337</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Gli utenti detentori delle criptovalute con portafogli non custodial faticano a trasferire i loro asset in modo facile, sicuro ed efficiente. Le principali questioni includono:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li><strong>Complessità</strong>: Il processo è multilivello e coinvolge numerose transazioni su diverse applicazioni e siti web.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Rischio di custodia di terze parti</strong>: Gli utenti sono tenuti a trasferire i loro fondi in un portafoglio custodiale per spostare gli asset crittografici, momento in cui perdono la visibilità delle loro transazioni.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Costi elevati</strong>: Le soluzioni di trasferimento impongono elevate commissioni di elaborazione sulle transazioni, in parte per coprire le potenziali perdite dovute a frodi o problemi di conformità. Allo stesso tempo, le transazioni vengono elaborate su reti costose con poca ottimizzazione. Il grafico rappresenta un esempio di questi costi elevati; fino all'estate del 2020, l'ecosistema di finanza decentralizzata (DeFi) in rapida espansione ha causato un aumento dei prezzi del gas. Le commissioni di gas sono causate dall'attività sulla blockchain Ethereum, come una semplice transazione, una negoziazione o la creazione di un NFT. Queste commissioni misurano la quantità di sforzo computazionale necessaria per eseguire ciascuna operazione</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p><img alt="Immagine che contiene linea, Diagramma, schermata, ricevuta</p>
+<p>Descrizione generata automaticamente" src="{{ site.baseurl }}/assets/2023/11/-g7z81jAAZAFmP2rPPxpCdk9lUNuXNwl8QChhiKPQxTMNHyRZtqTE6A9-IBIMoXpbm-ixGGutZADiw6Jne0x08KGWAaZjD1m-B_Qv-0TaVyxBt2YPEWP-9fGTmK9jBf8Jt-gJ31RBl5r1V6ZdV8D" width="643" height="335" /></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Fonte: &nbsp;<a href="https://etherscan.io/chart/gasprice"><em>etherscan.io/chart/gasprice</em></a></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li><strong>Interoperabilità</strong>: Garantire che l'astrazione dell'account sia compatibile con le tecnologie blockchain esistenti ed emergenti è essenziale per l'interoperabilità. Raggiungere questa compatibilità può essere una sfida, specialmente in un ecosistema blockchain in rapida evoluzione.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Conclusioni</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>In un mondo blockchain in continua evoluzione, l'account abstraction emerge come una forza trasformativa, pronta a migliorare l'esperienza dell'utente e a ridefinire la funzionalità della blockchain. La EIP-4337 (ERC-4337) introduce il concetto di "smart account", aprendo la strada a servizi finanziari innovativi e esperienze utente. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Nonostante le sfide affrontate dagli utenti detentori delle criptovalute, la promessa dell'astrazione del conto ha il potenziale per semplificare le interazioni degli utenti, migliorare l'efficienza e influenzare settori come DeFi e marketplace NFT. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Scavando più a fondo nel mondo dell'astrazione del conto, scopriamo le sue capacità di affrontare le sfide contemporanee del settore che ha finora sofferto della scarsa adozione forse a causa della complessa esperienza utente per l'onboarding delle applicazioni web3. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Questa esplorazione contribuisce alla narrazione in corso della tecnologia blockchain, gettando luce sul suo potenziale per ridefinire l'ecosistema finanziario e sfidare ulteriormente i sistemi centralizzati tradizionali, promuovendo servizi finanziari decentralizzati centrati sull'utente.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Referenze</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p><a href="https://ieeexplore.ieee.org/abstract/document/10212316">https://ieeexplore.ieee.org/abstract/document/10212316</a></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><a href="https://www.binance.com/it/blog/markets/nuovo-standard-erc4337--account-abstraction--guida-completa-2989482401183580996" target="_blank" rel="noopener" title="">https://www.binance.com/it/blog/markets/nuovo-standard-erc4337--account-abstraction--guida-completa-2989482401183580996</a></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><a href="https://arxiv.org/abs/2105.07447">https://arxiv.org/abs/2105.07447</a></p>
+<p><!-- /wp:paragraph --></p>

@@ -1,0 +1,262 @@
+---
+layout: post
+title: 'Read-only Reentrancy: una Nuova Minaccia per gli Smart Contract che va oltre
+  la classica Reentrancy'
+date: 2023-08-16 13:00:30.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Approfondimenti
+tags: []
+meta:
+  _wpas_done_all: '1'
+  _thumbnail_id: '6218'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/articoli/read-only-reentrancy-attacco-smartcontract-ita/"
+excerpt: L'attacco di Reentrancy in sola lettura si riferisce a una situazione in
+  cui una view in solidity viene rientrata, di solito senza alcuna misura di protezione,
+  poiché non modifica lo stato del contratto. Tuttavia, se lo stato del contratto
+  è incoerente, ciò potrebbe portare a valori errati riportati. Inoltre, questa vulnerabilità
+  può essere sfruttata dagli aggressori per ingannare altri protocolli che si basano
+  sui valori restituiti, inducendoli a leggere stati errati ed eseguire potenziali
+  azioni indesiderate.
+---
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:2198px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:56.232940673828125%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/08/Screenshot+2023-08-16+at+15.10.58.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e6d1da90-2fed-4002-8a52-c7b033ac8f60/Screenshot+2023-08-16+at+15.10.58.png" data-image-dimensions="2198x1236" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="2198" height="1236" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e6d1da90-2fed-4002-8a52-c7b033ac8f60/Screenshot+2023-08-16+at+15.10.58.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e6d1da90-2fed-4002-8a52-c7b033ac8f60/Screenshot+2023-08-16+at+15.10.58.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e6d1da90-2fed-4002-8a52-c7b033ac8f60/Screenshot+2023-08-16+at+15.10.58.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e6d1da90-2fed-4002-8a52-c7b033ac8f60/Screenshot+2023-08-16+at+15.10.58.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e6d1da90-2fed-4002-8a52-c7b033ac8f60/Screenshot+2023-08-16+at+15.10.58.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e6d1da90-2fed-4002-8a52-c7b033ac8f60/Screenshot+2023-08-16+at+15.10.58.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e6d1da90-2fed-4002-8a52-c7b033ac8f60/Screenshot+2023-08-16+at+15.10.58.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Cos'è l'Attacco di Read-Only Reentrancy</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">L'attacco di Read-Only Reentrancy si riferisce a una situazione in cui <strong>una view viene “rientrata”, di solito non equipaggiata dallo sviluppatore con nessuna misura di protezione</strong>, poiché essendo una view non modifica lo stato del contratto. Tuttavia, se lo stato del contratto è incoerente, ciò potrebbe portare a valori errati riportati. Inoltre, questa vulnerabilità può essere sfruttata dagli aggressori per ingannare altri protocolli che si basano sui valori restituiti, inducendoli a leggere stati errati ed eseguire potenziali azioni indesiderate.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Nel contesto dei protocolli DeFi, vengono stabilite varie integrazioni con altre piattaforme DeFi per ottenere prezzi dei token o leggere i prezzi dei token incapsulati emessi da protocolli specifici. Questa integrazione è possibile quando un protocollo di prestito supporta token di pool da altri protocolli come garanzia o consente lo staking. Tali integrazioni richiedono frequentemente il recupero dei prezzi dei token di pool o dei prezzi dei token incapsulati.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gli aggressori approfittano di queste situazioni per eseguire attacchi di Reentrancy in sola lettura manipolando i prezzi dei token a loro vantaggio.</p>
+<h2 style="white-space:pre-wrap;">Il possibile impatto della Read-only Reentrancy</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">La rilevanza dell'attacco di reentrancy in sola lettura risiede <strong>nella sua novità, spesso trascurata dagli sviluppatori e dagli auditor</strong>. Man mano che le interazioni tra diversi protocolli nello spazio DeFi aumentano, il rischio rappresentato da questo tipo di attacco diventa più evidente. Particolarmente preoccupante è il suo impatto sui protocolli DeFi che si integrano con piattaforme come Curve.fi. </p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Questi protocolli spesso dipendono dalla lettura dei prezzi dei token e dei prezzi dei token incapsulati da altri sistemi, rendendoli suscettibili all'exploit attraverso la manipolazione dei prezzi. Per garantire la sicurezza e l'integrità dell'ecosistema finanziario decentralizzato, è cruciale che sviluppatori, auditor e l'intera comunità siano vigili su questa minaccia e implementino opportune salvaguardie per mitigare i rischi.</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:2196px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:48.178504943847656%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/08/Screenshot+2023-08-16+at+15.11.13.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/19a56ebf-fcae-4d36-ba85-eb2fd9efe191/Screenshot+2023-08-16+at+15.11.13.png" data-image-dimensions="2196x1058" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="2196" height="1058" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/19a56ebf-fcae-4d36-ba85-eb2fd9efe191/Screenshot+2023-08-16+at+15.11.13.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/19a56ebf-fcae-4d36-ba85-eb2fd9efe191/Screenshot+2023-08-16+at+15.11.13.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/19a56ebf-fcae-4d36-ba85-eb2fd9efe191/Screenshot+2023-08-16+at+15.11.13.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/19a56ebf-fcae-4d36-ba85-eb2fd9efe191/Screenshot+2023-08-16+at+15.11.13.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/19a56ebf-fcae-4d36-ba85-eb2fd9efe191/Screenshot+2023-08-16+at+15.11.13.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/19a56ebf-fcae-4d36-ba85-eb2fd9efe191/Screenshot+2023-08-16+at+15.11.13.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/19a56ebf-fcae-4d36-ba85-eb2fd9efe191/Screenshot+2023-08-16+at+15.11.13.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Cos'è l'Attacco di Reentrancy (classico)</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Un attacco di Reentrancy si verifica quando una funzione all'interno di un contratto intelligente invoca un contratto esterno non del tutto affidabile e questo contratto esterno effettua successivamente una chiamata ricorsiva alla funzione originale. Di conseguenza, l'attacco di Reentrancy può portare all'esaurimento dei fondi o all'avvio di attività dannose all'interno del contratto.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Questo tipo di attacco può manifestarsi in varie forme, tra cui Reentrancy in Singola Funzione, Reentrancy tra Diverse Funzioni, Reentrancy tra Diversi Contratti e Reentrancy crosschain.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In questo articolo, ci concentreremo nell'esplorare la Reentrancy in Sola Lettura, approfondendone le specifiche caratteristiche e implicazioni, ma prima diamo un esempio di <strong>Attacco di Reentrancy classica</strong>.</p>
+<h2 style="white-space:pre-wrap;">Scenario di Attacco di Reentrancy</h2>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:2190px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:64.20091247558594%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/08/Screenshot+2023-08-16+at+15.11.31.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/26f91b4f-cb03-4ede-8615-320e4970aaa6/Screenshot+2023-08-16+at+15.11.31.png" data-image-dimensions="2190x1406" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="2190" height="1406" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/26f91b4f-cb03-4ede-8615-320e4970aaa6/Screenshot+2023-08-16+at+15.11.31.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/26f91b4f-cb03-4ede-8615-320e4970aaa6/Screenshot+2023-08-16+at+15.11.31.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/26f91b4f-cb03-4ede-8615-320e4970aaa6/Screenshot+2023-08-16+at+15.11.31.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/26f91b4f-cb03-4ede-8615-320e4970aaa6/Screenshot+2023-08-16+at+15.11.31.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/26f91b4f-cb03-4ede-8615-320e4970aaa6/Screenshot+2023-08-16+at+15.11.31.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/26f91b4f-cb03-4ede-8615-320e4970aaa6/Screenshot+2023-08-16+at+15.11.31.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/26f91b4f-cb03-4ede-8615-320e4970aaa6/Screenshot+2023-08-16+at+15.11.31.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:2106px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:63.72269821166992%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/08/Screenshot+2023-08-16+at+15.11.42.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/98a00324-ef78-4536-84f5-f4453ac2d1d9/Screenshot+2023-08-16+at+15.11.42.png" data-image-dimensions="2106x1342" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="2106" height="1342" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/98a00324-ef78-4536-84f5-f4453ac2d1d9/Screenshot+2023-08-16+at+15.11.42.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/98a00324-ef78-4536-84f5-f4453ac2d1d9/Screenshot+2023-08-16+at+15.11.42.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/98a00324-ef78-4536-84f5-f4453ac2d1d9/Screenshot+2023-08-16+at+15.11.42.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/98a00324-ef78-4536-84f5-f4453ac2d1d9/Screenshot+2023-08-16+at+15.11.42.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/98a00324-ef78-4536-84f5-f4453ac2d1d9/Screenshot+2023-08-16+at+15.11.42.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/98a00324-ef78-4536-84f5-f4453ac2d1d9/Screenshot+2023-08-16+at+15.11.42.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/98a00324-ef78-4536-84f5-f4453ac2d1d9/Screenshot+2023-08-16+at+15.11.42.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<ol data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Un utente chiama la funzione withdrawAll() del contratto "Reentrant", con l'intenzione di prelevare il proprio saldo.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Il contratto verifica prima il saldo dell'utente nella mappatura userBalances. Se il saldo è maggiore di 0, la funzione procede; in caso contrario, viene generato un messaggio di errore che dice "Saldo insufficiente". </p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Il contratto quindi deduce il saldo dell'utente dalla variabile totalSupply senza aggiornare il saldo dell'utente nella mappatura userBalances. </p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Il contratto esegue una dichiarazione msg.sender.call{value: balance}("") per trasferire il saldo dell'utente (in Ether) all'indirizzo dell'utente. Qui risiede la vulnerabilità. La funzione call consente di chiamare contratti esterni e poiché viene eseguita prima dell'aggiornamento del saldo dell'utente, il contratto esterno può chiamare nuovamente la funzione withdrawAll() prima che il saldo sia impostato su zero. </p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Durante la chiamata a msg.sender, il contratto esterno può richiamare nuovamente la funzione withdrawAll(), rientrando efficacemente nella funzione withdrawAll() mentre la chiamata iniziale è ancora in corso. </p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Nella chiamata rientrante, la funzione verifica nuovamente il saldo dell'utente, che è ancora il valore originale. Poiché il contratto consente la Reentrancy senza alcuna protezione, si ripete lo stesso processo e il contratto esterno può eseguire la funzione withdrawAll() ripetutamente, ogni volta deducendo il saldo dell'utente dalla totalSupply ed eseguendo il trasferimento di Ether. </p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Questo ciclo di Reentrancy continua fino a quando totalSupply raggiunge zero, risultando in uno scenario in cui il contratto non ha abbastanza Ether per soddisfare il trasferimento di saldo al chiamante originale. </p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Di conseguenza, il contratto non riuscirà a inviare Ether (richiede(success, "Impossibile inviare Ether")) quando il saldo Ether sarà esaurito, lasciando il contratto in uno stato incoerente e azzerando il saldo dell'utente nella mappatura userBalances.</p>
+</li>
+</ol>
+<h2 style="white-space:pre-wrap;">Qual è il metodo di operazione o la strategia di attacco impiegata nello scenario di Reentrancy in Sola Lettura?</h2>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1838px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:80.73993682861328%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/08/Screenshot+2023-08-16+at+15.11.57.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/b147d296-2a36-410b-91cb-51e97237be2c/Screenshot+2023-08-16+at+15.11.57.png" data-image-dimensions="1838x1484" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1838" height="1484" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/b147d296-2a36-410b-91cb-51e97237be2c/Screenshot+2023-08-16+at+15.11.57.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/b147d296-2a36-410b-91cb-51e97237be2c/Screenshot+2023-08-16+at+15.11.57.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/b147d296-2a36-410b-91cb-51e97237be2c/Screenshot+2023-08-16+at+15.11.57.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/b147d296-2a36-410b-91cb-51e97237be2c/Screenshot+2023-08-16+at+15.11.57.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/b147d296-2a36-410b-91cb-51e97237be2c/Screenshot+2023-08-16+at+15.11.57.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/b147d296-2a36-410b-91cb-51e97237be2c/Screenshot+2023-08-16+at+15.11.57.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/b147d296-2a36-410b-91cb-51e97237be2c/Screenshot+2023-08-16+at+15.11.57.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1694px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:87.60330963134766%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/08/Screenshot+2023-08-16+at+15.12.20.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f7b3a15b-7329-4617-8f3a-3fcd3e4cb46f/Screenshot+2023-08-16+at+15.12.20.png" data-image-dimensions="1694x1484" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1694" height="1484" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f7b3a15b-7329-4617-8f3a-3fcd3e4cb46f/Screenshot+2023-08-16+at+15.12.20.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f7b3a15b-7329-4617-8f3a-3fcd3e4cb46f/Screenshot+2023-08-16+at+15.12.20.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f7b3a15b-7329-4617-8f3a-3fcd3e4cb46f/Screenshot+2023-08-16+at+15.12.20.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f7b3a15b-7329-4617-8f3a-3fcd3e4cb46f/Screenshot+2023-08-16+at+15.12.20.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f7b3a15b-7329-4617-8f3a-3fcd3e4cb46f/Screenshot+2023-08-16+at+15.12.20.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f7b3a15b-7329-4617-8f3a-3fcd3e4cb46f/Screenshot+2023-08-16+at+15.12.20.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f7b3a15b-7329-4617-8f3a-3fcd3e4cb46f/Screenshot+2023-08-16+at+15.12.20.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<ol data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In questo scenario, un aggressore implementa un contratto in grado di eseguire rientranze e lo designa come "contratto rientrante". Diversi protocolli, inclusi il protocollo DeFi target, si basano sulla lettura di determinati valori da questo contratto, rendendolo una parte cruciale dell'attacco. </p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Quando gli altri protocolli interagiscono con il contratto rientrante, scatta un metodo di fallback, causando l'esecuzione di una logica specifica definita all'interno del contratto dell'aggressore. </p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Approfittando dell'opportunità, il contratto dell'aggressore procede quindi a chiamare il contratto del protocollo DeFi target senza alcun ostacolo, sfruttando la sua vulnerabilità. </p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Come previsto, il protocollo target interagisce con il contratto rientrante compromesso e recupera involontariamente valori errati o manipolati. </p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Mentre il contratto target rimane all'oscuro dell'attacco, l'aggressore lo ha sfruttato con successo, completando l'intero processo poiché i Passaggi 1 e 2 si concludono infine senza interferenze. </p>
+</li>
+</ol>
+<h2 style="white-space:pre-wrap;">Casi di Attacchi del Mondo Reale</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Numerosi protocolli sono caduti vittima di attacchi in sola lettura, con conseguente appropriazione illecita di ingenti liquidità legate a questi protocolli, per un ammontare di milioni di dollari.</p>
+<h2 style="white-space:pre-wrap;">1- Attacco alla Piattaforma Sentiment:</h2>
+<h4 style="white-space:pre-wrap;">Analisi dell'Attacco</h4>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In un notevole incidente avvenuto il 4 aprile 2023, la piattaforma Sentiment, operante sulla soluzione ampiamente adottata Layer 2, Arbitrum, è stata vittima di un attacco. L'atto malevolo ha coinvolto la manipolazione dei prezzi degli asset utilizzando una Reentrancy in sola lettura, con conseguente perdita significativa di circa un milione di dollari per la piattaforma.</p>
+<h4 style="white-space:pre-wrap;">Protocolli Coinvolti</h4>
+<h4 style="white-space:pre-wrap;">Piattaforma Sentiment:</h4>
+<p class="sqsrte-large" style="white-space:pre-wrap;">L'obiettivo principale della piattaforma Sentiment è affrontare le inefficienze di capitale offrendo una soluzione basata su primitive che consente il credito on-chain senza garanzie. Affronta la sfida del rischio di controparte diffuso attraverso l'ipoteca on-chain. Fondamentale per il protocollo Sentiment è il concetto di "Conto Sentiment", che concede agli utenti un accesso a leve più elevate rispetto ai tradizionali mercati finanziari. Gli asset presi in prestito da questi conti possono essere impiegati nell'ecosistema DeFi. </p>
+<h4 style="white-space:pre-wrap;">Protocollo Balancer:</h4>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Balancer è un protocollo di market maker automatizzato decentralizzato (AMM) costruito su Ethereum, che fornisce un blocco flessibile per la liquidità programmabile. Il componente centrale di Balancer è la Vault, un contratto intelligente responsabile della gestione e del possesso di tutti i token in ciascun pool di Balancer. Inoltre, il Vault funge da principale gateway per varie operazioni di Balancer, tra cui scambi, partecipazioni ed uscite. </p>
+<h4 style="white-space:pre-wrap;">Aave v3:</h4>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Il protocollo Aave è un protocollo di liquidità decentralizzato che consente agli utenti di partecipare come fornitori, mutuatari o liquidatori. Gli utenti che forniscono liquidità a un mercato possono guadagnare interesse sui loro asset crittografici forniti, mentre i mutuatari possono sovra-collateralizzarsi e prendere in prestito asset. Aave supporta anche "flash loan", che sono transazioni di prestito in un blocco che non richiedono sovra-collateralizzazione tradizionale.</p>
+<h2 style="white-space:pre-wrap;">Impatto dell'Attacco:</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">La piattaforma Sentiment si integra con i pool di Balancer, consentendo agli utenti di aprire conti con gli asset di Balancer. Per agevolare questa integrazione, la piattaforma Sentiment utilizza il contratto Vault di Balancer e il suo metodo getPrice(token). Tuttavia, ciò introduce una vulnerabilità agli attacchi di Reentrancy in sola lettura, che potrebbero portare alla manipolazione dei prezzi degli asset. Questo vettore di attacco potrebbe avere conseguenze gravi per la piattaforma Sentiment, potenzialmente comportando ingenti perdite finanziarie e minando la fiducia dei suoi utenti.</p>
+<h2 style="white-space:pre-wrap;">Risultato Positivo Dopo l'Attacco</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Fortunatamente, il team di Sentiment è riuscito a invertire la situazione dopo l'attacco. Sono riusciti a recuperare con successo il 90% dei fondi rubati dall'aggressore e hanno lavorato diligentemente per recuperare la parte restante. Questa risoluzione positiva dimostra la prontezza di risposta del team e gli sforzi di recupero efficaci, portando a un esito favorevole a seguito dell'incidente.</p>
+<h2 style="white-space:pre-wrap;">2- Leggi il Nostro Ultimo Articolo sull'Attacco a Eraland</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><a href="https://www.smartcontract.tips/articoli/zksync-based-lending-protocol-eralend-under-attack-34m-loss-uncovered" target="_new" rel="noopener"><span style="text-decoration:underline">https://www.smartcontract.tips/articoli/zksync-based-lending-protocol-eralend-under-attack-34m-loss-uncovered</span></a></p>
+<h2 style="white-space:pre-wrap;">Mitigazione</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">L'approccio alla mitigazione degli attacchi di Reentrancy in sola lettura varia a seconda che si stia scrivendo un nuovo contratto o si stia leggendo un contratto già implementato.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Per i nuovi contratti, un metodo efficace di mitigazione prevede l'aggiunta di una protezione di Reentrancy in sola lettura. Questa protezione funziona verificando se il blocco di Reentrancy è attivo. Se il blocco è attivato, viene generato un errore, impedendo l'esecuzione ulteriore. Per garantire la trasparenza, il blocco può essere reso pubblico, consentendo ai contratti chiamanti di verificare se il contratto target è in modalità bloccata prima di procedere.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Per quanto riguarda i contratti esistenti, un modificatore di Reentrancy può essere implementato e chiamato come primo passo in qualsiasi esecuzione di funzione. Se il modificatore fallisce, indicando un potenziale attacco di Reentrancy, il contratto sarà posto in modalità bloccata e qualsiasi operazione di lettura successiva dovrebbe essere evitata per prevenire ulteriori vulnerabilità. Utilizzando questi metodi di mitigazione, gli sviluppatori possono migliorare la sicurezza e la robustezza dei loro smart contract contro gli attacchi di Reentrancy in sola lettura.</p>
+</div>

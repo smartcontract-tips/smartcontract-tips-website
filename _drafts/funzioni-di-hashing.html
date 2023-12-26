@@ -1,0 +1,128 @@
+---
+layout: post
+title: 'Funzioni di hashing: cosa sono e a cosa servono'
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: pending
+categories:
+- Academy
+tags: []
+meta:
+  _last_editor_used_jetpack: block-editor
+  _edit_last: '48926058'
+  _aioseo_title: ''
+  _aioseo_description: ''
+  _aioseo_keywords: ''
+  _aioseo_og_title: ''
+  _aioseo_og_description: ''
+  _aioseo_og_article_section: ''
+  _aioseo_og_article_tags: ''
+  _aioseo_twitter_title: ''
+  _aioseo_twitter_description: ''
+  _wpas_done_all: '1'
+  _thumbnail_id: '5601'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+---
+<p><!-- wp:paragraph --></p>
+<p>La funzione di hashing è una funzione matematica che ha delle caratteristiche semplici e precise. Come tutte le funzioni matematiche ha un insieme di valori che le possono essere passate come variabile d’ingresso ed un insieme di valori che saranno il risultato o variabile d’uscita.&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Output = F ( Input )</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Insieme dei valori di ingresso</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Nel caso delle funzioni di hashing avremo che l’insieme dei valori che può assumere la variabile d’ingresso, ovvero l’input, è definito in modo informale come “qualunque dato”, sia esso un semplice bit, un byte, un pixel, un documento word, o un video su youtube. Tutti questi esempi sono traducibili in lunghe o brevi stringhe di bit e come tali possono essere delle valide variabili d’ingresso per la funzione di hashing.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Insieme dei valori di uscita</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Diversamente da quanto avviene per l’input, l’output di una funzione di hashing ha sempre una lunghezza predefinita e fissa. Allo stato dell’arte si utilizzano funzioni di hashing chiamate SHA256 il cui insieme dei valori consentiti in uscita è definito come “l’insieme delle combinazioni di stringhe di 256 bit”.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Non sfuggirà al lettore che l’insieme di tali combinazioni è un insieme di un numero enorme di elementi, per la precisione è costituito da 2^256 possibili combinazioni, ovvero un numero di possibili valori di uscita della magnitudine di 10^70 (1 seguito da 70 zeri)</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Replicabilità del risultato</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Una funzione di hashing ha una caratteristica molto importante, genera un output che non cambia nel tempo se non cambia nel tempo il suo input.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Ovvero, se noi calcoliamo oggi</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Output_1 = F( File pdf contenente la Divina Commedia)</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>E poi calcoliamo domani</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Output_2 = F( File pdf contenente la Divina Commedia)</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Il risultato sarà sempre lo stesso.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Non prossimità dei risultati e non invertibilità</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:image --></p>
+<figure class="wp-block-image"><img src="{{ site.baseurl }}/assets/oC6S9_4TsrN9eOOxHQKPhjCEUU7TCEFAlvoeAUmLwng8vlrg98KEn6XdzvUKI9Gcu3EwwL0fww4XQoB1kYesYpjEpWndtT_BuvnWlaIMMVi7GZyBkWuRpbFgjoBDeMqqshKwk9HM6z_35zJCAcPVTWUaC0nxWtzCus7UlffLtvnnJE_P8vbQnbaT0IjY" alt="" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>Figura Caso 1: input pari al messaggio “Ciao”</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image --></p>
+<figure class="wp-block-image"><img src="{{ site.baseurl }}/assets/j7gOuNph2vpON8ObOUY8UtFrx-Wy9HrHZzIm6QD6sU-0EbGvnk1IeRZEHwC6G-YxUsiZ-f7BCvi10_AbYD866TByqhImKXiF8MbR3oc2pmraOsCYfz4Fvo_9G_xkTWsG8ICZFouUbcypCmkEBIG9kF4JUIxupYEyZ-UDQD-b7YMekYGYY1YXj7G-6oHI" alt="" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>Figura Caso 2: input pari al messaggio “Ciao!”</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Come si evidenzia dalle figure, la stessa funzione di hash riceve due input leggermente diversi, essi differiscono solo per la presenza del carattere “!” alla fine. Eppure il loro output è completamente diverso.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Questo non consente ad un eventuale attaccante malevolo di capire, data la conoscenza del solo output della funzione di hash, quale fosse il dato di input usato all’origine. In questo senso si dice che la funzione di hash è “non invertibile” ovvero non è possibile capire gli ingressi a partire dalle uscite.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Ancorché la parola “impossibile” venga spesso usata anche nel contesto di questo testo, è importante precisare che in realtà invertire una funzione di hash non è un problema impossibile ma soltanto “impraticabile”.&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Infatti è sempre possibile generare a caso dati di input fino a che non riusciamo a trovare un output uguale a quello che vogliamo invertire.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">A cosa servono le funzioni di hashing</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Le applicazioni delle funzioni di hashing sono molteplici:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>Una funzione di hashing può essere utilizzata per <strong>archiviare le password degli utenti in modo sicuro</strong>. Invece di memorizzare la password in chiaro, viene calcolato l'hash della password e viene memorizzato l'hash. Quando un utente inserisce la password per accedere al sistema, viene calcolato l'hash della password inserita e viene confrontato con l'hash memorizzato. Se i due hash corrispondono, significa che la password inserita è corretta.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>Le funzioni di hashing sono anche utilizzate per verificare <strong>l'integrità dei dati durante il trasferimento attraverso una rete</strong>. Ad esempio, quando si scarica un file da Internet, è possibile calcolare l'hash del file scaricato e confrontarlo con l'hash fornito dal sito Web di origine. Se i due hash corrispondono, significa che il file non è stato alterato durante il trasferimento.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>Una delle applicazioni più interessanti è proprio quella della realizzazione di uno schema di<strong> firma digitale</strong>. <a href="https://smartcontract.tips/2022/12/29/firma-digitale/">Ti invito ad approfondire attraverso la lettura di questo articolo</a>.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Infine, non ultima in ordine di importanza, grazie alla funzione di hashing è possibile costruire la cosiddetta prova di lavoro <strong><a href="https://it.wikipedia.org/wiki/Proof-of-work">(proof of work)</a></strong>. Un sistema nato inizialmente come una sorta di francobollo digitale per mitigare il fenomeno dello spamming via email e poi <a href="https://bitcoin.org/bitcoin.pdf">reso celebre da Satoshi Nakamoto come meccanismo di costruzione della blockchain</a> <strong>Bitcoin</strong>.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>

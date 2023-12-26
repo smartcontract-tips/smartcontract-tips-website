@@ -1,0 +1,50 @@
+---
+layout: post
+title: C'è scalabilità e scalabilità
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: pending
+categories: []
+tags: []
+meta:
+  _elasticsearch_indexed_on: '1970-01-01 00:00:00'
+  jabber_published: '1472829302'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '26416017757'
+  email_notification: '1472829305'
+  _edit_last: '48926058'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+---
+<p>Tutti a dire che Bitcoin non scala perché non gestisce più di una decina di transazioni al secondo e si dà per scontato che la scalabilità significhi usare più risorse per servire sempre più richieste in una maniera più o meno direttamente proporzionale.</p>
+<p>Ma se ragionassimo in maniera completamente diversa e provassimo a contare non il numero di utenti e transazioni ma il <strong>numero</strong> di attacker, ossìa coloro che vogliono manomettere la sicurezza delle transazioni con double spending, manomissione dei blocchi e altre forme di attacco. Ebbene quello che salterebbe fuori è che il Bitcoin è capacissimo di scalare su questa dimensione.</p>
+<p>Guardiamo la voce <a href="https://it.wikipedia.org/wiki/Scalabilit%C3%A0">scalabilità</a> su Wikipedia e scopriamo che esiste una scalabilità detta amministrativa.</p>
+<dl>
+<dd>
+<blockquote><p>Un sistema amministrativamente scalabile è quello che mantiene inalterata la sua gestibilità indipendentemente da quante organizzazioni lo utilizzano.</p></blockquote>
+</dd>
+</dl>
+<p>&nbsp;</p>
+<p><strong>Non è esattamente quello di cui stiamo parlando?</strong></p>
+<p>Possiamo immaginare infatti che Bitcoin operi in uno scenario in cui tutti possono accedere alla rete senza autenticazione e tutti sono potenzialmente disonesti eppure nonostante questo la rete è sempre riuscita ad assorbire gli attacchi. Direi quindi che è estremamente <strong>resiliente</strong> ....ricapitolando: tutti accedono senza autenticarsi, tutti possono attaccare cercando di creare una copia disonesta della blockchain, nessuno è incaricato di approvare o revocare le transazioni ...eppure in questo inferno di caos e disonestà la blockchain viene su "onesta", integra e aliena come il monolite di Odissea nello Spazio.</p>
+<p>Com’è possibile garantire che questo registro universale rimanga integro? Cioè come garantire che ogni aggiornamento sia onesto e venga riportato possibilmente in maniera identica in tutte le copie? La risposta = <strong>Proof-of-work</strong>.</p>
+<p>La grandezza dell’innovazione del Bitcoin sta tutta qui. La soluzione parte dal presupposto che le pagine del registro universale (chiamate blocchi) debbano essere molto difficili da creare ma molto facili da riconoscere (nel senso di riconoscerne la validità).</p>
+<p>A questo scopo è stato previsto che, data la difficoltà nella creazione di queste “pagine”, mediamente solo ogni dieci minuti qualcuno dei partecipanti riuscirà a crearne una nuova, mentre una volta creata, tutti gli altri partecipanti potranno istantaneamente verificare che le transazioni in essa contenute siano valide e quindi aggiungere il blocco alla loro copia locale.</p>
+<p>E se un partecipante decide di barare e scrivere nella copia locale una cosa diversa e non veritiera? Beh, sarà l’unico fra tanti, e nessuno presterà attenzione alla sua copia.</p>
+<p>E se nessuno dei partecipanti rispetta questa regola? Allora nessuna copia sarà ritenuta valida da nessuno degli altri partecipanti, la moneta non avrà nessun valore fino a che almeno due cominceranno a comportarsi in maniera onesta ed esisterà una versione integra condivisa da almeno due di loro. Gli altri si adegueranno o non avranno mai visione di una copia valida.</p>
+<p>Ma se il numero di partecipanti raddoppia, il tempo di creazione di una nuova pagina (diciamo blocco) dovrebbe allora dimezzarsi? Sì, ma il protocollo prevede che i partecipanti debbano misurare periodicamente se questo succede e, se succede, debbano aumentare la difficoltà del “gioco” in modo da tenere il tempo medio di creazione pari a 10 minuti.</p>
+<p>Il Bitcoin non è nato quindi per essere un modo efficiente per trasferire un credito da una parte all’altra del mondo. E’ nato invece per funzionare in un ambiente assolutamente ostile secondo due principi: nessuno ha titolo esclusivo per tenere traccia dei pagamenti; si dà per scontato che siano tutti disonesti e che tutti vogliano falsificare il registro universale. E se funziona in un ambiente così ostile lo deve alla magia della proof-of-work.</p>
+<p>***</p>
+<p>Approfondimento su "<a href="http://amzn.to/2bQt1u7">I Bitcoin sotto il materasso</a>", disponibile su Kindle.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

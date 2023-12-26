@@ -1,0 +1,49 @@
+---
+layout: post
+title: Ethereum Gas alle stelle
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: pending
+categories:
+- Smart Contracts
+tags: []
+meta:
+  _thumbnail_id: '3584'
+  jabber_published: '1515669235'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '13467217260'
+  email_notification: '1515669235'
+  _elasticsearch_indexed_on: '2018-01-11 11:13:55'
+  _edit_last: '48926058'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+---
+<p>Le fee stanno diventando un problema anche per Ethereum, dico anche perché finora sul banco delle fee extra lusso c'era solo Bitcoin.</p>
+<p>Il punto è sempre quello della scalabilità mancata da una parte e dall'innalzamento dei prezzi (oggi ETH quota $1400) dall'altra. Tuttavia mi sento di dire che il problema fee per Ethereum è forse anche più serio che per Bitcoin.</p>
+<p>Infatti se vogliamo accettare il fatto che Bitcoin possa diventare una riserva di valore con una blockchain destinata a poche ma importanti transazioni invece che un mezzo di pagamento stile POS, Ethereum non potrà mai essere considerato tale. Ethereum è denaro programmabile che si muove di continuo e che deve per forza accomodare un volume di transazioni enorme. I contratti non sono solo pagamenti da tizio a caio, i contratti hanno degli stati che possono essere cambiati in modo interattivo attraverso le Dapps e questo significa molte transazioni, non solo pagamenti, per cambiamenti di stato che devono essere pagati con il gas.</p>
+<p>Già oggi pare che Ethereum faccia più transazioni di tutte le altre cripto messe insieme  ma qualcosa comincia a scricchiolare o almeno a diventare preoccupante.</p>
+<p>Tra le cause ci sono le <strong>numerose ICO, i criptogattini e EtherDelta</strong> (un exchange di token ERC20 senza exchange, vale la pena dargli un'occhiata).</p>
+<p>Ricordiamo che il gas è stato inventato con lo scopo di misurare quante risorse di calcolo sono necessarie per l'esecuzione di un'istruzione da parte dei miner. Ad esempio, una somma fra interi costa 1 gas, e così via (le cifre qui sono puramente indicative). Il gas a sua volta ha un gas price che cambia, ad esempio io posso offrire un gas price di 1GWei (1 miliardesimo di Eth) ed un altro utente un gas price di 10 GWei. Ovviamente i miner preferiscono le transazioni più generose.</p>
+<p>Cosa implica un gas price di 100 Gwei oggi come oggi con ETH a $1200?</p>
+<p>Pagamento semplice: <strong>21000 gas --&gt; $2.52</strong></p>
+<p>Token transfer: <strong>31000 gas --&gt; $3.72</strong></p>
+<p>Deploy di un token ERC20:  <strong>circa 800000 gas --&gt; $96</strong></p>
+<p>Deploy di un contratto complesso stile tokensale.: <strong>circa 4M gas --&gt; $480</strong></p>
+<p>&nbsp;</p>
+<h2>L'oracolo del gas</h2>
+<p>A quanto pare questa situazione è anche aggravata ad un malfunzionamento del cosiddetto oracolo del gas che calcola la media dei gas price offerti dagli utenti. Naturalmente se questa stima fornita ai wallet è pompata verso l'alto la maggiorparte degli utenti tende a offrire più di quello che dovrebbe amplificando ancora di più il fenomeno.</p>
+<blockquote><p>Recently, however, something odd has been affecting the estimated gas price, which is in turn influencing the median average calculated by the pricing oracle. Although it is still possible to manually lower the gas price when transacting over Ethereum, the increasingly high estimates are particularly dangerous for users who are unaccustomed to having to check and set transaction costs themselves.</p></blockquote>
+<p>tratto da</p>
+<p><a href="https://www.ethnews.com/ethereum-foundations-nick-johnson-on-gwei-transaction-fees">https://www.ethnews.com/ethereum-foundations-nick-johnson-on-gwei-transaction-fees</a></p>
+<p>A quanto pare la ETH Foundation sta lavorando ad una modifica che invece di calcolare la mediana dei tx fee calcolerà la mediana delle fee minime spese negli ultimi blocchi, secondo una loro evidenza statistica questa fornisce una stima più accurata.</p>
+<p>Attendiamo news, anzi <strong>attendiamo ribassi del gas price.</strong></p>

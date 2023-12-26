@@ -1,0 +1,301 @@
+---
+layout: post
+title: 'HardHat, Truffle e Foundry: Un’Esplorazione Completa dei Principali Framework
+  di Sviluppo Web3'
+date: 2023-09-27 00:06:04.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Approfondimenti
+- Insights
+tags: []
+meta:
+  _wpas_done_all: '1'
+  _thumbnail_id: '6225'
+  _edit_last: '48926058'
+  _cmplz_scanned_post: '1'
+  ppma_authors_name: Redazione
+  _last_editor_used_jetpack: block-editor
+  footnotes: ''
+  _aioseo_title: ''
+  _aioseo_description: ''
+  _aioseo_keywords: ''
+  _aioseo_og_title: ''
+  _aioseo_og_description: ''
+  _aioseo_og_article_section: ''
+  _aioseo_og_article_tags: ''
+  _aioseo_twitter_title: ''
+  _aioseo_twitter_description: ''
+  ppma_disable_author_box: '0'
+  BS_author_type: BS_author_is_user
+  BS_guest_author_name: ''
+  BS_guest_author_url: ''
+  BS_guest_author_description: ''
+  BS_guest_author_image_id: ''
+author:
+  login: redazione
+  email: dcarboni+redazione@gmail.com
+  display_name: Redazione
+  first_name: Redazione
+  last_name: ''
+permalink: "/articoli/hardhat-truffle-e-foundry-unesplorazione-completa-dei-principali-framework-di-sviluppo-web3/"
+excerpt: Nel mondo decentralizzato di Web3, l'emergere di strumenti pensati per facilitare
+  la creazione di smart contract e DApp ha trasformato l'esperienza degli sviluppatori.
+  A guidare il gruppo ci sono HardHat, Truffle e Foundry. Questa guida approfondita
+  esplora la loro evoluzione, le funzionalità tecniche e i casi d'uso pratici
+---
+<p><!-- wp:paragraph {"className":"is-style-info"} --></p>
+<p class="is-style-info">Nel mondo decentralizzato di Web3, l’emergere di strumenti pensati per facilitare la creazione di smart contract e DApp ha trasformato l’esperienza degli sviluppatori. A guidare il gruppo ci sono HardHat, Truffle e Foundry. Questa guida approfondita esplora la loro evoluzione, le funzionalità tecniche e i casi d’uso pratici.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":1} --></p>
+<h1 class="wp-block-heading">Uno Sguardo alla Loro Evoluzione</h1>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li><strong>Truffle:</strong> In qualità di pioneristico framework per smart contract, Truffle ha aperto la strada, introducendo un ecosistema integrato per gli sviluppatori.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>HardHat:</strong> Nonostante il suo ingresso tardivo, HardHat è diventato rapidamente il preferito da molti sviluppatori, colmando le lacune lasciate da Truffle.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Foundry</strong>: L’ultimo arrivato, Foundry, con le sue capacità di test ineguagliabili, sta guadagnando posizioni nel dominio Web3.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:heading {"level":1} --></p>
+<h1 class="wp-block-heading">Il Grande Duello: Truffle vs. HardHat</h1>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li><strong>Linguaggio di Sviluppo:</strong> HardHat supporta TypeScript di default. In contrasto, con Truffle, gli sviluppatori devono eseguire tsc per la compilazione di TypeScript.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Integrazione con Ethers:</strong> Entrambi possono integrarsi con la libreria Ethers, ma HardHat offre un’esperienza molto più semplice</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Astrazioni di Contratto:</strong> Truffle eccelle qui con astrazioni di contratto integrate, semplificando le interazioni con web3.js.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Debugging:</strong> Entrambi i framework supportano console.log, ma Truffle ha il vantaggio con un debugger nativo che offre step in/out, breakpoints e altro. Inoltre, Truffle permette di fare debugging di una transazione sulla mainnet. HardHat, invece, è limitato alle istruzioni console.log incluse nel contratto distribuito.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Ecosistema di Plugin:</strong> HardHat ha un vantaggio con un ecosistema di plugin più esteso.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Esperienza dello Sviluppatore:</strong> Il Cruscotto di Truffle si integra senza problemi con MetaMask per il deployment, facendo affidamento su dotenv e sulla gestione delle chiavi segrete. Per quanto riguarda le estensioni, il “Truffle per VS Code” si concentra su una UX sviluppatore arricchita, unendo caratteristiche essenziali in un’interfaccia unica. In confronto, l’estensione “HardHat VS Code” si focalizza sugli errori di compilazione di Solidity.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:heading {"level":1} --></p>
+<h1 class="wp-block-heading">Esplorazione Tecnica</h1>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">HardHat</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Panoramica:</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Un “elmetto” per gli sviluppatori Ethereum, HardHat introduce una rete su misura, permettendo agli sviluppatori di valutare le implicazioni in tempo reale delle loro azioni sulla chain Ethereum.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Comandi Chiave:</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li><strong>Inizializza:</strong> <em>npx hardhat</em></li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Compila:</strong> <em>npx hardhat compile</em></li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Testa:</strong> <em>npx hardhat test</em></li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Strumenti per Sviluppatori:</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li><strong>HardHat Runner:</strong> È il componente centrale, responsabile dell’esecuzione di task, script e test.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Ethers.js:</strong> Integrato con Ethers.js, semplifica le interazioni con la blockchain Ethereum.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Scenario Pratico:</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Per esempio, nello sviluppo di un gioco basato su Ethereum, le modifiche rapide al contratto sono comuni. Usare <em>console.log()</em> aiuta nel debugging. Le dettagliate stack traces di HardHat semplificano il processo di identificazione degli errori.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Vantaggi Tecnici:</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>Il supporto a TypeScript è standard.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Si integra agevolmente con la libreria Ethers.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Offre un ampio supporto ai plugin.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Truffle</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>La Traiettoria di Truffle</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Con uno sguardo al futuro, Truffle sta evolvendo:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li><strong>Focus Multi-chain:</strong> Allargando i suoi orizzonti, Truffle sta spostando il suo focus per supportare più chain, enfatizzando la sicurezza.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Strategia di Co-opetizione:</strong> In una mossa unica, Truffle favorisce la compatibilità, permettendo agli sviluppatori di usarlo insieme a HardHat e Foundry.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Obiettivi a Livello Impresa:</strong> Nel suo nucleo, Truffle si immagina come la soluzione prediletta per lo sviluppo integrato, da un capo all’altro, di DApp a livello aziendale.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Panoramica:</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Considerato come la suite per eccellenza per lo sviluppo Ethereum, Truffle accompagna senza problemi gli sviluppatori dalla creazione al deployment del contratto.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading"><strong>Comandi Chiave:</strong></h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li><strong>Inizializza:</strong> <em>truffle init</em></li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Compila:</strong> <em>truffle compile</em></li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Migra:</strong> <em>truffle migrate</em></li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Testa:</strong> <em>truffle test</em></li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Strumenti per Sviluppatori:</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li><strong>Ganache:</strong> Una blockchain Ethereum personale per distribuire test e monitorare lo stato.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Drizzle:</strong> Librerie che rafforzano lo sviluppo front-end di DApp.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Scenario Pratico:</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Sviluppare una DApp di marketplace richiede spesso migrazioni sulla rete di test. Dopo aver scritto il contratto, eseguendo <em>truffle compile</em> e poi <em>truffle migrate –reset –network goerli</em> lo si distribuisce sulla testnet Goerli.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Vantaggi Tecnici:</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>Fornisce astrazioni di contratto integrate per web3.js.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Il debugging è arricchito da un debugger nativo.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Il Cruscotto Truffle e il “Truffle per VS Code” offrono un’esperienza sviluppatore migliorata.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Foundry</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">La Prospettiva di Foundry</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Storicamente, gli sviluppatori passavano da Truffle a HardHat in quanto quest’ultimo era un sistema meno “opinionato”. Ma con l’ecosistema Ethereum in pieno sviluppo, HardHat è diventato troppo prescrittivo. Di conseguenza, gli sviluppatori stanno ora affluendo verso Foundry per il suo approccio aperto. Cosa distingue Foundry?</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li><strong>Testing Rapido:</strong> I test Solidity di Foundry sono incredibilmente veloci, e introduce il fuzz testing.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Funzioni Avanzate:</strong> Foundry integra funzionalità interessanti come cheatcodes e i comandi di <em>cast</em>.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>“<em>Cheatcodes give you powerful assertions, the ability to alter the state of the EVM, mock data, and more.”</em></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><em>“cast – Perform Ethereum RPC calls from the comfort of your command line.”</em></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Panoramica:</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Servendo principalmente gli ecosistemi Substrate e Polkadot, Foundry è una manna per gli sviluppatori che puntano su queste piattaforme.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Comandi Chiave:</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li><strong>Inizializza:</strong> <em>foundry new my_project</em></li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Compila:</strong> <em>foundry build</em></li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Testa:</strong> f<em>oundry test</em></li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Strumenti per Sviluppatori:</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li><strong>Substrate Node Template:</strong> Ideale per inizializzare nodi Substrate.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Polkadot JS:</strong> Uno strumento per interagire con i nodi Substrate.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Scenario Pratico:</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Se si punta a lanciare una parachain su Polkadot, il Substrate Node Template di Foundry è uno strumento inestimabile. Una volta impostato il nodo, foundry test verifica la connettività.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Vantaggi Tecnici:</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>Eccelle nei test Solidity veloci e introduce il fuzz testing.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Funzionalità innovative come cheatcodes e comandi “cast”.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:heading {"level":1} --></p>
+<h1 class="wp-block-heading">Conclusione:</h1>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>La scelta tra HardHat, Truffle o Foundry dipende dalle esigenze specifiche del tuo progetto e dalle tue preferenze di sviluppo. Mentre il Web3 continua la sua crescita anche nel bear market, questi dinamici framework promettono di accompagnare al meglio il lavoro degli sviluppatori.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>

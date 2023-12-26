@@ -1,0 +1,29 @@
+---
+layout: post
+title: BitCoin is broken?
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: pending
+categories: []
+tags: []
+meta:
+  _edit_last: '48926058'
+  jabber_published: '1383646540'
+  _zemanta_has_recommendations: '1'
+  _elasticsearch_indexed_on: '2013-11-05 10:16:00'
+  _wpas_done_all: '1'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+---
+<p><a href="http://www.flickr.com/photos/63583766@N04/6809856791" target="_blank" rel="noopener"><img class="zemanta-img-inserted alignleft" title="BGFJ0R (CYBER ATTACK) ...item 2.. Watching the..." alt="BGFJ0R (CYBER ATTACK) ...item 2.. Watching the..." src="{{ site.baseurl }}/assets/6809856791_75b9f375d5_m.jpg" width="78" height="173" /></a></p>
+<p>La notizia di oggi è che un gruppo di ricercatori ha mostrato che BitCoin è vulnerabile ad un certo tipo di attacco. La cosa grave secondo la ricerca è che la vulnerabilità non risiede nell'implementazione ma nel principio stesso su cui la moneta è basata, e siccome questo principio è analogo per le monete cugine come Namecoin, Litecoin etc. in pratica tutte le cryptocurrency sono a rischio. Detto questo il mercato non sembra ancora aver reagito alla notizia, anzi il cambio BTC/USD è più alto di ieri.</p>
+<p>Un sunto dello studio si trova <a href="http://hackingdistributed.com/2013/11/04/bitcoin-is-broken/">qui</a>. Provo a spiegarlo per come l'ho capito io. In pratica Bitcoin si basa sul fatto che una transazione non può essere falsificata né revocata perché ogni blocco di transazioni prima di essere dichiarato ufficiale e condiviso tra tutti deve essere "risolto" attraverso un oneroso ciclo di calcoli chiamato proof-of-work.  Siccome ogni blocco di transazioni è legato al precedente in una catena di blocchi, modificare una transazione in modo arbitrario è considerato impraticabile da una singola entità o anche da un gruppo minoritario nella rete. Il protocollo BitCoin però ipotizza che ogni volta che un partecipante "risolve" per primo un blocco, questo venga condiviso con tutti, la testa della catena dei blocchi viene spostata in avanti, e tutti i partecipanti smettono di lavorare per risolvere il vecchio blocco e si concentrano su un nuovo blocco di transazioni. Questo sarebbe il comportamento "onesto" su cui si è basata la criptovaluta finora. Secondo lo studio se il partecipante che per primo risolve il blocco attuale non lo comunica, e segretamente inizia a lavorare su un blocco nuovo mentre tutti gli altri partecipanti continuano a lavorare su un blocco che ormai non è più attuale, il partecipante malevolo acquisisce un vantaggio nella competizione per creare nuovi blocchi e ottenere i relativi compensi (ogni blocco risolto porta come premio la generazione di nuovi BitCoin). Secondo lo studio questo vantaggio può rendere inaffidabile il sistema monetario basato su BitCoin. In attesa di ulteriori commenti e notizie passo e chiudo.</p>

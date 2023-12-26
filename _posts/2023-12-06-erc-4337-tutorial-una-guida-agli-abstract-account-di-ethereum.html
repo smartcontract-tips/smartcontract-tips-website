@@ -1,0 +1,245 @@
+---
+layout: post
+title: 'ERC-4337 Tutorial: Una guida agli abstract account di Ethereum'
+date: 2023-12-06 21:04:51.000000000 +01:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Approfondimenti
+tags: []
+meta:
+  ppma_authors_name: Redazione
+  _thumbnail_id: '6727'
+  _oembed_637a5006f05fa438344b50cfc6bc0c36: "{{unknown}}"
+  _last_editor_used_jetpack: block-editor
+  _edit_last: '48926058'
+  _aioseo_title: ''
+  _aioseo_description: ''
+  _aioseo_keywords: ''
+  _aioseo_og_title: "#post_title"
+  _aioseo_og_description: "#post_excerpt"
+  _aioseo_og_article_section: ''
+  _aioseo_og_article_tags: ''
+  _aioseo_twitter_title: ''
+  _aioseo_twitter_description: ''
+  ppma_disable_author_box: '0'
+  BS_author_type: BS_author_is_user
+  BS_guest_author_name: ''
+  BS_guest_author_url: ''
+  BS_guest_author_description: ''
+  BS_guest_author_image_id: ''
+author:
+  login: redazione
+  email: dcarboni+redazione@gmail.com
+  display_name: Redazione
+  first_name: Redazione
+  last_name: ''
+permalink: "/articoli/erc-4337-tutorial-una-guida-agli-abstract-account-di-ethereum/"
+excerpt: Benvenuti alla seconda parte della nostra esplorazione del rivoluzionario
+  protocollo di Account Abstraction ERC-4337 di Ethereum. Dopo aver esplorato le basi
+  teoriche nella nostra guida precedenteora ci concentriamo sul lato pratico di questa
+  innovazione. In questa guida, vi accompagneremo nel complesso processo di creazione
+  e lancio di uno smart contract conforme a ERC-4337, con un focus sull'utilizzo della
+  piattaforma Stackup. Questo articolo vi fornirà le conoscenze pratiche necessarie
+  per sfruttare efficacemente le capacità di ERC-4337, aprendo la strada a una gestione
+  degli account migliorata sulla rete Ethereum.
+---
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph {"className":"is-style-info"} --></p>
+<p class="is-style-info">Questo articolo richiede un livello di conoscenza avanzato, abbiamo pubblicato anche <a href="https://smartcontract.tips/articoli/erc-4337-account-abstraction/" title="Introduzione a ERC-4337, la specifica per l’Account Abstraction">una guida introduttiva</a>. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:jetpack/markdown {"source":"## Introduzione all'Account Abstraction\nBenvenuti alla seconda parte della nostra esplorazione del rivoluzionario protocollo di Account Abstraction ERC-4337 di Ethereum. Dopo aver esplorato le basi teoriche nella nostra guida precedenteora ci concentriamo sul lato pratico di questa innovazione. In questa guida, vi accompagneremo nel complesso processo di creazione e lancio di uno smart contract conforme a ERC-4337, con un focus sull'utilizzo della piattaforma Stackup. Questo articolo vi fornirà le conoscenze pratiche necessarie per sfruttare efficacemente le capacità di ERC-4337, aprendo la strada a una gestione degli account migliorata sulla rete Ethereum.\n\n## Componenti Essenziali di ERC-4337\n* **UserOperations**: Considerateli come la checklist del vostro account Ethereum, che comprende compiti come trasferimenti di denaro, interazioni con smart contract o una combinazione di azioni. A differenza dell'attuale sistema Ethereum, dove eseguite ogni compito separatamente, UserOperations di ERC-4337 vi permette di raggruppare varie azioni in un'unica operazione. Firmate questa operazione combinata e la rete Ethereum se ne occupa. UserOperations mantengono una struttura simile alle attuali transazioni Ethereum, ma incorporano una logica aggiuntiva specifica per ERC-4337.\n\n* **Bundlers**: Dopo aver preparato il vostro UserOperation, i Bundlers sono quelli che lo inseriscono nella rete Ethereum. Agiscono come intermediari, raccogliendo più UserOperations, raggruppandoli e poi inviandoli alla rete. Questi possono essere validatori o ricercatori di MEV.\n \n* **EntryPoint**: Questo smart contract funge da portiere della rete Ethereum. Quando i Bundlers inviano UserOperations, l'EntryPoint li spacchetta ed esegue. Se trova un'operazione che non funziona, può annullare le azioni di quell'operazione, mantenendo l'integrità e l'affidabilità della transazione.\n \n* **Contract Account**: Pensate a questo come al vostro aiutante automatizzato nella rete Ethereum. Diversamente dagli account standard che richiedono l'iniziativa manuale, i Contract Accounts possono eseguire autonomamente azioni secondo le istruzioni ricevute, come quelle di un UserOperation. Possono interagire con altri contratti, gestire asset e prendere decisioni basate sulla loro logica programmata, automatizzando e semplificando complesse transazioni Ethereum.\n\n* **Paymaster**: Un componente opzionale che può coprire le spese di transazione per conto della vostra transazione. Si impegna a rimborsare il Bundler per i costi del gas. Le condizioni per questo rimborso sono delineate nello smart contract.\n \n* **Aggregators**: Questi smart contract opzionali lavorano con il Contract Account per convalidare collettivamente le firme da più UserOperations.\n \nIn sostanza, ERC-4337 introduce nuovi elementi all'interno dell'ecosistema Ethereum, ognuno con un ruolo specifico per facilitare transazioni più flessibili e sicure.\n\n## Requisiti\n* Software Yarn installato sul tuo sistema\n\n* Accesso alla chiave API di Stackup:\nhttps://app.stackup.sh/\n\n* Configurazione del repository Stackup\nhttps://github.com/stackup-wallet/erc-4337-examples\n\n* VScode o qualsiasi altro editor di codice.\n\n* Una finestra di terminale operativa per eseguire comandi\n\n## SimpleAccount.sol: Un Esempio Base di Contratto ERC-4337\n\nIl team principale di Ethereum ha sviluppato un esempio semplice e minimale di un contratto conforme all'ERC-4337, chiamato SimpleAccount.sol.\n\nhttps://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/samples/SimpleAccount.sol\n\nDedicheremo del tempo all'esame del codice fornito di seguito. Anche se non è necessario replicare questo codice in un file, la sua revisione ci aiuterà a comprendere meglio le sue funzionalità."} --></p>
+<div class="wp-block-jetpack-markdown">
+<h2>Introduzione all’Account Abstraction</h2>
+<p>Benvenuti alla seconda parte della nostra esplorazione del rivoluzionario protocollo di Account Abstraction ERC-4337 di Ethereum. Dopo aver esplorato le basi teoriche nella nostra guida precedenteora ci concentriamo sul lato pratico di questa innovazione. In questa guida, vi accompagneremo nel complesso processo di creazione e lancio di uno smart contract conforme a ERC-4337, con un focus sull’utilizzo della piattaforma Stackup. Questo articolo vi fornirà le conoscenze pratiche necessarie per sfruttare efficacemente le capacità di ERC-4337, aprendo la strada a una gestione degli account migliorata sulla rete Ethereum.</p>
+<h2>Componenti Essenziali di ERC-4337</h2>
+<ul>
+<li>
+<p><strong>UserOperations</strong>: Considerateli come la checklist del vostro account Ethereum, che comprende compiti come trasferimenti di denaro, interazioni con smart contract o una combinazione di azioni. A differenza dell’attuale sistema Ethereum, dove eseguite ogni compito separatamente, UserOperations di ERC-4337 vi permette di raggruppare varie azioni in un’unica operazione. Firmate questa operazione combinata e la rete Ethereum se ne occupa. UserOperations mantengono una struttura simile alle attuali transazioni Ethereum, ma incorporano una logica aggiuntiva specifica per ERC-4337.</p>
+</li>
+<li>
+<p><strong>Bundlers</strong>: Dopo aver preparato il vostro UserOperation, i Bundlers sono quelli che lo inseriscono nella rete Ethereum. Agiscono come intermediari, raccogliendo più UserOperations, raggruppandoli e poi inviandoli alla rete. Questi possono essere validatori o ricercatori di MEV.</p>
+</li>
+<li>
+<p><strong>EntryPoint</strong>: Questo smart contract funge da portiere della rete Ethereum. Quando i Bundlers inviano UserOperations, l’EntryPoint li spacchetta ed esegue. Se trova un’operazione che non funziona, può annullare le azioni di quell’operazione, mantenendo l’integrità e l’affidabilità della transazione.</p>
+</li>
+<li>
+<p><strong>Contract Account</strong>: Pensate a questo come al vostro aiutante automatizzato nella rete Ethereum. Diversamente dagli account standard che richiedono l’iniziativa manuale, i Contract Accounts possono eseguire autonomamente azioni secondo le istruzioni ricevute, come quelle di un UserOperation. Possono interagire con altri contratti, gestire asset e prendere decisioni basate sulla loro logica programmata, automatizzando e semplificando complesse transazioni Ethereum.</p>
+</li>
+<li>
+<p><strong>Paymaster</strong>: Un componente opzionale che può coprire le spese di transazione per conto della vostra transazione. Si impegna a rimborsare il Bundler per i costi del gas. Le condizioni per questo rimborso sono delineate nello smart contract.</p>
+</li>
+<li>
+<p><strong>Aggregators</strong>: Questi smart contract opzionali lavorano con il Contract Account per convalidare collettivamente le firme da più UserOperations.</p>
+</li>
+</ul>
+<p>In sostanza, ERC-4337 introduce nuovi elementi all’interno dell’ecosistema Ethereum, ognuno con un ruolo specifico per facilitare transazioni più flessibili e sicure.</p>
+<h2>Requisiti</h2>
+<ul>
+<li>
+<p>Software Yarn installato sul tuo sistema</p>
+</li>
+<li>
+<p>Accesso alla chiave API di Stackup:<br />
+https://app.stackup.sh/</p>
+</li>
+<li>
+<p>Configurazione del repository Stackup<br />
+https://github.com/stackup-wallet/erc-4337-examples</p>
+</li>
+<li>
+<p>VScode o qualsiasi altro editor di codice.</p>
+</li>
+<li>
+<p>Una finestra di terminale operativa per eseguire comandi</p>
+</li>
+</ul>
+<h2>SimpleAccount.sol: Un Esempio Base di Contratto ERC-4337</h2>
+<p>Il team principale di Ethereum ha sviluppato un esempio semplice e minimale di un contratto conforme all’ERC-4337, chiamato SimpleAccount.sol.</p>
+<p>https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/samples/SimpleAccount.sol</p>
+<p>Dedicheremo del tempo all’esame del codice fornito di seguito. Anche se non è necessario replicare questo codice in un file, la sua revisione ci aiuterà a comprendere meglio le sue funzionalità.</p>
+</div>
+<p><!-- /wp:jetpack/markdown --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading" id="SimpleAccountsol-A-Basic-ERC-4337-Contract-Illustration"><a href="https://hackmd.io/Mzg62rCpS1me1GhRBDqpFA#SimpleAccountsol-A-Basic-ERC-4337-Contract-Illustration"></a></h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:embed {"url":"https://gist.github.com/ddbit/ab68a8187c2d38d72e8ddaf795084007","type":"rich","providerNameSlug":"handler-delloggetto-incorporato"} --></p>
+<figure class="wp-block-embed is-type-rich is-provider-handler-delloggetto-incorporato wp-block-embed-handler-delloggetto-incorporato">
+<div class="wp-block-embed__wrapper">
+https://gist.github.com/ddbit/ab68a8187c2d38d72e8ddaf795084007
+</div>
+</figure>
+<p><!-- /wp:embed --></p>
+<p><!-- wp:separator --></p>
+<hr class="wp-block-separator has-alpha-channel-opacity" />
+<!-- /wp:separator --></p>
+<p><!-- wp:jetpack/markdown {"source":"## Com'è fatto un contratto ERC-4337? Vediamo i dettagli del SimpleAccount\nIl contratto `SimpleAccount` presentato è configurato per essere gestito da un indirizzo proprietario esterno. È adattato per l'interazione con un contratto `EntryPoint`, aderendo alle linee guida dell'ERC-4337. Questa configurazione permette al proprietario di avviare transazioni senza incorrere personalmente in spese di gas. Il contratto impiega le librerie di OpenZeppelin per funzionalità avanzate, come la validazione della firma crittografica (`ECDSA`) e il supporto per modelli di contratti aggiornabili (`UUPSUpgradeable` e `Initializable`). Inoltre, incorpora `BaseAccount` e un gestore di callback. `BaseAccount` è fondamentale, mantenendo il nonce dello smart contract, verificando il payload di UserOperation, facilitando le interazioni con `EntryPoint`, gestendo i pagamenti dell'esecuzione (tramite `payPrefund`()), e fornendo un framework per implementazioni su misura di funzioni come `_validateSignature()`, `_validateNonce()`, e `_payPrefund()`.\n\nUna variabile di stato chiave, owner, conserva l'indirizzo del proprietario dell'account. `_entryPoint` è un collegamento immutabile a un contratto esterno, designato come `EntryPoint`.\n\nDue funzioni principali, `execute` ed `executeBatch`, sono integrali a questo contratto. Consentono al proprietario o al `EntryPoint` del sistema di relay di inviare transazioni individuali o raggruppate. Queste funzioni includono salvaguardie, verificando che l'iniziatore sia o l'`EntryPoint` o il proprietario, prima di eseguire qualsiasi processo.\n\nL'aggiornabilità è una caratteristica notevole di questo contratto, consentendo il passaggio a un nuovo proprietario. Tuttavia, qualsiasi modifica a `EntryPoint` (come cambiamenti a `_entryPoint`) richiede il dispiegamento di un nuovo account di smart contract.\n\nPer l'applicazione pratica, utilizzeremo il SDK di Stackup, che semplifica il dispiegamento di un contratto compatibile con l'ERC-4337. Questo ci permette di eseguire efficientemente operazioni come l'approvazione di token ERC-20 e la gestione di trasferimenti di ETH e token.\n\n## Come Creare Contratti ERC-4337 Utilizzando Stackup\nIn questo segmento, ci concentriamo sulla costruzione di un contratto conforme all'ERC-4337 utilizzando Stackup (https://docs.stackup.sh/). Questo particolare contratto serve come un eccellente template di base per gli sviluppatori che si avventurano nell'Astrazione degli Account con Stackup.\n\n### Impostazioni per gli Sviluppatori\n1. Inizia aprendo la finestra del terminale ed eseguendo i seguenti comandi:\n\n- Impostare una copia locale di un progetto ERC-4337 di esempio da Stackup. Ecco una spiegazione di ogni comando:\n\n`git clone https://github.com/stackup-wallet/erc-4337-examples.git:`\n\n- Questo comando utilizza Git per clonare il repository. Il repository contiene codice di esempio per progetti ERC-4337 sviluppati da Stackup.\n```\ncd erc-4337-examples:\n```\n\n- Dopo aver clonato il repository, questo comando cambia la directory corrente nel terminale alla nuova directory 'erc-4337-examples' creata. Questa directory contiene i file del progetto clonato.\n```\nyarn install:\n```\n\n- Questo comando utilizza Yarn, un gestore di pacchetti per JavaScript, per installare tutte le dipendenze richieste per il progetto ERC-4337. Queste dipendenze sono specificate in un file chiamato 'package.json' nella directory del progetto. Eseguendo yarn install ti assicuri di avere tutti i pacchetti necessari e le loro versioni corrette per eseguire e lavorare sul progetto.\n\n2. Andando avanti, procederemo con l'impostazione del nostro contratto ERC-4337. Questo viene realizzato utilizzando il comando di inizializzazione fornito da Yarn:\n```\nyarn run init\n```\n- Questo comando è un passaggio cruciale nel processo di configurazione. Inizializza la configurazione del progetto per il tuo contratto ERC-4337. Essenzialmente, quando esegui `yarn run init`, viene eseguito uno script predefinito nel file `package.json` del progetto. Questo script è progettato per configurare vari aspetti dell'ambiente ERC-4337, come parametri predefiniti, impostazioni di rete e altre configurazioni necessarie affinché il contratto funzioni correttamente all'interno del framework Ethereum. Garantisce che il tuo ambiente di sviluppo sia correttamente allineato con i requisiti dello standard ERC-4337, facilitando un processo di sviluppo più fluido mentre inizi a costruire e personalizzare il tuo smart contract.\n\nAll'esecuzione del comando di inizializzazione viene generato un file `config.json`. Questo file contiene importanti valori di configurazione per il tuo contratto ERC-4337, come:\n\n- `rpcUrl`: Questo campo specifica l'URL della Remote Procedure Call (RPC), essenziale per supportare i metodi invocati dal contratto ERC-4337. Per popolare correttamente questo campo, avrai bisogno di una chiave API da Stackup.\n\n- `signingKey`: Questa chiave è fondamentale per creare firme per le UserOperations. Gioca un ruolo doppio essendo utilizzata anche dall'account contratto per la validazione delle transazioni.\n\n- `paymaster.rpcUrl`: Questo URL è specifico per il componente Paymaster del contratto ERC-4337. È cruciale affinché il Paymaster interagisca con la rete e svolga le sue funzioni.\n\n- `paymaster.context`: Questo è un campo flessibile che varia a seconda del Paymaster specifico con cui stai lavorando. È progettato per contenere qualsiasi informazione contestuale necessaria per l'operazione del Paymaster all'interno del contratto.\n\nCiascuno di questi campi gioca un ruolo specifico nella configurazione del contratto ERC-4337, garantendo che operi correttamente all'interno della rete Ethereum e interagisca efficacemente con altri componenti come UserOperations e Paymasters.\n\n## Generare una Chiave API per Stackup\n\n3. Una volta che il file `config.json` è a posto, è il momento di inserire dettagli specifici come l'URL RPC. Inizia visitando https://app.stackup.sh/sign-in e registrati per un account. Dopo la registrazione, ti verrà chiesto di scegliere una rete blockchain. Per questo tutorial, scegli la blockchain Ethereum Sepolia. Clicca su 'Avanti' per procedere. Successivamente, accedi alla tua nuova istanza bundler creata e seleziona l'opzione 'Chiave API' per ottenere la tua chiave. Copia questa Chiave API e torna al tuo file `config.json`, dove inserirai questa chiave nei campi rpcUrl pertinenti.\n\nIl file `config.json` completato dovrebbe avere la seguente struttura:\n``` json\n{\n  \u0022rpcUrl\u0022: \u0022https://api.stackup.sh/v1/node/b58...ad16\u0022,\n  \u0022signingKey\u0022: \u00220xc3e72...17bc\u0022,\n  \u0022paymaster\u0022: {\n    \u0022rpcUrl\u0022: \u0022https://api.stackup.sh/v1/paymaster/8f92...84d74\u0022,\n    \u0022context\u0022: {}\n  }\n}\n```\n\n## Creazione dell'indirizzo dello Smartcontract\n\n4. Ora che la nostra configurazione è stabilita, è il momento di generare un account smart contract, come specificato nel nostro file di configurazione. Per fare ciò, esegui il seguente comando nel tuo terminale:\n\n`yarn run simpleAccount address`\n\n- Questo comando produrrà un indirizzo, che è l'identificativo per l'account smart contract che stai per creare. È importante notare che, a questo stadio, l'account smart contract non è ancora stato dispiegato sulla rete Ethereum. Tuttavia, generare questo indirizzo è un passaggio cruciale, in quanto ci permette di conoscere in anticipo l'indirizzo del nostro account smart contract. Questo passaggio preliminare è essenziale per organizzare e preparare il successivo processo di dispiegamento dello smart contract.\n\nDopo aver eseguito il comando, il tuo terminale dovrebbe visualizzare un output simile al seguente:\n\n```\n$ ts-node scripts/simpleAccount/index.ts address\nIndirizzo SimpleAccount: 0x37662167966c7d2566b28ed8d4bea9d1d09d3ffd\n Completato in 1.75s.\n```\n\nQuesto output indica che il comando per generare l'indirizzo per il tuo SimpleAccount è stato eseguito con successo. L'indirizzo visualizzato (`0x37662167966c7d2566b28ed8d4bea9d1d09d3ffd`) è un indirizzo Ethereum generato casualmente, che funge da segnaposto per l'effettivo indirizzo che verrà assegnato al tuo account smart contract. Viene anche indicato il tempo di completamento del processo, dimostrando l'efficienza e la rapidità dell'operazione.\n\n- Nella sezione successiva, ci concentreremo sull'aggiungere fondi all'indirizzo SimpleAccount appena creato. È importante ricordare, tuttavia, che lo smart contract stesso non è ancora stato dispiegato.\n\n## Aggiungere Fondi all'Account Smart Contract Utilizzando un Faucet\n\nProcediamo con l'aggiungere fondi all'indirizzo del nostro account smart contract (per esempio, SimpleAccount) che abbiamo generato in precedenza.\n\nPer fare ciò, potresti utilizzare il QuickNode Multi-Chain Faucet (https://faucet.quicknode.com/drip). Questo ti permette di ottenere un po' di ETH testnet, che puoi inizialmente inviare al tuo portafoglio personale. Da lì, puoi trasferirlo all'indirizzo di SimpleAccount. È importante essere consapevoli del fatto che il Faucet richiede un saldo mainnet nell'indirizzo che deve essere finanziato. In alternativa, se possiedi già ETH di test in un diverso portafoglio, puoi trasferirlo direttamente all'indirizzo del tuo smart contract (SimpleAccount), evitando la necessità di utilizzare inizialmente il Faucet.\n\n## Avviare una Transazione da SimpleAccount a un Diverso Indirizzo\n\nOra che il nostro account smart contract, come SimpleAccount, è sufficientemente finanziato, è il momento di effettuare un trasferimento da questo account. Suggeriamo di assicurarti di avere almeno 0.01 ETH disponibili per testare un trasferimento di ETH, tenendo in mente le ulteriori spese di gas. Per iniziare, inserisci il seguente comando nel tuo terminale. Assicurati di sostituire i termini segnaposto come {`address`} e {`eth`} con i valori effettivi che intendi utilizzare.\n`yarn run simpleAccount transfer \u002d\u002dto {address} \u002d\u002damount {eth}`\n\nIl comando fornito viene utilizzato per avviare un trasferimento di Ethereum (ETH) dal tuo account smart contract (in questo caso, `SimpleAccount`) a un altro indirizzo Ethereum. Ecco una spiegazione dei suoi componenti:\n\n- `yarn run simpleAccount transfer`: Questa parte del comando indica a Yarn di eseguire la funzione transfer all'interno dello script simpleAccount. Lo script simpleAccount fa parte del tuo progetto ed è progettato per interagire con lo smart contract SimpleAccount.\n\n- `\u002d\u002dto {address}`: Questo flag specifica l'indirizzo Ethereum del destinatario per il trasferimento. Devi sostituire `{address}` con l'indirizzo Ethereum effettivo del destinatario a cui vuoi inviare ETH.\n\n- `\u002d\u002damount {eth}`: Qui, {`eth`} dovrebbe essere sostituito con la quantità di Ethereum che desideri trasferire. Questo valore è in ETH (la criptovaluta nativa di Ethereum). Ad esempio, se vuoi trasferire 0.02 ETH, sostituiresti {`eth`} con `0.02.`\n\nÈ importante assicurarsi che il `SimpleAccount` abbia abbastanza ETH per coprire sia l'importo che intendi trasferire sia le spese di gas associate alla transazione. Questo comando avvierà una transazione sulla rete Ethereum, trasferendo la quantità specificata di ETH dal tuo `SimpleAccount` all'indirizzo del destinatario fornito.\n\nIl processo include:\n\n- Accettare l'indirizzo di destinazione `(t)` e la quantità di ether `(amt)` come input nella funzione principale.\n- Eseguire una verifica per qualsiasi middleware, particolarmente rilevante se è coinvolto un paymaster.\n- Inizializzare un contratto SimpleAccount utilizzando le impostazioni specificate nel file `config.json`.\n- Analizzare ed elaborare i valori forniti di indirizzo e quantità.\n- Firmare la transazione e invocare la funzione `execute` con i valori sopra menzionati.\n- Generare e restituire sia l'hash dell'UserOperation sia l'hash della transazione come output.\n\n## Il Processo di Transazione di uno Smart Contract Account\n\nIn una panoramica generale, quando viene avviato un trasferimento da un account smart contract, si svolge un processo complesso in background. Inizia con la creazione di un oggetto UserOperation, che delinea la transazione desiderata. Questo oggetto viene poi inviato a un gruppo di Bundlers, entità responsabili della gestione di queste operazioni. I Bundlers, dopo aver ricevuto l'UserOperation, creano una transazione che interagisce con un contratto specifico, comunemente noto come il contratto EntryPoint. Questo contratto svolge un ruolo fondamentale nell'esecuzione delle UserOperations raggruppate. È presso questo EntryPoint che la transazione viene elaborata, eseguendo il trasferimento secondo le istruzioni nell'UserOperation. Questo processo coinvolge vari trasferimenti, chiamate a contratti e la gestione delle spese di gas, tutti orchestrati per facilitare l'esecuzione fluida del trasferimento dall'account smart contract alla destinazione specificata.\n\n## Conclusione\nHai configurato con successo un account smart contract utilizzando ERC-4337 e Stackup, e hai anche realizzato un trasferimento di fondi da questo account a un diverso indirizzo. Anche se questa procedura potrebbe sembrare semplice e realizzabile con o senza ERC-4337, è importante riconoscere la più ampia gamma di opportunità che ERC-4337 porta. Questo include la capacità di avere transazioni con spese di gas sponsorizzate e la capacità di gestire transazioni raggruppate, aprendo un nuovo regno di funzionalità ed efficienze nelle tue interazioni con gli smart contract."} --></p>
+<div class="wp-block-jetpack-markdown">
+<h2>Com’è fatto un contratto ERC-4337? Vediamo i dettagli del SimpleAccount</h2>
+<p>Il contratto <code>SimpleAccount</code> presentato è configurato per essere gestito da un indirizzo proprietario esterno. È adattato per l’interazione con un contratto <code>EntryPoint</code>, aderendo alle linee guida dell’ERC-4337. Questa configurazione permette al proprietario di avviare transazioni senza incorrere personalmente in spese di gas. Il contratto impiega le librerie di OpenZeppelin per funzionalità avanzate, come la validazione della firma crittografica (<code>ECDSA</code>) e il supporto per modelli di contratti aggiornabili (<code>UUPSUpgradeable</code> e <code>Initializable</code>). Inoltre, incorpora <code>BaseAccount</code> e un gestore di callback. <code>BaseAccount</code> è fondamentale, mantenendo il nonce dello smart contract, verificando il payload di UserOperation, facilitando le interazioni con <code>EntryPoint</code>, gestendo i pagamenti dell’esecuzione (tramite <code>payPrefund</code>()), e fornendo un framework per implementazioni su misura di funzioni come <code>_validateSignature()</code>, <code>_validateNonce()</code>, e <code>_payPrefund()</code>.</p>
+<p>Una variabile di stato chiave, owner, conserva l’indirizzo del proprietario dell’account. <code>_entryPoint</code> è un collegamento immutabile a un contratto esterno, designato come <code>EntryPoint</code>.</p>
+<p>Due funzioni principali, <code>execute</code> ed <code>executeBatch</code>, sono integrali a questo contratto. Consentono al proprietario o al <code>EntryPoint</code> del sistema di relay di inviare transazioni individuali o raggruppate. Queste funzioni includono salvaguardie, verificando che l’iniziatore sia o l’<code>EntryPoint</code> o il proprietario, prima di eseguire qualsiasi processo.</p>
+<p>L’aggiornabilità è una caratteristica notevole di questo contratto, consentendo il passaggio a un nuovo proprietario. Tuttavia, qualsiasi modifica a <code>EntryPoint</code> (come cambiamenti a <code>_entryPoint</code>) richiede il dispiegamento di un nuovo account di smart contract.</p>
+<p>Per l’applicazione pratica, utilizzeremo il SDK di Stackup, che semplifica il dispiegamento di un contratto compatibile con l’ERC-4337. Questo ci permette di eseguire efficientemente operazioni come l’approvazione di token ERC-20 e la gestione di trasferimenti di ETH e token.</p>
+<h2>Come Creare Contratti ERC-4337 Utilizzando Stackup</h2>
+<p>In questo segmento, ci concentriamo sulla costruzione di un contratto conforme all’ERC-4337 utilizzando Stackup (https://docs.stackup.sh/). Questo particolare contratto serve come un eccellente template di base per gli sviluppatori che si avventurano nell’Astrazione degli Account con Stackup.</p>
+<h3>Impostazioni per gli Sviluppatori</h3>
+<ol>
+<li>Inizia aprendo la finestra del terminale ed eseguendo i seguenti comandi:</li>
+</ol>
+<ul>
+<li>Impostare una copia locale di un progetto ERC-4337 di esempio da Stackup. Ecco una spiegazione di ogni comando:</li>
+</ul>
+<p><code>git clone https://github.com/stackup-wallet/erc-4337-examples.git:</code></p>
+<ul>
+<li>Questo comando utilizza Git per clonare il repository. Il repository contiene codice di esempio per progetti ERC-4337 sviluppati da Stackup.</li>
+</ul>
+<pre><code>cd erc-4337-examples:
+</code></pre>
+<ul>
+<li>Dopo aver clonato il repository, questo comando cambia la directory corrente nel terminale alla nuova directory ‘erc-4337-examples’ creata. Questa directory contiene i file del progetto clonato.</li>
+</ul>
+<pre><code>yarn install:
+</code></pre>
+<ul>
+<li>Questo comando utilizza Yarn, un gestore di pacchetti per JavaScript, per installare tutte le dipendenze richieste per il progetto ERC-4337. Queste dipendenze sono specificate in un file chiamato ‘package.json’ nella directory del progetto. Eseguendo yarn install ti assicuri di avere tutti i pacchetti necessari e le loro versioni corrette per eseguire e lavorare sul progetto.</li>
+</ul>
+<ol start="2">
+<li>Andando avanti, procederemo con l’impostazione del nostro contratto ERC-4337. Questo viene realizzato utilizzando il comando di inizializzazione fornito da Yarn:</li>
+</ol>
+<pre><code>yarn run init
+</code></pre>
+<ul>
+<li>Questo comando è un passaggio cruciale nel processo di configurazione. Inizializza la configurazione del progetto per il tuo contratto ERC-4337. Essenzialmente, quando esegui <code>yarn run init</code>, viene eseguito uno script predefinito nel file <code>package.json</code> del progetto. Questo script è progettato per configurare vari aspetti dell’ambiente ERC-4337, come parametri predefiniti, impostazioni di rete e altre configurazioni necessarie affinché il contratto funzioni correttamente all’interno del framework Ethereum. Garantisce che il tuo ambiente di sviluppo sia correttamente allineato con i requisiti dello standard ERC-4337, facilitando un processo di sviluppo più fluido mentre inizi a costruire e personalizzare il tuo smart contract.</li>
+</ul>
+<p>All’esecuzione del comando di inizializzazione viene generato un file <code>config.json</code>. Questo file contiene importanti valori di configurazione per il tuo contratto ERC-4337, come:</p>
+<ul>
+<li>
+<p><code>rpcUrl</code>: Questo campo specifica l’URL della Remote Procedure Call (RPC), essenziale per supportare i metodi invocati dal contratto ERC-4337. Per popolare correttamente questo campo, avrai bisogno di una chiave API da Stackup.</p>
+</li>
+<li>
+<p><code>signingKey</code>: Questa chiave è fondamentale per creare firme per le UserOperations. Gioca un ruolo doppio essendo utilizzata anche dall’account contratto per la validazione delle transazioni.</p>
+</li>
+<li>
+<p><code>paymaster.rpcUrl</code>: Questo URL è specifico per il componente Paymaster del contratto ERC-4337. È cruciale affinché il Paymaster interagisca con la rete e svolga le sue funzioni.</p>
+</li>
+<li>
+<p><code>paymaster.context</code>: Questo è un campo flessibile che varia a seconda del Paymaster specifico con cui stai lavorando. È progettato per contenere qualsiasi informazione contestuale necessaria per l’operazione del Paymaster all’interno del contratto.</p>
+</li>
+</ul>
+<p>Ciascuno di questi campi gioca un ruolo specifico nella configurazione del contratto ERC-4337, garantendo che operi correttamente all’interno della rete Ethereum e interagisca efficacemente con altri componenti come UserOperations e Paymasters.</p>
+<h2>Generare una Chiave API per Stackup</h2>
+<ol start="3">
+<li>Una volta che il file <code>config.json</code> è a posto, è il momento di inserire dettagli specifici come l’URL RPC. Inizia visitando https://app.stackup.sh/sign-in e registrati per un account. Dopo la registrazione, ti verrà chiesto di scegliere una rete blockchain. Per questo tutorial, scegli la blockchain Ethereum Sepolia. Clicca su ‘Avanti’ per procedere. Successivamente, accedi alla tua nuova istanza bundler creata e seleziona l’opzione ‘Chiave API’ per ottenere la tua chiave. Copia questa Chiave API e torna al tuo file <code>config.json</code>, dove inserirai questa chiave nei campi rpcUrl pertinenti.</li>
+</ol>
+<p>Il file <code>config.json</code> completato dovrebbe avere la seguente struttura:</p>
+<pre><code class="language-json">{
+  &quot;rpcUrl&quot;: &quot;https://api.stackup.sh/v1/node/b58...ad16&quot;,
+  &quot;signingKey&quot;: &quot;0xc3e72...17bc&quot;,
+  &quot;paymaster&quot;: {
+    &quot;rpcUrl&quot;: &quot;https://api.stackup.sh/v1/paymaster/8f92...84d74&quot;,
+    &quot;context&quot;: {}
+  }
+}
+</code></pre>
+<h2>Creazione dell’indirizzo dello Smartcontract</h2>
+<ol start="4">
+<li>Ora che la nostra configurazione è stabilita, è il momento di generare un account smart contract, come specificato nel nostro file di configurazione. Per fare ciò, esegui il seguente comando nel tuo terminale:</li>
+</ol>
+<p><code>yarn run simpleAccount address</code></p>
+<ul>
+<li>Questo comando produrrà un indirizzo, che è l’identificativo per l’account smart contract che stai per creare. È importante notare che, a questo stadio, l’account smart contract non è ancora stato dispiegato sulla rete Ethereum. Tuttavia, generare questo indirizzo è un passaggio cruciale, in quanto ci permette di conoscere in anticipo l’indirizzo del nostro account smart contract. Questo passaggio preliminare è essenziale per organizzare e preparare il successivo processo di dispiegamento dello smart contract.</li>
+</ul>
+<p>Dopo aver eseguito il comando, il tuo terminale dovrebbe visualizzare un output simile al seguente:</p>
+<pre><code>$ ts-node scripts/simpleAccount/index.ts address
+Indirizzo SimpleAccount: 0x37662167966c7d2566b28ed8d4bea9d1d09d3ffd
+ Completato in 1.75s.
+</code></pre>
+<p>Questo output indica che il comando per generare l’indirizzo per il tuo SimpleAccount è stato eseguito con successo. L’indirizzo visualizzato (<code>0x37662167966c7d2566b28ed8d4bea9d1d09d3ffd</code>) è un indirizzo Ethereum generato casualmente, che funge da segnaposto per l’effettivo indirizzo che verrà assegnato al tuo account smart contract. Viene anche indicato il tempo di completamento del processo, dimostrando l’efficienza e la rapidità dell’operazione.</p>
+<ul>
+<li>Nella sezione successiva, ci concentreremo sull’aggiungere fondi all’indirizzo SimpleAccount appena creato. È importante ricordare, tuttavia, che lo smart contract stesso non è ancora stato dispiegato.</li>
+</ul>
+<h2>Aggiungere Fondi all’Account Smart Contract Utilizzando un Faucet</h2>
+<p>Procediamo con l’aggiungere fondi all’indirizzo del nostro account smart contract (per esempio, SimpleAccount) che abbiamo generato in precedenza.</p>
+<p>Per fare ciò, potresti utilizzare il QuickNode Multi-Chain Faucet (https://faucet.quicknode.com/drip). Questo ti permette di ottenere un po’ di ETH testnet, che puoi inizialmente inviare al tuo portafoglio personale. Da lì, puoi trasferirlo all’indirizzo di SimpleAccount. È importante essere consapevoli del fatto che il Faucet richiede un saldo mainnet nell’indirizzo che deve essere finanziato. In alternativa, se possiedi già ETH di test in un diverso portafoglio, puoi trasferirlo direttamente all’indirizzo del tuo smart contract (SimpleAccount), evitando la necessità di utilizzare inizialmente il Faucet.</p>
+<h2>Avviare una Transazione da SimpleAccount a un Diverso Indirizzo</h2>
+<p>Ora che il nostro account smart contract, come SimpleAccount, è sufficientemente finanziato, è il momento di effettuare un trasferimento da questo account. Suggeriamo di assicurarti di avere almeno 0.01 ETH disponibili per testare un trasferimento di ETH, tenendo in mente le ulteriori spese di gas. Per iniziare, inserisci il seguente comando nel tuo terminale. Assicurati di sostituire i termini segnaposto come {<code>address</code>} e {<code>eth</code>} con i valori effettivi che intendi utilizzare.<br />
+<code>yarn run simpleAccount transfer --to {address} --amount {eth}</code></p>
+<p>Il comando fornito viene utilizzato per avviare un trasferimento di Ethereum (ETH) dal tuo account smart contract (in questo caso, <code>SimpleAccount</code>) a un altro indirizzo Ethereum. Ecco una spiegazione dei suoi componenti:</p>
+<ul>
+<li>
+<p><code>yarn run simpleAccount transfer</code>: Questa parte del comando indica a Yarn di eseguire la funzione transfer all’interno dello script simpleAccount. Lo script simpleAccount fa parte del tuo progetto ed è progettato per interagire con lo smart contract SimpleAccount.</p>
+</li>
+<li>
+<p><code>--to {address}</code>: Questo flag specifica l’indirizzo Ethereum del destinatario per il trasferimento. Devi sostituire <code>{address}</code> con l’indirizzo Ethereum effettivo del destinatario a cui vuoi inviare ETH.</p>
+</li>
+<li>
+<p><code>--amount {eth}</code>: Qui, {<code>eth</code>} dovrebbe essere sostituito con la quantità di Ethereum che desideri trasferire. Questo valore è in ETH (la criptovaluta nativa di Ethereum). Ad esempio, se vuoi trasferire 0.02 ETH, sostituiresti {<code>eth</code>} con <code>0.02.</code></p>
+</li>
+</ul>
+<p>È importante assicurarsi che il <code>SimpleAccount</code> abbia abbastanza ETH per coprire sia l’importo che intendi trasferire sia le spese di gas associate alla transazione. Questo comando avvierà una transazione sulla rete Ethereum, trasferendo la quantità specificata di ETH dal tuo <code>SimpleAccount</code> all’indirizzo del destinatario fornito.</p>
+<p>Il processo include:</p>
+<ul>
+<li>Accettare l’indirizzo di destinazione <code>(t)</code> e la quantità di ether <code>(amt)</code> come input nella funzione principale.</li>
+<li>Eseguire una verifica per qualsiasi middleware, particolarmente rilevante se è coinvolto un paymaster.</li>
+<li>Inizializzare un contratto SimpleAccount utilizzando le impostazioni specificate nel file <code>config.json</code>.</li>
+<li>Analizzare ed elaborare i valori forniti di indirizzo e quantità.</li>
+<li>Firmare la transazione e invocare la funzione <code>execute</code> con i valori sopra menzionati.</li>
+<li>Generare e restituire sia l’hash dell’UserOperation sia l’hash della transazione come output.</li>
+</ul>
+<h2>Il Processo di Transazione di uno Smart Contract Account</h2>
+<p>In una panoramica generale, quando viene avviato un trasferimento da un account smart contract, si svolge un processo complesso in background. Inizia con la creazione di un oggetto UserOperation, che delinea la transazione desiderata. Questo oggetto viene poi inviato a un gruppo di Bundlers, entità responsabili della gestione di queste operazioni. I Bundlers, dopo aver ricevuto l’UserOperation, creano una transazione che interagisce con un contratto specifico, comunemente noto come il contratto EntryPoint. Questo contratto svolge un ruolo fondamentale nell’esecuzione delle UserOperations raggruppate. È presso questo EntryPoint che la transazione viene elaborata, eseguendo il trasferimento secondo le istruzioni nell’UserOperation. Questo processo coinvolge vari trasferimenti, chiamate a contratti e la gestione delle spese di gas, tutti orchestrati per facilitare l’esecuzione fluida del trasferimento dall’account smart contract alla destinazione specificata.</p>
+<h2>Conclusione</h2>
+<p>Hai configurato con successo un account smart contract utilizzando ERC-4337 e Stackup, e hai anche realizzato un trasferimento di fondi da questo account a un diverso indirizzo. Anche se questa procedura potrebbe sembrare semplice e realizzabile con o senza ERC-4337, è importante riconoscere la più ampia gamma di opportunità che ERC-4337 porta. Questo include la capacità di avere transazioni con spese di gas sponsorizzate e la capacità di gestire transazioni raggruppate, aprendo un nuovo regno di funzionalità ed efficienze nelle tue interazioni con gli smart contract.</p>
+</div>
+<p><!-- /wp:jetpack/markdown --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>

@@ -1,0 +1,232 @@
+---
+layout: post
+title: Contratti metamorfici e le loro implicazioni sulla sicurezza
+date: 2023-07-09 22:10:07.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Approfondimenti
+tags: []
+meta:
+  _wpas_done_all: '1'
+  _thumbnail_id: '6208'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/articoli/contratti-metamorfici-come-funzionano-sono-sicuri-tornado-cash-hack-spiegazione/"
+excerpt: I contratti metamorfici rappresentano un concetto rivoluzionario nell'ambito
+  degli smart contract, introducendo adattabilità e flessibilità dinamiche. A differenza
+  dei contratti tradizionali con termini fissi, i contratti metamorfici possono modificare
+  autonomamente il loro codice e comportamento in base a trigger o condizioni predefinite.
+  Questa caratteristica consente loro di adattarsi ed evolversi in risposta a circostanze
+  mutevoli, rendendoli estremamente versatili e adattabili.
+---
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Contratti metamorfici: cosa sono? come funzionano? sono sicuri? Quando usarli? Ecco le risposte.</h2>
+</div>
+<div class="sqs-html-content">
+<p class="" style="white-space:pre-wrap;">(Articolo scritto in collaborazione tra la redazione SCT Italia ed il team di <a href="https://www.radixgroup.org" target="_blank" rel="noopener">Radix Srl</a>. In particolare ringraziamo Francesco Cabras e Giovanni Casu per il loro supporto)</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1640px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:56.34146499633789%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/07/upload_e021dc0208e20410fcc3c7b4d1521602.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1fb91714-ab58-41d0-b565-0770ad9ca582/upload_e021dc0208e20410fcc3c7b4d1521602.png" data-image-dimensions="1640x924" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1640" height="924" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1fb91714-ab58-41d0-b565-0770ad9ca582/upload_e021dc0208e20410fcc3c7b4d1521602.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1fb91714-ab58-41d0-b565-0770ad9ca582/upload_e021dc0208e20410fcc3c7b4d1521602.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1fb91714-ab58-41d0-b565-0770ad9ca582/upload_e021dc0208e20410fcc3c7b4d1521602.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1fb91714-ab58-41d0-b565-0770ad9ca582/upload_e021dc0208e20410fcc3c7b4d1521602.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1fb91714-ab58-41d0-b565-0770ad9ca582/upload_e021dc0208e20410fcc3c7b4d1521602.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1fb91714-ab58-41d0-b565-0770ad9ca582/upload_e021dc0208e20410fcc3c7b4d1521602.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1fb91714-ab58-41d0-b565-0770ad9ca582/upload_e021dc0208e20410fcc3c7b4d1521602.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">I contratti metamorfici rappresentano un concetto rivoluzionario nell'ambito degli smart contract, introducendo adattabilità e flessibilità dinamiche. A differenza dei contratti tradizionali con termini fissi, i contratti metamorfici possono modificare autonomamente il loro codice e comportamento in base a trigger o condizioni predefinite. Questa caratteristica consente loro di adattarsi ed evolversi in risposta a circostanze mutevoli, rendendoli estremamente versatili e adattabili.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">I contratti metamorfici offrono un'adattabilità e una flessibilità senza pari, rivoluzionando il concetto di smart contract. Consentono l'applicazione versatile in diverse industrie. Ad esempio, nei servizi basati su abbonamento, il contratto può regolare automaticamente prezzi, termini o livelli di servizio in base al comportamento dell'utente o alle condizioni di mercato. Nella gestione della supply chain, il contratto può adattarsi ai cambiamenti nella logistica, negli accordi di prezzo o nelle normative. Le applicazioni DeFi possono beneficiare dei contratti auto-modificanti aggiornando i tassi di interesse, i requisiti di collaterale o altri parametri in risposta alle fluttuazioni di mercato.</p>
+<h2 style="white-space:pre-wrap;">Concetti chiave e i design pattern dei contratti metamorfici</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">I concetti chiave e i design pattern sono cruciali per l'implementazione di successo dei contratti metamorfici. I condizionali e i trigger all'interno del codice del contratto definiscono le circostanze in cui il contratto modifica il suo comportamento o aggiorna i suoi termini. Separare la logica principale dai moduli aggiornabili migliora la sicurezza e la manutenibilità, consentendo aggiornamenti fluidi e garantendo la retrocompatibilità. L'upgradabilità degli smart contract e la modularità giocano un ruolo fondamentale nell'efficacia dei contratti metamorfici. L'upgradabilità consente ai proprietari di contratti di introdurre modifiche o miglioramenti senza la necessità di rilasciare nuovamente il contratto, riducendo al minimo le interruzioni delle transazioni in corso. Il design modulare consente l'upgradabilità indipendente di specifiche funzionalità del contratto, offrendo un controllo granulare sulle caratteristiche adattive.</p>
+<h2 style="white-space:pre-wrap;">Come creare contratti metamorfici</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Ci sono vari modi per creare contratti metamorfici, ma un approccio relativamente semplice prevede i seguenti passaggi:</p>
+<ol data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Inizialmente, deploy di un contratto di implementazione che non si basi su un costruttore, ma che possa avere una funzione regolare (come ad esempio <code>initialize</code>) che svolge un ruolo simile. Questo contratto di implementazione dovrebbe anche avere la capacità di auto-distruggersi.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Memorizza un riferimento all'indirizzo del contratto di implementazione nello storage in una posizione fissa e nota. Il contratto factory, che inizia la chiamata <code>CREATE2</code>, è una scelta adeguata per questo scopo.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Utilizza <code>CREATE2</code> per deployare un contratto metamorfico con un codice di inizializzazione fisso e non deterministico. Questo codice recupera l'indirizzo di implementazione dalla funzione del factory, clona il bytecode di runtime in quella posizione e deploya il bytecode di runtime per il contratto metamorfico. In alternativa, puoi utilizzare un contratto intermedio transitorio con un codice di inizializzazione fisso che deploya il contratto metamorfico utilizzando <code>CREATE</code> e quindi si auto-distrugge immediatamente.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Quando è necessario modificare il contratto metamorfico, semplicemente <code>self-destruct</code> il contratto esistente, deploya e fa riferimento a una nuova implementazione e redeploya il contratto. Poiché il codice di inizializzazione rimane lo stesso, l'indirizzo del contratto metamorfico rimarrà invariato.</p>
+</li>
+</ol>
+<h2 style="white-space:pre-wrap;">Modificare il bytecode del contratto utilizzando CREATE2, CREATE e SELFDESTRUCT</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In Ethereum, è possibile modificare il bytecode di un account fisso utilizzando una sequenza di chiamate <code>CREATE/CREATE2</code> e <code>SELFDESTRUCT</code>. Queste operazioni comportano il deploy e la distruzione dei contratti in un ordine specifico. Comprendere queste operazioni è essenziale per comprendere i concetti discussi in questo articolo. Mentre la documentazione di Ethereum fornisce spiegazioni dettagliate, ecco una panoramica breve:</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><code>CREATE/CREATE2</code> sono operazioni uniche della Ethereum Virtual Machine (EVM) utilizzate per creare nuovi account. Un contratto può essere creato solo se l'account di destinazione viene considerato "vuoto", ovvero ha una dimensione del codice pari a 0 e un nonce pari a 0. Quando un contratto viene creato, la sua dimensione del codice diventa maggiore di 0 e il nonce diventa 1. Sebbene queste informazioni siano comunemente note, vale la pena sottolineare alcuni dettagli chiave su <code>CREATE</code> e <code>CREATE2</code>:</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><code>CREATE</code>: Calcola l'indirizzo del nuovo contratto utilizzando la formula keccak256(deployer_addr, deployer_nonce) (specificamente, keccak256(rlp([deployer_addr, deployer_nonce]))[12:]).</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><code>CREATE2</code>: Calcola l'indirizzo del nuovo contratto utilizzando la formula keccak256(_0xFF, deployer_addr, salt, bytecode) (specificamente, keccak256(_0xFF, deployer_addr, salt, bytecode)[12:]).</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In contrasto, <code>SELFDESTRUCT</code> "cancella" un account ripristinandone il bytecode e il nonce. Ai fini di questo articolo, è fondamentale notare che <code>SELFDESTRUCT</code> reimposta il nonce dell'account, consentendo l'uso di <code>CREATE</code> più volte dallo stesso indirizzo con lo stesso nonce.</p>
+<h2 style="white-space:pre-wrap;">Il procedimento</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Utilizzando la sequenza <code>CREATE</code> -&gt; <code>SELFDESTRUCT</code> -&gt; <code>CREATE</code> -&gt; <code>SELFDESTRUCT</code> -&gt; ... con lo stesso bytecode dallo stesso indirizzo, ogni nuova operazione CREATE deploya un contratto in un nuovo indirizzo perché il "deployer_nonce" aumenta ad ogni transazione.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">D'altra parte, se utilizziamo la sequenza <code>CREATE2</code> -&gt; <code>SELFDESTRUCT</code> -&gt; <code>CREATE2</code> -&gt; <code>SELFDESTRUCT</code> -&gt; ... con lo stesso bytecode e salt, l'indirizzo risultante rimarrà lo stesso ad ogni iterazione.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Tuttavia, è importante notare che nel primo caso (con <code>CREATE</code>), l'indirizzo di deploy può essere lo stesso se il "deployer_nonce" rimane invariato. Ecco il trucco: utilizzando <code>SELFDESTRUCT</code>, possiamo reimpostare il nonce dell'indirizzo in cui risiede il contratto creato con <code>CREATE2</code>, consentendone il redeploy. Successivamente, utilizzando <code>CREATE</code>, possiamo deployare un nuovo contratto dallo stesso indirizzo ma con un codice diverso.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Combinate queste operazioni, possiamo implementare il seguente scenario di esempio:</p>
+<ol data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Deployare il contratto <code>MutDeployer</code> utilizzando <code>CREATE2</code>. Il nuovo contratto avrà un nonce di 1 (secondo EIP161).</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><code>MutDeployer</code> deploya <code>MutableV1</code> (la prima versione del codice mutabile) utilizzando <code>CREATE</code>. Il nuovo contratto viene deployato all'indirizzo keccak256(MutDeployerAddr, MutDeployerNonce == 1).</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gli utenti interagiscono con <code>MutableV1</code>, assumendo che il suo codice rimanga costante.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Il proprietario esegue <code>SELFDESTRUCT</code> su <code>MutableV1</code> per successivamente deployare MutableV2 allo stesso indirizzo.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Il proprietario esegue <code>SELFDESTRUCT</code> su <code>MutDeployer</code>, rendendo il suo account vuoto (codesize == 0 e nonce == 0).</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">L'utente ripete il passo 1, deployando lo stesso contratto <code>MutDeployer</code> utilizzando <code>CREATE2</code> allo stesso indirizzo. Ora, <code>MutDeployer</code> ha un nonce di 1, proprio come nel passo 1.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><code>MutDeployer</code> deploya <code>MutableV2</code> con un nuovo bytecode utilizzando <code>CREATE</code> (simile al passo 2). Il nuovo contratto viene deployato allo stesso indirizzo, keccak256(MutDeployerAddr, MutDeployerNonce == 1).</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gli utenti continuano ad interagire con <code>MutableV2</code> utilizzando lo stesso indirizzo di <code>MutableV1</code>.</p>
+</li>
+</ol>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Si noti che questo processo consente la modifica del codice del contratto mantenendo lo stesso indirizzo, consentendo aggiornamenti fluidi dei contratti senza richiedere agli utenti di cambiare l'indirizzo con cui interagiscono. Ecco di seguito il codice che realizza i vari passaggi.</p>
+</div>
+<p><script src="https://gist.github.com/ddbit/dfba4f7a89c944f02df6eb4513a0bfe6.js"></script></p>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">
+<h1 style="white-space:pre-wrap;">Potenziali rischi a modifiche dinamiche del codice</h1>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Tuttavia, la modifica dinamica del codice comporta anche potenziali rischi e vulnerabilità. Garantire la sicurezza e l'integrità delle capacità adattive diventa cruciale, richiedendo robuste misure di sicurezza e test approfonditi per prevenire modifiche non autorizzate o sfruttamenti. La complessità dei contratti metamorfici solleva preoccupazioni legali e normative riguardanti l'efficacia e gli obblighi contrattuali. La collaborazione con gli enti di regolamentazione e un'attenta analisi legale sono indispensabili per garantire la conformità. Trovare un equilibrio tra autonomia e governance è fondamentale per evitare conseguenze indesiderate o abusi delle funzionalità adattive, rendendo necessari chiari quadri di governance e meccanismi di supervisione.</p>
+<h2 style="white-space:pre-wrap;">Come difendersi dai contratti metamorfici maligni</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Per difendersi dai contratti metamorfici maligni, sono necessari controlli approfonditi e meccanismi di rilevamento. Il processo di rilevamento è ampiamente spiegato nel detector e nell'articolo menzionati, che consentono di verificare se un indirizzo può avere un codice mutabile. Ecco un riassunto dei controlli chiave:</p>
+<ol data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Assicurarsi che il contratto non contenga l'opcode SELFDESTRUCT o utilizzi DELEGATECALL verso un contratto con SELFDESTRUCT.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Verificare se CREATE2 è stato utilizzato per il deploy, tra gli altri indicatori.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Assicurarsi che il contratto sia stato inizialmente deployato da una fonte che non consente il redeploy. Questo può essere realizzato evitando l'uso di CREATE2 o tenendo traccia di ogni deploy e impedendo duplicazioni. Inoltre, è necessario verificare che il deployer stesso non sia in grado di metamorfosi.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Prima di procedere con la transazione, verificare che il contratto con cui si interagisce non sia cambiato utilizzando metodi come EXTCODEHASH o meccanismi simili all'inizio della transazione.</p>
+</li>
+</ol>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Per la maggior parte delle applicazioni legittime di CREATE2, come negli <a href="https://medium.com/statechannels/counterfactual-generalized-state-channels-on-ethereum-d38a36d25fc6" target="_blank" rel="noopener">“state channel” e nell'istanziazione controfattuale</a>, queste precauzioni non dovrebbero rappresentare sfide significative. In generale, fare attenzione quando si interagisce con qualsiasi contratto che può auto-distruggersi o subire modifiche pericolose. Tuttavia, se si cerca un contratto leggero con capacità di aggiornamento appropriate e controlli adeguati, non è necessario cercare altrove.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Effettuando questi controlli, è possibile accertare che il codice del contratto sia immutabile. Tuttavia, è importante notare che in scenari di sicurezza esiste sempre la possibilità di eludere la rilevazione costruendo scenari complessi utilizzando catene di DELEGATECALL o altre tecniche. Pertanto, bisogna fare attenzione.</p>
+<h2 style="white-space:pre-wrap;">Per riassumere il confronto tra i contratti metamorfici e i transparent proxies, possiamo evidenziare i seguenti punti:</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Persistenza dello storage: I transparent proxies preservano lo storage durante gli aggiornamenti, mentre i contratti metamorfici azzerano completamente lo stato, inclusi i saldi degli account. I transparent proxies sono comunemente utilizzati per contratti ERC20 o ERC721 aggiornabili, mentre i contratti metamorfici possono essere più adatti per contratti di identità ERC725 o altri contratti di auto-sovranità.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Overhead delle chiamate di contratto: Chiamare un contratto metamorfico comporta meno overhead rispetto alla chiamata a un transparent proxy. I transparent proxies devono verificare il chiamante e delegare quindi la chiamata a un contratto di logica.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Processo di aggiornamento: Gli aggiornamenti dei contratti metamorfici sono meno fluidi perché le operazioni di selfdestruct vengono registrate nella sotto-transazione di una transazione ed eseguite alla fine della transazione. Ciò significa che un aggiornamento richiede due transazioni, risultando in un codice di contratto temporaneamente vuoto (che può essere suscettibile a utilizzi intermedi) tra le transazioni. D'altra parte, se un transparent proxy incontra un selfdestruct, verrà completamente distrutto, mentre un contratto metamorfico può comunque essere recuperato.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Utilizzo del costruttore: Nessuno dei due metodi permette l'utilizzo del costruttore durante l'inizializzazione del contratto. Invece, di solito viene utilizzata una funzione di inizializzazione immediatamente dopo aver impostato il nuovo contratto con l'implementazione clonata. L'eccezione a questa regola si verifica quando si utilizza un contratto transitorio intermedio deployato tramite CREATE2 per deployare il contratto metamorfico tramite CREATE. In tali casi, i costruttori possono comunque essere utilizzati durante il deploy del contratto metamorfico.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Si tenga presente che queste sono considerazioni generali e l'adeguatezza di ciascun approccio dipende dai requisiti specifici e dai casi d'uso del contratto in fase di sviluppo.</p>
+<h1 style="white-space:pre-wrap;">Caso studio: l'attacco ai contratti di governance di Tornado Cash.</h1>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Un individuo con intenzioni malevole ha presentato con successo una proposta ingannevole che è passata inosservata ed è stata successivamente approvata dai votanti del token DAO. Di conseguenza, è riuscito ad ottenere 1,2 milioni di voti e a prendere il controllo della situazione.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Attraverso una serie di eventi imprevisti, la governance di Tornado Cash è stata dirottata mediante una proposta ingannevole, simile a un cavallo di Troia. Di conseguenza, questa proposta ha conferito effettivamente il completo controllo del DAO a un singolo indirizzo.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Nonostante gli smart contract abbiano impedito il prelievo di circa 275 milioni di dollari dai pool di privacy, l'autore dell'attacco è riuscito ad ottenere il controllo del token di governance TORN. Ciò gli ha permesso di modificare il router e di dirottare depositi e prelievi, nonché di ottenere privilegi amministrativi su Nova, il deployment sulla Gnosis chain.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Nel corso dell'anno, il crypto mixer di riferimento per DeFi ha affrontato una serie di difficoltà. Queste includono l'imposizione di sanzioni OFAC nell'agosto e l'incarcerazione del core developer Alexey Pertsev, che è stato successivamente rilasciato in attesa di processo.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Inoltre, alcune settimane fa sono sorte preoccupazioni riguardo a un potenziale sfruttamento del sistema di governance di Tornado. Questo coinvolgeva la creazione di indirizzi multipli e il blocco di 0 token TORN nella vault di governance. Tuttavia, poiché non sono state osservate conseguenze immediate, ciò è stato alla fine ignorato come un tentativo fallito.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Inganno oppure mossa preparatoria?</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gli indirizzi degli autori dell'attacco sono i seguenti:</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Indirizzo dell'autore dell'attacco 1: 0x092123663804f8801b9b086b03b98d706f77bd59</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Indirizzo dell'autore dell'attacco 2: 0x592340957ebc9e4afb0e9af221d06fdddf789de9</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Il contratto della proposta: <a href="https://etherscan.io/address/0xC503893b3e3c0C6b909222b45f2a3a259a52752D" target="_new" rel="noopener"><span style="text-decoration:underline">https://etherscan.io/address/0xC503893b3e3c0C6b909222b45f2a3a259a52752D</span></a></p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">L'attacco è stato eseguito in modo discreto, nascosto all'interno di una proposta mirata a penalizzare specifici relayers sospettati di comportamenti disonesti. Sebbene il codice sembrasse utilizzare una logica simile a una proposta precedente, l'autore dell'attacco aveva incorporato una funzione aggiuntiva che gli consentiva di attivare l'autodistruzione del contratto.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Il contratto della proposta è stato rilasciato tramite un contratto deployer, utilizzando una combinazione di opcode CREATE e CREATE2. Sfruttando il processo di deploy deterministico, l'attaccante ha sfruttato la possibilità di deployare nuovo codice all'indirizzo autorizzato dalla governance.</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:3456px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:50%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/07/come+funziona+un+contratto+metamorfico" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/768f3ffb-fd66-4f45-a0a4-154cd27fbd06/come+funziona+un+contratto+metamorfico" data-image-dimensions="3456x1728" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="3456" height="1728" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/768f3ffb-fd66-4f45-a0a4-154cd27fbd06/come+funziona+un+contratto+metamorfico?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/768f3ffb-fd66-4f45-a0a4-154cd27fbd06/come+funziona+un+contratto+metamorfico?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/768f3ffb-fd66-4f45-a0a4-154cd27fbd06/come+funziona+un+contratto+metamorfico?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/768f3ffb-fd66-4f45-a0a4-154cd27fbd06/come+funziona+un+contratto+metamorfico?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/768f3ffb-fd66-4f45-a0a4-154cd27fbd06/come+funziona+un+contratto+metamorfico?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/768f3ffb-fd66-4f45-a0a4-154cd27fbd06/come+funziona+un+contratto+metamorfico?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/768f3ffb-fd66-4f45-a0a4-154cd27fbd06/come+funziona+un+contratto+metamorfico?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Sfruttando la funzione selfDestruct, l'hacker è riuscito con successo a eliminare il codice autorizzato, reimpostando così il proprio nonce nel processo. Questa manipolazione gli ha consentito di rilanciare il contratto malevolo allo stesso identico indirizzo.</p>
+<h2 style="white-space:pre-wrap;"><span class="sqsrte-text-color--lightAccent">Dettagli:</span></h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><span class="sqsrte-text-color--lightAccent"><strong>Opzione A:</strong> Utilizzare l'opcode CREATE2 per creare un contratto di proposta maligno. Questo solleverà un allarme poiché CREATE2 e self-destruct sono utilizzati insieme.</span></p>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><span class="sqsrte-text-color--lightAccent"><strong>Opzione B</strong>: Utilizzare CREATE2 per creare il contratto deployer (0x7dc8), che a sua volta deploya il contratto di proposta maligno (0xc503) utilizzando CREATE.</span></p>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><span class="sqsrte-text-color--lightAccent">Successivamente, il contratto deployer viene autodistrutto (per reimpostare il nonce) e può creare una nuova proposta allo stesso indirizzo (0xc503).</span></p>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><span class="sqsrte-text-color--lightAccent">Il motivo di ciò risiede nel fatto che l'indirizzo del contratto deployato utilizzando CREATE è determinato dal mittente e dal valore del nonce (in questo caso, nonce = 1). Sfruttando ciò, l'attaccante è stato in grado di generare una nuova proposta con un indirizzo identico (0xc503).</span></p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Queste tecniche per creare "contratti metamorfici" sono una delle ragioni per cui alcuni hanno chiesto che l'opcode selfDestruct venga deprecato.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">La proposta malevola ha quindi assegnato 10.000 TORN a tutti gli indirizzi creati nell'attacco presunto della scorsa settimana. Questi sono stati sbloccati e prelevati dalla vault, conferendo all'attaccante 1,2 milioni di voti (contro i 700.000 voti legittimi) e il pieno controllo della governance di Tornado.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Consultare il grafico di BlockSec per una panoramica completa delle varie fasi coinvolte nell'attacco:</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1092px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:55.31135940551758%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/07/grafico+di+blocksec+panoramica+fasi+coinvolte+nell%27attacco+a+contratto+metamorfico" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/d9215f39-efc3-45e5-abef-6e1c65b427db/grafico+di+blocksec+panoramica+fasi+coinvolte+nell%27attacco+a+contratto+metamorfico" data-image-dimensions="1092x604" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1092" height="604" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/d9215f39-efc3-45e5-abef-6e1c65b427db/grafico+di+blocksec+panoramica+fasi+coinvolte+nell%27attacco+a+contratto+metamorfico?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/d9215f39-efc3-45e5-abef-6e1c65b427db/grafico+di+blocksec+panoramica+fasi+coinvolte+nell%27attacco+a+contratto+metamorfico?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/d9215f39-efc3-45e5-abef-6e1c65b427db/grafico+di+blocksec+panoramica+fasi+coinvolte+nell%27attacco+a+contratto+metamorfico?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/d9215f39-efc3-45e5-abef-6e1c65b427db/grafico+di+blocksec+panoramica+fasi+coinvolte+nell%27attacco+a+contratto+metamorfico?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/d9215f39-efc3-45e5-abef-6e1c65b427db/grafico+di+blocksec+panoramica+fasi+coinvolte+nell%27attacco+a+contratto+metamorfico?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/d9215f39-efc3-45e5-abef-6e1c65b427db/grafico+di+blocksec+panoramica+fasi+coinvolte+nell%27attacco+a+contratto+metamorfico?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/d9215f39-efc3-45e5-abef-6e1c65b427db/grafico+di+blocksec+panoramica+fasi+coinvolte+nell%27attacco+a+contratto+metamorfico?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">In un'imprevista svolta degli eventi, l'attaccante ha successivamente presentato una proposta per annullare le conseguenze della sua presa di controllo ostile, restituendo effettivamente il controllo al DAO come prima dell'attacco.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Oltre al profitto di circa 430 ETH (~750.000 dollari) dalla vendita di TORN (qualche indizio su dove l'attaccante abbia scelto di riciclare i profitti?), l'hacker potrebbe avere altre motivazioni:</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">O si tratta di una grande trolling o si rivelerà una lezione costosa ma non disastrosa sulla sicurezza della governance.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Come ha sottolineato il membro della comunità Tornadosaurus-Hex:</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Nota che non abbiamo nemmeno scelta riguardo a questa proposta, ma è comunque importante.</p>
+<h3 style="white-space:pre-wrap;">CONCLUSIONE (Importanza di test approfonditi e audit)</h3>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Test approfonditi e audit sono di importanza fondamentale per mitigare i rischi associati ai contratti metamorfici. Test rigorosi garantiscono l'affidabilità e la funzionalità delle capacità adattive del contratto. Audit completi aiutano ad individuare vulnerabilità e potenziali exploit, rafforzando complessivamente la sicurezza del contratto.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In SCT ITALIA stiamo costruendo una rete di esperti specializzati nella sicurezza degli smart contract, che attraverso analisi di sicurezza approfonditi, possono identificare vulnerabilità e debolezze negli smart contract, contribuendo a proteggere dai tentativi di sfruttamento maligno e garantendo l'integrità dei sistemi di governance. </p>
+</div>

@@ -1,0 +1,267 @@
+---
+layout: post
+title: 'Opcode PUSH0: Un aggiornamento significativo nell''ultima versione 0.8.20
+  di Solidity.'
+date: 2023-05-15 11:52:30.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Approfondimenti
+tags: []
+meta:
+  _wpas_done_all: '1'
+  _thumbnail_id: '6192'
+  ppma_authors_name: Zaryab Afser
+  _last_editor_used_jetpack: block-editor
+  _edit_last: '48926058'
+  _aioseo_title: ''
+  _aioseo_description: ''
+  _aioseo_keywords: ''
+  _aioseo_og_title: ''
+  _aioseo_og_description: ''
+  _aioseo_og_article_section: ''
+  _aioseo_og_article_tags: ''
+  _aioseo_twitter_title: ''
+  _aioseo_twitter_description: ''
+  ppma_disable_author_box: '0'
+  BS_author_type: BS_author_is_user
+  BS_guest_author_name: ''
+  BS_guest_author_url: ''
+  BS_guest_author_description: ''
+  BS_guest_author_image_id: ''
+author:
+  login: zaryab
+  email: devnullboxx+za@gmail.com
+  display_name: Zaryab Afser
+  first_name: Zaryab
+  last_name: Afser
+permalink: "/articoli/solidity-new-opcode-push0/"
+excerpt: Solidity ha appena rilasciato la nuova versione di Solidity, la 0.8.20. E,
+  come sempre, insieme a questa versione sono state introdotte molte nuove modifiche,
+  miglioramenti, correzioni di bug, ecc. Tuttavia, c'è un aggiornamento fondamentale
+  in questa versione di cui gli sviluppatori di smart contract devono essere a conoscenza.
+  Si tratta dell'inclusione di un nuovo opcode chiamato PUSH0.
+---
+<p><script class="TextAttributes-props" type="application/json">[ {<br />
+  "type": "highlight",<br />
+  "id": "6e166f9f-fe16-4703-aad8-bc81de8725a4",<br />
+  "shape": "underline",<br />
+  "isFront": false,<br />
+  "isAnimationEnabled": false,<br />
+  "animation": "draw",<br />
+  "duration": 0.5,<br />
+  "direction": "right",<br />
+  "color": {<br />
+    "type": "THEME_COLOR"<br />
+  },<br />
+  "thickness": {<br />
+    "unit": "em",<br />
+    "value": 0.1<br />
+  },<br />
+  "linecap": "square"<br />
+} ]</script></p>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;"><em>(Articolo pubblicato in italiano col permesso di Md Zaryab Afser, l’originale in inglese è disponibile sul suo </em><span class="sqsrte-text-highlight" data-text-attribute-id="6e166f9f-fe16-4703-aad8-bc81de8725a4"><a href="https://www.zaryabs.com/push0-opcode/"><em>sito</em></a></span><em>)</em></p>
+<p class="" data-rte-preserve-empty="true" style="white-space:pre-wrap;">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Solidity ha appena rilasciato la nuova versione di Solidity, la 0.8.20.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">E, come sempre, insieme a questa versione sono state introdotte molte nuove modifiche, miglioramenti, correzioni di bug, ecc. Tuttavia, c'è un aggiornamento fondamentale in questa versione di cui gli sviluppatori di smart contract devono essere a conoscenza. Si tratta dell'inclusione di un nuovo opcode chiamato PUSH0.</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:888px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:56.19369125366211%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/05/image-10.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/34e6f5f8-330a-464d-8787-a5c0e867bdb4/image-10.png" data-image-dimensions="888x499" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="888" height="499" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/34e6f5f8-330a-464d-8787-a5c0e867bdb4/image-10.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/34e6f5f8-330a-464d-8787-a5c0e867bdb4/image-10.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/34e6f5f8-330a-464d-8787-a5c0e867bdb4/image-10.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/34e6f5f8-330a-464d-8787-a5c0e867bdb4/image-10.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/34e6f5f8-330a-464d-8787-a5c0e867bdb4/image-10.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/34e6f5f8-330a-464d-8787-a5c0e867bdb4/image-10.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/34e6f5f8-330a-464d-8787-a5c0e867bdb4/image-10.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<figure class="block-animation-site-default">
+<blockquote data-animation-role="quote"></blockquote>
+<p><span>&#8220;</span>The new compiler switches the default target EVM version to Shanghai, which means that the generated bytecode will include PUSH0 opcodes.<span>&#8221;</span></p>
+<figcaption class="source">&mdash; Solidity Team</figcaption>
+</figure>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Prima di tutto, cos'è esattamente PUSH0?</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">L'opcode PUSH0 è in realtà piuttosto semplice.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Si tratta di un'istruzione che ha un compito specifico, ovvero quello di inserire il valore costante ZERO nello stack. Tutto qui, credetemi.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Sebbene PUSH0 sia stato recentemente incluso nella versione 0.8.20 di Solidity, la sua importanza è evidente fin dal 2021, con la nascita dell'EIP-3855.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Nelle sezioni seguenti, approfondiremo il significato di questo opcode apparentemente semplice ed esploreremo le sue implicazioni cruciali.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Se si dà una rapida occhiata agli opcode relativi alle operazioni PUSH che abbiamo avuto finora (istruzioni da 0x60 a 0x7f), ci si rende conto che avevamo opcode da PUSH1 a PUSH32.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Ciò significa che abbiamo la possibilità di inserire nello stack qualsiasi elemento da 1 byte a 32 byte, utilizzando il rispettivo opcode in base alle nostre esigenze.</p>
+</div>
+<pre class="source-code">PUSH1  = 0x60, // Place 1 byte item on stack.
+PUSH2  = 0x61, // Place 2 byte item on stack.
+PUSH3  = 0x62, // Place 3 byte item on stack.
+PUSH4  = 0x63, // Place 4 byte item on stack.
+PUSH5  = 0x64, // Place 5 byte item on stack.
+PUSH6  = 0x65, // Place 6 byte item on stack.
+PUSH7  = 0x66, // Place 7 byte item on stack.
+PUSH8  = 0x67, // Place 8 byte item on stack.
+PUSH9  = 0x68, // Place 9 byte item on stack.
+PUSH10 = 0x69, // Place 10 byte item on stack.
+....
+PUSH31 = 0x7e, // Place 31 byte item on stack.
+PUSH32 = 0x7f, // Place 32 byte item on stack.</pre>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Perché dovremmo voler INSERIRE il valore ZERO nello stack?</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">💡<em>Se vi state chiedendo perché dovremmo inserire il valore ZERO nello stack, dovreste dare un'occhiata a EIP3855 per maggiori dettagli, dato che ci sono molti casi in cui ZERO è richiesto nello stack per effettuare operazioni importanti.</em></p>
+</div>
+<style>
+  #block-yui_3_17_2_1_1684149365792_12931.sqs-block.sqs-background-enabled {</p>
+<p>            --tweak-text-block-background-color: </p>
+<p>    hsla(var(--darkAccent-hsl), 0.24)</p>
+<p>;</p>
+<p>    box-sizing: border-box;<br />
+    height: 100%;<br />
+    padding: 6% 6% 6% 6%;<br />
+    border-radius: 0px 0px 0px 0px;<br />
+  }<br />
+</style>
+<p>&nbsp;</p>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Tuttavia, non avevamo un modo adeguato per inserire ZERO nello stack.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Pertanto, per inserire il valore ZERO nello stack, abbiamo finora trovato delle scorciatoie come:</p>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><strong>"PUSH1 00"</strong>: utilizzando l'opcode PUSH1 per inserire gli zeri nello stack,</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">l'uso di più istruzioni <strong>DUP</strong> per duplicare gli zeri e metterli in pila, ecc.</p>
+</li>
+</ul>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Sebbene le soluzioni di cui sopra abbiano svolto il loro compito, non erano comunque adeguate.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">L'uso di "PUSH1 00", ad esempio, è codificato come due byte e tecnicamente consuma più gas di quanto dovrebbe per mettere uno zero sullo stack.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Inoltre, l'uso di più istruzioni DUP potrebbe far lievitare le dimensioni del codice del contratto e non è un approccio ottimizzato. Come accennato in precedenza, questo nuovo opcode potrebbe sembrare piuttosto semplice, ma risolve tutti questi problemi che sono stati ignorati per molto tempo.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Una parte della documentazione dell'EIP3855 dice:</p>
+</div>
+<figure class="block-animation-reveal">
+<blockquote data-animation-role="quote" data-animation-override></blockquote>
+<p><span>&#8220;</span>To put the “waste” into perspective, across existing accounts 340,557,331 bytes are wasted on PUSH1 00 instructions, which means 68,111,466,200 gas was spent to deploy them.In practice, a lot of these accounts share identical bytecode with others, so their total stored size in clients is lower, however, the deploy time cost must have been paid nevertheless.<span>&#8221;</span></p>
+<figcaption class="source">&mdash; EIP3855</figcaption>
+</figure>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">E questo già dimostra quanto poco efficiente sia stato finora l’uso o abuso delle tecniche precedentemente adottate.</p>
+<h2 style="white-space:pre-wrap;">Introduciamo l'opcode PUSH0</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Ora, con l'inclusione di PUSH0, saremo in grado di risolvere tutti questi problemi in un colpo solo.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">L'opcode PUSH0 ci consentirà di inserire direttamente un valore costante 0 nello stack senza dover utilizzare più istruzioni DUP o una combinazione di altri opcode.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Con il nuovo opcode PUSH0, ora abbiamo:</p>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Un meccanismo adeguato per inserire lo zero sullo stack,</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Riduzione della dimensione del bytecode del contratto, poiché possiamo sostituire molti opcode con il solo PUSH0,</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Riduzione al minimo dell'uso delle istruzioni DUP per duplicare gli zeri sullo stack, ecc.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Tempo di verifica</p>
+</li>
+</ul>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Siamo in Web3, quindi 👇</p>
+<blockquote><p class="sqsrte-large" style="white-space:pre-wrap;">Dont’ trust, verify</p>
+</blockquote>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Proviamo a verificare tutti i dettagli di cui sopra sull'opcode PUSH0 con un esempio e vediamo se fa effettivamente la magia. 🪄</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Prendiamo come esempio questo piccolo contratto,</p>
+</div>
+<div class="sqs-html-content">
+<p class="" style="white-space:pre-wrap;"><span class="sqsrte-text-color--white">contratto PushZero_Test{</span></p>
+<p class="" style="white-space:pre-wrap;"><span class="sqsrte-text-color--white">    uint256 public num;</span></p>
+<p class="" style="white-space:pre-wrap;"><span class="sqsrte-text-color--white">    funzione set(uint256 _n) public{</span></p>
+<p class="" style="white-space:pre-wrap;"><span class="sqsrte-text-color--white">        num = _n;</span></p>
+<p class="" style="white-space:pre-wrap;"><span class="sqsrte-text-color--white">    }</span></p>
+<p class="" style="white-space:pre-wrap;"><span class="sqsrte-text-color--white">} </span></p>
+</div>
+<style>
+  #block-yui_3_17_2_1_1684156812522_24598.sqs-block.sqs-background-enabled {</p>
+<p>            --tweak-text-block-background-color: </p>
+<p>    hsla(var(--black-hsl), 1)</p>
+<p>;</p>
+<p>    box-sizing: border-box;<br />
+    height: 100%;<br />
+    padding: 6% 6% 6% 6%;<br />
+    border-radius: 0px 0px 0px 0px;<br />
+  }<br />
+</style>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Compiliamo e distribuiamo questo contratto.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Per prima cosa, utilizzare le versioni precedenti, come la 0.8.19 o la 0.8.16, ecc. poi si usa l'ultima versione, la 0.8.20.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Risultati? 🤔</p>
+<h2 style="white-space:pre-wrap;">Dimensione del codice del contratto</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">➡️ Dimensione del bytecode del contratto utilizzando la versione precedente = ~678 caratteri</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">➡️ Dimensione del bytecode del contratto utilizzando la versione 0.8.20 = ~646 caratteri</p>
+<h2 style="white-space:pre-wrap;">Costo di distribuzione del gas ⛽️</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">➡️ Costo di implementazione del contratto usando le vecchie versioni = ~61511 gas</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">➡️ Costo di distribuzione del contratto usando le versioni 0.8.20 = ~58909 gas</p>
+<p class="sqsrte-large" data-rte-preserve-empty="true" style="white-space:pre-wrap;">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Come risultato di questo breve esperimento, possiamo chiaramente verificare che con l'inclusione dell'opcode PUSH0, ora abbiamo:</p>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Riduzione della dimensione del codice del contratto e</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Riduzione del costo del gas di distribuzione del contratto</p>
+<p class="sqsrte-large" data-rte-preserve-empty="true" style="white-space:pre-wrap;">
+</li>
+</ul>
+<p class="sqsrte-large" style="white-space:pre-wrap;">L'opcode quindi svolge egregiamente il suo compito. 🧐</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Se avete sottomano truffle, hardhat o remix non limitatevi a leggere. Provate e verificate anche voi</p>
+<h2 style="white-space:pre-wrap;">☢️ Avvertenza importante per gli sviluppatori di Solidity</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Sebbene l'opcode PUSH0 sia ora incluso nell'ultimo compilatore Solidity, è necessario fare attenzione quando lo si utilizza su catene diverse da ETH mainnet.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Ci sono ancora altre blockchain EVM o L2 che non riconoscono l'opcode PUSH0. Pertanto, se si tenta di utilizzare l'ultimo compilatore per distribuire il proprio contratto su una catena che non supporta questo opcode, la distribuzione del contratto fallirà.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Si potrebbe ottenere un errore che assomiglia a questo 👇</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1000px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:42.79999923706055%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/05/image-9.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/544e445a-c1a0-43be-a61b-1cdd42505157/image-9.png" data-image-dimensions="1000x428" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1000" height="428" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/544e445a-c1a0-43be-a61b-1cdd42505157/image-9.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/544e445a-c1a0-43be-a61b-1cdd42505157/image-9.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/544e445a-c1a0-43be-a61b-1cdd42505157/image-9.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/544e445a-c1a0-43be-a61b-1cdd42505157/image-9.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/544e445a-c1a0-43be-a61b-1cdd42505157/image-9.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/544e445a-c1a0-43be-a61b-1cdd42505157/image-9.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/544e445a-c1a0-43be-a61b-1cdd42505157/image-9.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<figcaption class="image-caption-wrapper">
+<div class="image-caption">
+<p class="" style="white-space:pre-wrap;">Distribuzione fallita durante l'utilizzo della versione 0.8.20 su Polygon Mumbai </p>
+</div>
+</figcaption>
+<div class="sqs-html-content">
+<p class="" data-rte-preserve-empty="true" style="white-space:pre-wrap;">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Pertanto, in questi casi, è necessario assicurarsi di aver selezionato la versione EVM corretta. Per saperne di più sulla selezione della versione EVM corretta da utilizzare, vai QUI.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Bene sviluppatore solidity, spero che sia stato utile.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">A più tardi. 👋🏻</p>
+</div>

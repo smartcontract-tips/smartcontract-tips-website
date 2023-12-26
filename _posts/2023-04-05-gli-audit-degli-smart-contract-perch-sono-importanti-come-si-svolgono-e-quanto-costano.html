@@ -1,0 +1,142 @@
+---
+layout: post
+title: Gli audit degli smart contract. Perché sono importanti, come si svolgono e
+  quanto costano.
+date: 2023-04-05 09:00:00.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Approfondimenti
+tags: []
+meta:
+  _wpas_done_all: '1'
+  _thumbnail_id: '6188'
+  ppma_authors_name: Davide
+  _last_editor_used_jetpack: block-editor
+  _edit_last: '48926058'
+  _aioseo_title: ''
+  _aioseo_description: ''
+  _aioseo_keywords: ''
+  _aioseo_og_title: ''
+  _aioseo_og_description: ''
+  _aioseo_og_article_section: ''
+  _aioseo_og_article_tags: ''
+  _aioseo_twitter_title: ''
+  _aioseo_twitter_description: ''
+  ppma_disable_author_box: '0'
+  BS_author_type: BS_author_is_user
+  BS_guest_author_name: ''
+  BS_guest_author_url: ''
+  BS_guest_author_description: ''
+  BS_guest_author_image_id: ''
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/articoli/gli-audit-degli-smart-contract-perch-sono-importanti-come-si-svolgono-e-quanto-costano/"
+---
+<p><!-- wp:paragraph {"className":"is-style-info"} --></p>
+<p class="is-style-info">Hai bisogno di un audit di sicurezza? <a href="https://smartcontract.tips/contatti/" title="Contatti / Contact">Scrivici</a> e ti metteremo in contatto con dei professionisti di nostra fiducia. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Cosa troverai in questo articolo:</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>L'importanza dell'audit di sicurezza per garantire la sicurezza degli smart contract.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Le competenze specifiche richieste a un auditor per eseguire l'audit di sicurezza degli smart contract.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>I costi e le fasi del processo di audit degli smart contract.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>I requisiti che il cliente deve soddisfare prima dell'inizio dell'audit.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Il processo di triage dei difetti in un software e la classificazione dei difetti in base alla sicurezza, il trust e la funzionalità.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>Il processo di external code review, comunemente chiamato audit di sicurezza, è essenziale per garantire la sicurezza degli smart contract. Sebbene il termine "audit" sia mutuato dalla finanza, la sua applicazione nel contesto degli smart contract ha lo stesso obiettivo di analizzare e valutare la corretta gestione dei fondi e dei clienti.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Poiché gli smart contract sono software, è importante comprendere che gli errori possono causare problemi gravi e irrecuperabili, come dimostrato dal caso di TheDao hack nel 2016. Pertanto, è necessaria la figura professionale di un auditor con competenze specifiche nel linguaggio di programmazione degli smart contract (solidity) e costantemente aggiornato sulle best practice e gli antipattern tipici dello sviluppo di software di smart contract.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>In sintesi, sebbene gli audit di sicurezza per gli smart contract non riguardino direttamente la contabilità e il bilancio, sono altrettanto cruciali per garantire la sicurezza delle transazioni finanziarie e la tutela dei fondi dei clienti. Come si dice, "la paranoia è una virtù" per gli auditor e gli sviluppatori di smart contract che devono essere costantemente vigili sulla sicurezza del codice che sviluppano.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Il processo di audit degli smart contract comporta costi e fasi diverse a seconda dell'agenzia o del professionista incaricato del lavoro. Se si sceglie di affidarsi a grandi agenzie, il costo dell'audit potrebbe essere significativo, ma ciò può garantire un maggiore livello di sicurezza. D'altra parte, se si cerca su Google, si possono trovare offerte più abbordabili, ma è importante valutare la competenza del professionista incaricato del lavoro.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>I costi dell'audit dipendono principalmente dalla complessità del progetto. Un progetto con pochi contratti e poche linee di codice richiederà meno ore di lavoro e costerà meno rispetto a un progetto con decine di contratti e migliaia di linee di codice. Per eseguire l'audit è necessario impiegare ore di personale altamente qualificato per l'ispezione manuale del codice, oltre all'utilizzo di strumenti automatici.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Fasi di un audit per smart contract:</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Il processo di audit si divide in diverse fasi, che richiedono la collaborazione del cliente e l'adempimento di alcuni requisiti stringenti prima dell'inizio dell'audit. Ad esempio, il codice deve essere disponibile in un repository Git per verificare i vari commit, la duplicazione del codice deve essere ridotta al minimo, e le dipendenze esterne devono essere ben documentate. Inoltre, è importante che il codice sia facilmente eseguibile anche al di fuori del PC dello sviluppatore, il codice deve compilare con una versione affidabile di Solidity, e non devono esserci compiler warnings, oppure questi devono essere giustificati. Una volta soddisfatti questi requisiti, il cliente deve rispettare altri requisiti utili, come la presenza di file di deploy documentati, i testcase nella directory /tests, test coverage documentato e possibilmente pari al 100%, artifacts e builds non inclusi nel git, separazione fra i file da auditare e quelli da tralasciare, documentazione del codice completa e accurata, specifiche funzionali del progetto, nessun getter per le variabili pubbliche, e aderenza alle code conventions linee guida di Solidity. Infine, l'auditor deve sapere esattamente quale commit del repository è oggetto del review, e tale informazione sarà riportata nella relazione di audit. In produzione, gli utenti dovrebbero poter verificare che il bytecode in esecuzione in blockchain corrisponda esattamente al codice generato dal sorgente oggetto dell'audit e non ad una versione diversa, anteriore o successiva.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>A tale scopo riportiamo un flowchart delle fasi dell’audit che vedono coinvolti l’auditor ed il team di sviluppo.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Il processo di triage dei difetti in un software è una classificazione basata sul modello di rischio, rappresentato dalla formula R = P * D, dove R rappresenta il rischio, P la probabilità che il problema si verifichi e D il danno potenziale che il problema potrebbe causare.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image --></p>
+<figure class="wp-block-image"><img src="{{ site.baseurl }}/assets/2023/04/Schermata+2023-04-04+alle+19.05.06.png" alt="" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>Oltre al modello di rischio, è possibile qualificare i difetti software in base ad altre dimensioni, come la sicurezza, il trust e la funzionalità. I difetti che minano la sicurezza del sistema dovrebbero essere considerati molto gravi, mentre quelli che introducono elementi come backdoor o privilegi che compromettono la trasparenza e l'autonomia dello smart contract dovrebbero essere valutati dal punto di vista della fiducia. Infine, i difetti funzionali, che non influiscono sulla sicurezza ma possono causare disallineamenti tra l'implementazione effettiva e i business requirement, dovrebbero essere considerati in modo particolare se sono coinvolti anche degli adempimenti contrattuali o legali off chain.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>L'audit di uno smart contract produce un rapporto in formato pdf che riassume i risultati dell'analisi e descrive il sistema analizzato. L'auditor prepara una versione iniziale del rapporto con le indicazioni principali e le criticità rilevate e suggerisce le azioni da intraprendere per mitigare o eliminare il rischio. Il team di sviluppo verifica le azioni suggerite e ne esegue una o più, e poi l'auditor verifica l'esecuzione e stila una seconda versione del rapporto, possibilmente finale.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image --></p>
+<figure class="wp-block-image"><img src="{{ site.baseurl }}/assets/2023/04/Schermata+2023-04-04+alle+19.13.01.png" alt="" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading"><strong>Quanto costa l’audit di uno smart contract?</strong></h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>E’ quasi impossibile fare delle stime senza conoscere i dettagli progetto come la taglia, la complessità della logica, la presenza o meno di codice assembly, i volumi finanziari che saranno trattati etc. Come esercizio di stile possiamo immaginare semplicemente un progetto di taglia media che contenga dai 3 ai 10 contratti solidity, che utilizzi il più possibile codice e librerie ben testate.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Naturalmente il mero numero dei contratti non stabilisce la complessità del progetto, i contratti possono essere fra loro accoppiati in modo spaghetti-code oppure ben separati e modulari, ognuno con le minime interazioni possibili con gli altri, e già questo farebbe una gran differenza nella complessità da analizzare.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Resta dunque un esercizio che lascia un po’ il tempo che trova, ma proviamoci lo stesso:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list {"ordered":true} --></p>
+<ol><!-- wp:list-item --></p>
+<li><strong>Raccolta del design del codice</strong>: Raccogliere i documenti pertinenti come le specifiche funzionali, le schede tecniche, i whitepaper o i yellow paper del progetto, il codice del contratto intelligente attraverso le contribuzioni di GitHub e altri, al fine di definire l'entità dell'audit. Il costo stimato per questo passaggio è tra $250 - $1000.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Test unitari</strong>: Eseguire i casi di test unitari per verificare se il contratto intelligente funziona come previsto. In questo passaggio, gli auditor utilizzano strumenti di auditing e testnet per garantire che i test unitari coprano tutti i rischi rilevanti. Il costo stimato per questo passaggio è tra $200 - $1000. Naturalmente qui si tratta di leggere ed eseguire i testcase già sviluppati dal team di sviluppo. <strong>Se l’auditor dovesse anche scrivere dei testcase a parte o dovesse scrivere tutti i testcase allora il costo aumenterebbe in modo sostanziale</strong>. Ritengo che un repository di smart contract debba contenere molte più linee di codice nei testcase che non nei contratti veri e propri.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Approccio all'audit</strong>: Analizzare manualmente il codice del contratto intelligente per individuare eventuali problemi come front-running. Questo passaggio richiede una valutazione dettagliata del codice per individuare eventuali vulnerabilità. Il costo stimato per questo passaggio è tra $500 - $2000.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Bozza iniziale</strong>: Compilare un elenco di problemi e di bug del codice rilevati durante l'audit e proporli ai team di sviluppo per la correzione. In questo passaggio, gli auditor combinano i risultati del testing manuale e automatico per compilare un elenco di problemi e suggerire soluzioni. Il costo stimato per questo passaggio è tra $500 - $1500.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Pubblicazione dell'audit finale</strong>: Produrre un documento finale che elenca tutti i problemi individuati e le azioni intraprese per risolverli, e pubblicarlo su GitHub. In questo passaggio, gli auditor producono un rapporto finale che viene pubblicato per la revisione pubblica. Il costo stimato per questo passaggio è tra $200 - $1000. &nbsp;</li>
+<p><!-- /wp:list-item --></ol>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>Quello che ottieniamo per un progetto di taglia medio piccola è un costo che varia dai 1000 ai 7000 euro. Ma ripeto, sono cifre da prendere con le molle e non è raro che un audit possa costare anche 10 volte tanto in funzione di chi lo fa e della complessità del progetto stesso.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Conclusione:</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>L'analisi di uno smart contract richiede una notevole quantità di tempo, attenzione e dedizione. E' fondamentale che l'esperto preposto all'audit sia fornito di tutte le informazioni necessarie per svolgere il suo lavoro in modo accurato, effettuando tutti i controlli necessari. Solitamente, questo processo richiede diverse interazioni tra l'auditor e il team di sviluppo, considerando che la prima versione dell'audit viene utilizzata come un punto di partenza e presenta una serie di suggerimenti che ci si aspetta vengano implementati dal team di sviluppo.</p>
+<p><!-- /wp:paragraph --></p>

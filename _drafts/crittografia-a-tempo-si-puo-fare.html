@@ -1,0 +1,136 @@
+---
+layout: post
+title: Crittografia a tempo con proof-of-work e witness encryption
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: pending
+categories:
+- Academy
+tags: []
+meta:
+  _last_editor_used_jetpack: block-editor
+  _edit_last: '48926058'
+  _aioseo_title: ''
+  _aioseo_description: ''
+  _aioseo_keywords: ''
+  _aioseo_og_title: ''
+  _aioseo_og_description: ''
+  _aioseo_og_article_section: ''
+  _aioseo_og_article_tags: ''
+  _aioseo_twitter_title: ''
+  _aioseo_twitter_description: ''
+  _wpas_done_all: '1'
+  _thumbnail_id: '5655'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+---
+<p><!-- wp:paragraph --></p>
+<p>Vi ricordate i film di spionaggio in cui una lettera prende fuoco dopo essere stata letta oppure un messaggio che appare visibile solo in un determinato momento grazie al decadimento radioattivo di un elemento che in qualche modo ne compone un sistema di protezione?</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>La crittografia come dico spesso è magica ma forse non può spingersi a tanto. Tuttavia una domanda lecita è:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph {"className":"is-style-warning"} --></p>
+<p class="is-style-warning"><strong>Posso cifrare un messaggio che potrà essere decifrato solo dopo un certo intervallo di tempo?</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Mi sono imbattuto in questo problema a seguito della richiesta di un cliente che voleva realizzare una logica di escrow software, ovvero un sistema che rilascia al cliente il codice sorgente di una app se il maintainer fosse stato impossibilitato a proseguirne la manutenzione.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Il requisito del cliente era piuttosto stringente e richiedeva che tale escrow fosse puramente software e senza una terza parte coinvolta. Non ho accettato l'incarico, sono abituato a realizzare escrow "finanziari" basati su smart contract e quindi senza un'intermediario, tuttavia in questo caso l'oggetto da trasferire non sarebbe un quantitativo di token o un token infungibile, ma sarebbe la conoscenza in chiaro del codice sorgente di una app.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Pur avendo rifiutato l'incarico ho continuato a pensare al problema e le mie ricerche mi hanno portato a pensare ad un sistema di cifratura a tempo. Immaginiamo ad esempio di avere un algoritmo che permetta di cifrare oggi un messaggio e di consegnare alla controparte una chiave che potrà decifrare non prima di un determinato tempo, ad esempio un mese.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Una <strong>non soluzione</strong> avrebbe potuto funzionare come segue:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>Il fornitore cifra il codice sorgente e lo distribuisce cifrato e consegna al cliente la chiave</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>se allo scadere dei 30 giorni il fornitore è ancora adempiente il cliente oblitera la chiave che dunque non sarà più in grado di decifrare il testo cifrato e il fornitore genera una nuova chiave per i prossimi 30 giorni. </li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Se invece il fornitore è inadempiente allora il cliente allo scadere dei 30 giorni aziona la sua chiave e decifra il testo e acquisisce il codice sorgente.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>Ammesso e non concesso di avere chiavi a tempo obliterabili la <strong>soluzione farebbe comunque acqua da tutte le parti e pertanto è una non-soluzione</strong>. Mi è rimasta però la curiosità di sapere se una cifratura a tempo fosse o meno possibile e mi sono imbattuto in <a href="https://crypto.stackexchange.com/questions/3064/is-it-possible-to-make-time-locked-encrytion-algorithm">varie discussioni online</a></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Il principio di base della crittografia (principio di Kerchoff) è che l'unica cosa necessaria per decifrare i dati è la chiave. Quindi la domanda che ci si pone è: "Come posso rendere disponibile l'intera chiave solo durante un certo periodo di tempo?". Le due risposte ovvie sono: </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>a) rivelare la chiave solo in quel momento, oppure </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>b) far dipendere la chiave da dati conoscibili solo in quel momento.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>La soluzione (a) sembra ovvia, banale e richiede un grande livello di trust, infatti qualcuno deve garantire che la chiave verrà consegnata al momento debito. La soluzione (b) sembra più interessante ed effettivamente esiste della letteratura scientifica a riguardo</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><a href="https://eprint.iacr.org/2015/482">How to build time-lock encryption. <em>Jia Liu, Tibor Jager, Saqib A. Kakvi, and Bogdan Warinschi</em></a></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":5656,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="https://smartcontract.tips/wp-content/uploads/2022/12/image-9.png" /><img src="{{ site.baseurl }}/assets/image-9.png" alt="" class="wp-image-5656" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Time chain</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Il primo elemento necessario per la realizzazione del modello di cifratura a tempo è quello di disporre di un sistema inattaccabile e trustless che garantisca la marcatura temporale. In questo senso la proof of work di Bitcoin appare la scelta più ovvia. Ogni giorno vengono creati circa 144 blocchi e l'altezza di blocco è una variabile che potrebbe essere verificata in fase di esecuzione della decifratura. Anche se ci sono dei dubbi che presenterò in seguito nel testo.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Witness encryption</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Tuttavia, la sola esistenza di una marcatura temporale garantita da un algoritmo di consenso e senza elementi fiduciari non è sufficiente. Infatti <strong>come posso costruire oggi una cifratura che sarà decifrabile da elementi che ancora non conosco</strong> e che saranno noti solo nel futuro, ad esempio la chiave potrebbe essere l'hash del millesimo blocco Bitcoin a partire dal tempo presente.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>In realtà questo problema si può risolvere attraverso la cosiddetta witness encryption. Ovvero, non ho bisogno di conoscere oggi la chiave di decifratura ma posso cifrare il messaggio imponendo che la chiave avrà determinate caratteristiche. In altre parole io cifratore posso conoscere l'input<strong> x</strong> ad un problema di calcolo <strong>R</strong>, cifrare un messaggio grazie a questo input ed imporre che per decifrare il messaggio serva una chiave <strong>w</strong> che è la soluzione del problema.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>(x, w) ∈ R</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Se il problema è abbastanza complesso da un punto di vista computazionale, ad esempio richiede 30 giorni, la crittazione è sicura per 30 giorni. Facciamo l'esempio del Sudoku. Io potrei cifrare un messaggio a partire dai pochi numeri sparsi di uno schema Sudoku non ancora risolto, l'algoritmo di cifratura prevede che la decrittazione potrà avvenire solo a patto di fornire uno schema Sudoku completo a partire da quello iniziale.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Quando impongo la regola di decrittazione non ho neppure bisogno di sapere se la soluzione esiste veramente, se non esiste il messaggio non sarà mai decrittabile.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Tutto questo cosa c'entra con Bitcoin e la cifratura a tempo? Secondo gli autori del <a href="https://eprint.iacr.org/2015/482">paper</a> l'uso combinato di witness encryption e Bitcoin dove la witness sarà ricavabile da un qualsiasi blocco successivo al blocco attuale della blockchain Bitcoin e con un altezza pari a quella attuale più N (ricordo che sono 144 blocchi ogni giorno), e grazie al fatto che il tempo medio fra blocchi in Bitcoin si aggiusta in modo automatico e decentralizzato, si potrà realizzare una chiave crittografica a tempo.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Conclusioni</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Abbiamo visto che almeno da un punto di vista teorico si <strong>può ipotizzare una cifratura a tempo usando Bitcoin come sorgente di verità "temporale" non soggetta al controllo di nessuna parte fiduciaria.</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Secondo gli autori la sicurezza del messaggio è garantita dal fatto che <strong>nessuno potrà oggettivamente trovare più conveniente rompere la cifratura piuttosto che usare le proprie risorse di calcolo per prendere il controllo della rete Bitcoin</strong>.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Ovvero se so rompere la cifratura <strong>sarebbe comunque più conveniente usare questa capacità per acquisire Bitcoin in modo malevolo</strong>.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Detto che ancora <strong>non esistono delle implementazioni valide di questa soluzione,</strong> personalmente nutro anche qualche dubbio sulla sicurezza complessiva del sistema e sul fatto che siano stati considerati accuratamente tutti i possibili modelli di attacco. Ad esempio cosa succederebbe se un attaccante <strong>decidesse di fare un fork della chain a partire da quello attuale e cercasse di creare una chain capace di produrre una witness verificabile e valida ma adottando degli stratagemmi per far abbassare la Bitcoin difficulty in modo da ridurre il tempo fra blocchi.</strong> Certo sarebbe ancora un attacco costoso e sarebbe efficace solo se il numero di blocchi da creare per ottenere la witness fosse superiore a quelli che rimangono prima del prossimo aggiustamento di difficoltà (cosa che avviene ogni 2016 blocchi), ma mi pare ci sia spazio per attaccare il sistema in modo efficace.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>

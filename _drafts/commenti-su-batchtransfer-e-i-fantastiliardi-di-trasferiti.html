@@ -1,0 +1,75 @@
+---
+layout: post
+title: Commenti sul BatchTransfer bug in ERC20 e i fantastiliardi di $$$
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: pending
+categories:
+- Sicurezza Informatica
+- Smart Contracts
+tags: []
+meta:
+  jabber_published: '1525012085'
+  timeline_notification: '1525012087'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  email_notification: '1525012088'
+  _publicize_job_id: '17307228098'
+  _elasticsearch_indexed_on: '2018-04-29 14:28:09'
+  _oembed_77fa074eb589631f8afd2d4acc792648: "{{unknown}}"
+  _oembed_b798268bcaf5c610168feb16ef25431b: "{{unknown}}"
+  _oembed_7af93fdd2a000f63255132cea39ba5c3: "{{unknown}}"
+  _oembed_40b63fad47ef5dfb3aa5cb8ba158e426: "{{unknown}}"
+  _thumbnail_id: '3639'
+  _oembed_7eaf8bfc320f91d9df7dacc6b80c293b: "{{unknown}}"
+  _oembed_8b6e16cf756b626f878211c34a13eb1b: "{{unknown}}"
+  _edit_last: '48926058'
+  _oembed_790615cf6e54d8ad9b372eec109afebe: "{{unknown}}"
+  _oembed_c061fa79fc4dc367626ac43bf0e8b19e: "{{unknown}}"
+  _oembed_76a2a92515e36bb35d31bd2ccc189236: "{{unknown}}"
+  _oembed_109d4df8fee4e3c66d08e344a3404092: "{{unknown}}"
+  _oembed_a707679245442006f7877a892757a29a: "{{unknown}}"
+  _oembed_14cb8f8044e852ef73d91d7fbc5b5b57: "{{unknown}}"
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+---
+<p>L'ultima mazzata alla credibilità di Ethereum viene da <a href="https://medium.com/@shessenauer/batch-overflow-bug-on-ethereum-erc20-token-contracts-and-safemath-f9ebcc137434">queste news</a> di Aprile che descrivono come da una semplice transazione del BeautyToken BEC di non so quanti trilioni di trilioni di token ognuno con un controvalore di circa $0.32 sarebbe la più grande transazione commerciale della storia. Vedere per credere i massimi token holder al momento</p>
+<p>https://etherscan.io/token/0xc5d105e63711398af9bbff092d4b6769c82f793d#balances</p>
+<p>Purtroppo, pare che questo bug non sia limitato al solo BEC token ma una dozzina di altri token abbiano evidentemente copy/pasted lo stesso codice. <a href="https://medium.com/@shessenauer/batch-overflow-bug-on-ethereum-erc20-token-contracts-and-safemath-f9ebcc137434">Qui una lista</a> di quelli noti</p>
+<p>&nbsp;</p>
+<p>Ovviamente di tratta di glitch, bugs, exploit di qualche malfunzionamento del codice. Come risposta gli exchange hanno chiuso tutte le transazioni di token ERC20 (per chi non lo sapesse ERC20 sono le specifiche che descrivono come uno smart contract Ethereum deve essere fatto per funzionare come un token).</p>
+<p>Sembra che tutto il problema derivi da questa funzione <strong>batchTransfer ( )</strong></p>
+<p><img class="alignnone size-full wp-image-3635" src="{{ site.baseurl }}/assets/batchoverflow.jpg" alt="batchoverflow.jpg" width="1098" height="303" /></p>
+<p>che vorrebbe in pratica con una sola transazione spedire un po' di token a diversi destinatari. Una specie di <strong>airdrop</strong> insomma.</p>
+<p>Ma si sa, la programmazione è la diabolica arte di inserire bug nei programmi, oppure se preferite un programma è il codice che sembra funzionare tra un bug e l'altro. Insomma per farla breve questo codice presenta un problema di overflow.</p>
+<p>2 + 2 = 0</p>
+<p>se il vostro registro è fatto con soli due bit. <strong>Se i bit sono 256 il concetto non cambia</strong>.</p>
+<p>A prima vista si direbbe che i devs fossero consapevoli dei problemi di overflow perché hanno utilizzato la <strong>SafeMath</strong> library (questo lo capiamo dal fatto che somme e sottrazioni sono nella forma .sub( ) e .add( )</p>
+<p>Importare e usare queste librerie che sono scritte apposta per evitare gli overflow è una condizione necessaria ma non sufficiente. Soprattutto se da qualche parte ti dimentichi di usarla come avviene nella riga 257. Passando alla funzione batchTransfer( ) dei parametri opportunamente forgiati:</p>
+<pre><code>batchTransfer([addressA,addressB],0x8000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000)
+</code></pre>
+<p>avviene il fattaccio, ovvero che la variabile amount nella linea 257 diventa</p>
+<pre><code>uint256 amount = 2 * 0x8000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000
+</code></pre>
+<p>che è esattamente <strong>0</strong> a causa dell'overflow.</p>
+<p>Quindi il successivo <strong>require</strong> alla linea 259 risulta rispettato e il codice successivo viene eseguito quando invece <strong>non dovrebbe.</strong></p>
+<p>Risultato finale: addressB e addressA ricevono dal nulla la modesta cifra di 0x8000&lt;altri 60 zeri a seguire&gt; token che significa <strong>2^255 token a testa. Non male.</strong></p>
+<h2>Di chi è la colpa?</h2>
+<p><strong>Colpa di Ethereum!!!  colpa di Vitalik !!!  colpa dei token !!!.</strong></p>
+<p>Si è letto un po' di tutto in giro. Soprattutto FUD. Ci sta che gli exchange sospendano le transazioni ERC20 per verificare quali di questi token tra le migliaia ormai listate possano soffrire della stessa vulnerabilità. Ma bisogna specificare che questo è un bug di chi ha scritto lo smart contract per questi token e <strong>non è un bug della piattaforma Ethereum</strong>.</p>
+<p>Secondo punto, non è nemmeno qualcosa che deriva dallo standard ERC20 che non prevede la possibilità di fare questo <strong>batchTransfer( ).  Ricordiamo quali sono le funzioni previste per ERC20</strong></p>
+<p><img class="alignnone size-full wp-image-3636" src="{{ site.baseurl }}/assets/screenshot-2018-04-29-16-18-50.png" alt="Screenshot 2018-04-29 16.18.50.png" width="1564" height="1254" /></p>
+<p>Quindi non è colpa di Vitalik se non nella misura in cui Ethereum è stato progettato per permettere a chiunque di mettere <strong>user code in blockchain</strong>. Ma questa in fondo è la più grande forza di Ethereum, senza di questa ci bastava Bitcoin (e per molti effettivamente è così).</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

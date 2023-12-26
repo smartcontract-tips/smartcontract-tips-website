@@ -1,0 +1,154 @@
+---
+layout: post
+title: Dalla cifratura simmetrica alla crittografia a chiave pubblica
+date: 2022-12-28 12:17:02.000000000 +01:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Academy
+- Privacy
+- Sicurezza Informatica
+tags:
+- basic
+- cryptography
+- encryption
+- pki
+meta:
+  _last_editor_used_jetpack: block-editor
+  _wpas_done_all: '1'
+  _thumbnail_id: '5594'
+  _edit_last: '48926058'
+  _aioseo_title: ''
+  _aioseo_description: ''
+  _aioseo_keywords: ''
+  _aioseo_og_title: ''
+  _aioseo_og_description: ''
+  _aioseo_og_article_section: ''
+  _aioseo_og_article_tags: ''
+  _aioseo_twitter_title: ''
+  _aioseo_twitter_description: ''
+  footnotes: ''
+  BS_author_type: BS_author_is_user
+  BS_guest_author_name: ''
+  BS_guest_author_url: ''
+  BS_guest_author_description: ''
+  BS_guest_author_image_id: ''
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/articoli/dalla-cifratura-simmetrica-alla-crittografia-a-chiave-pubblica/"
+---
+<p><!-- wp:heading {"level":1} --></p>
+<h1 class="wp-block-heading">Cifratura delle informazioni</h1>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Cifratura e decifratura sono operazioni che trovano tante applicazioni nella difesa della privacy personale e della tutela delle informazioni industriali e commerciali. La cifratura e la corrispondente decifratura sono possibili tramite due elementi: la chiave e l’algoritmo.&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Nelle migliori pratiche l’algoritmo deve in genere essere noto, la chiave ovviamente no e deve essere custodita da entrambe le parti della conversazione senza che questa venga resa nota ad eventuali parti avversarie che non devono conoscere le informazioni che vogliamo cifrare.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Il principio di Kerckhoffs</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph {"className":"is-style-info coblocks-alert-paragraph"} --></p>
+<p class="is-style-info coblocks-alert-paragraph"><strong>Il principio di Kerckhoffs noto anche come legge di Kerckhoffs</strong>, afferma che la sicurezza di un crittosistema non deve dipendere dal tenere celato l'algoritmo crittografico ma solo dal tenere celata la chiave.<br />Il principio fu enunciato dal crittografo olandese Auguste Kerckhoffs nel 1880. Secondo tale principio si afferma il concetto di sicurezza tramite trasparenza in opposizione al principio della sicurezza tramite segretezza.<br />In altre parole, il sistema deve rimanere sicuro anche nell'ipotesi di un avversario che conosca l'algoritmo di crittazione. In aggiunta, l’algoritmo può o perfino deve essere di pubblico dominio mentre l'unica cosa che conta è che la chiave usata dalle parti nella crittazione resti segreta. <br />Più in generale ed in modo indipendente Claude Shannon, considerato da molti il padre della teoria dell’informazione, ha formulato lo stesso principio nella forma "il nemico conosce il sistema" ovvero che “un sistema dovrebbe essere progettato sotto l’ipotesi prudenziale che il nemico acquisirà rapidamente familiarità con esso”.</p>
+<p>D’altronde se la "segretezza" dell'algoritmo o del metodo non è fondamentale, ma solo le chiavi utilizzate con l'algoritmo devono essere tenute segrete, la distribuzione delle stesse chiavi alle parti legittimamente autorizzate alla ricezione dei messaggi richiede un processo più semplice e meno costoso.<br />Va anche notato che un metodo o algoritmo noto al pubblico gode della verifica della sua sicurezza da parte di una comunità globale di crittografi, programmatori e ricercatori che in un processo darwiniano di selezione rileva tutti i difetti di metodi e implementazioni.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":1} --></p>
+<h1 class="wp-block-heading">Cifratura simmetrica</h1>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>L’implementazione più semplice della cifratura è detta simmetrica, nella quale i due interlocutori che vogliono comunicare attraverso un canale non sicuro, chiamiamoli Alice e Bob, utilizzeranno la stessa chiave sia per cifrare i messaggi che per decifrarli.&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Questo pone immediatamente un dilemma alle parti in comunicazione in quanto per poter usare la stessa chiave Alice e Bob devono trovare un modo per poterla scambiare, quindi devono avere accesso ad un canale sicuro.&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image --></p>
+<figure class="wp-block-image"><img src="{{ site.baseurl }}/assets/2022/12/3co44DjsbX_ILqpqSbE8cukZxuIN2p8dMKSkPzCYZlCyFusLuE3Mwm-b8lprSFgRjZoHO7ZeM8L1tc-dTlHAO3sAF_ctKTs8JFoSCis50lgQOss-Vzyq0tmEmc2trygDvc1pEREryda7M4px-NcSFeOyk29NXZsS8itF9KQHvswnxa_1YXa8e6qxlxnw" alt="" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>In figura viene mostrato come nella cifratura simmetrica Alice e Bob devono trovare un canale sicuro per condividere fra loro la chiave prima di poter cifrare e trasmettere i messaggi attraverso il canale non sicuro. In questo modello di attacco il canale non sicuro viene costantemente vigilato dall’avversario Charlie.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":1} --></p>
+<h1 class="wp-block-heading">Cifratura a chiave pubblica (o a doppia chiave)</h1>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph {"className":"is-style-info coblocks-alert-paragraph"} --></p>
+<p class="is-style-info coblocks-alert-paragraph">Un'applicazione molto importante della crittografia a chiave pubblica è la firma digitale.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Il grosso limite della crittografia simmetrica è il fatto che le due parti devono trovare un canale sicuro per condividere fra loro la chiave. A dire il vero esistono delle tecniche per scambiarsi chiavi segrete in canali insicuri la più famosa delle quali si chiama <em>metodo di Diffie Hellman</em>.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Ma tralasciando queste tecniche avanzate ci concentreremo invece su una diversa tipologia di cifratura molto più flessibile e utile che si chiama cifratura a doppia chiave.&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>In questa variante Alice e Bob fanno uso di due chiavi di cui una è detta pubblica ed una è detta privata.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>In questo caso Alice potrà distribuire a tutti e quindi anche a Bob la sua chiave pubblica che non deve più essere custodita in modo segreto. Bob potrà usare la chiave pubblica di Alice per cifrare i messaggi mentre Alice potrà ricevere tali messaggi e decifrarli utilizzando la sua chiave privata.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Al contrario della chiave pubblica che può essere liberamente condivisa e distribuita, la chiave privata deve essere gelosamente custodita.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>L’unico limite e avvertenza importante nell’uso di questa tecnica è che Bob deve essere sicuro di utilizzare la vera chiave pubblica di Alice e non una chiave creata in modo malevolo da un avversario che tenta di impersonare Alice.&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>La prova che una data chiave pubblica appartenga ad una determinata persona è dunque l’aspetto critico di questo sistema. Tale prova può essere prodotta in vari modi, citiamo ad esempio l’uso dei certificati digitali emessi da certification authority riconosciute.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Come equivalente nel mondo fisico, possiamo immaginarci una scatola dotata di un lucchetto speciale e le due chiavi, la privata la teniamo unica, mentre la pubblica la duplichiamo e la diamo ai nostri amici. Se riempio la scatola con un certo contenuto e la chiudo con la chiave privata, chiunque trovando la scatola chiusa potrà aprirla ed essere sicuro che ciò che trova dentro è il mio contenuto originale, inalterato. Questo garantisce l’autenticità. Viceversa chiunque potrà prendere la scatola vuota, metterci qualcosa dentro, chiuderla con la mia chiave pubblica e lasciarla da qualche parte. Solo io che possiedo la chiave privata potrò aprirla. Questo garantisce la sicurezza e la privatezza della consegna.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Esempio di chiave privata in cifre esadecimali</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>91149ee24f1ee9a6f42c3dd64c2287781c8c57a6e8e929c80976e586d5322a3d</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Esempio di chiave pubblica in cifre esadecimali</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph {"className":"is-style-info"} --></p>
+<p class="is-style-info">042c6b7e6da7633c8f226891cc7fa8e5ec84f8eacc792a46786efc869a408d29539a5e6f8de3f71c0014e8ea71691c7b41f45c083a074fef7ab5c321753ba2b3fe</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>In generale un indirizzo Bitcoin si costruisce a partire dalla chiave pubblica e la chiave pubblica a partire dalla chiave privata. Ma allora perché non utilizzare direttamente la chiave pubblica come identificativo del destinatario di un pagamento? Perché è necessario o utile utilizzare l’indirizzo? Ci sono varie ragioni: intanto la chiave pubblica è molto lunga e scomoda da condividere con qualcuno. E’ senz’altro più pratico trasmettere un indirizzo che ha una forma molto più compatta. In secondo luogo esistono indirizzi speciali detti multisig i cui coin possono essere incassati solo se si possiedono più chiavi private. Questo è particolarmente utile per costruire alcuni schemi di pagamento con firma congiunta. Ultima ragione poi se si usassero le chiavi pubbliche invece degli indirizzi, un eventuale errore di battitura anche di un solo carattere su una chiave pubblica non potrebbe essere individuato ed il coin verrebbe semplicemente spedito nel nulla dato che nessuno avrebbe la corrispondente chiave privata. Al contrario un errore di battitura su un indirizzo sarebbe probabilmente innocuo. Per la precisione c’è un algoritmo che verifica che le cifre e le lettere che compongono un indirizzo Bitcoin rispettino delle specifiche regole. In tal modo i nodi semplicemente scartano le transazioni con un indirizzo che contiene un errore di battitura. Esiste tuttavia ancora una probabilità pari a uno su quattromiliardi circa di commettere un errore che genera un indirizzo ancora sintatticamente corretto.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":1} --></p>
+<h1 class="wp-block-heading">Conclusioni</h1>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Abbiamo visto che nella cifratura a doppia chiave viene rimosso il problema di come distribuire le chiavi su un canale insicuro.&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Infatti la chiave privata e la chiave pubblica sono generate contestualmente e sono correlate fra loro ma viene rispettato il requisito che dalla conoscenza della chiave pubblica non sia praticabile ottenere la corrispondente chiave privata.&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>La forza della crittografia a chiave pubblica consiste proprio nella difficoltà di ottenere le informazioni private come la chiave privata a partire dalle informazioni pubbliche.&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Si tratta di un problema matematico che deve essere scelto in modo che sia difficile, tanto più è difficile risalire dalla conoscenza della chiave pubblica a quella della chiave privata tanto più la soluzione crittografica sarà sicura.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>La prima realizzazione della crittografia a doppia chiave è storicamente quella basata sul sistema RSA che parte dall’ipotesi che dati due numeri primi p e q ed il loro prodotto n= p * q, la fattorizzazione di n, quando questo è un numero molto grande, sia un problema molto difficile da risolvere per un calcolatore in tempi ragionevoli, a questo scopo si dice che il problema è impraticabile per ogni attaccante con le attuali conoscenze e tecnologie informatiche. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Va detto che impraticabile non significa impossibile ma semplicemente che lo sforzo necessario supera di gran lunga le capacità di calcolo disponibili al giorno d’oggi. La fattorizzazione di grandissimi numeri ricade in questa categoria di problemi e come tale può essere sfruttata per generare le chiavi.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>In altre parole, mentre è facile per un computer calcolare in pochi istanti il prodotto p * q = n è molto difficile il contrario, ovvero a partire da n capire che i fattori sono p e q. Questo ovviamente per numeri molto grandi.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Esiste una categoria di problemi che risultano più complessi. Questi problemi sono quelli del Discrete Logarithm Problem (DLP), ovvero calcolare il logaritmo di un numero intero all’interno di un campo finito. Senza entrare nei dettagli matematici ci limitiamo a dire che confrontato con il sistema RSA basato sulla fattorizzazione di grandi numeri, la crittografia basata su DLP garantisce la stessa robustezza agli attacchi ma con delle chiavi crittografiche di taglia più piccola e quindi più comode da trattare dalle applicazioni.</p>
+<p><!-- /wp:paragraph --></p>

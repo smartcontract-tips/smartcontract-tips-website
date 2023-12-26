@@ -1,0 +1,76 @@
+---
+layout: post
+title: 'Gli audit di sicurezza degli smart contract fatti dalla AI: un report scientifico
+  ne misura la qualità'
+date: 2023-07-19 16:50:31.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Approfondimenti
+tags: []
+meta:
+  _wpas_done_all: '1'
+  _thumbnail_id: '6211'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/articoli/gli-audit-di-sicurezza-degli-smart-contract-fatti-dalla-ai-un-report-scientifico-ne-misura-la-qualit/"
+excerpt: Non è la prima volta che si parla di utilizzare gli LLM  come GPT4 o Claude
+  per rilevare errori e vulnerabilità negli smart contract. Anzi, di fatto è stato
+  quasi un tormentone nel corso degli ultimi tempi con vari esperti, incluso il sottoscritto,
+  che si divertivano a postare screenshot delle risposte di ChatGPT a domande sulla
+  sicurezza di questo o quello snippet di codice solidity.
+---
+<figure class="<br />
+            sqs-block-image-figure<br />
+            image-block-outer-wrapper<br />
+            image-block-v2<br />
+            design-layout-stack<br />
+            combination-animation-site-default<br />
+            individual-animation-site-default<br />
+            individual-text-animation-site-default<br />
+            image-position-left</p>
+<p>          " data-scrolled data-test="image-block-v2-outer-wrapper"></p>
+<div class="intrinsic">
+<div class="</p>
+<p>                image-inset" data-animation-role="image" data-description=""></p>
+<div class="sqs-image-shape-container-element</p>
+<p>                content-fit</p>
+<p>            " style="<br />
+              position: relative;<br />
+              overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);</p>
+<p>            "></p></div>
+</div>
+</div>
+<p><img data-stretch="true" src="{{ site.baseurl }}/assets/2023/07/ai+controllo+sicurezza+smartcontract+audit" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/6c55f135-3fa8-46b7-b667-56e64e951779/ai+controllo+sicurezza+smartcontract+audit" data-image-dimensions="1024x768" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1024" height="768" sizes="(max-width: 768px) 100vw, 100vw" style="display:block;object-fit: contain;" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/6c55f135-3fa8-46b7-b667-56e64e951779/ai+controllo+sicurezza+smartcontract+audit?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/6c55f135-3fa8-46b7-b667-56e64e951779/ai+controllo+sicurezza+smartcontract+audit?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/6c55f135-3fa8-46b7-b667-56e64e951779/ai+controllo+sicurezza+smartcontract+audit?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/6c55f135-3fa8-46b7-b667-56e64e951779/ai+controllo+sicurezza+smartcontract+audit?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/6c55f135-3fa8-46b7-b667-56e64e951779/ai+controllo+sicurezza+smartcontract+audit?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/6c55f135-3fa8-46b7-b667-56e64e951779/ai+controllo+sicurezza+smartcontract+audit?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/6c55f135-3fa8-46b7-b667-56e64e951779/ai+controllo+sicurezza+smartcontract+audit?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+<div class="image-overlay" style="overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);"></div>
+</figure>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Non è la prima volta che si parla di utilizzare gli LLM  come GPT4 o Claude per rilevare errori e vulnerabilità negli smart contract. Anzi, di fatto è stato quasi un tormentone nel corso degli ultimi tempi con vari esperti, incluso il sottoscritto, che si divertivano a postare screenshot delle risposte di ChatGPT a domande sulla sicurezza di questo o quello snippet di codice solidity.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Forse spinti dall’ancestrale paura di venire rimpiazzati dalla macchina ci siamo mossi in maniera preventiva per mostrare che la macchina in realtà faceva dei gran pasticci e che noi esperti non saremmo rimasti senza lavoro.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Posto che anche dare in pasto ad un LLM un contratto e chiedergli se è sicuro sembra un’approccio piuttosto naif, una cosa che abbiamo imparato dall’uso degli LLM è che le domande vanno poste in modo corretto e in modo completo per rimuovere ambiguità e incomprensioni. Ma questo è un altro discorso</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In questo caso però voglio presentarvi un articolo scientifico scritto a quattro mani dai ricercatori dell’Imperial College London e UCL che in effetti cerca di dare una stima quantitativa al precendente “lo vedete che fa solo dei pasticci”.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">La referenza bibliografica completa è </p>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><em>David, Isaac, et al. "Do you still need a manual smart contract audit?." arXiv preprint arXiv:2306.12338 (2023).</em></p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Ed è scaricabile da<a href="https://arxiv.org/abs/2306.12338"> <strong>https://arxiv.org/abs/2306.12338</strong></a></p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">L'articolo esplora la fattibilità di utilizzare i Large Language Models (LLMs) per condurre audit di sicurezza sui smart contract. </p>
+<h2 style="white-space:pre-wrap;">Esperimento su smart contract vulnerabili e noti</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">La ricerca si concentra sull'ottimizzazione dell'ingegneria dei prompt per un'analisi di sicurezza  e valuta le prestazioni e l'accuratezza degli LLMs utilizzando un set di dati di riferimento composto da 52 smart contract di finanza decentralizzata (DeFi) che sono stati precedentemente compromessi (Pagina 1).</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">I risultati mostrano che, quando applicati a contratti vulnerabili, sia i modelli GPT-4 che Claude identificano correttamente il tipo di vulnerabilità nel 40% dei casi. Tuttavia, questi modelli mostrano anche un alto tasso di falsi positivi, che richiede un coinvolgimento continuo da parte degli auditor manuali. Nonostante ciò, gli LLMs testati superano un modello casuale del 20% in termini di punteggio F1. Francamente mi pare che siamo abbastanza lontani da una seppur minima utilità, o per lo meno andrebbe capito se il dover verificare i falsi positivi alla fine è un costo superiore ad un audit completamente manuale.</p>
+<h2 style="white-space:pre-wrap;">Esperimento su smart contract ignoti e realizzati ad hoc</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Giustamente non contenti del risultato i ricercatori fanno anche un’altra considerazione, ovvero che il test è stato condotto con esempi noti di smart contract affetti da vulnerabilità e pubblicati in veri servizi di DeFi, quindi probabilmente gli stessi modelii Claude e GPT potrebbero già includere nel loro training set informazioni relative a questi specifici hack. Per ovviare a questo problema allora conducono un secondo esperimento in cui vengono creati ad hoc 5 nuovi smart contract ognuno dei quali contiene 2 (oppure 15 in una variante dell’esperimento) vulnerabilità aggiunte dai ricercatori stessi.</p>
+<p class="sqsrte-large" data-rte-preserve-empty="true" style="white-space:pre-wrap;">
+<p class="sqsrte-large" style="white-space:pre-wrap;">GPT-4 e Claude sono stati in grado di rilevare 6 su 10 vulnerabilità (vulnerabilità totali in tutti i contratti). Per i contratti con 15 vulnerabilità, GPT-4 ha avuto prestazioni leggermente migliori e ha potuto identificare 46 delle possibili 75 vulnerabilità (61,3%) in tutti e 5 i contratti, mentre Claude ha identificato 43</p>
+<p class="sqsrte-large" data-rte-preserve-empty="true" style="white-space:pre-wrap;">
+<p class="sqsrte-large" style="white-space:pre-wrap;">In tutti i contratti, tranne LPManager, sono state identificate delle vulnerabilità. Claude è stato in grado di identificare il numero di vulnerabilità corrispondenti alla realtà nella maggior parte dei contratti, tranne FaucetToken, in cui non è stata rilevata alcuna vulnerabilità</p>
+<p class="sqsrte-large" data-rte-preserve-empty="true" style="white-space:pre-wrap;">
+<p class="sqsrte-large" style="white-space:pre-wrap;">L'articolo conclude che la ricerca costituisce un passo fondamentale verso la ridefinizione del panorama dell'audit degli smart contract ma in realtà questi risultati indicano che, <strong>nonostante i modelli di linguaggio possano identificare alcune vulnerabilità, non sono ancora in grado di sostituire completamente gli auditor umani.</strong></p>
+<p class="" data-rte-preserve-empty="true" style="white-space:pre-wrap;">
+</div>

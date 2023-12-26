@@ -1,0 +1,158 @@
+---
+layout: post
+title: 'MEV in Web3 Security: The Hidden Tax and Its Implications'
+date: 2023-09-08 13:19:23.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- English
+tags: []
+meta:
+  _wpas_done_all: '1'
+  _thumbnail_id: '6222'
+  _edit_last: '48926058'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/articoli/mev-in-web3-security-the-hidden-tax-and-its-implications/"
+excerpt: Maximal Extractable Value (MEV) has become one of the hotly debated topics
+  in the realm of Web3 security. Derived from the very fabric of blockchain operations,
+  MEV represents both a boon for miners and a potential hazard for regular users.
+---
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:727px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:56.25859451293945%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/09/Screenshot+2023-09-08+at+14.20.41.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ee1da35f-f490-49ac-818a-f695217c79e9/Screenshot+2023-09-08+at+14.20.41.png" data-image-dimensions="727x409" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="727" height="409" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ee1da35f-f490-49ac-818a-f695217c79e9/Screenshot+2023-09-08+at+14.20.41.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ee1da35f-f490-49ac-818a-f695217c79e9/Screenshot+2023-09-08+at+14.20.41.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ee1da35f-f490-49ac-818a-f695217c79e9/Screenshot+2023-09-08+at+14.20.41.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ee1da35f-f490-49ac-818a-f695217c79e9/Screenshot+2023-09-08+at+14.20.41.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ee1da35f-f490-49ac-818a-f695217c79e9/Screenshot+2023-09-08+at+14.20.41.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ee1da35f-f490-49ac-818a-f695217c79e9/Screenshot+2023-09-08+at+14.20.41.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ee1da35f-f490-49ac-818a-f695217c79e9/Screenshot+2023-09-08+at+14.20.41.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Maximal Extractable Value (MEV) has become one of the hotly debated topics in the realm of Web3 security. Derived from the very fabric of blockchain operations, MEV represents both a boon for miners and a potential hazard for regular users.</p>
+<h2 style="white-space:pre-wrap;">Defining MEV</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">MEV, originally referred to as “miner extractable value” in the context of proof-of-work, defines the maximum amount that can be profitably extracted from block production beyond the typical block reward and gas fees. This is achieved by selectively including, excluding, or rearranging transactions within a block. But with the transition to proof-of-stake systems, where validators, not miners, hold these powers, the term has since evolved to “maximal extractable value.”</p>
+<h2 style="white-space:pre-wrap;">MEV’s Mechanisms and Implications</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">When users initiate transactions, there’s a window between the transaction’s broadcast to the network and its mining into a block. This period sees transactions waiting in a “mempool,” a transparent transaction pool. This transparency, while inherent to blockchain’s design, also offers an opportunity for arbitrageurs and miners to observe and capitalize by frontrunning these transactions. This act can be especially lucrative when coupled with profit-sharing schemes like FaaS/MEVA.</p>
+<h2 style="white-space:pre-wrap;">But what are the ramifications?</h2>
+<ol data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">User Impact: MEV functions like an invisible tax that miners can impose upon users, thereby increasing transaction costs without users even realizing it.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Threat to Ethereum: The lure of MEV can be so enticing that miners may willingly destabilize consensus for a bigger payout, especially when block rewards seem meager in comparison.</p>
+</li>
+</ol>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Flashbots Dashboard offers insights into these activities, providing real-time data on extracted MEV, illustrating the growing nature of this trend.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Blockchain networks, including prominent ones like Bitcoin and Ethereum, operate as unchangeable ledgers safeguarded by a decentralized ensemble of computers, commonly termed “block producers”. In proof-of-work (PoW) systems, these are known as miners, whereas proof-of-stake (PoS) networks call them validators. Their primary function is to compile pending transactions into blocks. Once validated by the wider network, these blocks are then added to the overarching ledger. While these networks ensure every transaction’s integrity and maintain constant block production, the sequence in which transactions are recorded isn’t necessarily the same as when they’re submitted.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">A block has a capacity limit for transactions, which means block producers enjoy the discretion to pick which queued transactions from the mempool—a space where unconfirmed transactions await—they’ll incorporate in their block. Although they often prioritize transactions based on the highest fees to boost their revenue, this isn’t mandated by the network. This flexibility permits them to enhance their earnings by rearranging transactions, leading to the phenomenon of maximal-extractable value (MEV).</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:723px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:52.55878448486328%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/09/Screenshot+2023-09-08+at+14.24.08.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/74c134ae-5c2d-450b-b50b-6343a52b2858/Screenshot+2023-09-08+at+14.24.08.png" data-image-dimensions="723x380" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="723" height="380" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/74c134ae-5c2d-450b-b50b-6343a52b2858/Screenshot+2023-09-08+at+14.24.08.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/74c134ae-5c2d-450b-b50b-6343a52b2858/Screenshot+2023-09-08+at+14.24.08.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/74c134ae-5c2d-450b-b50b-6343a52b2858/Screenshot+2023-09-08+at+14.24.08.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/74c134ae-5c2d-450b-b50b-6343a52b2858/Screenshot+2023-09-08+at+14.24.08.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/74c134ae-5c2d-450b-b50b-6343a52b2858/Screenshot+2023-09-08+at+14.24.08.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/74c134ae-5c2d-450b-b50b-6343a52b2858/Screenshot+2023-09-08+at+14.24.08.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/74c134ae-5c2d-450b-b50b-6343a52b2858/Screenshot+2023-09-08+at+14.24.08.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Typically, block producers prioritize transactions based on the fees attached, not the submission time</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Extracting MEV demands specialized knowledge and resources. Consequently, it’s a standard practice for blockchain network’s block producers to delegate block creation to external networks comprised of searchers, builders, and relayers. Searchers identify MEV possibilities and curate bundles of several transactions, occasionally incorporating another user’s transaction. Afterward, these bundles are directed to builders who merge them to craft a comprehensive block. Completed blocks are then offered to relayers, forming the bridge to a blockchain’s primary block producers. It’s worth noting that while this depicts a prevalent approach to MEV extraction today, the ecosystem is in a state of swift metamorphosis.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">MEV’s emergence, unfortunately, often undermines the interests of average users. The repercussions, although not instantly discernible, become evident post-transaction. For instance, users might experience inferior trade execution rates, with MEV being siphoned directly from their transactions.</p>
+<h2 style="white-space:pre-wrap;">MEV in Action</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">To better understand MEV, consider these manifestations:</p>
+<ol data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">DEX Arbitrage: Perhaps the most basic form of MEV, this entails buying a token on one decentralized exchange (DEX) at a lower price and immediately selling it on another DEX at a higher rate. This strategy assures risk-free profit due to blockchain mechanics.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Liquidations: Lending platforms like Aave and Maker let users deposit collateral, which can then be borrowed by other users. When borrowers’ collateral values dip below certain thresholds due to market movements, these platforms allow for the collateral to be liquidated. This offers a ripe MEV opportunity for those who can swiftly spot and act upon these liquidation events.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Sandwich Trading: This involves observing large trades in the mempool, and capitalizing on the price effect of these trades. Traders can insert their own transactions before and after a large trade, essentially “sandwiching” the initial trade to reap profits.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">NFT MEV: While newer and less defined, there are MEV opportunities within the NFT sector. Given that NFT transactions occur on shared blockchains, traditional MEV strategies can be adapted for NFTs, like being the first to buy a highly sought-after NFT.</p>
+</li>
+</ol>
+<h2 style="white-space:pre-wrap;">The long tail</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">DEX arbitrage, liquidations, and sandwich trading are all very well-known MEV opportunities and are unlikely to be profitable for new searchers. However, there is a long tail of lesser known MEV opportunities (NFT MEV is arguably one such opportunity).</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Searchers who are just getting started may be able to find more success by searching for MEV in this longer tail. Flashbot’s MEV job board(opens in a new tab) lists some emerging opportunities.</p>
+<h2 style="white-space:pre-wrap;">The Rise of Sniping Bots</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">During the peak of the “altcoin” frenzy a year ago, sniping bots emerged as a predominant tool amongst opportunistic traders.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Step 1: These bots were programmed to vigilantly scan the blockchain for the launch of a new altcoin, particularly looking for events signaling the addition of liquidity.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Step 2: Once liquidity was detected, the bots would quickly execute a purchase of the new altcoin, securing it at an initial favorable rate before the broader market could react.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Step 3: After this initial acquisition, the bots would simply wait. As more traders discovered and began buying the altcoin, demand would drive the price up.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Step 4: Once the coin’s value had significantly appreciated – sometimes seeing increases of 2x, 5x, 10x, or even more from the initial purchase price – the bot would liquidate its position, selling off the altcoin for a substantial profit.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Such strategies, while lucrative, also introduced volatility and unpredictability in the market, especially for newcomers unaware of these automated players.</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:728px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:56.04396057128906%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/09/Screenshot+2023-09-08+at+14.24.48.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/33c80899-80f1-4cfc-9976-2e8d78d0f847/Screenshot+2023-09-08+at+14.24.48.png" data-image-dimensions="728x408" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="728" height="408" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/33c80899-80f1-4cfc-9976-2e8d78d0f847/Screenshot+2023-09-08+at+14.24.48.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/33c80899-80f1-4cfc-9976-2e8d78d0f847/Screenshot+2023-09-08+at+14.24.48.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/33c80899-80f1-4cfc-9976-2e8d78d0f847/Screenshot+2023-09-08+at+14.24.48.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/33c80899-80f1-4cfc-9976-2e8d78d0f847/Screenshot+2023-09-08+at+14.24.48.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/33c80899-80f1-4cfc-9976-2e8d78d0f847/Screenshot+2023-09-08+at+14.24.48.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/33c80899-80f1-4cfc-9976-2e8d78d0f847/Screenshot+2023-09-08+at+14.24.48.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/33c80899-80f1-4cfc-9976-2e8d78d0f847/Screenshot+2023-09-08+at+14.24.48.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;"><a href="https://github.com/topics/pancakeswap-sniper-bot-free" target="_blank" rel="noopener">https://github.com/topics/pancakeswap-sniper-bot-free</a></p>
+<h2 style="white-space:pre-wrap;">Countering MEV</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Efforts are underway to address the challenges posed by MEV. Projects like Flashbots aim to circumvent the public mempool by allowing traders to directly submit MEV transactions to validators. This shields transactions from being preyed upon by frontrunners.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Additionally, the Ethereum community is actively researching and devising techniques to reduce gas usage, such as “gas golfing.” This involves optimizing transaction programming to minimize gas fees, giving traders an edge in MEV opportunities.</p>
+<h2 style="white-space:pre-wrap;">Concluding Thoughts</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">MEV’s emergence showcases the teething problems faced by burgeoning technologies like blockchain. While it offers lucrative prospects for some, its unchecked proliferation can undermine user trust and system stability. As the world of Web3 security evolves, striking a balance between profit motives and system robustness becomes imperative.</p>
+</div>

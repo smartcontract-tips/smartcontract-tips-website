@@ -1,0 +1,206 @@
+---
+layout: post
+title: 'Il registro delle vulnerabilità: cos''è e chi l''ha creato? Caso studio sulla
+  reentrancy'
+date: 2023-05-05 14:07:36.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Approfondimenti
+tags: []
+meta:
+  _wpas_done_all: '1'
+  _thumbnail_id: '6191'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/articoli/il-registro-swc-cos-e-chi-lha-creato/"
+excerpt: Gli smart contract sono una parte fondamentale della tecnologia blockchain
+  e hanno permesso una vasta gamma di applicazioni innovative, dalla finanza decentralizzata
+  alla gestione della catena di approvvigionamento. Tuttavia, come qualsiasi software,
+  gli smart contract possono avere vulnerabilità di sicurezza che possono essere sfruttate
+  dagli attaccanti. In questo articolo, presenteremo il registro di classificazione
+  delle debolezze e dei casi di test degli smart contract (SWC), uno strumento che
+  può aiutare gli sviluppatori a identificare e mitigare queste vulnerabilità.
+---
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1640px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:56.34146499633789%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/05/swc.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/2a3e33e4-c93d-4b26-96e1-9cb347f557dd/swc.png" data-image-dimensions="1640x924" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1640" height="924" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/2a3e33e4-c93d-4b26-96e1-9cb347f557dd/swc.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/2a3e33e4-c93d-4b26-96e1-9cb347f557dd/swc.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/2a3e33e4-c93d-4b26-96e1-9cb347f557dd/swc.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/2a3e33e4-c93d-4b26-96e1-9cb347f557dd/swc.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/2a3e33e4-c93d-4b26-96e1-9cb347f557dd/swc.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/2a3e33e4-c93d-4b26-96e1-9cb347f557dd/swc.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/2a3e33e4-c93d-4b26-96e1-9cb347f557dd/swc.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<hr />
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Introduzione:</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gli smart contract sono una parte fondamentale della tecnologia blockchain e hanno permesso una vasta gamma di applicazioni innovative, dalla finanza decentralizzata alla gestione della catena di approvvigionamento. Tuttavia, come qualsiasi software, gli smart contract possono avere vulnerabilità di sicurezza che possono essere sfruttate dagli attaccanti. In questo articolo, presenteremo il registro di classificazione delle debolezze e dei casi di test degli smart contract (SWC), uno strumento che può aiutare gli sviluppatori a identificare e mitigare queste vulnerabilità.</p>
+<p>Il link <a href="https://swcregistry.io">al registro SWC</a></p>
+<h2 style="white-space:pre-wrap;">Cos'è il registro SWC?</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Il registro SWC, noto anche come Registro di classificazione delle debolezze degli smart contract, è un progetto che mira a mantenere una lista esaustiva di vulnerabilità e debolezze di sicurezza note negli smart contract su varie piattaforme blockchain, tra cui Ethereum, Binance Smart Chain e altre. Il progetto è stato avviato da un gruppo di ricercatori ed esperti di sicurezza che hanno riconosciuto l'importanza di identificare e mitigare i rischi di sicurezza negli smart contract.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Il registro SWC fornisce un sistema di classificazione standardizzato per identificare e descrivere diversi tipi di vulnerabilità e debolezze degli smart contract. Attualmente comprende oltre 200 voci che coprono una vasta gamma di problemi di sicurezza, come l'overflow e l'underflow degli interi, gli attacchi di reentrancy e i problemi di autorizzazione.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Ogni voce nel registro SWC include un identificatore univoco, un titolo, una descrizione della vulnerabilità o debolezza e informazioni sul suo potenziale impatto e gravità. Le voci sono categorizzate in base al loro livello di gravità, con categorie che vanno da "basso" a "critico".</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gli sviluppatori e gli auditor possono utilizzare il registro SWC come riferimento durante le verifiche di sicurezza o lo sviluppo di smart contract. Consultando il registro, gli sviluppatori possono assicurarsi che i loro smart contract non contengano vulnerabilità o debolezze note e possono adottare le misure necessarie per mitigare eventuali rischi identificati.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Oltre a fornire una lista esaustiva di vulnerabilità degli smart contract, il registro SWC funge anche da piattaforma per discutere e affrontare nuovi problemi di sicurezza man mano che emergono. Il progetto è open source e chiunque può contribuire presentando nuove vulnerabilità o debolezze, suggerendo modifiche alle voci esistenti o partecipando a discussioni su minacce emergenti alla sicurezza.</p>
+<h2 style="white-space:pre-wrap;">Chi ha creato il registro SWC?</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Il team di MythX è stato coinvolto nella creazione del registro SWC. Sono tra gli esperti della comunità blockchain che hanno contribuito al gruppo di lavoro SWC, che ha proposto l'idea e implementato il registro. Il team di MythX, che include esperti di sicurezza come Bernhard Mueller e Joran Honig, è noto per lo sviluppo di strumenti e servizi che aiutano gli sviluppatori a identificare e correggere le vulnerabilità di sicurezza negli smart contract, e il loro contributo al registro SWC fa parte di quel più ampio sforzo.</p>
+<h1 style="white-space:pre-wrap;">Esempio di classi di debolezza nel registro SWC</h1>
+<h2 style="white-space:pre-wrap;">Vulnerabilità di reentrancy (SWC-107)</h2>
+<h2 style="white-space:pre-wrap;">Descrizione:</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Chiamare contratti esterni rappresenta un rischio significativo in quanto può comportare la perdita di controllo del flusso. Un esempio di tale rischio è l'attacco di reentrancy, noto anche come attacco di chiamata ricorsiva. In questo attacco, un contratto malintenzionato richiama il contratto chiamante prima che l'invocazione iniziale della funzione sia completata, causando l'interazione di più invocazioni di funzioni in modi indesiderati.</p>
+<h2 style="white-space:pre-wrap;">ATTACCO ALLA DAO:</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Un attacco alla DAO (Decentralized Autonomous Organization) in smart contract si riferisce a una vulnerabilità nel codice di un'organizzazione autonoma decentralizzata che consente a un attaccante di rubare o manipolare gli asset dell'organizzazione.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Le DAO sono essenzialmente smart contract autoeseguenti che esistono su una blockchain e operano autonomamente senza la necessità di intermediari. Sono progettati per gestire fondi e prendere decisioni attraverso un sistema di votazione controllato dai membri dell'organizzazione.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In un attacco alla DAO, un hacker trova una vulnerabilità nel codice del smart contract e la sfrutta per ottenere il controllo sui fondi dell'organizzazione o manipolare il suo processo decisionale. Ciò può essere fatto attraverso una varietà di mezzi, come la creazione di una proposta malintenzionata approvata dal sistema di votazione, sfruttando una falla nel codice per svuotare i fondi dell'organizzazione o lanciando un attacco di denial-of-service per impedire ai membri di votare.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Un famoso esempio di attacco alla DAO è avvenuto nel 2016, quando un attaccante ha sfruttato una vulnerabilità nel codice di una DAO chiamata "The DAO" e ha rubato circa un terzo dei fondi dell'organizzazione, per un valore di circa 50 milioni di dollari all'epoca. Questo incidente ha evidenziato la necessità di migliori misure di sicurezza nei smart contract e l'importanza di condurre rigorose revisioni del codice prima di lanciare qualsiasi DAO o altro sistema basato su smart contract.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Prendiamo questo smart contract per capire:</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><strong>simple_dao.sol</strong>:</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:716px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:59.357540130615234%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/05/Schermata+2023-05-05+alle+16.20.21.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/db3822d0-86b4-4959-a6db-5d8068cef6d4/Schermata+2023-05-05+alle+16.20.21.png" data-image-dimensions="716x425" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="716" height="425" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/db3822d0-86b4-4959-a6db-5d8068cef6d4/Schermata+2023-05-05+alle+16.20.21.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/db3822d0-86b4-4959-a6db-5d8068cef6d4/Schermata+2023-05-05+alle+16.20.21.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/db3822d0-86b4-4959-a6db-5d8068cef6d4/Schermata+2023-05-05+alle+16.20.21.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/db3822d0-86b4-4959-a6db-5d8068cef6d4/Schermata+2023-05-05+alle+16.20.21.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/db3822d0-86b4-4959-a6db-5d8068cef6d4/Schermata+2023-05-05+alle+16.20.21.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/db3822d0-86b4-4959-a6db-5d8068cef6d4/Schermata+2023-05-05+alle+16.20.21.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/db3822d0-86b4-4959-a6db-5d8068cef6d4/Schermata+2023-05-05+alle+16.20.21.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Spiegazione di SimpleDA.sol:</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Questo smart contract è una semplice implementazione di un'organizzazione autonoma decentralizzata. Il contratto ha tre funzioni: <em>donate</em>, <em>withdraw</em> e <em>queryCredit</em>.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">La funzione <em>donate</em> è una funzione pagabile che può essere chiamata da chiunque e prende un parametro di indirizzo chiamato "to". Questa funzione consente al chiamante di inviare ether al contratto e aggiunge l'importo inviato al saldo del credito dell'indirizzo specificato ("to") nella mappatura del credito.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">La funzione <em>withdraw</em> prende un parametro di importo e consente al chiamante di prelevare un importo specificato di ether dal proprio saldo di credito se dispone di un credito sufficiente. La funzione controlla prima se il saldo di credito del chiamante (msg.sender) è maggiore o uguale all'importo specificato. Se il saldo è sufficiente, la funzione utilizza l'istruzione require per garantire che il chiamante sia in grado di ricevere l'ether utilizzando la funzione call con l'importo specificato come argomento. Se la chiamata è riuscita, la funzione sottrae l'importo specificato dal saldo di credito del chiamante.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">La funzione <em>queryCredit</em> prende un parametro di indirizzo e restituisce il saldo di credito dell'indirizzo specificato dalla mappatura del credito.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Il contratto ha una mappatura chiamata credit che mappa gli indirizzi ai valori uint che rappresentano il saldo di credito di ciascun indirizzo. Il contratto utilizza anche la variabile msg.value per ottenere l'importo di ether inviato al contratto dal chiamante.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><strong>È vulnerabile alla vulnerabilità di Reentrancy?</strong></p>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><strong>La risposta è sì;</strong></p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Il contratto SimpleDAO è vulnerabile all'attacco di reentrancy perché utilizza un approccio "pull" per trasferire ether al conto del chiamante nella funzione withdraw. In particolare, la funzione utilizza la funzione call per trasferire ether al chiamante, ma non aggiorna il saldo di credito del chiamante fino a dopo che la funzione call restituisce. Questo crea una vulnerabilità in cui un contratto malintenzionato o un attaccante può chiamare ripetutamente la funzione withdraw prima che la prima invocazione della funzione sia completata, svuotando efficacemente il contratto di ether.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><strong>Ecco come può essere effettuato un attacco di reentrancy sul contratto SimpleDAO:</strong></p>
+<ol data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">L'attaccante distribuisce un contratto malintenzionato che ha una funzione fallback che chiama la funzione withdraw del contratto SimpleDAO.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">L'attaccante chiama la funzione donate del contratto SimpleDAO e invia una grande quantità di ether al contratto malintenzionato.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">La funzione fallback del contratto malintenzionato viene chiamata automaticamente dopo aver ricevuto l'ether, che chiama la funzione withdraw del contratto SimpleDAO.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">La funzione withdraw trasferisce ether al contratto dell'attaccante utilizzando la funzione call senza aggiornare il saldo di credito dell'indirizzo dell'attaccante nella mappatura del credito.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">La funzione fallback del contratto malintenzionato viene eseguita di nuovo e la funzione withdraw del contratto SimpleDAO viene chiamata di nuovo.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">La funzione withdraw trasferisce di nuovo ether al contratto dell'attaccante, ma questa volta utilizza il saldo di credito dall'invocazione precedente della funzione, consentendo efficacemente all'attaccante di svuotare il contratto di tutto il suo ether.</p>
+</li>
+</ol>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Ecco un esempio di contratto malintenzionato dell'attaccante MaliciousContract.sol:</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:695px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:43.59712219238281%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/05/Schermata+2023-05-05+alle+16.24.07.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/eeb5cd06-32f7-4035-9962-92f5b45bcc00/Schermata+2023-05-05+alle+16.24.07.png" data-image-dimensions="695x303" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="695" height="303" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/eeb5cd06-32f7-4035-9962-92f5b45bcc00/Schermata+2023-05-05+alle+16.24.07.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/eeb5cd06-32f7-4035-9962-92f5b45bcc00/Schermata+2023-05-05+alle+16.24.07.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/eeb5cd06-32f7-4035-9962-92f5b45bcc00/Schermata+2023-05-05+alle+16.24.07.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/eeb5cd06-32f7-4035-9962-92f5b45bcc00/Schermata+2023-05-05+alle+16.24.07.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/eeb5cd06-32f7-4035-9962-92f5b45bcc00/Schermata+2023-05-05+alle+16.24.07.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/eeb5cd06-32f7-4035-9962-92f5b45bcc00/Schermata+2023-05-05+alle+16.24.07.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/eeb5cd06-32f7-4035-9962-92f5b45bcc00/Schermata+2023-05-05+alle+16.24.07.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Questo contratto è progettato per essere il contratto dell'attaccante in un attacco di reentrancy sul contratto SimpleDAO. Il contratto prende l'indirizzo del contratto SimpleDAO come argomento del costruttore e lo memorizza nella variabile di stato dao.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">La funzione fallback del contratto è esterna e pagabile, il che significa che può ricevere ether e essere chiamata da altri contratti. In questo caso, la funzione fallback chiama semplicemente la funzione withdraw del contratto SimpleDAO con un importo di prelievo di 1 ether.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Quando il contratto SimpleDAO richiama il contratto maligno durante l'esecuzione della funzione withdraw, la funzione fallback del contratto maligno viene eseguita di nuovo, consentendo all'attaccante di chiamare ripetutamente la funzione withdraw e svuotare il contratto di ether.</p>
+<h2 style="white-space:pre-wrap;">Rimedi:</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Le migliori pratiche per evitare le vulnerabilità di reentrancy sono:</p>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Assicurarsi che tutti i cambiamenti di stato interni vengano eseguiti prima dell'esecuzione della chiamata. Questo è noto come il pattern Checks-Effects-Interactions.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Utilizzare una serratura di reentrancy (ad esempio, ReentrancyGuard di OpenZeppelin).</p>
+</li>
+</ul>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Ecco lo stesso contratto dao di esempio con una modifica per rimediare all'attacco di reentrancy:</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:704px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:58.9488639831543%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/05/Schermata+2023-05-05+alle+16.26.03.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/b049983c-2858-4f5a-a72e-d103f555792c/Schermata+2023-05-05+alle+16.26.03.png" data-image-dimensions="704x415" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="704" height="415" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/b049983c-2858-4f5a-a72e-d103f555792c/Schermata+2023-05-05+alle+16.26.03.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/b049983c-2858-4f5a-a72e-d103f555792c/Schermata+2023-05-05+alle+16.26.03.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/b049983c-2858-4f5a-a72e-d103f555792c/Schermata+2023-05-05+alle+16.26.03.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/b049983c-2858-4f5a-a72e-d103f555792c/Schermata+2023-05-05+alle+16.26.03.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/b049983c-2858-4f5a-a72e-d103f555792c/Schermata+2023-05-05+alle+16.26.03.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/b049983c-2858-4f5a-a72e-d103f555792c/Schermata+2023-05-05+alle+16.26.03.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/b049983c-2858-4f5a-a72e-d103f555792c/Schermata+2023-05-05+alle+16.26.03.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Conclusione:</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In conclusione, il Registro SWC è una risorsa essenziale per gli sviluppatori per identificare e mitigare i rischi di sicurezza nel loro codice di contratto intelligente. Rimediare alle vulnerabilità è un passo importante per garantire la sicurezza e l'integrità del proprio codice. Tuttavia, poiché le vulnerabilità possono essere complesse e difficili da identificare, è spesso meglio cercare servizi di audit di sicurezza professionale. La nostra community, SCT ITALIA, organizza e facilità i servizi di audit di sicurezza per aiutare a garantire che il tuo contratto di token sia sicuro e privo di vulnerabilità che possono essere sfruttate dagli attaccanti. Prendendo misure proattive per proteggere il tuo token, puoi ridurre il rischio di perdite finanziarie e proteggere gli investimenti dei tuoi utenti.</p>
+</div>

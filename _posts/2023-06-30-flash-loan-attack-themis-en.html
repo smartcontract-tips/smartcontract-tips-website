@@ -1,0 +1,371 @@
+---
+layout: post
+title: A flawed oracle leads to a flash loan attack on the Themis Protocol.
+date: 2023-06-30 11:09:01.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- English
+- Hacks
+tags: []
+meta:
+  _wpas_done_all: '1'
+  _thumbnail_id: '6203'
+  _edit_last: '48926058'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/articoli/flash-loan-attack-themis-en/"
+excerpt: The Themis Protocol is a peer-to-peer lending and borrowing platform that
+  operates in a decentralized manner and supports multiple blockchains. As a native
+  crypto trading platform on Layer2, Themis Protocol offers collateralized lending
+  of NFTs, using historical NFT transaction data. Themis is essentially a collection
+  of DeFi protocols, built upon smart contracts. This allows its users to take on
+  varying roles within the governance chain, in accordance with their tolerance for
+  risk, and to earn yields commensurate with their participation.
+---
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1462px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:58.41313171386719%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/06/Screenshot+2023-07-01+at+18.34.28.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8e8a66ba-c307-4401-8609-c1dadae4aa49/Screenshot+2023-07-01+at+18.34.28.png" data-image-dimensions="1462x854" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1462" height="854" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8e8a66ba-c307-4401-8609-c1dadae4aa49/Screenshot+2023-07-01+at+18.34.28.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8e8a66ba-c307-4401-8609-c1dadae4aa49/Screenshot+2023-07-01+at+18.34.28.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8e8a66ba-c307-4401-8609-c1dadae4aa49/Screenshot+2023-07-01+at+18.34.28.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8e8a66ba-c307-4401-8609-c1dadae4aa49/Screenshot+2023-07-01+at+18.34.28.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8e8a66ba-c307-4401-8609-c1dadae4aa49/Screenshot+2023-07-01+at+18.34.28.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8e8a66ba-c307-4401-8609-c1dadae4aa49/Screenshot+2023-07-01+at+18.34.28.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8e8a66ba-c307-4401-8609-c1dadae4aa49/Screenshot+2023-07-01+at+18.34.28.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Overview</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The ThemisProtocol on Arbitrum was victimized by a flashloan attack, which resulted in the attacker acquiring approximately $370k, and we will discover how the attacker exploited Themis to steal assets.</p>
+<h2 style="white-space:pre-wrap;">Introduction to Themis Protocol</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The Themis Protocol is a peer-to-peer lending and borrowing platform that operates in a decentralized manner and supports multiple blockchains. As a native crypto trading platform on Layer2, Themis Protocol offers collateralized lending of NFTs, using historical NFT transaction data. Themis is essentially a collection of DeFi protocols, built upon smart contracts. This allows its users to take on varying roles within the governance chain, in accordance with their tolerance for risk, and to earn yields commensurate with their participation.</p>
+<h2 style="white-space:pre-wrap;">Vulnerability Assessment</h2>
+<h4 style="white-space:pre-wrap;">Overview of the Attacker transaction :</h4>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Transaction Hash: 0xff368294ccb3cd6e7e263526b5c820b22dea2b2fd8617119ba5c3ab8417403d8</p>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">link:<br /><a href="https://arbiscan.io/tx/0xff368294ccb3cd6e7e263526b5c820b22dea2b2fd8617119ba5c3ab8417403d8" target="_blank" rel="noopener">https://arbiscan.io/tx/0xff368294ccb3cd6e7e263526b5c820b22dea2b2fd8617119ba5c3ab8417403d8</a></p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1340px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:42.3880615234375%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/06/Screenshot+2023-07-01+at+18.52.48.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/cab72b42-c862-4714-992e-d0839f5c89fb/Screenshot+2023-07-01+at+18.52.48.png" data-image-dimensions="1340x568" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1340" height="568" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/cab72b42-c862-4714-992e-d0839f5c89fb/Screenshot+2023-07-01+at+18.52.48.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/cab72b42-c862-4714-992e-d0839f5c89fb/Screenshot+2023-07-01+at+18.52.48.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/cab72b42-c862-4714-992e-d0839f5c89fb/Screenshot+2023-07-01+at+18.52.48.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/cab72b42-c862-4714-992e-d0839f5c89fb/Screenshot+2023-07-01+at+18.52.48.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/cab72b42-c862-4714-992e-d0839f5c89fb/Screenshot+2023-07-01+at+18.52.48.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/cab72b42-c862-4714-992e-d0839f5c89fb/Screenshot+2023-07-01+at+18.52.48.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/cab72b42-c862-4714-992e-d0839f5c89fb/Screenshot+2023-07-01+at+18.52.48.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<h4 style="white-space:pre-wrap;">About the Attacker :</h4>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Address : 0xDb73eb484e7DEa3785520d750EabEF50a9b9Ab33</p>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">link: <a href="https://arbiscan.io/address/0xdb73eb484e7dea3785520d750eabef50a9b9ab33" target="_blank" rel="noopener">https://arbiscan.io/address/0xdb73eb484e7dea3785520d750eabef50a9b9ab33</a></p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1328px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:47.138553619384766%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/06/Screenshot+2023-07-01+at+18.52.58.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/95519355-e42b-4472-a530-f3dcad989639/Screenshot+2023-07-01+at+18.52.58.png" data-image-dimensions="1328x626" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1328" height="626" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/95519355-e42b-4472-a530-f3dcad989639/Screenshot+2023-07-01+at+18.52.58.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/95519355-e42b-4472-a530-f3dcad989639/Screenshot+2023-07-01+at+18.52.58.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/95519355-e42b-4472-a530-f3dcad989639/Screenshot+2023-07-01+at+18.52.58.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/95519355-e42b-4472-a530-f3dcad989639/Screenshot+2023-07-01+at+18.52.58.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/95519355-e42b-4472-a530-f3dcad989639/Screenshot+2023-07-01+at+18.52.58.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/95519355-e42b-4472-a530-f3dcad989639/Screenshot+2023-07-01+at+18.52.58.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/95519355-e42b-4472-a530-f3dcad989639/Screenshot+2023-07-01+at+18.52.58.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">This is the sequence of events that took place:</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1468px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:53.95095443725586%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/06/Screenshot+2023-07-01+at+18.53.05.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/d79c9acc-be67-423f-93ee-95b9fd46329b/Screenshot+2023-07-01+at+18.53.05.png" data-image-dimensions="1468x792" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1468" height="792" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/d79c9acc-be67-423f-93ee-95b9fd46329b/Screenshot+2023-07-01+at+18.53.05.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/d79c9acc-be67-423f-93ee-95b9fd46329b/Screenshot+2023-07-01+at+18.53.05.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/d79c9acc-be67-423f-93ee-95b9fd46329b/Screenshot+2023-07-01+at+18.53.05.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/d79c9acc-be67-423f-93ee-95b9fd46329b/Screenshot+2023-07-01+at+18.53.05.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/d79c9acc-be67-423f-93ee-95b9fd46329b/Screenshot+2023-07-01+at+18.53.05.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/d79c9acc-be67-423f-93ee-95b9fd46329b/Screenshot+2023-07-01+at+18.53.05.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/d79c9acc-be67-423f-93ee-95b9fd46329b/Screenshot+2023-07-01+at+18.53.05.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Step1</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The hacker initiates a flash loan from Aave v3 and two Uniswap v3 pools to borrow 40,000 WETH without collateral.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Step2</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The hacker uses 220 WETH as collateral to borrow DAI, $USDC, USDT, $ARB, and $WBTC from Themis Protocol.</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1468px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:19.618528366088867%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/06/Screenshot+2023-07-01+at+18.53.13.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/509b22c1-2404-4a3c-983f-4a31ede7e579/Screenshot+2023-07-01+at+18.53.13.png" data-image-dimensions="1468x288" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1468" height="288" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/509b22c1-2404-4a3c-983f-4a31ede7e579/Screenshot+2023-07-01+at+18.53.13.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/509b22c1-2404-4a3c-983f-4a31ede7e579/Screenshot+2023-07-01+at+18.53.13.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/509b22c1-2404-4a3c-983f-4a31ede7e579/Screenshot+2023-07-01+at+18.53.13.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/509b22c1-2404-4a3c-983f-4a31ede7e579/Screenshot+2023-07-01+at+18.53.13.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/509b22c1-2404-4a3c-983f-4a31ede7e579/Screenshot+2023-07-01+at+18.53.13.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/509b22c1-2404-4a3c-983f-4a31ede7e579/Screenshot+2023-07-01+at+18.53.13.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/509b22c1-2404-4a3c-983f-4a31ede7e579/Screenshot+2023-07-01+at+18.53.13.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Step3</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The hacker then creates a new smart contract and did various operations within it:</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Supplies 55 WETH to a balancer pool, fetching 54.665 LP tokens.</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1418px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:26.234132766723633%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/06/Screenshot+2023-07-01+at+18.53.34.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/778ecb5d-8708-4e14-a282-4bdcea6ecd02/Screenshot+2023-07-01+at+18.53.34.png" data-image-dimensions="1418x372" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1418" height="372" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/778ecb5d-8708-4e14-a282-4bdcea6ecd02/Screenshot+2023-07-01+at+18.53.34.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/778ecb5d-8708-4e14-a282-4bdcea6ecd02/Screenshot+2023-07-01+at+18.53.34.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/778ecb5d-8708-4e14-a282-4bdcea6ecd02/Screenshot+2023-07-01+at+18.53.34.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/778ecb5d-8708-4e14-a282-4bdcea6ecd02/Screenshot+2023-07-01+at+18.53.34.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/778ecb5d-8708-4e14-a282-4bdcea6ecd02/Screenshot+2023-07-01+at+18.53.34.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/778ecb5d-8708-4e14-a282-4bdcea6ecd02/Screenshot+2023-07-01+at+18.53.34.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/778ecb5d-8708-4e14-a282-4bdcea6ecd02/Screenshot+2023-07-01+at+18.53.34.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Deposits these BLP tokens into Themis Protocol and manipulates the protocol into believing BLP tokens worth more than their actual value. This is because Themis Protocol relied on a flawed oracle, which provided an inflated price of BLP tokens on the Uniswap price of ETH/USDT.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Executes a swap of 39,725 WETH for 2,423 wstETH, affecting the price of BLP tokens in the balancer pool and further inflating their worth. This swap affected the price of the BLP tokens in the balancer pool, making them appear even more valuable in the eyes of the flawed oracle.</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1466px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:15.279672622680664%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/06/Screenshot+2023-07-01+at+18.53.50.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/01ba27d8-c2ac-4427-84f4-4b84c478bf76/Screenshot+2023-07-01+at+18.53.50.png" data-image-dimensions="1466x224" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1466" height="224" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/01ba27d8-c2ac-4427-84f4-4b84c478bf76/Screenshot+2023-07-01+at+18.53.50.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/01ba27d8-c2ac-4427-84f4-4b84c478bf76/Screenshot+2023-07-01+at+18.53.50.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/01ba27d8-c2ac-4427-84f4-4b84c478bf76/Screenshot+2023-07-01+at+18.53.50.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/01ba27d8-c2ac-4427-84f4-4b84c478bf76/Screenshot+2023-07-01+at+18.53.50.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/01ba27d8-c2ac-4427-84f4-4b84c478bf76/Screenshot+2023-07-01+at+18.53.50.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/01ba27d8-c2ac-4427-84f4-4b84c478bf76/Screenshot+2023-07-01+at+18.53.50.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/01ba27d8-c2ac-4427-84f4-4b84c478bf76/Screenshot+2023-07-01+at+18.53.50.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Takes advantage of this manipulated pricing to borrow 317.62 WETH from Themis Protocol.</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1422px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:15.049226760864258%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/06/Screenshot+2023-07-01+at+18.54.03.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e4030c16-6157-4164-ba4f-97167788c6ae/Screenshot+2023-07-01+at+18.54.03.png" data-image-dimensions="1422x214" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1422" height="214" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e4030c16-6157-4164-ba4f-97167788c6ae/Screenshot+2023-07-01+at+18.54.03.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e4030c16-6157-4164-ba4f-97167788c6ae/Screenshot+2023-07-01+at+18.54.03.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e4030c16-6157-4164-ba4f-97167788c6ae/Screenshot+2023-07-01+at+18.54.03.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e4030c16-6157-4164-ba4f-97167788c6ae/Screenshot+2023-07-01+at+18.54.03.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e4030c16-6157-4164-ba4f-97167788c6ae/Screenshot+2023-07-01+at+18.54.03.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e4030c16-6157-4164-ba4f-97167788c6ae/Screenshot+2023-07-01+at+18.54.03.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e4030c16-6157-4164-ba4f-97167788c6ae/Screenshot+2023-07-01+at+18.54.03.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Step4</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The hacker then counter-swaps 2,423 wstETH for 39,724.94 WETH, reversing the earlier swapping effect and bringing back the original price value of BLP tokens in the balancer pool.</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1500px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:17.46666717529297%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/06/Screenshot+2023-07-01+at+18.54.11.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f2435a6a-68a7-4b1b-a713-87a815f3af3d/Screenshot+2023-07-01+at+18.54.11.png" data-image-dimensions="1500x262" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1500" height="262" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f2435a6a-68a7-4b1b-a713-87a815f3af3d/Screenshot+2023-07-01+at+18.54.11.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f2435a6a-68a7-4b1b-a713-87a815f3af3d/Screenshot+2023-07-01+at+18.54.11.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f2435a6a-68a7-4b1b-a713-87a815f3af3d/Screenshot+2023-07-01+at+18.54.11.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f2435a6a-68a7-4b1b-a713-87a815f3af3d/Screenshot+2023-07-01+at+18.54.11.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f2435a6a-68a7-4b1b-a713-87a815f3af3d/Screenshot+2023-07-01+at+18.54.11.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f2435a6a-68a7-4b1b-a713-87a815f3af3d/Screenshot+2023-07-01+at+18.54.11.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f2435a6a-68a7-4b1b-a713-87a815f3af3d/Screenshot+2023-07-01+at+18.54.11.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">The flash loan from Aave v3 and Uniswap v3 is repaid with 40,000 WETH, and the hacker walks away with his profit made from the leftover WETH and other tokens.</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1400px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:6.428571701049805%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/06/Screenshot+2023-07-01+at+18.54.24.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8b4beedb-6f2e-47d4-8c17-5d5c7c30f2c1/Screenshot+2023-07-01+at+18.54.24.png" data-image-dimensions="1400x90" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1400" height="90" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8b4beedb-6f2e-47d4-8c17-5d5c7c30f2c1/Screenshot+2023-07-01+at+18.54.24.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8b4beedb-6f2e-47d4-8c17-5d5c7c30f2c1/Screenshot+2023-07-01+at+18.54.24.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8b4beedb-6f2e-47d4-8c17-5d5c7c30f2c1/Screenshot+2023-07-01+at+18.54.24.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8b4beedb-6f2e-47d4-8c17-5d5c7c30f2c1/Screenshot+2023-07-01+at+18.54.24.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8b4beedb-6f2e-47d4-8c17-5d5c7c30f2c1/Screenshot+2023-07-01+at+18.54.24.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8b4beedb-6f2e-47d4-8c17-5d5c7c30f2c1/Screenshot+2023-07-01+at+18.54.24.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8b4beedb-6f2e-47d4-8c17-5d5c7c30f2c1/Screenshot+2023-07-01+at+18.54.24.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Stolen funds</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The stolen funds were cross-chained via Stargate Finance into ETH and remained at this address : <a href="https://debank.com/profile/0xDb73eb484e7DEa3785520d750EabEF50a9b9Ab33" target="_blank" rel="noopener">https://debank.com/profile/0xDb73eb484e7DEa3785520d750EabEF50a9b9Ab33</a><br />The attacker has successfully converted 191 ETH into Tornado Cash, effectively concealing the illicit assets.</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1510px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:95.62913513183594%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/06/Screenshot+2023-07-01+at+18.54.34.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ed69e1df-ef24-4e13-a4c6-7114328078b1/Screenshot+2023-07-01+at+18.54.34.png" data-image-dimensions="1510x1444" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1510" height="1444" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ed69e1df-ef24-4e13-a4c6-7114328078b1/Screenshot+2023-07-01+at+18.54.34.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ed69e1df-ef24-4e13-a4c6-7114328078b1/Screenshot+2023-07-01+at+18.54.34.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ed69e1df-ef24-4e13-a4c6-7114328078b1/Screenshot+2023-07-01+at+18.54.34.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ed69e1df-ef24-4e13-a4c6-7114328078b1/Screenshot+2023-07-01+at+18.54.34.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ed69e1df-ef24-4e13-a4c6-7114328078b1/Screenshot+2023-07-01+at+18.54.34.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ed69e1df-ef24-4e13-a4c6-7114328078b1/Screenshot+2023-07-01+at+18.54.34.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ed69e1df-ef24-4e13-a4c6-7114328078b1/Screenshot+2023-07-01+at+18.54.34.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Consequences</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In the aftermath of the exploit, the team recognized the incident and announced the temporary suspension of their borrowing functions.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Efforts are underway by the team to recover the funds from the hacker, aiming for a mutually beneficial outcome for all parties involved. In the event of no response or unwillingness from the attacker to cooperate, the team intends to involve authorities to address the problem.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">A compensation plan has been established for affected users, and a detailed report on the incident is expected to be shared once the situation stabilizes.</p>
+<h2 style="white-space:pre-wrap;">Conclusion</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The attack was successful because the attacker manipulated the token price using a flawed oracle. This incident highlights several important principles for ensuring the safety of DeFi projects.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Ensuring the security of the Price Oracle is crucial for DeFi protocols. To mitigate such exploits, it is advisable to use trusted price oracle services that aggregate data from multiple sources and protect against manipulation. Conducting regular contract audits and rigorous testing can help identify potential vulnerabilities and address them before they are exploited.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In addition, developing a well-designed economic model that considers possible attack vectors can reduce the risk of exploitation. This may involve implementing safeguards that limit maximum profits from trades or integrating an automated system that temporarily halts trading in response to significant price changes.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">As a network of specialists, SCT ITALIA brings together a team of expert professionals who offer audit security services. Our goal is to assist you in safeguarding your token contract or project, ensuring its security and minimizing the presence of exploitable vulnerabilities. Through our proactive approach to securing your projects, we aim to mitigate the risk of financial losses and provide protection for the investments made by your users.</p>
+</div>

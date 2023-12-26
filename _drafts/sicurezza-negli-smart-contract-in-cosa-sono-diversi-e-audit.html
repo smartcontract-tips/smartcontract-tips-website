@@ -1,0 +1,172 @@
+---
+layout: post
+title: 'Sicurezza negli smart contract: in cosa sono diversi e audit'
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: pending
+categories:
+- Sicurezza Informatica
+- Smart Contracts
+tags: []
+meta:
+  _last_editor_used_jetpack: block-editor
+  _wpas_done_all: '1'
+  _thumbnail_id: '5389'
+  _g_feedback_shortcode_12e5dc577f448433686da1d2bcc837623f9e6f1d: |2
+
+    <div class="wp-block-jetpack-contact-form" style="padding-top:16px;padding-right:16px;padding-bottom:16px;padding-left:16px">[contact-field label="Nome" required="1" type="name"/]
+
+    [contact-field required="1" type="email" label="Email"/]
+
+    [contact-field label="Messaggio" type="textarea"/]
+
+    <div class="wp-block-jetpack-button wp-block-button" style=""><button class="wp-block-button__link" style="" data-id-attr="placeholder" type="submit">Contattaci</button></div></div>
+  _g_feedback_shortcode_atts_12e5dc577f448433686da1d2bcc837623f9e6f1d: 'a:17:{s:2:"to";s:18:"dcarboni@gmail.com";s:7:"subject";s:77:"[Digital
+    Davide] Sicurezza negli smart contract: in cosa sono diversi e audit";s:12:"show_subject";s:2:"no";s:6:"widget";i:0;s:14:"block_template";N;s:19:"block_template_part";N;s:2:"id";i:5382;s:18:"submit_button_text";s:5:"Invia";s:14:"customThankyou";s:0:"";s:21:"customThankyouHeading";s:33:"Il
+    tuo messaggio è stato inviato";s:21:"customThankyouMessage";s:24:"Grazie per il
+    tuo invio!";s:22:"customThankyouRedirect";s:0:"";s:10:"jetpackCRM";b:1;s:9:"className";N;s:9:"postToUrl";N;s:14:"salesforceData";N;s:12:"hiddenFields";N;}'
+  _g_feedback_shortcode_40293c4dd89e88c63e5ff285fc283e5a0664b1b3: |2
+
+    <div class="wp-block-jetpack-contact-form" style="padding-top:16px;padding-right:16px;padding-bottom:16px;padding-left:16px">[contact-field label="Nome" required="1" type="name"/]
+
+    [contact-field required="1" type="email" label="Email"/]
+
+    [contact-field label="Messaggio" type="textarea"/]
+
+    <div class="wp-block-jetpack-button wp-block-button" style=""><button class="wp-block-button__link" style="" data-id-attr="placeholder" type="submit">Contattaci</button></div></div>
+  _g_feedback_shortcode_atts_40293c4dd89e88c63e5ff285fc283e5a0664b1b3: 'a:17:{s:2:"to";s:18:"dcarboni@gmail.com";s:7:"subject";s:77:"[Digital
+    Davide] Sicurezza negli smart contract: in cosa sono diversi e audit";s:12:"show_subject";s:2:"no";s:6:"widget";i:0;s:14:"block_template";N;s:19:"block_template_part";N;s:2:"id";i:5382;s:18:"submit_button_text";s:5:"Invia";s:14:"customThankyou";s:0:"";s:21:"customThankyouHeading";s:33:"Il
+    tuo messaggio è stato inviato";s:21:"customThankyouMessage";s:24:"Grazie per il
+    tuo invio!";s:22:"customThankyouRedirect";s:0:"";s:10:"jetpackCRM";b:1;s:9:"className";N;s:9:"postToUrl";N;s:14:"salesforceData";N;s:12:"hiddenFields";N;}'
+  _edit_last: '48926058'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+---
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Cosa distingue gli smart contract dal resto del software?</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Normalmente il software, anche quello che gestisce denaro, è un programma in esecuzione presso il computer di un qualche fiduciario. Ad esempio, il software del nostro internet banking funziona ed esegue dei compiti sulla base di istruzioni informatiche che gli sono state impartite e che noi non possiamo verificare in quanto utenti. Tali programmi sono poi attivabili e disattivabili a totale piacimento di chi li gestisce.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>Trasparenza e verificabilità degli smart contract</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Nel caso degli smart contract invece possiamo contare su un maggior livello di sicurezza, autonomia e trasparenza in quanto:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>Il codice dello smart contract è in genere visionabile e verificabile. Sappiamo esattamente quali istruzioni saranno eseguite e perché. Lo sappiamo anche se siamo dei semplici utenti grazie al fatto che il codice è validato in blockchain e come tale ispezionabile.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Durante l’esecuzione, i dati che vengono forniti come input ad uno smart contract sono anch’essi verificabili dagli interessati in qualunque momento e non possono essere alterati durante il percorso dal loro computer alla rete blockchain.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Allo stesso modo i risultati del calcolo di uno smart contract non sono solo visibili e verificabili sono anche inalterabili a posteriori garantendo che al verificarsi di una data condizione, il denaro da essi trattato, sarà sempre spedito al legittimo destinatario.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>Queste caratteristiche sono vere a patto che lo smart contract sia effettivamente scritto in modo da non presentare backdoors, di non consentire upgrade o comunque di limitarli a precise regole prestabilite e che effettivamente sia scritto in modo sicuro e non presenti vulnerabilità</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3><strong>Il testing dimostra la presenza di bug non la loro assenza</strong></h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>E' bene precisare che non esiste codice sicuro al 100% e nemmeno il code review o l'audit esterno può totalmente scongiurare la presenza di un malfunzionamento. Questo non significa che si possa lesinare sul testing e sui successivi code review interni ed esterni.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>Impatto di un bug sugli smart contract</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Non è un caso che quando uno smart contract che gestisce transazioni finanziarie sia affetto da un bug i problemi che ne derivano possono essere enormi e non recuperabili.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Resta emblematico il caso di TheDao hack nel 2016, che a causa di un reentrancy bug è stato sifonato da un utente malevolo e l'unico modo per poter recupare il maltolto è stato quello di attivare un hard fork a livello dell'intera rete Ethereum. Naturalmente si è trattato di un caso unico tale da richiedere una risposta così drastica. Ma nel caso del vostro smart contract nel 2022 non penso possiate contare che l'intera rete Ethereum decida per un hard fork.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>Confronto dei danni tra smart contract e codice tradizionale</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:table {"className":"is-style-stripes"} --></p>
+<figure class="wp-block-table is-style-stripes">
+<table />
+<thead />
+<tr>
+<th>Attacco/Bug</th>
+<th>Software tradizionale</th>
+<th>Smart contract</th>
+</tr>
+<tbody />
+<tr />
+<td>Denial of service</td>
+<td>Il danno è proporzionale al tempo in cui persiste il denial-of-service. Minore è il tempo di recupero minore sarà il danno.</td>
+<td>Tecnicamente non è possibile mandare il vostro contratto in DoS, ma l'intera rete Ethereum potrebbe rendere difficile l'interaione con il vostro contratto se le gas fee sono molto alte</td>
+<tr />
+<td />Data Leak</p>
+<td>In questo caso se si tratta di dati personali o segreti industriali, gli hacker possono chiedere un riscatto e causare un danno economico e reputazionale.</td>
+<p>
+<td>Non avrebbe senso immaginare un data leak visto che gli smart contract eseguono codice e dati visibili ed eseguibili pubblicamente. Se tali dati sono offuscati prima di raggiungere la blockchain allora il bug non riguarderebbe lo smart contract</td>
+<tr />
+<td>Data corruption</td>
+<td>Nel software tradizionale ovviamente la corruzione dei data causa una perdita economica, ma è possibile in genere recuperare da backup e ripristinare lo stato corretto. L'impatto è dunque lineare e proporzionale al tempo di recovery</td>
+<td>Data Corruption = LOSS.</td>
+<p>Questo è il caso più drammatico per lo smart contract. La corruzione di un dato o il valore inaspettato di un registro o variabile di stato può creare un disastro non recuperabile.<br />
+<tr />
+<td></td>
+<td></td>
+<td></td>
+</figure>
+<p><!-- /wp:table --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>Audit degli smart contract</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>L'audit del codice è una pratica giustamente ormai diffusa nell'industria sebbene abbia le sue limitazioni.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Infatti lo abbiamo detto e lo ribadiamo "nessun audit" può garantire che il vostro codice ad un dato momento non inizierà a manifestare gli effetti di un bug e come già detto prima "Il testing dimostra la presenza di bug non la loro assenza".</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Detto questo noi siamo molto favorevoli ad un approccio first test then code, non solo per ragioni legate alla sicurezza ma perché i testcase finiscono per diventare anche l'unica e più aggiornata fonte di documentazione sul codice stesso.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Gli audit non dovrebbero nemmeno essere chiamati audit ma più propriamente "code review esterni", questo per garantire che chi effettua il code review non abbia interessi diretti nell'applicazione dello smart contract che sta analizzando. Quindi per una buona pratica prima di mettere in produzione uno smart contract con fondi "veri" dovremmo avere in piedi:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>test case esaustivi di ogni linea di codice inclusi i "corner case" </li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>code review interno da parte degli sviluppatori senior o consulenti del progetto</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>code review esterno detto audit</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Se hai un progetto e <strong>ti interessano i miei servizi di audit o consulenza sugli smart contract </strong>non esitare a contattarmi</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:jetpack/contact-form {"subject":"[Digital Davide] Sicurezza negli smart contract: in cosa sono diversi e audit","to":"dcarboni@gmail.com","style":{"spacing":{"padding":{"top":"16px","right":"16px","bottom":"16px","left":"16px"}}}} --></p>
+<div class="wp-block-jetpack-contact-form" style="padding-top:16px;padding-right:16px;padding-bottom:16px;padding-left:16px"><!-- wp:jetpack/field-name {"label":"Nome","required":true} /--></p>
+<p><!-- wp:jetpack/field-email {"required":true} /--></p>
+<p><!-- wp:jetpack/field-textarea {"label":"Messaggio"} /--></p>
+<p><!-- wp:jetpack/button {"element":"button","text":"Contattaci","lock":{"remove":true}} /--></div>
+<p><!-- /wp:jetpack/contact-form --></p>

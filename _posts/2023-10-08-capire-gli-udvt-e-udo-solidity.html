@@ -1,0 +1,312 @@
+---
+layout: post
+title: Capire gli User Defined Operators in Solidity
+date: 2023-10-08 08:22:56.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Approfondimenti
+tags: []
+meta:
+  _wpas_done_all: '1'
+  _thumbnail_id: '6226'
+  _last_editor_used_jetpack: block-editor
+  _edit_last: '48926058'
+  _aioseo_title: ''
+  _aioseo_description: ''
+  _aioseo_keywords: ''
+  _aioseo_og_title: ''
+  _aioseo_og_description: ''
+  _aioseo_og_article_section: ''
+  _aioseo_og_article_tags: ''
+  _aioseo_twitter_title: ''
+  _aioseo_twitter_description: ''
+  BS_author_type: BS_author_is_user
+  BS_guest_author_name: ''
+  BS_guest_author_url: ''
+  BS_guest_author_description: ''
+  BS_guest_author_image_id: ''
+  _cmplz_scanned_post: '1'
+  footnotes: ''
+  ppma_authors_name: Zaryab Afser
+author:
+  login: zaryab
+  email: devnullboxx+za@gmail.com
+  display_name: Zaryab Afser
+  first_name: Zaryab
+  last_name: Afser
+permalink: "/articoli/capire-gli-udvt-e-udo-solidity/"
+excerpt: Gli UDVT sono data types astratti e senza costo di gas costruiti a partire
+  dai data type nativi di Solidity. Questo tipo di astrazioni è stato introdotto nella
+  versione 0.8.8. In termini più semplici, possiamo pensarli come alias per altri
+  tipi di valore. Il motivo principale alla base dell'introduzione di questo costrutto
+  è  quello di facilitare definizioni più rigorose delle variabili.
+---
+<p><!-- wp:paragraph --></p>
+<p>Solidity 0.8.19 ha introdotto alcune modifiche e aggiornamenti.<br />In questo post, approfondiremo gli operatori definiti dall'utente (UDO) e i tipi di valore definiti dall'utente (UDVT)</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>(Questo articolo è una traduzione curata dell’originale in inglese di Zartaj Afser disponibile a questo indirizzo.)</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Prima di conoscere gli UDO, dobbiamo esaminare gli UDVT.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":1} --></p>
+<h1 class="wp-block-heading">Quali sono i tipi di valore definiti dall'utente</h1>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Gli UDVT sono data types astratti e senza costo di gas costruiti a partire dai data type nativi di Solidity. Questo tipo di astrazioni è stato introdotto nella versione 0.8.8.<br />In termini più semplici, possiamo pensarli come alias per altri tipi di valore. Il motivo principale alla base dell'introduzione di questo costrutto è quello di facilitare definizioni più rigorose delle variabili.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Esempio rapido</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Ad esempio, il nostro contratto memorizza due tipi di indirizzi, uno per gli acquirenti e l'altro per i venditori. Sappiamo già che sotto il cofano entrambe queste variabili saranno di tipo indirizzo, tuttavia immaginiamo questi ulteriori requisiti di code styling</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>vogliamo renderli diversi per evitare confusione o mescolanza di concetti diversi</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>vogliamo che i tipi di dati siano più descrittivi sul valore che sta memorizzando?</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Prima dell'introduzione degli UDVT, questo obiettivo era ottenibile utilizzando le struct. Di seguito è riportato un esempio:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Le quattro funzioni di questo codice vengono utilizzate per incapsulare il tipo di dati specificato nel o dal tipo di dati definito.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Sono sicuro che hai visto questo tipo di utilizzo in alcuni contratti. Tuttavia, poiché sappiamo che le strutture sono tipi nativi e non mere astrazioni, useranno la memoria, costando più gas rispetto al semplice utilizzo. Al contrario gli UDVT sono alias che non costano gas.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Ora, per quanto riguarda la sintassi, possiamo definire UDVT come</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:preformatted --></p>
+<pre class="wp-block-preformatted">type A is B</pre>
+<p><!-- /wp:preformatted --></p>
+<p><!-- wp:paragraph --></p>
+<p>dove A è il tipo di valore astratto che si può anche chiamare un alias per B che è il tipo sottostante che può essere uint, indirizzo, ecc.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Una volta dichiarati questi tipi astrattu, otteniamo con loro due metodi nativi, wrap e unwrap , che possono essere utilizzati per convertire un tipo sottostante nel tipo di valore appena creato, o viceversa.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:preformatted --></p>
+<pre class="wp-block-preformatted">A.wrap(value)</pre>
+<p><!-- /wp:preformatted --></p>
+<p><!-- wp:preformatted --></p>
+<pre class="wp-block-preformatted">A.unwrap(value)</pre>
+<p><!-- /wp:preformatted --></p>
+<p><!-- wp:paragraph --></p>
+<p>Vediamo questo nel codice</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Questa è stata una dimostrazione relativa al precedente frammento di codice, tuttavia, come si evince da esso non è necessario definire esplicitamente le funzioni di wrap / unwrap perché Solidity fornisce queste funzioni nativamente.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Vediamo altri esempi di codice</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:preformatted --></p>
+<pre class="wp-block-preformatted">// SPDX-License-Identifier: GPL-3.0
+pragma solidity ^0.8.8;
+
+// Represent a 18 decimal, 256 bit wide fixed point type
+// using a user defined value type.
+type UFixed is uint256;
+
+/// A minimal library to do fixed point operations on UFixed.
+
+uint256 constant multiplier = 10**18;
+
+/// Adds two UFixed numbers. Reverts on overflow,
+/// relying on checked arithmetic on uint256.
+function add(UFixed a, UFixed b) internal pure returns (UFixed) {
+    return UFixed.wrap(UFixed.unwrap(a) + UFixed.unwrap(b));
+}
+
+/// Multiplies UFixed and uint256. Reverts on overflow,
+/// relying on checked arithmetic on uint256.
+function mul(UFixed a, uint256 b) internal pure returns (UFixed) {
+    return UFixed.wrap(UFixed.unwrap(a) * b);
+}
+
+/// Take the floor of a UFixed number.
+/// @return the largest integer that does not exceed `a`.
+function floor(UFixed a) internal pure returns (uint256) {
+    return UFixed.unwrap(a) / multiplier;
+}
+
+/// Turns a uint256 into a UFixed of the same value.
+/// Reverts if the integer is too large.
+function toUFixed(uint256 a) internal pure returns (UFixed) {
+    return UFixed.wrap(a * multiplier);
+}</pre>
+<p><!-- /wp:preformatted --></p>
+<p><!-- wp:paragraph --></p>
+<p>Possiamo concludere che gli UDVT non sono qualcosa che influenza la logica del contratto, ma una sorta di syntactic sugar che rende il nostro codice più chiaro e leggibile. PRB ad esempio, che è una libreria numerica per Solidity, utilizza UDVT per definire diversi tipi di numeri float.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Ora il problema sorge quando proviamo a usare le operazioni aritmetiche su UDVT. Come puoi vedere nell'esempio sopra, dobbiamo trattare in modo specifico queste operazioni. A questo scopo vengono introdotti gli UDO.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Quali sono gli operatori definiti dall'utente?<br />Gli UDO sono costruiti utilizzando le due caratteristiche integrate di Solidity, ovvero operatori integrati e <strong>using</strong> … <strong>for</strong> ….</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Gli UDO sono fondamentalmente una versione estesa di using for. Ricordiamo che using for è usato per:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>Collegamento di tutte le funzioni della libreria a un tipo di dati.<br />using LibrayName for TypeName</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Collegamento delle funzioni della libreria a tutti i tipi di dati.<br />using LibrayName for *</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Collegamento di funzioni di libreria specifiche o funzioni a qualsiasi tipo specifico: <!-- wp:list -->
+<ul><!-- wp:list-item --></p>
+<li><strong>using {LibrayName.FunctionName, FreeFunctionName} for TypeName</strong></li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>Ora UDO entra in gioco e definisce il quarto tipo del comando using for</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Esempio 👇:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:preformatted --></p>
+<pre class="wp-block-preformatted">using {FunctionName as OperatorSign} for UDVTName global;</pre>
+<p><!-- /wp:preformatted --></p>
+<p><!-- wp:paragraph --></p>
+<p>Questa sintassi facilita l’overloading di un operatore attraverso una funzione allo stesso modo del collegamento di una funzione di libreria, la differenza è che possiamo usare un segno operatore invece di usare il modo predefinito di chiamare la funzione. Questo sarà chiarito dall'esempio di codice qui sotto.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Esistono alcune regole durante l'utilizzo degli operatori definiti dall'utente.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Possono essere definiti solo come <strong>free</strong> <strong>functions</strong> ( funzioni definite a livello di file e non di contratto).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Le funzioni devono essere <strong>pure</strong>.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Può essere definito solo a livello globale con using for ovvero non può essere all'interno di un contratto ma a livello di file.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>L'operatore definito dall'utente può essere collegato solo agli UDVT e non ai tipi di valore predefiniti sottostanti.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Possono essere definiti solo per un tipo specifico, ovvero non funzioneranno con UDVT diversi nella stessa funzione.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:preformatted --></p>
+<pre class="wp-block-preformatted">Infine, mentre si collegano gli operatori a qualsiasi UDVT, è possibile utilizzare questi operatori simbolici: .&amp;, |, ^, ~, +, -, *, /, %, ==, !=, &lt;, &lt;=, &gt;, &gt;=</pre>
+<p><!-- /wp:preformatted --></p>
+<p><!-- wp:paragraph --></p>
+<p>Vediamo ora un esempio di codice.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:preformatted --></p>
+<pre class="wp-block-preformatted">// SPDX-License-Identifier: MIT
+pragma solidity 0.8.19;
+
+//The types are defined at the file level
+type Float is uint256;
+type unFloat is uint256;
+
+//"using for" statement are written at global directive
+//not inside a contract
+using {add as +} for Float global;
+using {multiply as *} for Float global;
+using {divide as /} for Float global;
+
+//These are pure free functions, which is a requirement
+///@notice Each function works with only one type.
+function add(Float a, Float b) pure returns (Float) {
+return Float.wrap(Float.unwrap(a) + Float.unwrap(b));
+}
+function multiply(Float a, Float b) pure returns (Float) {
+    return Float.wrap(Float.unwrap(a) * Float.unwrap(b));
+
+}
+
+function divide(Float a, Float b) pure returns (Float) {
+    return Float.wrap(Float.unwrap(a) / Float.unwrap(b));
+
+}
+//Using the attached operators inside a contract
+contract UDO {
+Float cent = Float.wrap(100);
+Float decimal = Float.wrap(1e18);
+
+//The multiplication and division using operators is only possible
+// because we attached these particular operators sign to the relavant functions
+function takePercent(Float _amount, Float totalAmount)
+external
+view
+returns (Float)
+{
+return (_amount * cent * decimal)/(totalAmount);</pre>
+<p><!-- /wp:preformatted --></p>
+<p><!-- wp:paragraph --></p>
+<p>Il collegamento di qualsiasi funzione a qualsiasi UDVT è indipendente dal legame della stessa funzione ad esso. Ciò significa che non possiamo chiamare la funzione con UDVT in modo simile a una funzione di libreria come add(a,b)o a.add(b) quando li stiamo vincolando come operatori, ma ovviamente, possiamo farlo quando sono collegati come funzioni.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Diamo un'occhiata all'esempio seguente.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:preformatted --></p>
+<pre class="wp-block-preformatted">// SPDX-License-Identifier: MIT
+pragma solidity 0.8.19;
+
+type Float is uint256;
+type unFloat is uint256;
+
+// binding and attaching
+using {multiply as *,multiply} for Float global;
+using {divide as /} for Float global;
+
+function multiply(Float a, Float b) pure returns (Float) {
+    return Float.wrap(Float.unwrap(a) * Float.unwrap(b));
+}
+
+function divide(Float a, Float b) pure returns (Float) {
+  return Float.wrap(Float.unwrap(a) / Float.unwrap(b));
+}</pre>
+<p><!-- /wp:preformatted --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:preformatted --></p>
+<pre class="wp-block-preformatted">contract UDO {
+  Float cent = Float.wrap(100);
+  Float decimal = Float.wrap(1e18)
+
+function takePercent(Float _amount, Float totalAmount)
+    external
+    view
+    returns (Float)
+{
+    // return (_amount * cent * decimal)/(totalAmount);
+    return      (_amount.multiply(decimal.multiply(cent))).divide(totalAmount);
+
+   //In this line Multiply will work but divide will throw an error, because 
+   // we haven't binded the divide function to Float.    </pre>
+<p><!-- /wp:preformatted --></p>
+<p><!-- wp:paragraph --></p>
+<p> }<br />}<br />I segni che abbiamo usato per funzioni particolari non sono strettamente necessari, avremmo potuto usare / invece di + con la funzione di aggiunta e il / funzionerebbe come funzione di aggiunta. Tuttavia, ciò causerà confusione indesiderata, quindi non lo faremo.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":1} --></p>
+<h1 class="wp-block-heading">Quali sono i casi d'uso?</h1>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Come discusso in precedenza, gli UDVT possono essere utilizzati per prevenire qualsiasi tipo di errore di tipo e fornire una migliore leggibilità del codice e comprensibilità della logica.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Il miglior utilizzo di queste sono le librerie numeriche ovviamente, dove possiamo associare operatori algebrici a tipi numerici e non solo.</p>
+<p><!-- /wp:paragraph --></p>

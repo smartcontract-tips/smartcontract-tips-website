@@ -1,0 +1,46 @@
+---
+layout: post
+title: I grandi fanno l'Hyperledger
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: pending
+categories: []
+tags: []
+meta:
+  _elasticsearch_indexed_on: '1970-01-01 00:00:00'
+  jabber_published: '1472293264'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '26200458753'
+  email_notification: '1472293265'
+  _edit_last: '48926058'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+---
+<p><span style="font-weight:400;">Quando satoshi Nakamoto come un novello Prometeo rubò ai cieli della matematica e della crittografia quel mirabile gioiello di tecnologia che si chiama Bitcoin forse non aveva ben chiare tutte le conseguenze di quel gesto. Tra le altre quella che alcune tra le più grandi aziende del mondo si sarebbero messe in fila per ripercorrere quella strada che lui aveva aperto.</span></p>
+<p>Così nella giungla sempre più fitta dell’ecosistema blockchain troviamo anche <a href="https://www.hyperledger.org/" target="_blank" rel="noopener">Hyperledger</a>, un consorzio che nasce alla fine del 2015 e che non s’impone come una soluzione proprietaria da parte di una big company, ma come iniziativa della Linux Foundation.</p>
+<p><span style="font-weight:400;">La motivazione di base è che, secondo i fondatori, Bitcoin non risponde pienamente a tutti i requisiti per la creazione di registri di transazioni nel mondo business. Possiamo forse anche immaginare che Bitcoin ha quel quid di politicamente scorretto che intimidisce multinazionali, banche, istituzioni quel tanto che basta per impedirne la piena adozione. Tuttavia le sue caratteristiche sono così interessanti che questi stessi attori non possono e non vogliono rinunciare a tutti i benefici di questa nuova invenzione.</span></p>
+<p>Non diamo una risposta qui, diciamo che invece che tra i primi membri di questo consorzio ci sono aziende specializzate in ledger e criptovalute come Blockchain.info, ConsenSys, R3, Digital Asset Holdings, più un plotone di tecnologiche come Cisco,Fujitsu, Hitachi, IBM, Intel, NEC, NTT DATA e altre. Completano la lista alcune istituzioni finanziarie come ABN AMRO, Deutsche Börse Group, J.P. Morgan, SWIFT e altre.</p>
+<p><span style="font-weight:400;">Ma aldilà dell’impressionante lista di partecipanti, cosa sta producendo esattamente questo consorzio? Oltre le varie discussioni su slack [link] riguardo requisiti, casi d’uso etc., quello che possiamo trovare di più concreto sono due progetti open source in </span><b>incubazione</b><span style="font-weight:400;">, uno si chiama <strong><a href="https://github.com/hyperledger/fabric" target="_blank" rel="noopener">Fabric</a></strong> ed il main contributor è IBM mentre l’altro si chiama <strong><a href="https://intelledger.github.io/introduction.html" target="_blank" rel="noopener">SawTooth Lake</a></strong> ed è firmato Intel. Iniziamo proprio da SawTooth Lake e vediamo come Intel interpreta la creazione di un distributed ledger. Lasciando da parte tutti i dettagli architetturali e funzionalità previste la cosa a mio parere più interessante è <strong>PoET</strong> ovvero Proof-of-elapsed-time che è l’interpretazione Intel del lottery game di Nakamoto normalmente chiamato Proof-of-work.</span></p>
+<p><span style="font-weight:400;">Ricordiamo che il protocollo Bitcoin prevede che migliaia di miner cerchino di acquisire il diritto a scrivere il blocco successivo ripetendo una funzione di hashing nel tentativo di produrre un output casuale inferiore al target. Più tentativi vengono fatti da un miner più alta è per quest’ultimo la probabilità di vincere il “gioco” e quindi di scrivere il blocco e incassare il premio. </span></p>
+<p><span style="font-weight:400;">La difficoltà è un parametro auto-regolato dalla rete tale che in media ogni dieci minuti ci sarà un vincitore ed un nuovo blocco. </span></p>
+<p>Nel caso di PoET invece sparisce la necessità di effettuare ripetuti tentativi, i miner vengono chiamati validator. Ogni validator genera un wait time usando una sorta di generazione random. Il validator con il wait time più basso viene eletto leader e potrà scrivere il nuovo blocco. Sembra semplice, ma come si ci si può fidare che il leader abbia veramente generato quel “wait time”, e non abbia manipolato il suo generatore di numeri casuali? La risposta si chiama TEE (Trusted Execution Environment) che nel caso di Intel è un prodotto chiamato <a href="https://en.wikipedia.org/wiki/Software_Guard_Extensions" target="_blank" rel="noopener">SGX</a> (Software Guard Extensions). Queste estensioni consentono al processore di creare delle zone di esecuzione sicure dette “enclave” che non possono essere violate da altri programmi in esecuzione sul computer, nemmeno se questi hanno il privilegi di amministratore di sistema e vengono eseguiti in kernel space (condizioni queste che permettono in genere di fare “qualsiasi” cosa). Oltre questo, SGX consente di generare delle attestazioni crittografiche che appunto attestano che un determinato codice, e non un altro truffaldino, con una determinata firma digitale è stato messo in esecuzione. Questo consente dunque a PoET di funzionare come rimpiazzo di Proof-of-work in un protocollo di consenso come quello adottato per la Blockchain. Tuttavia la domanda che sorge spontanea è: chi attesta che l’attestazione sia veritiera? La risposta è: il processore stesso. Questo incorpora le chiavi per questo genere di attestazioni, e tali chiavi immutabili e stampate nell’hardware e sono certificate direttamente dal costruttore del chip, quindi da Intel. In altre parole, il trust viene spostato, non è più nelle mani dei partecipanti ma viene riposto nel chipmaker e la rete funziona solo se tutti usano chip Intel. Scelta opinabile? Forse, ma ricordiamoci che Intel è un produttore di chip, il più grande produttore di chip, e quindi la proposta è perfettamente allineata con il suo business.</p>
+<p><span style="font-weight:400;">Vediamo invece <strong>Fabric</strong>, che in precedenza era un progetto tutto IBM chiamato Open Blockchain che è diventato il primo progetto incubato in Hyperledger cambiando nome appunto in Fabric.</span></p>
+<p>Fabric implementa la tecnologia della blockchain in modo molto flessibile e, secondo gli autori, lo stesso Bitcoin potrebbe essere ottenuto a partire da Fabric come una semplice specializzazione. È in grado di ospitare qualsiasi linguaggio per lo sviluppo di contratti.</p>
+<p><span style="font-weight:400;">Fabric in precedenza era un progetto tutto IBM chiamato Open Blockchain che è diventato il primo progetto incubato in Hyperledger e ribattezzato appunto in Fabric.</span></p>
+<p><span style="font-weight:400;">I 3 concetti principali dell’architettura sono abbastanza tipici per una tecnologia di distributed ledger:</span></p>
+<ul>
+<li>Il Ledger appunto, ovvero registro universale che contiene lo stato del sistema e le transazioni. E’ organizzato in blocchi collegati crittograficamente.</li>
+<li>La Transazione, cioè una richiesta di eseguire una funzione sul ledger. La funzione è implementata da un codice eseguibile chiamato chaincode.</li>
+<li>Chaincode: il codice che implementa le funzioni che possono alterare lo stato del sistema. Anche il chaincode è memorizzato nel ledger.</li>
+</ul>
+<p><span style="font-weight:400;">Due altr importanti caratteristiche sono le transazioni private, che consentono solo alle parti interessate di accedere in chiaro ai dettagli di una transazione; e il Customizable Consensus Protocol, che consente a Fabric di implementare il meccanismo di consenso in modo modulare, in una modalità potremmo dire plug-&amp;-vote il protocollo scelto potrebbe essere proof-of-work (come in Bitcoin), proof-of-stake o Paxos, quest’ultimo è lo stato dell’arte dei protocolli di consenso.</span></p>

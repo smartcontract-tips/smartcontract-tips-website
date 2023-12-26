@@ -1,0 +1,43 @@
+---
+layout: post
+title: Prova notarile per autori indie nel 2016
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: pending
+categories: []
+tags: []
+meta:
+  _elasticsearch_indexed_on: '1970-01-01 00:00:00'
+  jabber_published: '1473205056'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '26559501360'
+  email_notification: '1473205057'
+  _edit_last: '48926058'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+---
+<p>&nbsp;</p>
+<p><img class="  wp-image-588 alignleft" src="{{ site.baseurl }}/assets/389px-quentin_massys_-_portrait_of_a_man_-_national_gallery_of_scotland.jpg" alt="389px-quentin_massys_-_portrait_of_a_man_-_national_gallery_of_scotland" width="204" height="252" /></p>
+<p>Nel 2016 ci sono nuovi modi per proteggere un'<strong>opera inedita dal plagio</strong> di qualche malintenzionato, o per lo meno per dimostrare senza ombra di dubbio di esserne l'autore.</p>
+<p><strong>Il diritto d’autore sulle opere di ingegno nasce con l’opera stessa</strong> e la legge tutela le opere dell’ingegno per il solo fatto della loro creazione, indipendentemente da qualsiasi formalità di deposito e di registrazione.</p>
+<p>In passato le possibilità erano essenzialmente tre, la prima consisteva nell'iscriversi alla SIAE ma questa opzione un po' vecchio stile ha lo svantaggio di costare (tariffe sul sito SIAE) e di durare solo 5 anni. La seconda, forse ancora più costosa e vecchio stile, consiste nel depositare l'opera firmata in ogni sua pagina presso un Notaio. "Firmata in ogni sua pagina" dà già il senso ottocentesco della questione. Immagino i notai oggi siano più moderni di quelli di cento anni fa, tuttavia ho come il sospetto che per la maggior parte di loro la firma digitale sia una firma autografa scannerizzata. La terza soluzione, quella di chi non aveva soldi da investire in sigilli e diritti di cancelleria, era quella di spedirsi una copia dell'opera con una raccomandata in un pacco sigillato con timbri e data in bella vista.</p>
+<h2>Ma siamo nel 2016</h2>
+<p>abbiamo il wifi, i computer quantici, le stampanti 3d, e la crittografia asimmetrica e non è accettabile pensare in termini di "spediamoci un pacco sigillato con raccomandata". Nel 2016 soprattutto abbiamo la blockchain (se non sapete cos'è vi consiglio di leggere I<a href="http://amzn.to/2bVIxJi" target="_blank" rel="noopener"> Bitcoin sotto il materasso).</a> Ebbene, è possibile prendere un file e ottenere una sorta di "timbro" digitale con data e ora certa a prova della sua "esistenza". Questa certificazione crittografica non viene semplicemente creata e poi conservata nel disco di qualche startup leggera che oggi c'è e domani sparisce, no viene scritta nella stessa blockchain dei Bitcoin, un archivio clonato in modo integro e non falsificabile in migliaia e migliaia di computer nel mondo.</p>
+<p>Esistono vari servizi che permettono di inserire queste timestamp dentro la blockchain, io conosco <a href="https://bitnation.co/" target="_blank" rel="noopener">Bitnation</a>, <a href="https://www.proofofexistence.com/" target="_blank" rel="noopener">proofofexistence</a> and <a href="https://stampd.io/" target="_blank" rel="noopener">stampd.io.</a> Devo ammettere di aver scelto quest'ultimo perché mi è sembrato leggermente più facile da capire e utilizzare (e non è poco). Nel caso del mio ebook, la GUI ha generato un SHA256 del mio file e con un piccolo pagamento di 0.09EUR ha inserito quest'informazione dentro una transazione Bitcoin di tipo OP_RETURN (in pratica una transazione che non sposta coin, ma contiene 40 byte di dati). Ora il mio ebook è crittograficamente attestato come "esistente" ad una data certa. Un piccolo paragrafo di testo come quello che segue serve a spiegare al mondo che</p>
+<h6>Tutti i diritti sono riservati. L’hash SHA256 del libro è sigillato nella blockchain nella transazione <b><i><a href="https://blockchain.info/tx/d922071f70c342e57908f58a03a9203b34b7ce00b37404c2f37fdd7a7f07a1fb" target="_blank" rel="noopener">d922071f70c342e57908f58a03a9203b34b7ce00b37404c2f37fdd7a7f07a1fb</a> </i></b></h6>
+<h6>OP_RETURN = <b>5354414d50442323 +</b><b><i>5ad406c004e335c11c89b2e7a87a8dafc486cf2e09a795a0b0b918ad56a0efaa</i></b></h6>
+<p>In caso di vertenza, potrò crittograficamente dimostrare che possedevo una copia del file prima di chiunque altro, e questa prova la potrò fornire anche se stampd.io avrà chiuso i battenti poiché tale prova non è dipendente dall'integrità dei loro archivi ma dall'integrità della blockchain.</p>
+<p>&nbsp;</p>
+<p>***</p>
+<p>Approfondimento su questi temi in “<a href="http://amzn.to/2bQt1u7">I Bitcoin sotto il materasso</a>“, disponibile per Kindle.</p>
+<p>&nbsp;</p>

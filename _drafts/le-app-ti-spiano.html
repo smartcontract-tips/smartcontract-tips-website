@@ -1,0 +1,40 @@
+---
+layout: post
+title: Le app ti spiano
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: pending
+categories: []
+tags: []
+meta:
+  jabber_published: '1486675207'
+  email_notification: '1486675209'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '1686484969'
+  _elasticsearch_indexed_on: '2017-02-09 21:20:12'
+  _edit_last: '48926058'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+---
+<p class="p1"><img class="alignnone  wp-image-2626" src="{{ site.baseurl }}/assets/3944289_acd21023.jpg" alt="3944289_acd21023" width="264" height="430" /></p>
+<p class="p1">In una recente ricerca è risultato che di 1200 applicazioni per cellulare prese in esame molte utilizzavano informazioni e <strong>dati che non erano necessari per lo scopo dell’applicazione stessa</strong>.</p>
+<p class="p1">In pratica capita spesso che un’app che scaricate magari per giocare a Tic Tac Toe vi chieda durante l’installazione il permesso di leggere i dati della rubrica e del GPS. La maggior parte delle volte l’utente dà il suo OK, perché altrimenti l’app non si installa e noi non possiamo giocare a Tic Tac Toe.</p>
+<p class="p1">Ulteriore risultato della ricerca, il 15% delle app esaminate non forniva una descrizione chiara e a norma di legge di come avrebbe usato i dati raccolti.</p>
+<p class="p1">Poi veniamo a qualche esperienza diretta. Io ho un telefono Microsoft. Sì, e allora? Mi piace l’interfaccia grafica ed è veloce. Ti vedo utente Apple che storci il naso e già ti senti superiore. Devo dire che però una cosa abbastanza scellerata del mio telefono Microsoft è la gestione dell’autenticazione OAuth.</p>
+<p class="p1">Di che si tratta? Avete presente quando la vostra app che so, del club doposcuola di vostro figlio, vi dice ad esempio “fai login con Facebook”? Benissimo. In questi casi significa che chi ha sviluppato la app semplicemente non vi vuole far annoiare “creando e confermando” un nuovo account sulla loro app e decide di riconoscere la vostra identità attraverso Facebook (potrebbe essere Twitter o Google, è lo stesso).</p>
+<p class="p1">In questi casi quello che succede è che l’app ci mostra sullo schermo una pagina che viene direttamente dai server di Facebook dove noi inseriamo username e password. Facebook stesso restituisce il controllo alla app insieme ad un token, ovvero una specie di password temporanea che noi utenti non vediamo proprio, che da questo momento potrà essere usata dalla app per ottenere da Facebook le informazioni personali che attestano la nostra identità.</p>
+<p class="p1">Questo passaggio è critico, infatti <strong>la schermata in cui inseriamo username e password deve assolutamente venire dai server di Facebook e non deve essere generata dalla app</strong>. Questo per garantire che la app non riceva mai in chiaro la nostra password.</p>
+<p class="p1">In genere nei browser web questo è verificabile sulla barra dell’indirizzo dove possiamo vedere il lucchetto e affianco leggere il nome del server “<a href="http://www.facebook.com">www.facebook.com</a>”.</p>
+<p class="p1">Purtroppo su <strong>Windows Phone (almeno nella versione 8.*)</strong> non è così chiaro da dove provenga la pagina che chiede di inserire username e password: <strong>non si vede un certificato, non si vede il famoso lucchetto del browser</strong> che in genere consente di capire che la connessione verso un certo server è certificata.</p>
+<p class="p1">Per la gioia di mio figlio adolescente e ifonista (double trouble), mentre scrivo queste righe abbiamo verificato che invece iOS 10.2 gestisce la cosa correttamente aprendo una vera finestra di Safari con lucchetto e nome del server ben visibile.</p>
+<p>Picture © Copyright <a title="View profile" href="http://www.geograph.org.uk/profile/7420" rel="cc:attributionURL dct:creator">Brian Robert Marshall</a> and licensed for <a href="http://www.geograph.org.uk/reuse.php?id=3944289">reuse</a> under this <a class="nowrap" title="Creative Commons Attribution-Share Alike 2.0 Licence" href="http://creativecommons.org/licenses/by-sa/2.0/" rel="license">Creative Commons Licence</a>.</p>

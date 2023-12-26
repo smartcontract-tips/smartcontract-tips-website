@@ -1,0 +1,203 @@
+---
+layout: post
+title: The BRC-20 UniSat Wallet hacked with double-spend attacks.
+date: 2023-05-21 11:23:00.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- English
+- Hacks
+tags: []
+meta:
+  _wpas_done_all: '1'
+  _thumbnail_id: '6198'
+  _edit_last: '48926058'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/articoli/the-brc-20-unisat-wallet-has-been-hit-by-a-significant-volume-of-double-spend-attacks/"
+excerpt: The launch of “BRC-20” on the Bitcoin blockchain has generated significant
+  excitement among users. BRC-20 is a concept similar to Ethereum’s ERC-20 token,
+  enabling individuals to create their own tokens. This standard, introduced in March,
+  utilizes the contentious Ordinals inscription technique developed in January. Previously
+  limited to the Bitcoin token, the blockchain now hosts various coins such as $ORDI,
+  $PEPE, and $MEME.
+---
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:614px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:55.70032501220703%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/05/Screenshot+2023-06-07+at+11.57.13.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f355390c-ee11-400e-b9cd-f4884133a436/Screenshot+2023-06-07+at+11.57.13.png" data-image-dimensions="614x342" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="614" height="342" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f355390c-ee11-400e-b9cd-f4884133a436/Screenshot+2023-06-07+at+11.57.13.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f355390c-ee11-400e-b9cd-f4884133a436/Screenshot+2023-06-07+at+11.57.13.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f355390c-ee11-400e-b9cd-f4884133a436/Screenshot+2023-06-07+at+11.57.13.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f355390c-ee11-400e-b9cd-f4884133a436/Screenshot+2023-06-07+at+11.57.13.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f355390c-ee11-400e-b9cd-f4884133a436/Screenshot+2023-06-07+at+11.57.13.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f355390c-ee11-400e-b9cd-f4884133a436/Screenshot+2023-06-07+at+11.57.13.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/f355390c-ee11-400e-b9cd-f4884133a436/Screenshot+2023-06-07+at+11.57.13.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Overview</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The launch of “BRC-20” on the Bitcoin blockchain has generated significant excitement among users. BRC-20 is a concept similar to Ethereum’s ERC-20 token, enabling individuals to create their own tokens. This standard, introduced in March, utilizes the contentious Ordinals inscription technique developed in January. Previously limited to the Bitcoin token, the blockchain now hosts various coins such as $ORDI, $PEPE, and $MEME.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">However, the introduction of these new tokens has not been entirely without issues. As developers raced to release wallets compatible with these tokens, UniSat wallet claimed to be the first to support them.Unfortunately, shortly after its launch, the developers discovered a vulnerability in the Chrome extension, rendering it inaccessible. They later disclosed that this vulnerability exposed the wallet to double-spend attacks.<br />The attack was noticed by the project team, who then reported the issue on Twitter.</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:587px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:64.73594665527344%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/05/Screenshot+2023-06-07+at+11.57.22.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e8cc7f62-5480-4aa4-9f12-7c6cc03ac0c9/Screenshot+2023-06-07+at+11.57.22.png" data-image-dimensions="587x380" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="587" height="380" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e8cc7f62-5480-4aa4-9f12-7c6cc03ac0c9/Screenshot+2023-06-07+at+11.57.22.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e8cc7f62-5480-4aa4-9f12-7c6cc03ac0c9/Screenshot+2023-06-07+at+11.57.22.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e8cc7f62-5480-4aa4-9f12-7c6cc03ac0c9/Screenshot+2023-06-07+at+11.57.22.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e8cc7f62-5480-4aa4-9f12-7c6cc03ac0c9/Screenshot+2023-06-07+at+11.57.22.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e8cc7f62-5480-4aa4-9f12-7c6cc03ac0c9/Screenshot+2023-06-07+at+11.57.22.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e8cc7f62-5480-4aa4-9f12-7c6cc03ac0c9/Screenshot+2023-06-07+at+11.57.22.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e8cc7f62-5480-4aa4-9f12-7c6cc03ac0c9/Screenshot+2023-06-07+at+11.57.22.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">UniSat Marketplace Hit by Double-Spend Attack</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The recently launched UniSat Marketplace has fallen victim to a series of double-spend attacks. These attacks have exploited a vulnerability within the platform’s codebase, allowing malicious actors to spend the same cryptocurrency tokens multiple times. It is concerning that such attacks have occurred shortly after the marketplace’s introduction.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Despite efforts to anticipate and prevent double-spend attacks, the project team discovered certain vulnerabilities in the initial public version of the UniSat Marketplace. These vulnerabilities exposed the platform to exploitation, leading to the occurrence of these attacks.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Based on an initial analysis conducted by the extension’s team, approximately 70 out of the total 383 transactions were affected.</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:587px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:47.52981185913086%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/05/Screenshot+2023-06-07+at+11.57.32.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/cdfdd16f-40b4-481c-afcb-33bae183d314/Screenshot+2023-06-07+at+11.57.32.png" data-image-dimensions="587x279" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="587" height="279" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/cdfdd16f-40b4-481c-afcb-33bae183d314/Screenshot+2023-06-07+at+11.57.32.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/cdfdd16f-40b4-481c-afcb-33bae183d314/Screenshot+2023-06-07+at+11.57.32.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/cdfdd16f-40b4-481c-afcb-33bae183d314/Screenshot+2023-06-07+at+11.57.32.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/cdfdd16f-40b4-481c-afcb-33bae183d314/Screenshot+2023-06-07+at+11.57.32.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/cdfdd16f-40b4-481c-afcb-33bae183d314/Screenshot+2023-06-07+at+11.57.32.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/cdfdd16f-40b4-481c-afcb-33bae183d314/Screenshot+2023-06-07+at+11.57.32.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/cdfdd16f-40b4-481c-afcb-33bae183d314/Screenshot+2023-06-07+at+11.57.32.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Double-Spend Attack</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Double-spending refers to a type of manipulation in which the perpetrator spends the same cryptocurrency multiple times. It shares a historical connection with the Byzantine Generals’ Problem, which highlights the difficulty of achieving consensus without a central authority. The technological structure of Bitcoin effectively resolved this issue, and thus far, the Bitcoin network has never experienced a double-spend problem. Conversely, Ethereum has encountered this problem on multiple occasions due to its intricate operational system</p>
+<h2 style="white-space:pre-wrap;">What is the process through which double-spending occurs?</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Double spending occurs when a person spends the same cryptocurrency on two separate occasions.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">To understand how double spending happens, it’s important to consider the structure of blockchains, which consist of a series of transaction blocks. Each new block in the chain requires a hash, which is a crucial cryptographic function that includes details about public transaction data and the specific date the block was added.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><strong>Double spending can occur in a couple of ways.</strong></p>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Firstly, it can happen when services mistakenly consider a non-final block as a final one. This can lead to the duplication of payments for a transaction.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Secondly, inadequate transaction confirmation procedures by services can also contribute to double spending, as the payment for a transaction can be spent multiple times.</p>
+</li>
+</ul>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Flawed smart contract logic is another notable cause of double spending problems. If there is a lack of robust signature validation in place, users can potentially spend the same tokens twice, thereby exploiting the system.</p>
+<h2 style="white-space:pre-wrap;">Exploitation example:</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><strong>Here’s a simplified example to illustrate a double-spend attack:</strong></p>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The attacker initiates a transaction to purchase a product or service on an online marketplace using a certain amount of cryptocurrency.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Simultaneously, the attacker creates another transaction using the same funds to send them to another wallet address under their control.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The attacker tries to quickly broadcast both transactions to the network, hoping that at least one of them will be confirmed before the network recognizes the double spending.</p>
+</li>
+</ul>
+<p class="sqsrte-large" style="white-space:pre-wrap;">If successful, the attacker will have effectively spent the same cryptocurrency twice, taking advantage of the time delay in transaction confirmation and exploiting any vulnerabilities in the system’s consensus mechanism.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The attack appears in various forms, including:</p>
+<h2 style="white-space:pre-wrap;">Finney Attack, how does it work?</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Hal Finney devised a technique involving mining a block, including a transaction from wallet A to wallet B, and delaying its broadcast. In the meantime, the attacker pays a vendor and transfers funds to wallet C. If the vendor doesn’t receive an alert after waiting for some time, they assume the transaction is still in the mempool and complete the product transfer. Subsequently, the attacker broadcasts their block, causing the initial transaction to wallet A to supersede the recent transaction to wallet C. Consequently, the vendor never receives the payment, while the attacker successfully sends the funds to their alternate wallet.</p>
+<h2 style="white-space:pre-wrap;">Race Attack, how does it work?</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">ByteCoin, a prominent member of the Bitcoin network, introduced the concept known as the “race attack.” This attack occurs when two transactions compete to be included in a block. The transaction that successfully enters the block is considered valid, while the one that fails to do so is deemed unsuccessful.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Here’s how an attacker executes a race attack: Firstly, they send a certain amount of cryptocurrency to a victim without broadcasting the transaction. At the same time, the attacker initiates another transaction with the same cryptocurrency and broadcasts it to the network. The validators, responsible for approving transactions, prioritise adding the second transaction to the block since it’s the first one they encounter. Consequently, the victim’s transaction loses the race to be included in the block, resulting in the failure of the intended payment.</p>
+<h2 style="white-space:pre-wrap;">51% attack, what is it?</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">A 51% attack refers to a situation where a single entity gains control over a blockchain network by possessing a majority stake, enabling them to disrupt the network’s operations. This control grants them the ability to manipulate transactions in various ways, such as preventing them from being confirmed, altering the transaction history, and executing double-spend transactions.</p>
+<h2 style="white-space:pre-wrap;">Is it possible for double-spending issues to occur in real-world scenarios?</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Double-spending issues can manifest in various real-life financial transactions, both in online and offline settings. However, the specific mechanisms through which they occur can differ based on the context. Here is an example illustrating a real-life scenario of double-spending:</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">During a video call, John informed either Alice or Bob that one of them would pay Jane $500 in cash. Jane approached Alice and requested the $500, which Alice provided, assuming it fulfilled their agreement. However, before Alice had a chance to inform Bob about her payment to Jane, Jane approached Bob and asked for $500 as well. Unaware of Jane’s prior transaction with Alice and not suspecting any deception, Bob gave her the $500.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In the given scenario, both Alice and Bob unintentionally paid Jane twice, constituting a form of double-spending within this specific context.</p>
+<h2 style="white-space:pre-wrap;">Ordinals Protocol and Records</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Ordinals is a pioneering protocol that enables the creation of records within the underlying Bitcoin blockchain. These records are associated with specific satoshis and are added to the blockchain. Ordinals serve as digital artifacts capable of carrying diverse data formats, including text, JPEG images, PDFs, videos, and audio files.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In contrast, the BRC-20 standard utilizes records for deploying token contracts and facilitating their transfer. In the past, the Ordinals protocol encountered code errors that hindered the validation of 1200 records. The issue stemmed from a flaw in the protocol’s indexer function, which only considered records from the initial incoming transaction request prior to version 0.5.1 of the protocol.</p>
+<h2 style="white-space:pre-wrap;">UniSat Marketplace Reacts to the Vulnerability</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In response to the vulnerability, the developers of UniSat Marketplace took swift action by promptly disabling the wallet and publicly acknowledging the issue via Twitter. They assured users that they were actively working on resolving the problem and emphasized their commitment to prioritizing the security of user funds.</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:593px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:48.73524475097656%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/05/Screenshot+2023-06-07+at+11.57.45.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/a630184d-03a3-4216-93a7-92580dfddbdc/Screenshot+2023-06-07+at+11.57.45.png" data-image-dimensions="593x289" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="593" height="289" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/a630184d-03a3-4216-93a7-92580dfddbdc/Screenshot+2023-06-07+at+11.57.45.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/a630184d-03a3-4216-93a7-92580dfddbdc/Screenshot+2023-06-07+at+11.57.45.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/a630184d-03a3-4216-93a7-92580dfddbdc/Screenshot+2023-06-07+at+11.57.45.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/a630184d-03a3-4216-93a7-92580dfddbdc/Screenshot+2023-06-07+at+11.57.45.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/a630184d-03a3-4216-93a7-92580dfddbdc/Screenshot+2023-06-07+at+11.57.45.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/a630184d-03a3-4216-93a7-92580dfddbdc/Screenshot+2023-06-07+at+11.57.45.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/a630184d-03a3-4216-93a7-92580dfddbdc/Screenshot+2023-06-07+at+11.57.45.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<h1 style="white-space:pre-wrap;">Preventing from double-spending Attack :</h1>
+<h2 style="white-space:pre-wrap;">Sound Consensus Mechanisms</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In a blockchain system with a robust consensus mechanism, the occurrence of double-spending is effectively eliminated. Consensus mechanisms empower miners or validators to fulfill their responsibility of preserving the network’s integrity. The secure logic and design of these mechanisms inherently prevent any accidental or intentional double-spending problems from arising.</p>
+<h4 style="white-space:pre-wrap;">Inclusion of Nonce to Prevent Replay Attacks</h4>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Nonces are complex cryptographic values that undergo hashing to enable block mining. Each nonce value can only be utilized once, serving as a safeguard against replay attacks. By ensuring non-duplication, nonces play a vital role in upholding the integrity of the blockchain by preserving the uniqueness of each block.</p>
+<h4 style="white-space:pre-wrap;">Confirm if UXTO Has Been Spent</h4>
+<p class="sqsrte-large" style="white-space:pre-wrap;">An Unspent Transaction Output (UTXO) is a data structure that contains information regarding the history and current state of a transaction. In the blockchain, every transaction has an output that can serve as the input for a subsequent transaction. However, an output only becomes a new UTXO once it has been spent by a user. To prevent double-spending, it is crucial to incorporate a system that verifies whether a UTXO has already been spent or not.</p>
+<h4 style="white-space:pre-wrap;">High Node Operation Cost</h4>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Executing a double-spending manipulation typically necessitates the attacker’s control over one or multiple nodes within the network. In the case of a 51% attack, the hacker must gain dominance over more than half of the nodes in operation.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">To mitigate the risk of double-spending, blockchains often implement measures that raise the requirements for node operation. For example, Ethereum mandates staking 32 ETH (equivalent to $54,135) to become a node manager. This significant financial commitment acts as a deterrent, making it costly for potential double-spenders to carry out their malicious actions.</p>
+<h4 style="white-space:pre-wrap;">Blockchain Protocol and Smart Contract Audit</h4>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Double-spending attacks frequently arise as a result of vulnerabilities within the underlying blockchain protocol and smart contracts. To effectively identify and rectify these critical vulnerabilities, a comprehensive and professional audit is considered the optimal approach.</p>
+<h2 style="white-space:pre-wrap;">Conclusion:</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The UniSat Marketplace experienced a vulnerability that was exploited by criminals, resulting in a double-spend attack. This incident emphasizes the significance of performing comprehensive code testing and audits before releasing it to the public. It is worth mentioning that our company, <code>SCT ITALIA</code>, specializes in conducting security audits for blockchain projects. We understand the importance of identifying and addressing vulnerabilities to prevent such attacks. The developers of UniSat Marketplace demonstrated commendable responsiveness by promptly addressing the issue and actively seeking a solution. However, it is advisable for users to exercise caution when utilizing the UniSat Marketplace wallet until the matter is fully resolved.</p>
+</div>

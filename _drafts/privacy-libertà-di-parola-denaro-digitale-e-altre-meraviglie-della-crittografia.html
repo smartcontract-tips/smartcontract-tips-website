@@ -1,0 +1,146 @@
+---
+layout: post
+title: Privacy, libertà di parola, denaro digitale e altre meraviglie della crittografia
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: draft
+categories: []
+tags: []
+meta:
+  _last_editor_used_jetpack: block-editor
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+---
+<p><!-- wp:paragraph --></p>
+<p>La privacy è un diritto delle persone. Questo diritto è riconosciuto e tutelato dal regolamento 679/2016. Tuttavia una cosa è il diritto riconosciuto dalla legge e ben altra è la capacità di garantirlo. Oltre alle capacità organizzative è necessario anche conoscere le tecnologie e le metodologie tecniche incluse quelle più tecniche che sono legate alle crittografia.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>[inserire mio diagramma]</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Incominciamo proprio dalla cifratura dei dati. In generale la cifratura è ottenibile tramite due elementi uno noto (l'algoritmo) e uno segreto (la chiave). A differenza di quanto si può pensare rendere noto l'algoritmo è una best practice. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Alice, Bob, Charlie e gli altri</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>In genere i flussi di dati e le azioni sono iniziati da delle persone che agiscono secondo i loro bisogni e intenzioni, non sempre lecite o simpatiche. In generale abbiamo Alice che spesso inizia delle azioni, Bob che interagisce con Alice e Charlie è il nemico che cerca di spiare o danneggiare la comunicazione.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Cifratura simmetrica</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Nella cifratura simmetrica la stessa chiave può essere usata sia per cifrare che per decifrare</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>cifrato = E(chiave, testo)</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>testo = D(chiave, cifrato)</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>A titolo di esempio puramente scolastico un semplice algoritmo di cifratura simmetrica è l'operatore booleano XOR. Infatti dati due stringhe di bit A(il dato) e B (la chiave segreta)</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>(A xor B) xor B = A </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Ma come possiamo usare la cifratura simmetrica? Introduciamo le persone</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>In genere la definizione e le intenzioni di Charlie rappresentano il modello di attacco. <strong>Non si può progettare un sistema di protezione dei dati senza definire quale sarà il modello dell'attaccante</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Cifratura asimmetrica</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Nella cifratura simmetrica Alice e Bob possono trasmettersi un messaggio su un canale insicuro che come tale sarà osservato da Charlie a patto che il messaggio sia preventivamente cifrato. Il problema è che perché Bob possa decifrare il messaggio cifrato Alice dovrà condividere con Bob la chiave e questo dovrà avvenire tramite un canale "sicuro" non osservabile da Charlie. Ad esempio Alice potrebbe spedire un email cifrata a Bob e spedire la chiave attraverso un messaggio SMS posto che la trasmissione di quest'ultimo possa essere considerata sicura (cosa che non può essere data per scontata).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Il problema della condivisione della chiave non è secondario. In questo senso ci viene in aiuto la cosiddetta cifratura a chiave pubblica. In questo schema Alice genera due chiavi, una pubblica ed una privata. Bob riceve la chiave pubblica di Alice (tanto è pubblica e Alice la può spedire tranquillamente su un canale insicuro). A questo punto Bob usa la chiave pubblica di Alice per cifrare un messaggio e solo Alice con la sua chiave privata potrà decifrarlo. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Una CPU da $10 contro il resto del mondo</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Forse nella prima volta della storia dell'umanità l'individuo dispone di una difesa superiore all'attacco qualunque sia la portata di quest'ultimo. Se ai tempi di Gengis Khan avessimo tentato di difendere il nostro piccolo podere dall'assalto delle sue truppe non ci sarebbe stata storia. Oggi almeno per quanto riguarda i dati, con una CPU da $10 possiamo cifrare con una forza tale che nemmeno NSA, CIA, KGB e MI5 messi insieme potrebbero forzare la cifratura. Certo possono sempre usare una chiave inglese da 5 euro e torturarci, ma questo è un altro discorso. Non divaghiamo.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Internet privato con TOR, onion routing</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Hashing e checksum</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Hashing e firma digitale</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Hashing e passwords</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>RSA o curve ellittiche?</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>PKI e certificati digitali</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Firma digitale qualificata</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>PGP e GPG</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Attribute based encryption</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Cifratura per gruppi</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Ring signature</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Shamir Shared Secret</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Denaro digitale senza la blockchain, si può?</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Francobollo per email ovvero la Prova di lavoro</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Criptovalute e la blockchain</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Prova di Peterson </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>l'esempio delle aste decentralizzate</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>testa o croce a distanza</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Crittografia post quantistica</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Zero Knowledge Proof</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Crittografia omomorfica</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Crittografia quasi omomorfica (cryptdb)</p>
+<p><!-- /wp:paragraph --></p>

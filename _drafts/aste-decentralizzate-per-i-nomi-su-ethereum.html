@@ -1,0 +1,79 @@
+---
+layout: post
+title: Aste decentralizzate per i nomi su Ethereum
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: pending
+categories: []
+tags: []
+meta:
+  _thumbnail_id: '3658'
+  jabber_published: '1536328756'
+  timeline_notification: '1536328758'
+  email_notification: '1536328758'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '21895453421'
+  _elasticsearch_indexed_on: '2018-09-07 13:59:20'
+  _edit_last: '48926058'
+  _last_editor_used_jetpack: block-editor
+  _aioseo_title: ''
+  _aioseo_description: ''
+  _aioseo_keywords: ''
+  _aioseo_og_title: ''
+  _aioseo_og_description: ''
+  _aioseo_og_article_section: ''
+  _aioseo_og_article_tags: ''
+  _aioseo_twitter_title: ''
+  _aioseo_twitter_description: ''
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+---
+<p>Oggi ho comprato il <strong>dominio digitaldavide.eth</strong>. Non lo trovate su whois, non su quello tradizionale almeno, digitaldavide.eth è un dominio Ethereum : \</p>
+<p>Questa è una di quelle cose oscure che forse fra 10 anni potrebbe però farci esclamare "ah, ne avevo sentito parlare, ma sai ... non avevo tempo". Nessuno può dirlo in realtà ma le pieghe e le curve del passato possono farci riflettere. Quanto saremmo stati furbi a comprare 20 anni fa un dominio internet come hotel.com, oppure music.com. Qualcuno ci aveva pensato, il nostro connazionale (mio concittadino) Nichi Grauso ad esempio comprò centinaia (o forse migliaia) di domini di tipo un po' generalista tipo gelato.it, banane.com eccetera. Non credo che la cosa si sia tramutata in un grosso profitto per lui, comunque&nbsp; da bravo imprenditore aveva fiutato che in qualche modo i domini avrebbero dominato il mondo e scusate il gioco di parole.</p>
+<p>Dare i nomi alle cose è importante, perfino nella Bibbia, Adamo inizia la sua vita assegnando i nome alle cose che trova nel paradiso terrestre. E Internet se non è un paradiso è sicuramente un mondo complesso. Facciamo un passo indietro, cosa sono i name service e perché sono importanti? Ogni volta che scriviamo sul browser un indirizzo come facebook.com oppure spediamo una mail a paolorossi@gmail.com diamo per scontato che il messaggio arrivi a destinazione e che questi indirizzi siano localizzabili in rete. In realtà in una rete ogni computer non ha direttamente un indirizzo tipo digitaldavide.me. Quello che ha invece è un numero assegnato che comunemente è formato da 4 interi tipo 157.149.45.55 (sì caro esperto, sto parlando di IPv4 e ormai dovremmo parlare di IPv6, ma dammi tempo). Quindi dare un nome (es. digitaldavide.me) alle cose (esempio 156.144.4.33) avviene grazie ad un name service, che si chiama DNS ed è costituito da una vera e propria rete planetaria di computer che mantengono questa tabella gigantesca di indirizzi e numeri IP. Il fatto che sia una rete&nbsp; e che il protocollo sia aperto consente a questo importante servizio di funzionare senza essere vincolato a qualche particolare azienda.</p>
+<p>Quindi possiamo usare la parola magica? Possiamo dire che è DECENTRALIZZATO?</p>
+<p>Lo è ma fino a un certo punto, esistono delle autorità, esistono dei server cosiddetti root ed il tutto è ricondotto appunto ad una gerarchia. La testa di questa enorme rete di gestione dei nomi su internet è ovviamente negli Stati Uniti dove ci sono la maggior parte dei root server.</p>
+<p>Un dominio internet si compra da società specializzate come Godaddy o Namecheap, ma anche le italianissime Tiscali o Aruba. Quando si vuole comprare un dominio si verifica che nessuno lo abbia già comprato e si acquista tramite uno di questi provider che poi si occuperanno di diffondere questa informazione a tutte le macchine della rete DNS.</p>
+<p>Sebbene questo servizio sia distribuito globalmente e regolato da accordi e protocolli esistono delle autorità e come tale un record DNS è censurabile. Ad esempio i famosi siti pirata di cinema online vengono regolarmente ostacolati grazie all'oscuramento del loro nome nella rete DNS. Questo significa che in realtà gli stessi siti sono sempre lì, raggiungibili tramite il numero IP. Comunque, tale pratica di oscuramento non porta molto lontano visto che i suddetti cambiano record DNS e ricominciano daccapo senza cambiare una virgola, o meglio cambiano solo una sillaba e passano da cinemagratis.it a cinemagratis.pink</p>
+<p>Torniamo invece al mio nuovo dominio digitaldavide.eth. Prima di tutto dobbiamo chiarire che non serve a mappare il nome su un indirizzo internet, ma piuttosto un nome su un indirizzo ethereum, ovvero una stringona di 20 byte come questa</p>
+<p>0x8387a9f497353af8a54269824f2272195c3c2a0f</p>
+<p>Un indirizzo Ethereum è associato ad un account e permette di ricevere, spedire cripto-moneta e di interagire con gli smart contract. Anzi, gli smart contract stessi sono identificati da un indirizzo eth. Quindi il nome digitaldavide.eth è mappato su un indirizzo eth, il mio, o meglio uno dei miei. Che per inciso ho creato io dal mio wallet personale senza chiederlo a nessuno. Questo è il potere della decentralizzazione. <strong>Nessuna autorità è necessaria per fornirci un indirizzo eth</strong>.</p>
+<p>Per mantenere una tabella che mappa ogni nome verso un indirizzo ETH ovviamente useremo uno smart contract, o meglio viene usato uno smart contract. Non c'è bisogno neanche di dirlo, ma l'esecuzione del DNS, o meglio dell'ENS, è praticamente un gioco da ragazzi in Ethereum dato che è una blockchain nata proprio con lo scopo di permettere la programmazione di sistemi decentralizzati.</p>
+<p>Tuttavia, dotarci in&nbsp; modo autonomo di indirizzi ETH è relativamente facile in quanto si tratta di una risorsa pressoché illimitata, infatti lo spazio degli indirizzi è costituito da 2^160 possibili elementi. Si tratta di quantità difficili da concepire con la nostra intuizione, diciamo che il numero di atomi di tutto l'universo è un numero molto piccolo in confronto.</p>
+<p>Quando si tratta di nomi invece succede che solo un numero piccolo di combinazioni alfanumeriche ha un senso compiuto ed ovviamente un dominio come pizza.eth è molto più appetibile di sZZdf3dDfd.eth</p>
+<p>La domanda quindi è "in assenza di un'autorità" chi permette la vendita e la registrazione dei domini? Ovviamente anche la soluzione è uno smart contract ed è precisamente un'asta decentralizzata.</p>
+<p>Il tipo di asta implementato dallo smart contract di ENS è precisamente un'asta di Vickrey, ovvero un'asta con offerte segrete in cui vince l'offerente più alto ma paga il prezzo della seconda miglior offerta.</p>
+<p>Il frequentatore assiduo di blockchain e dintorni avrà subito intuito una difficoltà nella creazione di un'asta con offerte segrete. Infatti Ethereum, così come Bitcoin, è un protocollo in cui i dati sono spediti in chiaro, <strong>non esiste la possibilità di creare transazioni e spedire dati a contratti senza che questi dati risultino visibili</strong>. Tutti vedrebbero la nostra offerta segreta, si fa per dire.</p>
+<p>Per ovviare a questo inconveniente l'implementazione dell'asta Vickrey è divisa in due fasi: una fase di offerta detta appunto bidding, ed una fase di rivelazione, detta appunto reveal.</p>
+<p>Nella fase di offerta, gli offerenti mandano una cifra allo smart contract che gestisce l'asta e insieme mandano una versione cifrata dell'offerta (sempre all'esperto, non è cifrata, tecnicamente è l'hash sha3 dell'offerta) che viene dunque salvata nello smart contract. In parole povere, per ogni offerente l'asta conserva un record fatto così</p>
+<p>indirizzo ETH dell'offerente, soldi spediti, offerta cifrata</p>
+<p>Notare che i soldi spediti non sono l'offerta, ma sono una sorta di cauzione in grado di coprire l'offerta se questa risulta vincente. Quindi se io spedisco 1 ETH, ma ne offro in realtà 0.3 ETH all'asta, un osservatore esterno vedrà una transazione in blockchain fatta più o meno così</p>
+<p>0x&lt;indirizzo di Davide&gt;, 1 ETH, "daijoi99rjfijo=?ç"</p>
+<p>dove l'ultimo pezzo incomprensibile è l'offerta vera e propria. Si potrebbe obiettare che di sicuro l'offerta è inferiore alla cauzione di 1 ETH, in realtà non è così scontato. Infatti in un asta Vickrey vince l'offerente che fa l'offerta più alta, ma paga il prezzo offerto dalla seconda offerta più alta. Quindi se io offro 3 ETH, ma verso 1 ETH di cauzione, in realtà se il secondo più alto ha offerto 0.9 ETH sono ancora dentro e posso concludere l'asta in modo vincente. Se invece la cauzione non basta, beh sono guai. Perdo la cauzione e anche l'asta.</p>
+<p>Veniamo alla fase di reveal, dopo un certo numero di ore, lo smart contract smette di accettare nuove offerte e si mette appunto nello stato di reveal. A questo punto chi ha fatto un'offerta la deve spedire in chiaro allo smart contract che potrà verificarla (per l'esperto, in pratica lo smart contract fa <strong>sha3</strong> dell'offerta rivelata in chiaro e verifica che il risultato sia uguale a quella stringa cifrata mandata in fase di bidding).</p>
+<p>Anche la fase di reveal ha una durata limitata a 48 ore, dopo di che lo smart contract in pratica stabilisce chi è il vincitore. Per chiudere tutto poi l'utente deve fare una terza transazione di finalizzazione, o se preferite in italiano di liquidazione. Ovvero tutte le "cauzioni" spedite vengono restituire ai mittenti, e anche il vincitore pagherà con il prezzo del secondo arrivato e quindi probabilmente riceverà indietro la somma risultante in eccesso.</p>
+<p>A questo punto digitaldavide.eth è in mio possesso, tuttavia non è finita qui. Bisogna infatti fare delle ulteriori transazioni per stabilire quale indirizzo ETH 0x... deve essere risolto dal nome digitaldavide.eth.</p>
+<p>Tutto si fa attraverso un wallet ETH in grado di interagire con gli smart contract di ENS. Nessuno sito web intermediario in teoria sarebbe necessario.</p>
+<p>In questo modo possiamo anche confermare che non solo dotarsi di un indirizzo ETH non necessità di nessuna entità centrale, ma anche dotarsi di un nome con il suffisso .eth avviene in modo totalmente decentralizzato attraverso uno smart contract.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

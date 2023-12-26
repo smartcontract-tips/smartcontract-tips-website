@@ -1,0 +1,238 @@
+---
+layout: post
+title: Yearn Finance Loses $11.5 Million in Security Breach Due to Misconfigured yUSDT
+  Minting
+date: 2023-04-24 12:31:00.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Hacks
+tags: []
+meta:
+  _wpas_done_all: '1'
+  _thumbnail_id: '6201'
+  _edit_last: '48926058'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/articoli/yearn-finance-loses-115-million-in-security-breach-due-to-misconfigured-yusdt-minting/"
+excerpt: On April 13, 2023, Yearn Finance suffered a loss of approximately $11.5 million
+  due to a security breach that allowed an attacker to mint additional yUSDT tokens.
+  This was possible due to a misconfigured iUSDC address during deployment, which
+  allowed the attacker to generate additional tokens using a small deposit of USDT.
+---
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1452px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:56.19834518432617%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/04/Screenshot+2023-06-20+at+23.03.40.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/013ae864-fb0f-4923-8009-ef14011b51b3/Screenshot+2023-06-20+at+23.03.40.png" data-image-dimensions="1452x816" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1452" height="816" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/013ae864-fb0f-4923-8009-ef14011b51b3/Screenshot+2023-06-20+at+23.03.40.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/013ae864-fb0f-4923-8009-ef14011b51b3/Screenshot+2023-06-20+at+23.03.40.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/013ae864-fb0f-4923-8009-ef14011b51b3/Screenshot+2023-06-20+at+23.03.40.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/013ae864-fb0f-4923-8009-ef14011b51b3/Screenshot+2023-06-20+at+23.03.40.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/013ae864-fb0f-4923-8009-ef14011b51b3/Screenshot+2023-06-20+at+23.03.40.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/013ae864-fb0f-4923-8009-ef14011b51b3/Screenshot+2023-06-20+at+23.03.40.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/013ae864-fb0f-4923-8009-ef14011b51b3/Screenshot+2023-06-20+at+23.03.40.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Overview:</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">On April 13, 2023, Yearn Finance suffered a loss of approximately $11.5 million due to a security breach that allowed an attacker to mint additional yUSDT tokens. This was possible due to a misconfigured iUSDC address during deployment, which allowed the attacker to generate additional tokens using a small deposit of USDT.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The attacker took advantage of the misconfiguration of the yUSDT token on Yearn Finance and used Fulcrum’s iUSDC token instead of the intended iUSDT token. This allowed the hacker to mint 1.2 quadrillion yUSDT tokens with a $10,000 deposit, which were then exchanged for various stablecoins such as DAI, USDC, BUSD, TUSD and USDT.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Although it used Aave V1 for a series of swaps, the Aave team confirmed that its protocol was not exploited in the attack and that Aave V1 was not affected and stressed that the root cause of the hack was the misconfigured yUSDT token, not Aave.</p>
+<h2 style="white-space:pre-wrap;">About the attacker :</h2>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Address : 0x5baC20BEef31d0ECCb369A33514831eD8e9cdfE0</p>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">link: <a href="https://etherscan.io/address/0x5bac20beef31d0eccb369a33514831ed8e9cdfe0" target="_blank" rel="noopener">https://etherscan.io/address/0x5bac20beef31d0eccb369a33514831ed8e9cdfe0</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Wallet 1: 0x16Af29b7eFbf019ef30aae9023A5140c012374A5</p>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">link: <a href="https://etherscan.io/address/0x16Af29b7eFbf019ef30aae9023A5140c012374A5" target="_blank" rel="noopener">https://etherscan.io/address/0x16Af29b7eFbf019ef30aae9023A5140c012374A5</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Wallet 2: 0x6f4A6262d06272c8B2E00Ce75e76d84b9D6F6aB8</p>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">link: <a href="https://etherscan.io/address/0x6f4A6262d06272c8B2E00Ce75e76d84b9D6F6aB8" target="_blank" rel="noopener">https://etherscan.io/address/0x6f4A6262d06272c8B2E00Ce75e76d84b9D6F6aB8</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 style="white-space:pre-wrap;">Aave Lending pool V1 Contract:</h2>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Address: 0x398eC7346DcD622eDc5ae82352F02bE94C62d119</p>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">link:<br /><a href="https://etherscan.io/address/0x398ec7346dcd622edc5ae82352f02be94c62d119#code" target="_blank" rel="noopener">https://etherscan.io/address/0x398ec7346dcd622edc5ae82352f02be94c62d119#code</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 style="white-space:pre-wrap;">Vulnerable yUSDT contract:</h2>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Address: 0x83f798e925BcD4017Eb265844FDDAbb448f1707D</p>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">link:<br /><a href="https://etherscan.io/address/0x83f798e925BcD4017Eb265844FDDAbb448f1707D#code" target="_blank" rel="noopener">https://etherscan.io/address/0x83f798e925BcD4017Eb265844FDDAbb448f1707D#code</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 style="white-space:pre-wrap;">Overview of the transaction :</h2>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Transaction Hash: 0xd55e43c1602b28d4fd4667ee445d570c8f298f5401cf04e62ec329759ecda95d</p>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">link:<br /><a href="https://etherscan.io/tx/0xd55e43c1602b28d4fd4667ee445d570c8f298f5401cf04e62ec329759ecda95d" target="_blank" rel="noopener">https://etherscan.io/tx/0xd55e43c1602b28d4fd4667ee445d570c8f298f5401cf04e62ec329759ecda95d</a></p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1448px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:53.176795959472656%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/04/Screenshot+2023-06-20+at+23.04.01.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1965ba72-7878-4614-abc3-3eb5ccbda877/Screenshot+2023-06-20+at+23.04.01.png" data-image-dimensions="1448x770" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1448" height="770" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1965ba72-7878-4614-abc3-3eb5ccbda877/Screenshot+2023-06-20+at+23.04.01.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1965ba72-7878-4614-abc3-3eb5ccbda877/Screenshot+2023-06-20+at+23.04.01.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1965ba72-7878-4614-abc3-3eb5ccbda877/Screenshot+2023-06-20+at+23.04.01.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1965ba72-7878-4614-abc3-3eb5ccbda877/Screenshot+2023-06-20+at+23.04.01.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1965ba72-7878-4614-abc3-3eb5ccbda877/Screenshot+2023-06-20+at+23.04.01.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1965ba72-7878-4614-abc3-3eb5ccbda877/Screenshot+2023-06-20+at+23.04.01.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1965ba72-7878-4614-abc3-3eb5ccbda877/Screenshot+2023-06-20+at+23.04.01.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Let’s break down the attack :</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The root cause of the attack on Yearn Finance was a misconfiguration that caused the rebalancing of pools to rely on an incorrect underlying token. One of the strategy pools, Fulcrum, was configured with the wrong address, with USDC being the underlying token of the misconfigured pool.<br />The attacker initiated the attack by funding it with 10 ETH using TornadoCash on April 11th, 2023, and then created a malicious contract on April 13th, 2023.<br />The attacker obtained a flash loan to fund the attack and gradually paid back the USDT loan with the Aave pool.</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1496px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:29.144386291503906%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/04/Screenshot+2023-06-20+at+23.04.18.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/2eafbf85-fefb-4d6e-ae9f-613629a88f9e/Screenshot+2023-06-20+at+23.04.18.png" data-image-dimensions="1496x436" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1496" height="436" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/2eafbf85-fefb-4d6e-ae9f-613629a88f9e/Screenshot+2023-06-20+at+23.04.18.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/2eafbf85-fefb-4d6e-ae9f-613629a88f9e/Screenshot+2023-06-20+at+23.04.18.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/2eafbf85-fefb-4d6e-ae9f-613629a88f9e/Screenshot+2023-06-20+at+23.04.18.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/2eafbf85-fefb-4d6e-ae9f-613629a88f9e/Screenshot+2023-06-20+at+23.04.18.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/2eafbf85-fefb-4d6e-ae9f-613629a88f9e/Screenshot+2023-06-20+at+23.04.18.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/2eafbf85-fefb-4d6e-ae9f-613629a88f9e/Screenshot+2023-06-20+at+23.04.18.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/2eafbf85-fefb-4d6e-ae9f-613629a88f9e/Screenshot+2023-06-20+at+23.04.18.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">The attacker carried out a sophisticated attack that exploited two DeFi protocols: Aave V1 and yUSDT/ycUSDT. Aave V1 is a decentralized lending platform that allows users to deposit their cryptocurrencies and earn interest on them. The interest rate offered by Aave V1 is algorithmically adjusted based on the supply and demand of the deposited assets. The attacker managed to exploit a vulnerability in the interest rate model of Aave V1, which allowed them to empty the interest rate of the platform, potentially causing a significant loss of funds for depositors.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Additionally, the attacker directly transferred Fulcrum USDC, a stablecoin, to the yUSDT/ycUSDT pool. This pool involves a combination of USDT and cUSDT, and the attacker may have attempted to manipulate the value of the pool by taking advantage of price discrepancies between these assets. By transferring Fulcrum USDC directly to the pool, the attacker triggered a rebalancing mechanism that automatically adjusted the portfolio to maintain the desired ratios of the assets.</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1434px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:30.822872161865234%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/04/Screenshot+2023-06-20+at+23.04.39.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/58dcdb4d-5c42-4c57-b0df-999a8998e8e8/Screenshot+2023-06-20+at+23.04.39.png" data-image-dimensions="1434x442" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1434" height="442" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/58dcdb4d-5c42-4c57-b0df-999a8998e8e8/Screenshot+2023-06-20+at+23.04.39.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/58dcdb4d-5c42-4c57-b0df-999a8998e8e8/Screenshot+2023-06-20+at+23.04.39.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/58dcdb4d-5c42-4c57-b0df-999a8998e8e8/Screenshot+2023-06-20+at+23.04.39.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/58dcdb4d-5c42-4c57-b0df-999a8998e8e8/Screenshot+2023-06-20+at+23.04.39.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/58dcdb4d-5c42-4c57-b0df-999a8998e8e8/Screenshot+2023-06-20+at+23.04.39.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/58dcdb4d-5c42-4c57-b0df-999a8998e8e8/Screenshot+2023-06-20+at+23.04.39.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/58dcdb4d-5c42-4c57-b0df-999a8998e8e8/Screenshot+2023-06-20+at+23.04.39.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">In this particular case, the attacker utilized a vulnerability in the bZxUSDC minting process to manipulate the price of yUSDT. bZxUSDC is a token created by the bZx protocol that represents the value of a USDC deposit in the protocol’s lending pool. By minting bZxUSDC tokens, the attacker was able to access the lending pool and manipulate the price of yUSDT, which is another token that represents the value of a USDT deposit in the same pool.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The price of yUSDT had been raised due to a misconfiguration that occurred when the Fulcrum iUSDC token was utilized instead of the intended Fulcrum iUSDT token. This misconfiguration had persisted since the contract’s release, and the address for the Fulcrum had been misconfigured, allowing the attacker to take advantage of the situation.</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1436px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:46.79665756225586%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/04/Screenshot+2023-06-20+at+23.04.53.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/da691f5a-f899-4882-9ac5-b72973461e4a/Screenshot+2023-06-20+at+23.04.53.png" data-image-dimensions="1436x672" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1436" height="672" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/da691f5a-f899-4882-9ac5-b72973461e4a/Screenshot+2023-06-20+at+23.04.53.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/da691f5a-f899-4882-9ac5-b72973461e4a/Screenshot+2023-06-20+at+23.04.53.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/da691f5a-f899-4882-9ac5-b72973461e4a/Screenshot+2023-06-20+at+23.04.53.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/da691f5a-f899-4882-9ac5-b72973461e4a/Screenshot+2023-06-20+at+23.04.53.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/da691f5a-f899-4882-9ac5-b72973461e4a/Screenshot+2023-06-20+at+23.04.53.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/da691f5a-f899-4882-9ac5-b72973461e4a/Screenshot+2023-06-20+at+23.04.53.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/da691f5a-f899-4882-9ac5-b72973461e4a/Screenshot+2023-06-20+at+23.04.53.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">This caused yUSDT/ycUSDT to retrieve a large amount of USDC, mistakenly thinking that its own balance was 0. The attacker then used the Curve Swap function with significantly imbalanced share prices and exchanged the incorrectly calculated yUSDT for stablecoins which added up to a loss of $11.5M and the flashloan was repaid.</p>
+<h2 style="white-space:pre-wrap;">Exploit conculsion :</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Overall, the attacker’s actions demonstrate the complex and interconnected nature of the DeFi ecosystem, as well as the potential risks and vulnerabilities that exist within it. By exploiting weaknesses in one protocol, the attacker was able to affect the operation of another protocol and potentially cause financial losses for users. and The attacker’s actions were able also to exploit bZxUSDC vulnerability and cause a significant rebalancing of the pool, which could have resulted in financial losses for users.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The incident highlights the importance of thorough testing and auditing of DeFi protocols to prevent such vulnerabilities from being exploited. In this case, a misconfiguration error allowed the attacker to access the pool and manipulate the price, demonstrating the need for careful attention to detail in the development and deployment of smart contracts.</p>
+<h2 style="white-space:pre-wrap;">Conclusion:</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">To maintain the integrity and security of Web3, proactive security measures such as anomaly detection are crucial. By monitoring the blockchain in real time, security platforms can detect anomalies in a timely manner and prevent hacks. Prioritizing proactive security in the still-growing DeFi ecosystem is critical to preventing such exploits in the future and for the Web3 community to build a more resilient and reliable ecosystem that attracts new users and enables a decentralized future.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">However, it’s not just about detecting anomalies in real time. It’s also critical to thoroughly test the logic of the code before deploying it to the main network to mitigate potential vulnerabilities and prevent such incidents from occurring. The attack could have been avoided if proper validation and confirmation of the Fulcrum address had been performed during the deployment process before it was hard-coded into the builder and deployed to the production/network environment.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">To avoid such vulnerabilities, At SCT ITALIA, we provide smart contract security, examine smart contracts for logical problems and end-to-end security for externally exposed web applications and networks. With the increasing complexity of the blockchain ecosystem, it is vital to engage the services of professional security providers to ensure the safety and integrity of the system.</p>
+</div>

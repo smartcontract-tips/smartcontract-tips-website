@@ -1,0 +1,240 @@
+---
+layout: post
+title: Come si fa l'audit di uno smart contract.
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: pending
+categories:
+- Sicurezza Informatica
+- Smart Contracts
+tags: []
+meta:
+  _last_editor_used_jetpack: block-editor
+  _wpas_done_all: '1'
+  _thumbnail_id: '4027'
+  _edit_last: '48926058'
+  _aioseo_title: ''
+  _aioseo_description: ''
+  _aioseo_keywords: ''
+  _aioseo_og_title: ''
+  _aioseo_og_description: ''
+  _aioseo_og_article_section: ''
+  _aioseo_og_article_tags: ''
+  _aioseo_twitter_title: ''
+  _aioseo_twitter_description: ''
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+---
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Cos'è e perché fare l'audit di uno smart contract</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>In realtà gli audit di sicurezza andrebbero chiamati più correttamente external code reviews. Il termine audit è mutuato dalla finanza dove si intende più genericamente l'analisi contabile e della situazione patrimoniale di un'azienda che deve rispondere ai propri utenti o azionisti del modo in cui gestisce le proprie disponibilità economiche e i fondi dei propri clienti. Questo per il semplice fatto che se un'entità come una banca o altro intermediario finanziario non garantisce una corretta gestione dei fondi suoi e dei propri clienti c'è un forte rischio di causare delle perdite patrimoniali.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Nel caso degli smart contract abbiamo una situazione ibrida in cui in realtà parliamo di software e non di bilanci societari, ma in un certo senso essendo uno smart contract denaro programmabile ecco che la terminologia si confonde.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Come abbiamo già evidenziato in un <a href="https://smartcontract.tips/2020/04/25/sicurezza-e-audit-degli-smart-contract/">precedente articolo</a>, quando uno smart contract che gestisce transazioni finanziarie è affetto da un bug i problemi che ne derivano possono essere gravi e non recuperabili.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Emblematico è il caso di TheDao hack nel 2016, che a causa di un reentrancy bug ha causato perdite per centinaia di milioni di dollari e a costretto la community ad attivare un hard fork a livello dell’intera rete Ethereum. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Nella tabella sotto sono riassunte le maggiori differenze tra i danni causati da un bug nel software tradizionale Vs. smart contract.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:table --></p>
+<figure class="wp-block-table">
+<table />
+<thead />
+<tr>
+<th>Attacco/Bug</th>
+<th>Software tradizionale</th>
+<th>Smart contract</th>
+</tr>
+<tbody />
+<tr />
+<td>Denial of service</td>
+<td>Il danno è proporzionale al tempo in cui persiste il denial-of-service. Minore è il tempo di recupero minore sarà il danno.</td>
+<td>Tecnicamente non è possibile mandare il vostro contratto in DoS, ma l’intera rete Ethereum potrebbe rendere difficile l’interaione con il vostro contratto se le gas fee sono molto alte</td>
+<tr />
+<td />Data Leak
+<td>In questo caso se si tratta di dati personali o segreti industriali, gli hacker possono chiedere un riscatto e causare un danno economico e reputazionale.</td>
+<td>Non avrebbe senso immaginare un data leak visto che gli smart contract eseguono codice e dati visibili ed eseguibili pubblicamente. Se tali dati sono offuscati prima di raggiungere la blockchain allora il bug non riguarderebbe lo smart contract</td>
+<tr />
+<td>Data corruption</td>
+<td>Nel software tradizionale ovviamente la corruzione dei data causa una perdita economica, ma è possibile in genere recuperare da backup e ripristinare lo stato corretto. L’impatto è dunque lineare e proporzionale al tempo di recovery</td>
+<td>Data Corruption = LOSS.</td>
+<p>Questo è il caso più drammatico per lo smart contract. La corruzione di un dato o il valore inaspettato di un registro o variabile di stato può creare un disastro non recuperabile.<br />
+<tr />
+<td></td>
+<td></td>
+<td></td>
+</figure>
+<p><!-- /wp:table --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Chi dovrebbe fare l'audit dei nostri smart contract</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Come evidenziato in precedenza stiamo parlando di codice software e non di bilanci e contabilità, quindi è necessaria una figura professionale con competenze nello specifico linguaggio di programmazione degli smart contract (comunemente solidity) che sia aggiornata e formata sulle best practice e antipattern tipici dello sviluppo software di smart contract.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>"La paranoia è una virtù"</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>E' necessario anche una specifica attitudine, infatti se lo sviluppatore di software deve stare molto attento alla sicurezza del codice che scrive, auditors e sviluppatori di smart contract dovrebbero esserne ossessionati.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Quanto costa un audit di smart contract e quanto tempo ci vuole</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph {"placeholder":"Sei più una persona mattiniera o un nottambulo?"} --></p>
+<p>Quello degli "audit degli smart contract" in realtà è un mercato come tutti gli altri. Esistono agenzie con nomi molto blasonati e altri professionisti meno conosciuti. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph {"placeholder":"Sei più una persona mattiniera o un nottambulo?"} --></p>
+<p>Da un lato affidarsi ad una grande agenzia può darci la sensazione di andare sul sicuro e può risultare un accreditamento a livello di marketing. Naturalmente il costo in questo caso può essere molto significativo. In alternativa attraverso Google è possibile trovare centinaia di offerte più abbordabili. In questo caso è sempre bene cercare di capire quale sia l'effettiva competenza del professionista che andrà a svolgere il lavoro.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>I costi per un audit dipendono ovviamente dalla complessità del progetto. VA da se che un progetto con pochi contratti e poche linee di codice sarà molto meno costoso da verificare di uno con decine di contratti e decine di migliaia di linee di codice.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Per eseguire l'audit infatti, oltre all'utilizzo di strumenti automatici, sono necessarie molte ore di tempo di <strong>personale altamente qualificato impiegate nell'ispezione manuale del codice</strong>.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>I costi possono quindi variare dalle poche migliaia alle decine di migliaia di euro per progetti di media complessità. In alcuni casi di progetti molto complessi l'audit potrebbe richiedere mesi e vari passaggi moltiplicando i costi indicati sopra anche di un fattore x10.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Quali sono le fasi di un audit</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>L'audit è un'attività abbastanza complessa che può riassumersi nelle seguenti fasi:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Innanzitutto si deve lavorare con il cliente per avere una serie di requisiti stringenti rispettati ancora prima di iniziare l'audit:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>Il codice deve essere disponibile in un repository Git per verificare i vari commit</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>La duplicazione del codice deve essere ridotta al minimo.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Le dipendenze esterne devono essere ben documentate e il codice facilmente eseguibile anche al di fuori del PC dello sviluppatore. "Nel mio computer funzionava" non è accettabile.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Il codice deve compilare con una versione di solidity che sia considerata affidabile, se non succede allora va giustificato l'uso di una versione precedente o successiva</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Non devono esserci compiler warnings, oppure vanno giustificati a dovere.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>Sembra banale ma possono passare giorni prima di ottenere questi requisiti iniziali soddisfatti. Inoltre superati questi dovrebbero essere rispettati anche i seguenti, con priorità più bassa ma utili comunque:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>file di deploy presenti e documentati</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>testcase nella directory /tests</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>test coverage documentato e possibilmente pari al 100%</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>artifacts e builds non inclusi nel git</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>separazione fra i file da auditare e quelli da tralasciare</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>documentazione del codice completa e accurata</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>specifiche funzionali del progetto</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>nessun getter per le variabili pubbliche</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>aderenza alle code conventions linee guida di Solidity</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>Sebbene sia importante che il codice venga presentato in un repository git resta il fatto che l'auditor deve sapere esattamente quale commit del repository è oggetto del review e tale sarà anche riportato nella relazione di audit. Infatti in produzione gli utenti dovrebbero poter verificare che il bytecode in esecuzione in blockchain corrisponda esattamente al codice generato dal sorgente oggetto dell'audit e non ad una versione diversa, anteriore o successiva.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>A tale scopo riportiamo un flowchart delle fasi dell'audit che vedono coinvolti l'auditor ed il team di sviluppo.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":5707,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="https://smartcontract.tips/wp-content/uploads/2023/01/image-1.png" /><img src="{{ site.baseurl }}/assets/image-1.png" alt="" class="wp-image-5707" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Cos'è il triage dei difetti</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Il triage come suggerisce il nome altro non è che una classificazione dei problemi basata sul classico modello di rischio</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>R = P * D</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Dove R è il rischio, P è la probabilità che il problema si verifichi e D è il danno potenziale che il problema potrebbe causare.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><img width="601px;" height="280px;" src="{{ site.baseurl }}/assets/itFA6lFm82Zq2TeHuyx1MkoEfidSAvaUwwpjtrxOL8AwCHxYgQx_ThgA4fbxq05brzycuMB4jsqaNQFaJIa47oBBz0e-tHsQ-RuK2fYLH1Fsm7Q77Z2GbQuHUqSv17nTyjyMRj_BYlQ_od2IUkIhLsu4sbJv3mo0pOsqJVt5MJuhMKsR-NEmdHxIPDGJ1A" /></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>In modo trasversale potremmo qualificare i difetti software secondo altre dimensioni:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>Sicurezza, il difetto va corretto assolutamente perché in genere anche se improbabile potrebbe avere conseguenze disastrose</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Trust, il difetto non è legato all'esecuzione di codice scorretto ma al fatto che introduce degli elementi come backdoor o privilegi che possono minare alla base la trasparenza e autonomia dello smart contract.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Funzionale, il codice e sicuro e non modificabile, tuttavia presente un disallineamento fra l'implementazione effettiva e i business requirement. Questo tipo di difetto dovrebbe essere comunque considerato molto grave, specialmente se in gioco ci sono anche degli adempimenti contrattuali o legali off chain</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Il rapporto di audit</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Il rapporto è solitamente un file pdf che racchiude i risultati dell'audit. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Tale rapporto normalmente include anche una descrizione rapida e sintetica dell'intero sistema analizzato.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Normalmente l'auditor prepara una versione iniziale del documento che racchiude le indicazioni principali e le criticità rilevate e suggerisce le azioni da intraprendere per mitigare o eliminare il rischio.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>A seguito della trasmissione della versione iniziale al team di sviluppo, questo verifica e decide se intraprendere le azioni suggerite nel rapporto. Se una o più azioni vengono intraprese la palla torna all'auditor che ne verifica l'esecuzione e stila una seconda versione, possibilmente finale, del rapporto di audit. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Conclusioni</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>L'audit di uno smart contract richiede tempo, attenzione e impegno. E' necessario  mettere l'auditor in condizione di avere tutte le informazioni necessarie e poi eseguire i suoi controlli. Questo in genere richiede diverse interazioni tra auditor e team di sviluppo senza contare che il primo rapporto dell'audit è da considerarsi pre-liminare e contiene una serie di suggerimenti che l'auditor si aspetta di vedere implementati dal team di sviluppo. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>

@@ -1,0 +1,219 @@
+---
+layout: post
+title: ERC 4626 - Il contratto per gli yield bearing tokens
+date: 2023-11-12 16:26:48.000000000 +01:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Approfondimenti
+tags: []
+meta:
+  _last_editor_used_jetpack: block-editor
+  _oembed_99171822fa465488ae1c810226415f43: <blockquote class="twitter-tweet" data-width="500"
+    data-dnt="true"><p lang="en" dir="ltr">5/ Yearn V3 + ERC-4626 = inevitable<br><br>Contributors
+    are already working hard implementing the standard for Yearn’s V3 vaults<br><br>So
+    are devs at <a href="https://twitter.com/AlchemixFi?ref_src=twsrc%5Etfw">@AlchemixFi</a>,
+    <a href="https://twitter.com/Balancer?ref_src=twsrc%5Etfw">@balancer</a>, <a href="https://twitter.com/RariCapital?ref_src=twsrc%5Etfw">@RariCapital</a>,
+    <a href="https://twitter.com/feiprotocol?ref_src=twsrc%5Etfw">@feiprotocol</a>,
+    <a href="https://twitter.com/OpenZeppelin?ref_src=twsrc%5Etfw">@OpenZeppelin</a>
+    and elsewhere<br><br>Perhaps one day, we’ll even see a Erc4626 tab on <a href="https://twitter.com/etherscan?ref_src=twsrc%5Etfw">@etherscan</a></p>&mdash;
+    yearn (@yearnfi) <a href="https://twitter.com/yearnfi/status/1511444226566983683?ref_src=twsrc%5Etfw">April
+    5, 2022</a></blockquote><script async src="https://platform.twitter.com/widgets.js"
+    charset="utf-8"></script>
+  _oembed_time_99171822fa465488ae1c810226415f43: '1699806411'
+  _wpas_done_all: '1'
+  _thumbnail_id: '6599'
+  _g_feedback_shortcode_b64314187fe33cef2e0f5889853c5fb1247c94c0: |2
+
+    <div class="wp-block-jetpack-contact-form">[contact-field required="1" type="name" label="Nome"/]
+
+    [contact-field required="1" type="email" label="Email"/]
+
+    [contact-field type="textarea" label="Messaggio"/]
+
+    <div class="wp-block-jetpack-button wp-block-button" style=""><button class="wp-block-button__link" style="" data-id-attr="placeholder" type="submit">Contattaci</button></div></div>
+  _g_feedback_shortcode_atts_b64314187fe33cef2e0f5889853c5fb1247c94c0: a:17:{s:2:"to";s:18:"dcarboni@gmail.com";s:7:"subject";s:69:"[Digital
+    Davide] ERC 4626 - Il contratto per gli yield bearing tokens";s:12:"show_subject";s:2:"no";s:6:"widget";i:0;s:14:"block_template";N;s:19:"block_template_part";N;s:2:"id";i:5252;s:18:"submit_button_text";s:5:"Invia";s:14:"customThankyou";s:0:"";s:21:"customThankyouHeading";s:33:"Il
+    tuo messaggio è stato inviato";s:21:"customThankyouMessage";s:24:"Grazie per il
+    tuo invio!";s:22:"customThankyouRedirect";s:0:"";s:10:"jetpackCRM";b:1;s:9:"className";N;s:9:"postToUrl";N;s:14:"salesforceData";N;s:12:"hiddenFields";N;}
+  _g_feedback_shortcode_d757cbc4c0bac0b630abe417e1a570022b5eec90: |2
+
+    <div class="wp-block-jetpack-contact-form">[contact-field required="1" type="name" label="Nome"/]
+
+    [contact-field required="1" type="email" label="Email"/]
+
+    [contact-field type="textarea" label="Messaggio"/]
+
+    <div class="wp-block-jetpack-button wp-block-button" style=""><button class="wp-block-button__link" style="" data-id-attr="placeholder" type="submit">Contattaci</button></div></div>
+  _g_feedback_shortcode_atts_d757cbc4c0bac0b630abe417e1a570022b5eec90: a:17:{s:2:"to";s:18:"dcarboni@gmail.com";s:7:"subject";s:69:"[Digital
+    Davide] ERC 4626 - Il contratto per gli yield bearing tokens";s:12:"show_subject";s:2:"no";s:6:"widget";i:0;s:14:"block_template";N;s:19:"block_template_part";N;s:2:"id";i:5252;s:18:"submit_button_text";s:5:"Invia";s:14:"customThankyou";s:0:"";s:21:"customThankyouHeading";s:33:"Il
+    tuo messaggio è stato inviato";s:21:"customThankyouMessage";s:24:"Grazie per il
+    tuo invio!";s:22:"customThankyouRedirect";s:0:"";s:10:"jetpackCRM";b:1;s:9:"className";N;s:9:"postToUrl";N;s:14:"salesforceData";N;s:12:"hiddenFields";N;}
+  _edit_last: '48926058'
+  ppma_authors_name: Davide
+  _wp_old_date: '2022-08-08'
+  _aioseo_title: ''
+  _aioseo_description: ''
+  _aioseo_keywords: ''
+  _aioseo_og_title: ''
+  _aioseo_og_description: ''
+  _aioseo_og_article_section: ''
+  _aioseo_og_article_tags: ''
+  _aioseo_twitter_title: ''
+  _aioseo_twitter_description: ''
+  ppma_disable_author_box: '0'
+  BS_author_type: BS_author_is_user
+  BS_guest_author_name: ''
+  BS_guest_author_url: ''
+  BS_guest_author_description: ''
+  BS_guest_author_image_id: ''
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/articoli/erc-4626-il-contratto-per-gli-yield-bearing-tokens/"
+---
+<p><!-- wp:paragraph --></p>
+<p>La DeFi spesso replica meccanismi già esistenti nella finanza tradizionale. In particolare qui ci riferiamo ad una sorta di titolo al portatore che consente di dimostrare il possesso di una quota di un fondo e di poterlo riscattare, sperabilmente ad un valore maggiore di quanto lo abbiamo pagato. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Di fatto un vero e proprio <strong>fondo di investimento aperto</strong> fatto con i token, ma non chiamiamolo così altrimenti scattano gli allarmi Consob, BDI, BCE, le guardie, LaGarde, Draghi, Dungeons eccetera eccetera.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":5263,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="https://smartcontract.tips/wp-content/uploads/2022/08/image-3.png" /><img src="{{ site.baseurl }}/assets/2023/11/image-3.png" alt="" class="wp-image-5263" /><br />
+<figcaption class="wp-element-caption">smart contract developer</figcaption>
+</figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Caso d'uso per i vault token: <strong>esempio pratico</strong> </h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Deposito 100 DAI dentro un <strong>ipotetico contratto Vault</strong> che promette il 3% di APY ed in cambio ottengo 100 vToken dove vToken è il simbolo del token coniato dalla Vault. Il vToken non sarebbe un token popolare o liquidabile come il DAI, ma rappresenta la quota di proprietà degli asset della Vault e come tale può essere liquidato con un guadagno o con una perdita.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Come sappiamo DAI è un token ERC20, ma se ci pensiamo anche la nostra ipotetica Vault ed i token vToken che emette devono essere compliant con ERC20, quindi visibili e scambiabili con qualsiasi wallet Ethereum.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Inoltre se la popolarità e la liquidità lo consente, tali vToken potrebbero essere accettati per scambi in liquidity pool o altri exchange proprio in virtù del fatto che prima o poi potranno essere riscattati in cambio di DAI.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Senza entrare nel merito di strategie magiche che promettono APY a doppia cifra, resta il fatto che la finanza è sempre stata questo: <strong>rinunciare ad una somma oggi per averne una maggiore domani.</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Senza entrare nel merito delle possibili applicazioni di una Vault e dei token yield bearing vogliamo solo descrivere il nuovo standard per i contract che serve come riferimento per tutti coloro che vogliono sviluppare servizi di DeFi secondo questa modalità.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Avere uno <strong>standard per gli Yield Bearing Tokens è comunque importante perché le implementazioni di riferimento saranno ben testate dalla community riducendo almeno i rischi di vulnerabilità del codice</strong>, posto che i rischi finanziari e gli scam possono essere evitati solo da uno studio approfondito delle strategie di investimento adottate dalla Vault.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Il noto servizio di DeFi <strong>yearn.finance</strong> è uno dei più attivi promotori di questo nuovo standard.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:embed {"url":"https://twitter.com/iearnfinance/status/1511444226566983683","type":"rich","providerNameSlug":"twitter","responsive":true} --></p>
+<figure class="wp-block-embed is-type-rich is-provider-twitter wp-block-embed-twitter">
+<div class="wp-block-embed__wrapper">
+https://twitter.com/iearnfinance/status/1511444226566983683
+</div>
+</figure>
+<p><!-- /wp:embed --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Lo standard EIP 4626</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph {"className":"is-style-info coblocks-alert-paragraph"} --></p>
+<p class="is-style-info coblocks-alert-paragraph">Una cosa <strong>simpatoca</strong> di questo standard è che è uno dei pochi nuovi standard di cui mi ricordo a memoria il numero. Sarà dovuto al fatto che fa la rima 46 - 26 <a href="https://emojipedia.org/smiling-face-with-smiling-eyes/">😊😊</a></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Quali sono gli elementi di questo nuovo standard.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Lo standard è come sempre visibile e scaricabile nel sito della Ethereum Foundation</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><a href="https://eips.ethereum.org/EIPS/eip-4626">https://eips.ethereum.org/EIPS/eip-4626</a></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Vediamo i punti salienti del nuovo Contratto. Intanto è derivato da ERC20. Quindi ogni Vault è sempre anche un token ERC20.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Inoltre prevede l'emissione di eventi di deposito e di prelievo. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>interface IERC4626 is IERC20, IERC20Metadata {
+
+event Deposit(
+        address indexed caller, 
+        address indexed owner, 
+        uint256 assets, 
+        uint256 shares
+);
+
+    event Withdraw(
+        address indexed caller,
+        address indexed receiver,
+        address indexed owner,
+        uint256 assets,
+        uint256 shares
+    );
+</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:paragraph --></p>
+<p>Deve fornirci informazioni (view) su qual è l'asset sottostante, che deve essere un altro token ERC20, che viene gestito dalla Vault (ad esempio DAI) e qual è il totale del sottostante gestito.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>
+    function asset() external view returns 
+(address assetTokenAddress);
+
+    
+    function totalAssets() external view returns (uint256 totalManagedAssets);</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:paragraph --></p>
+<p>Ok, se sei arrivato fin qui hai superato le parti più noiose, oppure sono tutte noiose? Comunque abbiamo le funzioni di deposito e di riscatto (redeem).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>deposit( ) fa il minting dei token di quote vault (le shares) e deposita l'asset sottostante dentro il contratto</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>redeem( ) fa esattamente il contrario, brucia le quote (shares) e tira fuori dal contratto il dovuto in token del sottostante (ad esempio DAI)</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:code --></p>
+<pre class="wp-block-code"><code>function deposit(
+        uint256 assets, 
+        address receiver) 
+external returns (uint256 shares);
+    
+
+function redeem(
+        uint256 shares,
+        address receiver,
+        address owner
+    ) external returns (uint256 assets);</code></pre>
+<p><!-- /wp:code --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>La cosa interessante è che non si tratta solo di una specifica, esiste anche un'implementazione di riferimento, che è quella di Open Zeppelin</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/extensions/ERC4626.sol">https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/extensions/ERC4626.sol</a></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>

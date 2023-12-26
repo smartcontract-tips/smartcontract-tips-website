@@ -1,0 +1,102 @@
+---
+layout: post
+title: 'Si fa presto a dire smart: caveats per smart contract sicuri - parte 1'
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: pending
+categories:
+- Sicurezza Informatica
+- Smart Contracts
+tags: []
+meta:
+  jabber_published: '1507987613'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '10317316480'
+  _elasticsearch_indexed_on: '2017-10-14 13:26:54'
+  email_notification: '1507987615'
+  _thumbnail_id: '3328'
+  _edit_last: '48926058'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+---
+<p>Sempre più persone sentono parlare di ICO e quindi si immaginano di ottenere soldi facili con un wallet online aperto come un cesto di basketball dove gli investitori non vedono l'ora di schiacciar dentro palloni foderati di ether, bitcoin, litecoin e tutti gli altri coin della famiglia.</p>
+<p>Il tutto perché si tratta di smart contract, sono lì apposta. Ora a parte la difficoltà di metter su una vera ICO, difficoltà che aumenta ogni giorno perché ogni giorno l'asticella si sposta verso l'alto e la competizione è in crescita esponenziale, ci sono anche aspetti meramente tecnici su cui riflettere.</p>
+<p>ICO a parte ogni smart contract è sempre un pezzo di "programmable money". Anzi, nel momento in cui viene messo in moto sulla blockchain è un pezzo di "programmed money" e come ben sanno tutti quelli che hanno scritto un hello wor<del>l</del>d non è possibile scrivere un software senza metterci dentro, involontariamente si spera, un bug.</p>
+<blockquote><p>"In accordance with Unix philosophy, Perl gives you enough rope to hang yourself" --Larry Wall</p></blockquote>
+<p>Un bug che colpisce un programma già è una cosa seccante, se colpisce il nostro denaro diventa un disastro. A differenza di un normale sistema in produzione che una volta individuato il bug si può fixare e riavviare - e pazienza per il downtime - quando succede ad uno smart contract in realtà ripristinare lo stato corretto di esecuzione non è scontato. Si può sostituire un contract con uno corretto, ma non è detto che si possano recuperare gli ether. Infatti non si tratta di recuperare dati, si tratta di recuperare gli effetti di transazioni irrevocabili. Per questa ragione Ethereum sembra un progetto pazzesco. Tanto pazzesco che però piace a molti e sta diventando la piattaforma di riferimento per mettere bug nei soldi, ops ... per creare smart contract.</p>
+<p>Se nel caso del software normale l'audit del codice sembra quasi una pratica da sbrigare per compiacenza generale di clienti e colleghi, nel caso degli smart contract diventa una pratica alla quale non vorremo mai rinunciare.</p>
+<p><img class="alignnone size-full wp-image-3329" src="{{ site.baseurl }}/assets/screenshot-2017-10-14-15-43-21.png" alt="Screenshot 2017-10-14 15.43.21" width="373" height="213" /></p>
+<p><strong>Auditor dove siete?</strong></p>
+<p>Sempre più progetti pubblicano i risultati dei loro audit su codice solidity e la cosa è molto apprezzabile, ci consente di imparare molto dagli audit degli altri e di capire meglio lo stato dell'arte su cos'è considerato un codice "relativamente" sicuro, o per lo meno un codice audited.</p>
+<p>Uno dei framework più affermati per iniziare, almeno iniziare, con codice sicuro (per quanto si possa essere sicuri di qualcosa) è sicuramente Open Zeppelin. Tra le librerie fornite da Open Zeppelin c'è Safe Math</p>
+<p>&nbsp;</p>
+<h3>SafeMath</h3>
+<p>Il problema con solidity è che non fornisce un controllo sull'overflow della somma fra due numeri, o in generale sul risultato di un'operazione aritmetica. Ad esempio nel caso della somma se questa supera il max integer value di (2^256-1). Safe Math aggiunge un controllo sul risultato. Allo stesso modo per molte altre operazioni aritmetiche.</p>
+<pre><strong>function</strong> safeAdd(<strong>uint256</strong> x, <strong>uint256</strong> y) <strong>internal</strong> <strong>returns</strong>(<strong>uint256</strong>) {
+
+ <strong>uint256</strong> z = x + y;
+ assert((z &gt;= x) &amp;&amp; (z &gt;= y));
+ <strong>return</strong> z;
+}</pre>
+<p>Naturalmente usare SafeMath per ogni operazione consuma più gas, quindi se siamo sicuri di non "sforare" con le operazioni aritmetiche non bisognerebbe usarlo.</p>
+<p>&nbsp;</p>
+<h3>Reentrancy</h3>
+<p>Un altro tipico problema è la reentrancy. Quando una funzione spedisce ether ad un account esterno in generale questo potrebbe essere un altro contratto. Un contratto può essere programmato per eseguire codice nel momento in cui riceve ether e in modo malevolo potrebbe re-invocare la funzione che lo sta "beneficiando" con lo scopo di sifonarla. L'errore tipico è spedire una quota di ether ad un indirizzo e solo dopo mettere a zero il suo balance in una tabella, come nell'esempio sotto.</p>
+<p>&nbsp;</p>
+<pre>// THIS CONTRACT CONTAINS A BUG - DO NOT USE
+<strong>contract</strong> Fund {
+  /// Mapping of ether shares of the contract.
+  mapping(<strong>address</strong> =&gt; uint) shares;
+  /// Withdraw your share.
+  <strong>function</strong> withdraw() {
+  <strong>if</strong> (msg.sender.send(shares[msg.sender]))
+    shares[msg.sender] = 0;
+  }
+}</pre>
+<p>&nbsp;</p>
+<p>msg.sender potrebbe a sua volta invocare ancora withdraw( ... ) prima che l'istruzione shares[msg.sender] = 0 venga eseguita. Un esempio di questo exploit è riportato <a href="https://medium.com/@gus_tavo_guim/reentrancy-attack-on-smart-contracts-how-to-identify-the-exploitable-and-an-example-of-an-attack-4470a2d8dfe4">qui</a></p>
+<p>Un errore simile a questo è stato alla base del <a href="http://smartcontract.tips/2016/11/12/cronache-dal-criptocosmo/">DAOsaster</a>. Una versione corretta del "prelievo" prima di tutto mette a zero il balance del prelevante e solo dopo gli spedisce i suoi ether.</p>
+<pre><strong>contract</strong> Fund {
+ /// Mapping of ether shares of the contract.
+ mapping(<strong>address</strong> =&gt; uint) shares;
+ /// Withdraw your share.
+ <strong>function</strong> withdraw() {
+   <strong>var</strong> share = shares[msg.sender];
+   shares[msg.sender] = 0;
+   msg.sender.transfer(share);
+ }
+}</pre>
+<p>Ultimo caso analizzato in questa parte del post è un caso in realtà non legato a Ethereum ma valido in generale per tutti i linguaggi con blocchi di codice separati da parentesi (python è immune), non fate <strong>if su più linee senza parentesi.</strong></p>
+<p>&nbsp;</p>
+<h3>Multi line if without brackets</h3>
+<div class="highlight highlight-source-js">
+<pre><strong>function</strong> destroyDeed() {
+ <strong>if</strong> (active) <strong>throw</strong>;
+ <strong>if</strong>(owner.send(<strong>this</strong>.balance))
+ selfdestruct(burn);
+}</pre>
+<p>Questo stile di programmazione porta molto probabilmente un refactoring o un futuro sviluppo del codice ad aggiungere qualche istruzione in modo errato, come sotto.</p>
+<pre><strong>function</strong> destroyDeed() {
+ <strong>if</strong> (active) <strong>throw</strong>;
+ <strong>if</strong>(owner.send(<strong>this</strong>.balance))
+ runPreDestroy();
+ selfdestruct(burn);
+}</pre>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

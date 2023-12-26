@@ -1,0 +1,172 @@
+---
+layout: post
+title: Fare una ICO in pochi semplici passi
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: pending
+categories: []
+tags: []
+meta:
+  jabber_published: '1500889959'
+  _oembed_df063be772ba239d360009f1613f69f4: "{{unknown}}"
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _thumbnail_id: '3017'
+  email_notification: '1500889962'
+  _publicize_job_id: '7426449310'
+  _oembed_da7ec4003bffd47b3b55d2f1da74f87f: "{{unknown}}"
+  _elasticsearch_indexed_on: '2017-07-24 09:52:44'
+  _oembed_dc594f82170b954df6627527e4e1d38d: "{{unknown}}"
+  _oembed_35873c9449fe5b007bab75f86cfc8e1f: "{{unknown}}"
+  _oembed_07c409e4c0d6099953c338504aa05eec: "{{unknown}}"
+  _oembed_3080e118f1201cd1a2e8e8fbbeac6acc: "{{unknown}}"
+  _oembed_1cf3f4445770a15e06addf1c14653829: "{{unknown}}"
+  _oembed_24fe2838f08820239babac2393404124: "{{unknown}}"
+  _oembed_c8dba28b79ea0a3c0cf8a6ae0d9d6aab: "{{unknown}}"
+  _oembed_56f401541bbd20c7b0b4dde5601ebe56: "{{unknown}}"
+  _oembed_f54a1fb6450ee51bf80170e4dc991cb5: "{{unknown}}"
+  _oembed_5f035c5b5a88851639b6369c0a7c13c0: "{{unknown}}"
+  _oembed_40703f495d336588eee3ae78358b7c5d: "{{unknown}}"
+  _oembed_e17ae3ac2083349f0396016ff02a6fea: "{{unknown}}"
+  _oembed_1f007c903ac8abe081c226b00d128b39: "{{unknown}}"
+  _oembed_198f818e3bfe4e18a554f1da3c1bc0aa: "{{unknown}}"
+  _oembed_8e7159f42432b73785d9bc67daeddd0d: "{{unknown}}"
+  _oembed_a5a9d3aecc9826498807ac098771642c: "{{unknown}}"
+  _oembed_ae63c09cd05ac47c1d7b8b55941843b6: "{{unknown}}"
+  _oembed_a6eca4b1ab076a55aebd248f4f072145: "{{unknown}}"
+  _oembed_465b807eee05cb0579b6e971f86c63e4: "{{unknown}}"
+  _oembed_0572c8c5cc437cf91843d6f5c795c6ee: "{{unknown}}"
+  _oembed_4d946f7025c50ae3f9a85d6e35efde88: "{{unknown}}"
+  _oembed_2b227f913469890b1d62109451da4ac1: "{{unknown}}"
+  _oembed_5a6d9836259a44efdc30b483c316d8dc: "{{unknown}}"
+  _oembed_dc62761651a9d3aca483a04bb7f1a264: "{{unknown}}"
+  _oembed_b964f3ca25274698ba1fc2279007ad22: "{{unknown}}"
+  _oembed_b3352a8448ff884ed62e745a1d2e66f0: "{{unknown}}"
+  _oembed_5cf29f2c4e880fd6d5cf56759a14c1b9: "{{unknown}}"
+  _oembed_066fa1bd647b42572ad943795b982f41: "{{unknown}}"
+  _edit_last: '48926058'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+---
+<p>EDIT:</p>
+<p>vista l'attuale enorme attenzione sull'argomento ICO questo post ha ricevuto un numero di visite considerevole. Mi preme precisare alcune cose: fare una ICO non è una cosa che si fa "in pochi semplici passi". Il titolo era un po' catchy ma la verità è che una ICO non è più una cosuccia da niente dove con un po' di tecnologia si raccolgono soldi a palate. Una ICO necessità di soldi per iniziare, tanti soldi per il marketing, lo sviluppo e la gestione complessiva. Le ICO hanno raccolto l'attenzione di tanti, e anche dei regulator. Quindi occhio, potreste trovarvi a fare i conti con qualche tribunale o organismo di vigilanza se non sapete cosa state facendo. La raccolta di denaro va sempre inquadrata in qualche framework legale e per questo rivolgetevi ad un legale, esperto di ICO preferibilmente. Questo articolo parla solo degli aspetti tecnici, anzi in realtà parla solo di un aspetto tecnico: il token. Infatti il token è un mero pezzo di codice che effettivamente chiunque può lanciare sulla blockchain. Da qui a venderlo però ...</p>
+<p>FINE EDIT:</p>
+<p>&nbsp;</p>
+<p>Impariamo a fare una ICO, prima che il gruppo mamme su whatsapp ci preceda con la ICO "festa di fine anno" e prenda un vantaggio competitivo su noi techies di lungo corso.</p>
+<p class="p1">La ICO, Initial Coin Offering o come a volte mi viene di dire Initial Crypto Offering è appunto un modo molto in voga per raccogliere fondi emettendo in cambio un token digitale verificabile su blockchain che ci dà in teoria qualche diritto. In realtà quale sia la funzione del token ricevuto in cambio dei fondi versati non è chiara in generale, ogni caso è un caso a sé. Comunque per chi emette il token si tratta di un'opportunità per ottenere dei capitali e sviluppare il progetto descritto da un immancabile white paper. In altri casi è un modo per intascare qualche ether o bitcoin e poi sparire nel nulla. E’ un territorio nuovo, il lungo braccio della legge non è ancora arrivato. Ma <strong>noi ragioniamo in termini di fiducia e onestà e vediamo come sviluppare la nostra prima ICO</strong></p>
+<p>Gli ingredienti per la nostra prima ICO sono:</p>
+<ul>
+<li>uno smart contract per gestire e distribuire i token</li>
+<li>una landing page con un countdown per creare tensione</li>
+<li>un white paper che descrive il nostro progetto</li>
+</ul>
+<p>Cominciamo dalla parte un po' più ostica, ovvero lo smart contract. Prima di poter scrivere lo smart contract per una ICO dobbiamo imparare a scrivere uno smart contract qualunque, diciamo un HelloWorld.</p>
+<p>A differenza di altri miei articoli del blog questo è un po' più tecnico nel senso che "mostra" pezzi di codice sorgente e comandi per eseguire e testare i contratti. Il post cerca di essere autocontenuto ma in pratica servirebbe conoscere un minimo di programmazione e poi per approfondire consultare la documentazione tecnica degli smart contract su Ethereum. Metto qualche link qui sotto ...</p>
+<p>https://solidity.readthedocs.io/en/develop/introduction-to-smart-contracts.html</p>
+<p>https://solidity.readthedocs.io/en/develop/index.html</p>
+<p>&nbsp;</p>
+<p class="p1"><span class="s1">Per preparare il nostro primo contratto abbiamo bisogno di alcuni strumenti. Prima di tutto ci serve un client per la rete Ethereum che ci permetta di creare transazioni e contratti e firmarli con le chiavi private che andremo a creare. Ci sono varie possibilità ma personalmente utilizzerò il client Parity. Per le istruzioni di installazione conviene riferirsi al sito ufficiale <a href="http://parity.io">parity.io</a></span></p>
+<p class="p1"><span class="s1">Una volta installato parity dovrà essere lanciato in modo che sincronizzi la blockchain locale, se è la prima volta che viene usato ci metterà un bel po’ di tempo. Diciamo un paio d’ore ma dipende dalla velocità di connessione. Siccome stiamo “giocando” e non vogliamo spendere o magari sprecare soldi veri invece della rete Ethereum ufficiale, la cosiddetta mainnet, utilizzeremo una delle reti di test. Nel nostro caso la Kovan. Lanciare parity sulla testnet Kovan è molto semplice</span></p>
+<pre class="p2"><span class="s2">parity --chain kovan</span></pre>
+<p class="p4"><span class="s1">A questo punto bisogna aspettare … </span></p>
+<p class="p4"><span class="s1">Una volta che la blockchain è in sync possiamo occuparci del resto. Prima di tutto creiamo qualche account usando parity. In generale parity ha un’intefaccia web raggiungibile all’indirizzo localhost:8080</span></p>
+<p><img class="alignnone size-full wp-image-2973" src="{{ site.baseurl }}/assets/screenshot-2017-07-24-11-21-23.png" alt="Screenshot 2017-07-24 11.21.23.png" width="1704" height="662" /></p>
+<p>&nbsp;</p>
+<p class="p4"><span class="s1">Creare nuovi account è molto semplice, basta premere +account e seguire le istruzioni. Nel mio caso ho potuto anche importare un account da un altro wallet chiamato metamask. Gli importi di ogni account sono in ether ovviamente e su rete Kovan in particolare. Una prima cosa di cui abbiamo bisogno è ottenere alcuni ether su rete kovan. Per fare questo esistono faucet e slack dove si chiedono e si ottengono senza troppi problemi. Un esempio è <a href="https://gitter.im/kovan-testnet/faucet">https://gitter.im/kovan-testnet/faucet</a> ma naturalmente è meglio cercare con Google dato che questi servizi nascono e muoiono continuamente.</span></p>
+<p class="p4"><span class="s1">Una volta ottenuti gli ether possiamo concentrarci sul nostro contratto, cioè sul nostro HelloWorld contract.</span></p>
+<h2>Hello World</h2>
+<p class="p1"><span class="s1">Proviamo dunque a sviluppare un nuovo contract. Cominciamo a collegarci alla tab contracts</span></p>
+<p class="p1"><span class="s1"><a href="http://127.0.0.1:8180/#/contracts/">http://127.0.0.1:8180/#/contracts/</a></span></p>
+<p class="p1"><img class="alignnone  wp-image-2978" src="{{ site.baseurl }}/assets/screenshot-2017-07-24-11-23-49.png" alt="Screenshot 2017-07-24 11.23.49" width="729" height="282" /></p>
+<p class="p1"><span class="s1">Intanto vediamo la semplice sintassi dove una funzione è usata come costruttore mentre l’altra chiamata sendMoney ha la keyword <strong>payable</strong> che indica che una transazione che invoca sendMoney può anche portare con sé un pagamento che va a finire a rimpinguare il saldo del contratto stesso che ricordiamoci può ricevere e spedire ether.</span></p>
+<p class="p1"><span class="s1">Come si può vedere le funzioni sono vuote. Questo volutamente perché è un contratto minimale che di fatto non fa nulla a parte esistere ed eventualmente ricevere degli ether. Non essendoci poi delle funzioni che permettono di estrarre gli ether depositati di fatto questo contratto è un pozzo senza fondo dal quale non è possibile recuperare i fondi depositati. Quindi non serve a niente se non a bruciare ether e a mostrare la struttura elementare di un contratto. Per una panoramica più completa della documentazione di solidity e sulla struttura dei contratti vi invito a leggere la doc ufficiale.</span></p>
+<p class="p1"><span class="s1">Una volta compilato lo possiamo lanciare su blockchain con deploy et voilà, il nostro contratto è in esecuzione pronto a ricevere transazioni. Basterà ad esempio invocare sendMoney da un nostro wallet e metterci dentro un po’ di ether per vedere il balance del contratto aumentare.</span></p>
+<p>&nbsp;</p>
+<h2>Ora passiamo ad un vero token.</h2>
+<p class="p1">Prima di tutto i token sono degli smart contract che in generale possono essere implementati con una logica qualunque. Tuttavia, dato che è molto facile scrivere del codice non sicuro, sono state proposte delle convenzioni o meglio dei pattern per realizzare il token perfetto o perlomeno non troppo imperfetto. Partiamo dall’interfaccia ERC20. Un’interfaccia è un insieme di funzioni che ci aspettiamo un contratto di tipo ERC20 debba implementare. Questa è una convenzione tipica dei linguaggi di programmazione ad oggetti anche se solidity non è esattamente un linguaggio ad oggetti. La sintassi e la semantica delle funzioni ERC20 è descritta qui sotto.</p>
+<blockquote>
+<p class="p3"><span class="s1"><b>totalSupply</b></span></p>
+<p class="p4"><span class="s2">function</span> <span class="s3">totalSupply</span><span class="s1">() constant returns (uint256 totalSupply)</span></p>
+<p class="p3"><span class="s1">Get the total token supply</span></p>
+<p class="p3"><span class="s1"><b>balanceOf</b></span></p>
+<p class="p4"><span class="s2">function</span> <span class="s3">balanceOf</span><span class="s1">(address _owner) constant returns (uint256 balance)</span></p>
+<p class="p3"><span class="s1">Get the account balance of another account with address </span><span class="s4">_owner</span></p>
+<p class="p3"><span class="s1"><b>transfer</b></span></p>
+<p class="p4"><span class="s2">function</span> <span class="s3">transfer</span><span class="s1">(address _to, uint256 _value) returns (bool success)</span></p>
+<p class="p3"><span class="s1">Send </span><span class="s4">_value</span><span class="s1"> amount of tokens to address </span><span class="s4">_to</span></p>
+<p class="p3"><span class="s1"><b>transferFrom</b></span></p>
+<p class="p4"><span class="s2">function</span> <span class="s3">transferFrom</span><span class="s1">(address _from, address _to, uint256 _value) returns (bool success)</span></p>
+<p class="p3"><span class="s1">Send </span><span class="s4">_value</span><span class="s1"> amount of tokens from address </span><span class="s4">_from</span><span class="s1"> to address </span><span class="s4">_to</span></p>
+<p class="p3"><span class="s1">The </span><span class="s4">transferFrom</span><span class="s1"> method is used for a withdraw workflow, allowing contracts to send tokens on your behalf, for example to "deposit" to a contract address and/or to charge fees in sub-currencies; the command should fail unless the </span><span class="s4">_from</span><span class="s1"> account has deliberately authorized the sender of the message via some mechanism; we propose these standardized APIs for approval:</span></p>
+<p class="p3"><span class="s1"><b>approve</b></span></p>
+<p class="p4"><span class="s2">function</span> <span class="s3">approve</span><span class="s1">(address _spender, uint256 _value) returns (bool success)</span></p>
+<p class="p3"><span class="s1">Allow _spender to withdraw from your account, multiple times, up to the _value amount. If this function is called again it overwrites the current allowance with _value.</span></p>
+<p class="p3"><span class="s1"><b>allowance</b></span></p>
+<p class="p4"><span class="s2">function</span> <span class="s3">allowance</span><span class="s1">(address _owner, address _spender) constant returns (uint256 remaining)</span></p>
+<p class="p3"><span class="s1">Returns the amount which </span><span class="s4">_spender</span><span class="s1"> is still allowed to withdraw from </span><span class="s4">_owner</span></p>
+</blockquote>
+<p class="p5"><span class="s1">In pratica con il nostro client parity possiamo subito creare un token erc20. Infatti parity fornisce già degli <a href="https://github.com/paritytech/parity/tree/master/js/src/contracts/snippets">snippet</a> di codice pronti per creare un token con pochi clic di mouse.</span></p>
+<p>Per il codice completo vai qui.</p>
+<p>https://github.com/paritytech/parity/tree/master/js/src/contracts/snippets</p>
+<p class="p5"><span class="s1">Il primo pezzo è proprio l’interfaccia Token.sol, ovvero un contratto vuoto, senza implementazione che definisce solo le funzioni necessarie per ERC20</span></p>
+<p><img class="alignnone size-full wp-image-2985" src="{{ site.baseurl }}/assets/screenshot-2017-07-24-11-29-43.png" alt="Screenshot 2017-07-24 11.29.43.png" width="1642" height="986" /></p>
+<p class="p1"><span class="s1">Per brevità non inserisco tutto il codice di Token.sol che è reperibile <a href="https://github.com/paritytech/parity/tree/master/js/src/contracts/snippets">qui</a>. Quello che serve ora è un secondo contratto che “implementa” ciò che Token.sol definisce. In questo caso parity fornisce ancora un utile esempio:</span></p>
+<p><img class="alignnone size-full wp-image-2988" src="{{ site.baseurl }}/assets/screenshot-2017-07-24-11-31-01.png" alt="Screenshot 2017-07-24 11.31.01.png" width="1700" height="1092" /></p>
+<p class="p1"><span class="s1">In questo snippet le funzioni hanno una loro implementazione. La riga 12 mostra l’istruzione </span></p>
+<pre class="p1"><span class="s1">Contract StandardToken is Token</span></pre>
+<p class="p1"><span class="s1">Che esprime la relazione di ereditarietà fra i due contratti.</span></p>
+<p class="p1"><span class="s1">La figura sopra mostra solo una parte del contratto. Il resto è visibile sotto.</span></p>
+<p>&nbsp;</p>
+<p><img class="alignnone  wp-image-2991" src="{{ site.baseurl }}/assets/screenshot-2017-07-24-11-32-02.png" alt="Screenshot 2017-07-24 11.32.02" width="733" height="371" /></p>
+<p class="p1"><span class="s1">La parte essenziale è la penultima riga che contiene l’equivalente di una tabella address-&gt;balance che di fatto stabilisce chi possiede cosa, dove il chi è sempre un indirizzo di un account mentre il cosa è la quantità di token posseduta.</span></p>
+<p class="p1"><span class="s1">Tuttavia anche questo contratto da solo non è sufficiente, infatti implementa le funzioni ERC20 ma non ha modo di interagire con ad esempio un’applicazione o un essere umano che genera transazioni. A questo scopo parity fornisce uno snippet detto HumanStandardToken.sol</span></p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-2995" src="{{ site.baseurl }}/assets/screenshot-2017-07-24-11-33-38.png" alt="Screenshot 2017-07-24 11.33.38.png" width="1936" height="872" /></p>
+<p class="p1"><span class="s1">Prima di tutto notiamo che HumanStandardToken importa il codice di StandardToken e lo estende.</span></p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-full wp-image-2997" src="{{ site.baseurl }}/assets/screenshot-2017-07-24-11-34-44.png" alt="Screenshot 2017-07-24 11.34.44.png" width="2126" height="840" /></p>
+<p class="p1"><span class="s1">Alla riga 36 troviamo il costruttore dove possiamo inserire come parametri la quantità iniziale di token, il tokenName, le unità decimali ed il simbolo</span></p>
+<p class="p1"><span class="s1">Una volta che abbiamo tutti gli elementi possiamo compilare il nostro HumanStandardToken.sol per poi “lanciarlo” nella blockchain. </span></p>
+<p class="p1"><span class="s1">In questo caso ci verrà chiesto di configurare, cioè passare quei parametri del costruttore visibili nel codice.</span></p>
+<p><img class="alignnone size-full wp-image-3000" src="{{ site.baseurl }}/assets/screenshot-2017-07-24-11-38-02.png" alt="Screenshot 2017-07-24 11.38.02.png" width="1006" height="802" /></p>
+<p class="p1"><span class="s1">Nel nostro caso abbiamo creato un contratto di nome Toki, come il leggendario guerriero manga, con un supply di 100 toki e nessuna cifra decimale consentita.</span></p>
+<p class="p1"><span class="s1">Una volta in esecuzione possiamo andare a ripescarlo da qualsiasi blockchain explorer.</span></p>
+<p class="p1"><span class="s1">Ad esempio, etherscan lo vede così</span></p>
+<p><img class="alignnone size-full wp-image-3002" src="{{ site.baseurl }}/assets/screenshot-2017-07-24-11-38-57.png" alt="Screenshot 2017-07-24 11.38.57.png" width="1878" height="788" /></p>
+<p>&nbsp;</p>
+<p class="p1"><span class="s1">Ok, ora abbiamo creato e deploy-iato il nostro token. Come facciamo a distribuire i token? Infatti a quanto pare non esiste una funzione nel nostro contract che permette di acquistare toki in cambio di ether. Ci saremmo aspettati una funzione tipo </span></p>
+<pre class="p1"><span class="s1">buy(amount) </span></pre>
+<p class="p1"><span class="s1">… etc. E invece no.</span></p>
+<p class="p1"><span class="s1">I token sono <strong>tutti assegnati al creatore del contratto</strong>, nel mio caso l’account “prova”. Lui può decidere cosa farne e a chi assegnarli o venderli. Questa è una scelta implementativa non dettata da nessuno standard. Risulta comunque flessibile e ci permette di stabilire delle politiche di prezzo dei token non codificate nel contract del token stesso. Possiamo in generale avere un altro contratto che vende i token oppure semplicemente possiamo in modo manuale o semi-manuale spedire i token a chi ci invia gli ether. Nel caso del nostro tutorial lo facciamo manualmente ma non è certo quello che farei in una vera ICO.</span></p>
+<h2>Finalmente la ICO</h2>
+<p class="p1">Abbiamo già stabilito che il codice di un token non contiene la logica per vendere i token stessi ai partecipanti, ma invece i token sono inizialmente assegnati al creatore del contratto. Sarà lui a poter assegnare i token a chi vuole previo pagamento. Quindi il modo più semplice e manuale di fare una ICO è quello di metter su una bella landing page con un contatore, un white paper e poi in backend scrivere uno script che assegna tutti i token in proporzione agli ether versati. Un modo è quello di creare una landing page con <a href="http://www.proofsuite.com/i/">http://www.proofsuite.com/i/</a> . E’ un generatore di ICO pages e con pochi passaggi ci restituisce un risultato come questo</p>
+<p><img class="alignnone size-full wp-image-3008" src="{{ site.baseurl }}/assets/screenshot-2017-07-24-11-43-02.png" alt="Screenshot 2017-07-24 11.43.02.png" width="1220" height="954" /></p>
+<p>Il nostro token si chiama Toki e useremo toki anche come simbolo.</p>
+<p class="p1">Se volete divertirvi è disponibile la versione online (non garantisco che duri a lungo visto che un servizio gratuito di una piccola azienda) potete visitarla qui <a href="http://www.proofsuite.com/i/1HKqYT4HSF">http://www.proofsuite.com/i/1HKqYT4HSF</a></p>
+<p class="p1">In ogni caso il contratto su Kovan esiste davvero</p>
+<p class="p3"><a href="https://kovan.etherscan.io/address/0xe26b960e36eb85b20799b6ac95d9913cafe9bd9a">0xe26B960E36eb85b20799B6ac95D9913Cafe9BD9A</a></p>
+<p class="p1">e si può inviare ether all'indirizzo</p>
+<p class="p1">0x0017a3B477E612d8bF44756889975e591f4a1f26</p>
+<p class="p1">Non aspettatevi niente di che. La distribuzione dei fondi agli acquirenti è manuale e i token sono solo 1000, se spedite etere e i token sono finiti, beh perdete i soldi. Non ho mica detto che questa ICO funziona bene. E’ solo un gioco.</p>
+<p class="p1">In generale</p>
+<blockquote>
+<p class="p5"><span class="s1">Want to buy Toki tokens?</span></p>
+<p class="p5"><span class="s1">The price is 1 toki = 0.1 ether</span></p>
+<p class="p5"><span class="s1">send to Kovan network only to address</span></p>
+<p class="p5"><span class="s1">0x006FE4320f1fbbEBa4a6df4c72173186962bb71B</span></p>
+<p class="p5"><span class="s1">Beware Toki is a fake ico, send Kovan ether only. Money is lost forever.</span></p>
+</blockquote>
+<p>Con questo abbiamo finito. In realtà manca una cosa, il white paper. Ebbene visto che il post è già piuttosto lungo ve lo risparmio :)</p>
+<p>&nbsp;</p>
+<p>Se ti è piaciuto l'articolo potresti scaricare il mio Kindle ebook <a href="http://amzn.eu/j95TnCq" target="_blank" rel="noopener">Dagli Smart Contract alle ICO.<img class="  wp-image-3530 aligncenter" src="{{ site.baseurl }}/assets/screenshot-2017-10-25-21-22-57.png" alt="Screenshot 2017-10-25 21.22.57" width="167" height="287" /></a></p>
+<p>Oppure in alternativa mettere un mi piace alla <a href="https://www.facebook.com/bitcoinsottoilmaterasso/">Facebook page</a></p>
+<p>Ultima raccomandazione: <strong>niente di quello che scrivo è un invito ad investire i tuoi soldi, è al massimo un invito a conoscere la tecnologia sottostante. Se investi non investire più di quello che sei disposto a perdere e soprattutto non investire in cose che non capisci, siano queste i bitcoin, Ripple o bipcucù (cit.)</strong></p>

@@ -1,0 +1,142 @@
+---
+layout: post
+title: ChatGPT e la sicurezza degli smart contract
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: pending
+categories:
+- Sicurezza Informatica
+- Smart Contracts
+tags:
+- AI
+- audit
+- blockchain
+- GPT3
+- smart contract
+meta:
+  _last_editor_used_jetpack: block-editor
+  _wpas_done_all: '1'
+  _thumbnail_id: '5550'
+  _g_feedback_shortcode_31a7611fd1fddad2c9a5243bb00bf8ef55202857: |2
+
+    <div class="wp-block-jetpack-contact-form" style="padding-top:16px;padding-right:16px;padding-bottom:16px;padding-left:16px">[contact-field label="Nome" required="1" requiredText="(obbligatorio)" type="name"/]
+
+    [contact-field required="1" requiredText="(obbligatorio)" type="email" label="Email"/]
+
+    [contact-field label="Messaggio" requiredText="(obbligatorio)" type="textarea"/]
+
+    <div class="wp-block-jetpack-button wp-block-button" style=""><button class="wp-block-button__link" style="" data-id-attr="placeholder" type="submit">Contattaci</button></div></div>
+  _g_feedback_shortcode_atts_31a7611fd1fddad2c9a5243bb00bf8ef55202857: a:14:{s:2:"to";s:18:"dcarboni@gmail.com";s:7:"subject";s:60:"[Digital
+    Davide] ChatGPT e la sicurezza degli smart contract";s:12:"show_subject";s:2:"no";s:6:"widget";i:0;s:14:"block_template";N;s:19:"block_template_part";N;s:2:"id";i:5521;s:18:"submit_button_text";s:5:"Invia";s:14:"customThankyou";s:0:"";s:21:"customThankyouHeading";s:33:"Il
+    tuo messaggio è stato inviato";s:21:"customThankyouMessage";s:24:"Grazie per il
+    tuo invio!";s:22:"customThankyouRedirect";s:0:"";s:10:"jetpackCRM";b:1;s:9:"className";N;}
+  _edit_last: '48926058'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+excerpt: Una breve analisi di come GPT3 possa essere utililzzato per scrivere ed analizzare
+  il codice degli smart contract
+---
+<p><!-- wp:paragraph --></p>
+<p>Mentre i copywriter e gli artisti digitali tremano all'idea che GPT3 possa lasciarli tutti senza lavoro, un'altra categoria di lavoratori digitali, ovvero gli sviluppatori, cominciano a rendersi conto che l'IA può scrivere codice a partire da requisiti in inglese puro. Nel 2016 ho scritto questo post <a href="https://smartcontract.tips/2016/10/01/i-computer-del-futuro-si-addestrano/" data-type="post" data-id="856">I computer del futuro non si programmano, si addestrano</a> che riassume i miei pensieri sull'argomento.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph {"placeholder":"Quali abilità o lezioni hai imparato di recente?"} --></p>
+<p>Una caratteristica di ChatGPT è senz'altro la capacità di produrre o analizzare codice di programmazione. Sembra che i progettisti abbiano proprio voluto mettersi alla prova con la capacità di muoversi al confine tra il linguaggio formale della macchina a quello informale dell'utente.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph {"placeholder":"Quali abilità o lezioni hai imparato di recente?"} --></p>
+<p> Infatti è possibile da un lato inserire dei requisiti in linguaggio umano ed ottenere il corrispondente codice solidity che li implementa e dall'altro è possibile chiedere a ChatGPT di analizzare uno snippet di codice.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Questo si presta ovviamente all'utilizzo dello strumento in ambito sviluppo o perfino in ambito audit del codice degli smart contract.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Ma fino a che punto possiamo spingerci?</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>E' sicuro utilizzare ChatGPT per generare il codice dei nostri smart contract?</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>E' sufficiente chiedere e la chat genera il codice, come nell'esempio qui sotto in cui faccio generare un codice per un token ERC20</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":5526,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="https://smartcontract.tips/wp-content/uploads/2022/12/image.png" /><img src="{{ site.baseurl }}/assets/image.png" alt="" class="wp-image-5526" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>Naturalmente fin qui niente di ché, in fondo <strong>avrei potuto ottenere di più e meglio attraverso un qualunque wizard online </strong>per generare un token standard. Le cose si fanno più interessanti se aggiungo requisiti non standard.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":5528,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="https://smartcontract.tips/wp-content/uploads/2022/12/image-1.png" /><img src="{{ site.baseurl }}/assets/image-1.png" alt="" class="wp-image-5528" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>E al codice precedente Chat aggiunge alcune funzioni e strutture dati</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Come ad esempio una modifica a transfer</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":5531,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="https://smartcontract.tips/wp-content/uploads/2022/12/image-3.png" /><img src="{{ site.baseurl }}/assets/image-3.png" alt="" class="wp-image-5531" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>E la definizione del mapping che indica chi può spendere i propri token.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":5529,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="https://smartcontract.tips/wp-content/uploads/2022/12/image-2.png" /><img src="{{ site.baseurl }}/assets/image-2.png" alt="" class="wp-image-5529" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>Purtroppo non esegue esattamente quello che intendevo in quanto tutto il balance dell'utente resta bloccato e non solo quello in eccesso che deriva dall'interesse del 10%. Ma in fondo non mi sono proprio speso per farmi capire. <strong>Un programmatore umano mi avrebbe capito senza commettere lo stesso errore?</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Analisi del codice da parte di ChatGPT</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Vediamo come se la cava con l'analisi del codice</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":5533,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="https://smartcontract.tips/wp-content/uploads/2022/12/image-4.png" /><img src="{{ site.baseurl }}/assets/image-4.png" alt="" class="wp-image-5533" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>Il risultato è sorprendente, riesce ad interpretare in linguaggio umano la logica implementata dal codice</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":5536,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="https://smartcontract.tips/wp-content/uploads/2022/12/image-5.png" /><img src="{{ site.baseurl }}/assets/image-5.png" alt="" class="wp-image-5536" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>Se poi ci spingiamo alla richiesta di un'analisi di eventuali bug o vulnerabilità (notare che il codice è volutamente vulnerabile ad un reentrancy attack, ovvero la call ad un contratto esterno potrebbe causare un rientro dell'esecuzione con ulteriore call senza mai azzerare il balance)</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":5538,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="https://smartcontract.tips/wp-content/uploads/2022/12/image-6.png" /><img src="{{ site.baseurl }}/assets/image-6.png" alt="" class="wp-image-5538" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>Quindi in pratica, Chat non è in grado di individuare in questo caso la code reentrancy e si limita a suggerire delle best practice.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Inserimento di codice vulnerabile</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>E se provassimo a far creare a lui un codice inclusivo di una data vulnerabilità? (credits Mauro Pili per l'idea)</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":5541,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="https://smartcontract.tips/wp-content/uploads/2022/12/image-7.png" /><img src="{{ site.baseurl }}/assets/image-7.png" alt="" class="wp-image-5541" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>In realtà è una domanda a trabocchetto in quanto solidity se eseguito nel contesto di uno smart contract non è vulnerabile a race conditions, dato che ogni transazione viene eseguita separatamente dalle altre ed in sequenza in modo atomico dai nodi minatori. La sua risposta pertanto è imprecisa, ma in fondo anche la domanda era mal posta.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":5543,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="https://smartcontract.tips/wp-content/uploads/2022/12/image-8.png" /><img src="{{ site.baseurl }}/assets/image-8.png" alt="" class="wp-image-5543" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Conclusioni</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Forse il lavoro degli sviluppatori e degli auditor di smart contract non è ancora a rischio di venire AI-fied. Tutto sommato anzi, direi che strumenti come ChatGPT possono arricchire il toolkit dei professionisti ed avere dei continui confronti fra le proprie conoscenze e quelle distillate dall'algoritmo. In un certo senso potrà essere usato come gli altri code checker e static analyzer, ma con un'interfaccia conversazionale molto più interessante.</p>
+<p><!-- /wp:paragraph --></p>

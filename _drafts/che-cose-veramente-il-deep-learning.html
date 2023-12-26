@@ -1,0 +1,65 @@
+---
+layout: post
+title: Che cos'è veramente il deep learning
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: pending
+categories: []
+tags: []
+meta:
+  _elasticsearch_indexed_on: '1970-01-01 00:00:00'
+  jabber_published: '1473763904'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '26777916115'
+  email_notification: '1473763905'
+  _edit_last: '48926058'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+---
+<p>L'hypecycle implacabilmente ci propone nuovi topic che ci fanno sentire in colpa perché non ne sappiamo abbastanza. Uno di questi è il deep learning. Ma esiste o è solo una buzzword? Cos'è allora? Qualcuno lo sta facendo veramente o è come il solito "sex at college", tutti ne parlano ma nessuno lo fa.</p>
+<p>Partiamo dall'immaginario collettivo, deep learning è già di per se una buzzword formidabile nell'evocare qualcosa che si nasconde tra le pieghe di nuove meraviglie come le google car che guidano da sole e i computer capaci di far rivivere lo stile di Van Gogh. Sul lato oscuro, abbiamo letto di eminenti scienziati parlare di fine dell'umanità, di pericolo superiore al riscaldamento globale, di razza umana come semplice boot loader per la macchina senziente che verrà.</p>
+<h2>Cerchiamo di capire cos'è.</h2>
+<p>Secondo Michael Jordan (non quello alto 2mt): ... su tutti gli argomenti accademici c'è un sacco di disinformazione. I media sta cercando di fare del loro meglio per catturare i lettori. Il Deep Learning è in gran parte un rebranding delle reti neurali, che risalgono al 1980. In realtà risalgono al 1960 e sembra che ogni 20 anni ci sia una nuova onda che li ripropone. Le reti neurali si chiamano così perché ispirate, se non al funzionamento, almeno alla struttura che idealmente abbiamo del cervello umano, un organo composto da cellule neurali che sono collegate tramite assoni e sinapsi fra loro.</p>
+<p>[gallery ids="614,613" type="rectangular" orderby="rand"]</p>
+<h5 style="text-align:center;">Rete neurale artificiale e neuroni di un piccione</h5>
+<p>&nbsp;</p>
+<p>Ma in realtà - sempre secondo Jordan - pensare che il deep learning sia un approccio ispirato al funzionamento del cervello umano e di come questo elabora le informazioni , impara e prende decisioni è semplicemente <strong>sbagliato!</strong></p>
+<p>In realtà una rete neurale è più semplicemente un modello matematico esprimibile come una funzione, diciamo f( ) che prende dei dati in ingresso e restituisce un output che dipende dalla nostra applicazione (vedi esempi sotto).</p>
+<p><em><strong>output = f ( input )</strong></em></p>
+<p>dove <strong>input</strong> potrebbe essere il log del nostro webserver e <strong>output</strong> potrebbe essere "attacco informatico"  oppure "tutto apposto". Oppure, <strong>input</strong> potrebbe essere l'immagine un'immagine da TAC e  <strong>output=</strong> "tumore in corso"/"tutto regolare". In generale la rete neurale risolve un problema di classificazione. Ad esempio, il software che riconosce il volto delle persone nelle immagini è molto probabilmente basato su una rete neurale.</p>
+<p>Il fatto è che questa funzione contiene anche una, in genere numerosa, serie di <strong>parametri</strong> che come delle immaginarie manopole filtrano o amplificano alcune parti dell'input. Per farsi un'idea, ogni freccetta nel diagramma <strong>qui sotto</strong> corrisponde ad uno di questi parametri.</p>
+<p>[caption id="attachment_919" align="alignnone" width="511"]<img class="alignnone size-full wp-image-919" src="{{ site.baseurl }}/assets/neural_net.jpeg" alt="neural_net" width="511" height="350" /> Rete neurale molto semplice[/caption]</p>
+<p>&nbsp;</p>
+<p>Il disegno semplifica parecchio dato che nei casi reali il numero delle "freccette" è molto elevato. Quanto elevato? Per avere un'idea pensate che i pallozzi di input layer corrispondono ai pixel di un'immagine.</p>
+<p>[caption id="attachment_747" align="aligncenter" width="382"]<img class="alignnone  wp-image-747" src="{{ site.baseurl }}/assets/classify.png" alt="classify" width="382" height="267" /> Mi è semblato di vedele un gatto![/caption]</p>
+<p>Quindi una bitmap 1000x1000 ha bisogno di un <strong>input da 1 milione di elementi</strong></p>
+<p>Si parla di learning perché questa funzione va addestrata, in pratica si mettono in input dei dati di cui conosciamo con precisione l'output e si cerca di ottenere l'insieme dei parametri che permette alla nostra rete di indovinare il massimo numero di output conosciuti (la groundtruth). Questo passaggio si chiama <strong>training.</strong></p>
+<p>Questo spazza via l'analogia suggestiva e un po' romantica con il cervello umano e il fatto di aver inserito una piccola formula matematica penso abbia <strong>spaventato</strong> la metà dei lettori. In realtà quella mostrata qui è una versione super edulcorata di <a href="https://en.wikipedia.org/wiki/Artificial_neuron#Basic_structure" target="_blank" rel="noopener">questa</a>, e così mi son giocato anche l'altra metà.</p>
+<p>In una rete neurale in genere queste funzioni corrispondono ad uno dei pallini del diagramma, che in genere sono oraganizzati in una o più schiere verticali dette livelli. Nel nostro caso abbiamo due livelli, uno <strong>hidden</strong> ed uno <strong>output.</strong> Più livelli significa più pallozzi (o meglio neuroni), e più pallozzi significa più parametri che devono essere aggiustati dal nostro algoritmo di training.</p>
+<p>"Deep" perché se aggiungiamo molti livelli a questo schema otteniamo delle reti profonde che hanno delle caratteristiche interessanti: data una mole di dati (immaginate una tabella di numeri con centinaia e centinaia di colonne) queste sono in grado di "capire" da sole quali di queste colonne vanno mantenute e quali semplicemente scartate. Sono in grado di applicare delle "rotazioni" nello spazio vettoriale (whatz??) in modo da massimizzare la quantità e la qualità d'informazione trattata. Suona un po' complicato? Lo è. Facciamo un esempio, sappiamo che la taglia di una persona (XS,S,M,L,XL,XXL) dipende dalla sua altezza ma anche dal suo peso.</p>
+<p><em><strong>taglia dipende da (altezza, peso)</strong></em></p>
+<p>Ebbene, molto probabilmente esiste una combinazione lineare di queste due grandezze che chiamiamo "corporatura" che potrebbe essere espressa in termini di somme e prodotti</p>
+<p><em><strong>corporatura = coefficiente1 * altezza + coefficiente2 * peso</strong></em></p>
+<p>Dove <strong>coefficiente1 e coefficiente2</strong> sono dei numeri che inizialmente non ci sono noti e non entriamo nei dettagli di come vengono calcolati, diciamo che servono a dare importanza all'altezza e al peso rispettivamente.</p>
+<p>Questa nuova feature potrebbe essere molto più utile e rapida per classificare la taglia di una persona rispetto all'insieme delle due che abbiamo raccolto attraverso le misure. Questo ragionamento lo abbiamo impostato in modo manuale e si basa su un'ipotesi ragionevole data dalla nostra conoscenza del problema. Una rete neurale (e specialmente una rete profonda), è invece in grado di estrarre automaticamente queste feature più efficienti senza avere una conoscenza del problema che sta trattando.</p>
+<p>[caption id="attachment_696" align="alignnone" width="560"]<img class="alignnone size-full wp-image-696" src="{{ site.baseurl }}/assets/tikz41.png" alt="tikz41" width="560" height="279" /> Una rete (poi non così) deep[/caption]</p>
+<p>Il problema del Deep è che aumentando il numero di livelli di una rete neurale si aumentava a dismisura il tempo necessario per fare il training. Però siamo nel 2016, e mentre nel 1969 sono andati sulla luna con un computer potente come un Vic20, adesso un cellulare da 20EUR potrebbe contenere tutto lo scibile umano, almeno quello che vale la pena conoscere.</p>
+<p>Addestrare una rete fully connected (dove ogni neurone è collegato a tutti quelli del livello successivo) resta comunque un problema complesso. Un approccio interessante consiste nel aumentare il numero dei livelli senza richiedere che tutti i vari neuroni siano completamente connessi. Ci sono diversi approcci (che non vediamo qui) dei quali diamo solo qualche link: <a href="https://en.wikipedia.org/wiki/Deep_belief_network" target="_blank" rel="noopener">Deep Belief Networks</a>, <a href="https://en.wikipedia.org/wiki/Recurrent_neural_network" target="_blank" rel="noopener">Recurrent Networks</a>, <a href="http://cs231n.github.io/classification/" target="_blank" rel="noopener">Convolutional Networks.</a></p>
+<p>Non si tratta di risultati dell'ultima ora, La pagina <a href="http://yann.lecun.com/exdb/lenet/index.html" target="_blank" rel="noopener">LeNet</a> di Yann LeCun (oggi head of AI a Facebook) è una piccola caverna delle meraviglie. La mia preferita è questa. La rete fornisce la risposta corretta in tempo reale (<span style="color:#993300;">answer</span>) mentre il "manoscritto" viene continuamente modificato.</p>
+<p>[caption id="attachment_761" align="aligncenter" width="320"]<img class=" size-full wp-image-761 aligncenter" src="{{ site.baseurl }}/assets/a31.gif" alt="a31" width="320" height="200" /> Rete alle prese con un riconoscimento di caratteri birichino[/caption]</p>
+<p>Per capirci, stiamo parlando di uno studio di <strong>vent'anni fa</strong>.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

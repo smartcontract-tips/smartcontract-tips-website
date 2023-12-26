@@ -1,0 +1,143 @@
+---
+layout: post
+title: 'How to save on gas with SmartContracts: comprehensive guide.'
+date: 2023-09-04 15:45:52.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- English
+- Insights
+tags: []
+meta:
+  _wpas_done_all: '1'
+  _thumbnail_id: '6220'
+  _edit_last: '48926058'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/articoli/how-to-save-on-gas-with-smartcontracts-comprehensive-guide/"
+excerpt: When developing smart contracts on the Ethereum blockchain, one of the most
+  crucial aspects to consider is the gas consumption. Gas is a measure of computational
+  work on Ethereum, and it costs real money to users. Therefore, optimizing your smart
+  contracts to use less gas is not just a performance improvement but also a cost-saving
+  strategy.
+---
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1640px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:56.34146499633789%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/09/how+to+save+on+gas+using+smartcontracts+solidity.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/4fea2cb5-8ffb-4920-90be-bfdaa2b66156/how+to+save+on+gas+using+smartcontracts+solidity.png" data-image-dimensions="1640x924" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1640" height="924" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/4fea2cb5-8ffb-4920-90be-bfdaa2b66156/how+to+save+on+gas+using+smartcontracts+solidity.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/4fea2cb5-8ffb-4920-90be-bfdaa2b66156/how+to+save+on+gas+using+smartcontracts+solidity.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/4fea2cb5-8ffb-4920-90be-bfdaa2b66156/how+to+save+on+gas+using+smartcontracts+solidity.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/4fea2cb5-8ffb-4920-90be-bfdaa2b66156/how+to+save+on+gas+using+smartcontracts+solidity.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/4fea2cb5-8ffb-4920-90be-bfdaa2b66156/how+to+save+on+gas+using+smartcontracts+solidity.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/4fea2cb5-8ffb-4920-90be-bfdaa2b66156/how+to+save+on+gas+using+smartcontracts+solidity.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/4fea2cb5-8ffb-4920-90be-bfdaa2b66156/how+to+save+on+gas+using+smartcontracts+solidity.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">When developing smart contracts on the Ethereum blockchain, one of the most crucial aspects to consider is the gas consumption. Gas is a measure of computational work on Ethereum, and it costs real money to users. Therefore, optimizing your smart contracts to use less gas is not just a performance improvement but also a cost-saving strategy.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The total gas cost is calculated as: <strong>Total Gas Cost=Gas Used×Gas Price</strong></p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The gas price fluctuates based on network congestion, while the gas used depends on your smart contract’s operations. Let’s dive into various techniques to optimize the gas usage in a Solidity smart contract.</p>
+<h1 style="white-space:pre-wrap;">The Scenario</h1>
+<p class="sqsrte-large" style="white-space:pre-wrap;">We’ll start with a simple Solidity smart contract that calculates the sum of even numbers less than 99 from an array of integers. Below is the initial code:</p>
+<h2 style="white-space:pre-wrap;">Initial Code</h2>
+</div>
+<p><script src="https://gist.github.com/beknownagency/b192d8f8f885bd2222559dcbb5171805.js"></script></p>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gas used before any optimization: 297069 (when using <code>[1,2,3,4,5,6,7,8,9,10,53,44,76,32,100,400,500]</code> as the argument).</p>
+<h2 style="white-space:pre-wrap;">1. Use <code>calldata</code> Instead of <code>memory</code></h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In Solidity, <code>calldata</code> is a data location that is cheaper than <code>memory</code> because it’s read-only and external to the smart contract. This makes it suitable for function parameters that don’t need to be modified within the function.</p>
+<h2 style="white-space:pre-wrap;">Optimized Code</h2>
+</div>
+<p><script src="https://gist.github.com/beknownagency/b743f0c77bc092837d8f4e28d92190ad.js"></script></p>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gas used: 59585</p>
+<h2 style="white-space:pre-wrap;">2. Use Local Variables Instead of State Variables</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">State variables are stored on the blockchain, making them more expensive to use than local variables. By using a local variable, you can reduce the gas cost.</p>
+<h4 style="white-space:pre-wrap;">Optimized Code</h4>
+</div>
+<p><script src="https://gist.github.com/beknownagency/7d6f3494134a522a75795a208d6d6c2a.js"></script></p>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gas used: 58729</p>
+<h2 style="white-space:pre-wrap;">3. Short-Circuit Condition Checks</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">You can combine multiple conditions into a single <code>if</code> statement to short-circuit unnecessary checks.</p>
+<h4 style="white-space:pre-wrap;">Optimized Code</h4>
+</div>
+<p><script src="https://gist.github.com/beknownagency/7471c000501e465978260e5a81950617.js"></script></p>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">When two conditions are combined with an &amp;&amp;, the second condition won't be evaluated if the first one is false, due to short-circuiting.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">This short-circuiting behavior also applies to nested if statements: if the outer if condition is false, the inner if condition won't be evaluated.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">There's no significant gas optimization to be gained from using nested if statements over a combined if condition with an &amp;&amp; operator. Both will have approximately the same gas cost since they both leverage short-circuiting.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gas used: 57450</p>
+<h2 style="white-space:pre-wrap;">4. Use <code>++i</code> Instead of <code>i++</code></h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Prefix increment (<code>++i</code>) is slightly more efficient than postfix (<code>i++</code>) because it doesn’t require a temporary variable.</p>
+<h4 style="white-space:pre-wrap;">Optimized Code</h4>
+</div>
+<p><script src="https://gist.github.com/beknownagency/8b646d7076f966485267845a6b4902d6.js"></script></p>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gas used: 56400</p>
+<h2 style="white-space:pre-wrap;">5. Cache Array Length</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Caching the length of the array can save gas as it avoids multiple calls to retrieve the array’s length.</p>
+<h4 style="white-space:pre-wrap;">Optimized Code</h4>
+</div>
+<p><script src="https://gist.github.com/beknownagency/8807bba0b306932da212dcfbb18b6630.js"></script></p>
+<div class="sqs-html-content">
+<p class="" style="white-space:pre-wrap;">Gas used: 55200</p>
+<h2 style="white-space:pre-wrap;">6. Load Array Elements to Memory</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Loading array elements into a memory variable can save gas when the element is used multiple times.</p>
+<h4 style="white-space:pre-wrap;">Optimized Code</h4>
+</div>
+<p><script src="https://gist.github.com/beknownagency/de499ed0ba99b9c9432ea76b284d9d59.js"></script></p>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gas used: 54300</p>
+<h1 style="white-space:pre-wrap;">Additional Tools for Optimization</h1>
+<h2 style="white-space:pre-wrap;">Unchecked Increment</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Since we are sure that the loop won’t iterate more than (2^{256} - 1) times, we can use the <code>unchecked</code> block to skip overflow checks, saving some gas.</p>
+</div>
+<p><script src="https://gist.github.com/beknownagency/e23922626a31fa5d804e1d87bff9a945.js"></script></p>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Use Custom Errors Instead of Revert</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Starting from Solidity v0.8.4, custom errors can be defined to provide more information about failures in a gas-efficient way.</p>
+</div>
+<p><script src="https://gist.github.com/beknownagency/a93dd72394e862107fb3684cdc1dfbb1.js"></script></p>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Bit Shifting Instead of Division/Multiplication</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Bit shifting can be more efficient than division or multiplication when dealing with powers of 2.</p>
+</div>
+<p><script src="https://gist.github.com/beknownagency/8d9fd4602c6b40e9c8191c3698091c2f.js"></script></p>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Function Prioritization</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The order of functions in a contract can impact gas consumption due to how the Ethereum Virtual Machine (EVM) handles method IDs. Place the most frequently used functions earlier in the contract to save some gas.</p>
+<h2 style="white-space:pre-wrap;">Solidity compiler’s optimizer</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">You can also use the Solidity compiler’s optimizer by adding the following snippet to your <code>truffle-config.js</code> if you’re using Truffle:</p>
+</div>
+<p><script src="https://gist.github.com/beknownagency/430ed20f7fc0f0bbcbe642cc53f8054f.js"></script></p>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Or if you’re using Hardhat, add it to your <code>hardhat.config.js</code>:</p>
+</div>
+<p><script src="https://gist.github.com/beknownagency/c69f7320263e928c70d083a6131ba98e.js"></script></p>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">These settings enable the optimizer and set it to run 200 times, a number that aims to balance deployment cost against runtime costs.</p>
+<h2 style="white-space:pre-wrap;">Conclusion</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gas optimization is crucial for the efficient execution and interaction of smart contracts on the Ethereum blockchain. By applying these techniques, you can significantly reduce the gas cost, making your smart contracts more efficient and user-friendly. Always remember to test thoroughly to ensure that optimizations do not introduce bugs or vulnerabilities.</p>
+<h2 style="white-space:pre-wrap;"></h2>
+</div>

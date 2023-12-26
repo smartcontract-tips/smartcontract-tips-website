@@ -1,0 +1,117 @@
+---
+layout: post
+title: Gli utenti di Trust Wallet perdono $170.000 a causa della vulnerabilità di
+  WebAssembly.
+date: 2023-05-03 10:04:00.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Attacchi
+tags: []
+meta:
+  _wpas_done_all: '1'
+  _oembed_03abfcb6a23b29806ebeb6dfedca409a: "{{unknown}}"
+  _thumbnail_id: '6194'
+  _oembed_c8ebd95a33d0e09f980d2b4c38cb8067: "{{unknown}}"
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/articoli/trust-wallet-vulnerabilit-di-webassembly/"
+excerpt: Nel regno in rapida espansione dei wallet digitali, la sicurezza è fondamentale.
+  Trust Wallet, un popolare portafoglio di criptovalute, ha rivelato una significativa
+  violazione della sicurezza in una dichiarazione del 22 aprile. La vulnerabilità,
+  identificata nell'implementazione del wallet di WebAssembly (Wasm), ha provocato
+  perdite per un valore di circa $ 170.000 di varie criptovalute per i suoi utenti.
+---
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1640px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:56.34146499633789%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/05/upload_b9ff677ab379933e4e5c0a3c69bca665.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/77eacf56-0329-485d-a41b-cea8d4e4a346/upload_b9ff677ab379933e4e5c0a3c69bca665.png" data-image-dimensions="1640x924" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1640" height="924" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/77eacf56-0329-485d-a41b-cea8d4e4a346/upload_b9ff677ab379933e4e5c0a3c69bca665.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/77eacf56-0329-485d-a41b-cea8d4e4a346/upload_b9ff677ab379933e4e5c0a3c69bca665.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/77eacf56-0329-485d-a41b-cea8d4e4a346/upload_b9ff677ab379933e4e5c0a3c69bca665.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/77eacf56-0329-485d-a41b-cea8d4e4a346/upload_b9ff677ab379933e4e5c0a3c69bca665.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/77eacf56-0329-485d-a41b-cea8d4e4a346/upload_b9ff677ab379933e4e5c0a3c69bca665.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/77eacf56-0329-485d-a41b-cea8d4e4a346/upload_b9ff677ab379933e4e5c0a3c69bca665.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/77eacf56-0329-485d-a41b-cea8d4e4a346/upload_b9ff677ab379933e4e5c0a3c69bca665.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Overview</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Nel regno in rapida espansione dei wallet digitali, la sicurezza è fondamentale. Trust Wallet, un popolare portafoglio di criptovalute, ha rivelato una significativa violazione della sicurezza in una dichiarazione del 22 aprile. La vulnerabilità, identificata nell'implementazione del wallet di WebAssembly (Wasm), ha provocato perdite per un valore di circa $ 170.000 di varie criptovalute per i suoi utenti.</p>
+<h2 style="white-space:pre-wrap;">La genesi del problema</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">È interessante notare che la vulnerabilità non è stata inizialmente identificata dal team interno di Trust Wallet, ma è stata portata alla loro attenzione attraverso il loro programma di bug bounty. In questo programma, dei ricercatori di sicurezza indipendenti mettono alla prova la robustezza del software alla ricerca di vulnerabilità incentivati dalle ricompense riconosciute per eventuali problemi significativi scoperti.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Un ricercatore di sicurezza ha identificato la vulnerabilità WebAssembly nella libreria open source di Trust Wallet, Wallet Core, nel novembre 2022. Nello specifico, i nuovi indirizzi di portafoglio generati tra il 14 e il 23 novembre 2022 ne erano affetti, Trust Wallet ha chiarito che tutti gli indirizzi creati prima e dopo queste date erano sicuri.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">La violazione è culminata in due exploit separati, che hanno portato a una perdita totale di quasi $ 170.000. Secondo un rapporto post mortem, sono rimasti circa 500 indirizzi vulnerabili, con un saldo di circa $ 88.000.</p>
+<h2 style="white-space:pre-wrap;">Casualità insufficiente nel generatore di numeri pseudo-casuali MT19937</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">La versione interessata di WASM utilizzava MT19937, un generatore di numeri pseudo-casuali Mersenne Twister (PRNG) con una dimensione dello stato di 19937 bit, per generare i seed mnemonici. Per avviare il processo di generazione, questo PRNG richiedeva un singolo valore di inizializzazione a 32 bit. Tuttavia, a causa delle dimensioni limitate del seed, la versione WASM era in grado di produrre solo circa 4 miliardi di possibili mnemonici. Inoltre, il PRNG MT19937, che opera sulla base di un metodo di ricorsione lineare, non fornisce una sicurezza sufficiente per scopi crittografici. È suscettibile alla previsione degli output successivi utilizzando una lunga sottosequenza di numeri di output, il che rappresenta un rischio per la sicurezza.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Anche se questo problema non è stato ancora registrato come una Common Vulnerabilities and Exposures (CVE), tuttavia, un altro team ha scoperto un problema simile nella libreria Intel Paillier Cryptosystem, che può essere trovata qui:</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">https://github.com/intel/pailliercryptolib/issues/2</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:794px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:18.765743255615234%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/05/upload_a0716e5f737831ca2902e74d3fa49f34.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8a53e7f0-1acc-4a03-9041-19e15d8fc44c/upload_a0716e5f737831ca2902e74d3fa49f34.png" data-image-dimensions="794x149" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="794" height="149" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8a53e7f0-1acc-4a03-9041-19e15d8fc44c/upload_a0716e5f737831ca2902e74d3fa49f34.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8a53e7f0-1acc-4a03-9041-19e15d8fc44c/upload_a0716e5f737831ca2902e74d3fa49f34.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8a53e7f0-1acc-4a03-9041-19e15d8fc44c/upload_a0716e5f737831ca2902e74d3fa49f34.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8a53e7f0-1acc-4a03-9041-19e15d8fc44c/upload_a0716e5f737831ca2902e74d3fa49f34.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8a53e7f0-1acc-4a03-9041-19e15d8fc44c/upload_a0716e5f737831ca2902e74d3fa49f34.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8a53e7f0-1acc-4a03-9041-19e15d8fc44c/upload_a0716e5f737831ca2902e74d3fa49f34.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/8a53e7f0-1acc-4a03-9041-19e15d8fc44c/upload_a0716e5f737831ca2902e74d3fa49f34.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Rischi per la sicurezza e prevedibilità di MT19937</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Come anticipato, il problema in questione deriva dall'insufficiente livello di casualità fornito dal generatore di numeri pseudo-casuali MT19937. Quando questo generatore è stato utilizzato per generare chiavi private, un individuo con esperienza (potenzialmente un attore malintenzionato) potrebbe monitorare un numero sufficiente di iterazioni per prevedere iterazioni future. Nel caso in cui questa persona sappia che un particolare indirizzo di portafoglio è stato creato utilizzando MT19937, potrebbe ottenere l'accesso alla chiave privata associata a un determinato indirizzo pubblico, richiedendo una potenza di calcolo da moderata a elevata. In alternativa, un attore malintenzionato potrebbe creare un ampio database contenente tutti i possibili output 2^32 generati da MT19937. Utilizzando tecniche di reverse engineering, potrebbero abbinare le chiavi private a un ampio set di indirizzi vulnerabili che si estendono su varie catene.</p>
+<h2 style="white-space:pre-wrap;">Indirizzi portafogli identificati con il problema su MT19937</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Durante la procedura di analisi dell’incidente di sicurezza, gli indirizzi di wallet (meno di 100) sono stati identificati come creati con MT19937. Vale la pena notare che alcuni di questi wallet sono stati istituiti diversi anni fa e la maggior parte di essi è risultata inattiva.</p>
+<h2 style="white-space:pre-wrap;">Risposta e mitigazione di Trust Wallet</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Il codice responsabile della vulnerabilità è stato prontamente corretto entro un giorno dalla verifica del bug bounty. Ciò ha garantito che qualsiasi indirizzo di portafoglio creato dopo la correzione non fosse interessato dalla vulnerabilità. Tuttavia, la vulnerabilità persisteva negli indirizzi creati tra la versione 0.0.172 e la versione 0.0.182 stesse. Il team di sviluppo di Trust Wallet non è stato in grado di eliminare la vulnerabilità per i wallet creati utilizzando queste versioni interessate senza il coinvolgimento dei proprietari degli indirizzi interessati. Per non correre rischi, gli utenti dovrebbero trasferire le proprie somme dagli indirizzi dei wallet interessati a nuovi indirizzi generati con la versione aggiornata del wallet. </p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">È importante notare che questa azione dovrebbe essere intrapresa dagli stessi proprietari degli indirizzi del wallet dato che Trustwallet non può “operare” in loro vece vista la natura non custodial del wallet. Sono state prese a riguardo tutte le misure possibili per informare gli utenti e fornire assistenza per mitigare il rischio di potenziali attacchi.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Per raggiungere il maggior numero possibile di utenti interessati, sono stati utilizzati vari canali di comunicazione per avvisarli e incoraggiare il trasferimento di risorse dagli indirizzi dei portafogli interessati. È stata implementata una strategia di notifica multicanale, inclusi avvisi in-app e notifiche push su dispositivi mobili, visualizzati ogni minuto.</p>
+<h2 style="white-space:pre-wrap;">Collaborazione con Binance per notificare gli utenti interessati</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Inoltre, dopo aver scoperto che molte delle somme sugli indirizzi dei wallet colpiti proveniva da Binance, Trust Wallet ha contattato l’exchange per informare gli utenti pur nel rispetto della loro privacy, garantendo che nessuna informazione di identificazione personale è stata condivisa tra Binance e Trust Wallet. </p>
+<h2 style="white-space:pre-wrap;">Tempistica sulla divulgazione della notizia di vulnerabilità</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">È stata presa in considerazione la divulgazione della vulnerabilità una volta implementate tutte le soluzioni possibili. Tuttavia, dopo un'attenta valutazione, è stato stabilito che una divulgazione pubblica anticipata avrebbe potuto esporre la maggior parte dei fondi degli utenti interessati a un rischio di pirateria informatica immediato e altamente probabile. L'obiettivo principale era aiutare gli utenti a salvaguardare i propri beni e prevenire potenziali perdite. Pertanto, la comunicazione riservata uno a uno con gli utenti è stata ritenuta essenziale per consentire loro di intraprendere le azioni necessarie pur mantenendo la proprietà esclusiva dei propri beni.</p>
+<h2 style="white-space:pre-wrap;">Supporto e rimborso per gli utenti vittime del malfunzionamento</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">La risposta di Trust Wallet alla violazione non si è fermata a livello tecnico. Riconoscendo le perdite finanziarie subite dai suoi utenti, Trust Wallet ha annunciato un piano di compensazione. Il portafoglio si è impegnato a rimborsare gli utenti che avevano perso i propri beni durante la violazione. Oltre a rimborsare gli importi perduti, Trust Wallet si è anche offerto di coprire le spese del gas associate ai trasferimenti di fondi, dimostrando un approccio globale per correggere la situazione.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Trust Wallet ha anche fornito assistenza ai clienti interessati dalla vulnerabilità offrendo assistenza ai clienti e rimborsando loro le spese del gas. Ad oggi, sono stati rimborsati circa 23,6 BNB di gas a più utenti che hanno trasferito i propri fondi in un luogo sicuro.</p>
+<h2 data-rte-preserve-empty="true" style="white-space:pre-wrap;"></h2>
+<h2 style="white-space:pre-wrap;">Aumento dei costi operativi e correzione della vulnerabilità</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Sebbene in questo momento esista ancora un certo livello di rischio nella divulgazione di queste informazioni, la maggior parte dei fondi è stata trasferita e messa al sicuro dagli utenti negli ultimi mesi. Di conseguenza, il costo operativo per un attore malintenzionato per sfruttare la vulnerabilità è aumentato rispetto ai potenziali guadagni dai restanti portafogli interessati. Attualmente, questi portafogli detengono circa $ 88.300 USD su circa 500 portafogli interessati con un saldo superiore a $ 10 USD di token. Inoltre, la vulnerabilità è stata esplicitamente identificata e corretta.</p>
+<p class="sqsrte-large" data-rte-preserve-empty="true" style="white-space:pre-wrap;">
+<h2 style="white-space:pre-wrap;">Conclusione</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">All'indomani della violazione, Trust Wallet ha compiuto sforzi significativi per migliorare le proprie misure di sicurezza complessive. Hanno avviato audit di sicurezza più rigorosi della loro base di codice, con un'attenzione particolare alle sezioni che trattano dati sensibili. Inoltre, hanno utilizzato strumenti di analisi statica e dinamica per identificare in modo proattivo potenziali vulnerabilità.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Mentre l'evento WasmGate è stato un duro promemoria dell'importanza della sicurezza informatica nello spazio delle risorse digitali, la risposta di Trust Wallet ha rassicurato gli utenti sul loro impegno a mantenere un ambiente sicuro per le loro risorse. Da allora la piattaforma si è ripresa e continua a essere una scelta privilegiata tra gli utenti di criptovalute.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">L'incidente funge da promemoria tempestivo per tutte le piattaforme digitali dell'importanza di solide misure di sicurezza informatica. Man mano che lo spazio delle risorse digitali continua a crescere, anche le minacce cresceranno, rendendo la necessità di pratiche di sicurezza efficaci più critica che mai. Il viaggio di Trust Wallet attraverso l'incidente di WasmGate fornisce un utile caso di studio per altre piattaforme su come rispondere efficacemente a tali sfide.</p>
+</div>

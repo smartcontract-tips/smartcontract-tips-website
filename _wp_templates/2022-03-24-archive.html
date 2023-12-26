@@ -1,0 +1,41 @@
+---
+layout: wp_template
+title: Archivio
+date: 2022-03-24 23:45:58.000000000 +01:00
+type: wp_template
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  origin: theme
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/articoli/archive/"
+excerpt: Visualizza categorie di articoli, tag ed altri archivi.
+---
+<p><!-- wp:template-part {"slug":"header","theme":"zoologist","tagName":"header"} /--></p>
+<p><!-- wp:query {"queryId":3,"query":{"perPage":5,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","sticky":"","inherit":true},"tagName":"main","displayLayout":{"type":"flex","columns":4},"layout":{"inherit":true}} --><br />
+<main class="wp-block-query"><!-- wp:query-title {"type":"archive","style":{"spacing":{"margin":{"bottom":"160px"}}},"fontSize":"large"} /--></p>
+<p><!-- wp:post-template --><br />
+<!-- wp:group {"layout":{"inherit":true}} --></p>
+<div class="wp-block-group"><!-- wp:post-title {"textAlign":"left","level":3,"isLink":true,"style":{"spacing":{"margin":{"bottom":"calc(2 * var(\u002d\u002dwp\u002d\u002dstyle\u002d\u002dblock-gap))"}},"typography":{"textTransform":"uppercase"}},"fontSize":"small"} /--></p>
+<p><!-- wp:post-featured-image {"isLink":true} /--></p>
+<p><!-- wp:spacer {"height":"120px"} --></p>
+<div style="height:120px" aria-hidden="true" class="wp-block-spacer"></div>
+<p><!-- /wp:spacer --></div>
+<p><!-- /wp:group --><br />
+<!-- /wp:post-template --></p>
+<p><!-- wp:query-pagination {"paginationArrow":"arrow","align":"wide"} --><br />
+<!-- wp:query-pagination-previous /--></p>
+<p><!-- wp:query-pagination-numbers /--></p>
+<p><!-- wp:query-pagination-next /--><br />
+<!-- /wp:query-pagination --></main><br />
+<!-- /wp:query --></p>
+<p><!-- wp:template-part {"slug":"footer","theme":"zoologist","className":"site-footer-container"} /--></p>

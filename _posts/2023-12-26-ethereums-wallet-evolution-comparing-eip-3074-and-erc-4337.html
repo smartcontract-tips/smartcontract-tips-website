@@ -1,0 +1,202 @@
+---
+layout: post
+title: 'Ethereum’s Wallet Evolution: Comparing EIP-3074 and ERC-4337'
+date: 2023-12-26 10:59:49.000000000 +01:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- English
+- Insights
+tags: []
+meta:
+  ppma_authors_name: Redazione
+  _last_editor_used_jetpack: block-editor
+  _wpas_done_all: '1'
+  _thumbnail_id: '6785'
+  _edit_last: '48926058'
+  _aioseo_title: ''
+  _aioseo_description: ''
+  _aioseo_keywords: ''
+  _aioseo_og_title: "#post_title"
+  _aioseo_og_description: ''
+  _aioseo_og_article_section: ''
+  _aioseo_og_article_tags: ''
+  _aioseo_twitter_title: ''
+  _aioseo_twitter_description: ''
+  ppma_disable_author_box: '0'
+  BS_author_type: BS_author_is_user
+  BS_guest_author_name: ''
+  BS_guest_author_url: ''
+  BS_guest_author_description: ''
+  BS_guest_author_image_id: ''
+author:
+  login: redazione
+  email: dcarboni+redazione@gmail.com
+  display_name: Redazione
+  first_name: Redazione
+  last_name: ''
+permalink: "/articoli/ethereums-wallet-evolution-comparing-eip-3074-and-erc-4337/"
+---
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading" id="Introduction">Introduction</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Currently, Ethereum’s wallet system exhibits significant limitations. Initially, to ensure simplicity and reliability, Ethereum adopted its wallet mechanism from pre-existing, thoroughly vetted blockchain models. However, developers quickly recognized its constraints and the potential for more advanced solutions in future Ethereum iterations. Following numerous proposals and refinements, it appears that a definitive solution for Ethereum’s wallets is now within reach.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading" id="What-is-Account-Abstraction-in-Ethereum"><a href="https://hackmd.io/0_6BmdfjSOOt1MbcXjfF4A?both#What-is-Account-Abstraction-in-Ethereum"></a>What is Account Abstraction in Ethereum?</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Account Abstraction in Ethereum brings programmability to five key functionalities traditionally hardcoded in Externally Owned Accounts (EOAs):</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list {"ordered":true} --></p>
+<ol><!-- wp:list-item --></p>
+<li><strong>Authentication</strong>: Moving from a fixed ECDSA key to diverse identity proof methods.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Authorization</strong>: Transitioning from total authority granted by a single key to various access policies.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Replay Protection</strong>: Separating transaction ordering from replay protection mechanisms.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Gas Payment</strong>: Decoupling the payment of gas from the account’s ETH balance, allowing for alternative methods.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Execution</strong>: Evolving from a single call to one destination to complex execution logic involving multiple calls.</li>
+<p><!-- /wp:list-item --></ol>
+<p><!-- /wp:list --></p>
+<p><!-- wp:heading {"level":4} --></p>
+<h4 class="wp-block-heading" id="Use-Cases-of-Account-Abstraction"><a href="https://hackmd.io/0_6BmdfjSOOt1MbcXjfF4A?both#Use-Cases-of-Account-Abstraction"></a>Use Cases of Account Abstraction</h4>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li><strong>Advanced Signature Schemes</strong>: Incorporating various cryptographic methods like Schnorr, BLS, and post-quantum signatures.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Key Management</strong>: Implementing key rotation for security and deadman’s switches for inheritance purposes.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Access Policies</strong>: Introducing multisig and role-based access controls, and dapp-specific session keys.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Replay Protection Innovations</strong>: Allowing parallel transactions and pre-signed future actions.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Gas Abstraction</strong>: Facilitating gas sponsorship and payments in assets other than ETH.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Execution Enhancements</strong>: Enabling batching and atomicity in transactions, and tailored dapp user experiences.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:heading {"level":4} --></p>
+<h4 class="wp-block-heading" id="Account-abstraction-in-Ethereum-introduces-versatility-in-key-areas"><a href="https://hackmd.io/0_6BmdfjSOOt1MbcXjfF4A?both#Account-abstraction-in-Ethereum-introduces-versatility-in-key-areas"></a>Account abstraction in Ethereum introduces versatility in key areas:</h4>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li><strong>Signature Schemes</strong>: Adoption of diverse cryptographic methods, including secp256r1, Schnorr, BLS, post-quantum signatures, and ZK proofs.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Key Management</strong>: Features for key rotation and inheritance-focused deadman’s switches.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Access Control</strong>: Multisig, role-based access, dapp-specific session keys, and social recovery options.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Replay Protection</strong>: Facilitating parallel transactions and third-party pre-signed transactions.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Gas Management</strong>: Allowing third-party gas sponsorship and non-ETH asset payments.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Privacy Enhancements</strong>: Anonymous transactions, airdrop claims, and secure withdrawals.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Execution Flexibility</strong>: Supporting batched calls, atomic transactions, and dapp-specific user experience improvements.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>These examples illustrate the expanded capabilities and security improvements in Ethereum’s account framework.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading" id="EIP-3074-and-ERC-4337-Enhancements"><a href="https://hackmd.io/0_6BmdfjSOOt1MbcXjfF4A?both#EIP-3074-and-ERC-4337-Enhancements"></a>EIP-3074 and ERC-4337 Enhancements</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Advancing EOAs with EIP-3074</strong><br />The Ethereum community has long sought a standardized method for augmenting wallet functionality. The debate centers around two innovative yet divergent ideas:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>Integrating smart capabilities within EOAs.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Extending standard EOA features to smart contract wallets.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:image {"id":6791,"width":"808px","height":"auto","sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full is-resized"><a href="https://smartcontract.tips/wp-content/uploads/2023/12/image-5.png" /><img src="{{ site.baseurl }}/assets/2023/12/image-5.png" alt="" class="wp-image-6791" style="width:808px;height:auto" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading"><em>EIP 3074 transaction flow</em></h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>The EIP-3074 proposal, championed by Sam Wilson, Matt Garnett, and collaborators, is aimed at the former. It suggests the introduction of two novel opcodes, AUTH and AUTHCALL, into the Ethereum Virtual Machine (EVM). These would be utilized by entities known as ‘invokers’—smart contracts designated to operate on behalf of an EOA upon receiving authorization.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Under EIP-3074, users would digitally sign a message with their private keys to express their transactional intent. This signed message is then incorporated into a blockchain transaction that beckons an invoker. The invoker, in possession of the message and using the AUTH opcode, temporarily assumes command of the user’s account. AUTHCALL is then employed to execute transactions for the user. Notably, this process liberates users from the necessity of holding ETH for transaction fees, as alternative compensations like ERC-20 tokens could be utilized.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>EIP-3074 proposes a seamless enhancement to existing EOAs, sidestepping the need for asset migration to new wallet forms, a requirement of the ERC-4337 approach. This method can be envisioned as equipping EOAs with additional modular features.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Concerns Regarding EIP-3074</strong><br />Despite its potential, EIP-3074 has elicited concerns, especially regarding the extensive control bestowed upon invokers. Critics draw parallels to the infamous DAO incident, suggesting that such power concentration might set the stage for similar vulnerabilities. The balance between added utility and system integrity remains a critical point of contention.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Amidst the progressive discussions, the introduction of ERC-4337 emerged, inspired by an idea from Ethereum’s co-founder, Vitalik Buterin.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":6788,"width":"784px","height":"auto","sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full is-resized"><a href="https://smartcontract.tips/wp-content/uploads/2023/12/image-3.png" /><img src="{{ site.baseurl }}/assets/2023/12/image-3.png" alt="" class="wp-image-6788" style="width:784px;height:auto" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p><em>ERC 4337 transaction flow</em></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":6790,"width":"787px","height":"auto","sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full is-resized"><a href="https://smartcontract.tips/wp-content/uploads/2023/12/image-4.png" /><img src="{{ site.baseurl }}/assets/2023/12/image-4.png" alt="" class="wp-image-6790" style="width:787px;height:auto" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p><em>ERC 4337 transaction flow</em></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Innovations with ERC-4337: A New Transaction Paradigm</strong><br />ERC-4337 offers a fresh take on account abstraction by emulating the traditional transaction mempool at a more sophisticated level. Users dispatch ‘UserOperation’ objects to specific Ethereum bundlers, which then consolidate these objects into a comprehensive bundle transaction for integration into the blockchain.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Entry Point Contract: The Heart of Operation</strong><br />An ‘Entry Point’ contract is central to this framework, overseeing the initiation of user wallets and the validation of ‘UserOperation’ objects. It scrutinizes the legitimacy of these operations by interfacing with the respective wallet.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Smart Contract Wallets: The Final Arbiters</strong><br />The ‘UserOperation’ reaches its culmination within the smart contract wallet chosen by the user, which has been tailored to communicate effectively with the EntryPoint structure.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Envisioning the Future of Wallet Integration</strong><br />The dialogue surrounding these advancements aims to craft a long-term vision for Ethereum. The consensus points towards a future devoid of traditional EOAs, ushering in a new era of smart contract wallets.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>ERC-4337’s Roadmap</strong><br />Advocates for ERC-4337 anticipate a transition where the ‘User Operation’ mempool could eventually supplant the current system. A significant network upgrade could convert all EOAs into smart contract wallets capable of iterative enhancements, much like the strategies employed by platforms like Optimism. In contrast to this, adapting EIP-3074 to such a future might incur considerable technical complexities.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>EIP-3074’s Counterproposal</strong><br />Supporters of EIP-3074 propose an alternative trajectory. They envision account abstraction as a complementary feature to EIP-3074, with a focus on validating user intentions and providing safeguards against unauthorized invokers.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>The Arrival of Standard Smart Contract Wallets</strong><br />While both EIP-3074 and ERC-4337 are on the brink of adoption, their respective implementation timelines differ due to the nature of their proposals:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>EIP-3074 is a Core EIP, seeking to amend the consensus mechanism, thus necessitating a network-wide update. It is under consideration for the upcoming Shanghai upgrade. Its integration is straightforward for node developers.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>ERC-4337, in contrast, entails a more extensive coding endeavor but operates independently of network upgrades like The Merge. It has garnered support across various clients and has been tested on the Goerli testnet. Efforts are underway to integrate it with popular interfaces like Metamask and various Layer 2 solutions.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Conclusion: A New Dawn for Ethereum’s User Experience</strong><br />These proposals are the fruits of extensive research and experimentation, all aimed at refining the experience for Ethereum users. The notion of relying on physical tokens for blockchain access is nearing obsolescence, with account abstraction heralding a significant leap towards Ethereum’s mass adoption.</p>
+<p><!-- /wp:paragraph --></p>

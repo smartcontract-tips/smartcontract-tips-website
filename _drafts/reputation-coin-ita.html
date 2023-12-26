@@ -1,0 +1,48 @@
+---
+layout: post
+title: Reputation Coin (ITA)
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: pending
+categories: []
+tags: []
+meta:
+  jabber_published: '1387834558'
+  publicize_twitter_user: __dadaista__
+  publicize_twitter_url: http://t.co/DFsWiytSUJ
+  _wpas_done_5421447: '1'
+  _publicize_done_external: a:1:{s:7:"twitter";a:1:{i:46075288;b:1;}}
+  _elasticsearch_indexed_on: '2013-12-23 21:36:18'
+  _edit_last: '48926058'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+---
+<p>In questo post si vuole illustrare come le tecnologie che oggi sono alla base del Bitcoin e delle altre monete digitali, e quindi al di fuori del controllo di una singola company o di un singolo o gruppo di potere, potrebbero anche essere utilizzarte per la gestione di un sistema di reputazione che al contempo sia <strong>globale</strong>, <strong>decentralizzato</strong> e <strong>sicuro</strong>.</p>
+<p dir="ltr">Mettiamo insieme un po' di ipotesi:</p>
+<p dir="ltr"><strong>Consumer</strong>  <strong>Charlie,</strong> consumatore di un servizio (es. una API)</p>
+<p dir="ltr"><strong>Producer</strong>  <strong>Paul,</strong> produttore di un servizio</p>
+<p dir="ltr"><strong>Service</strong> <strong>S</strong>, servizio online</p>
+<p dir="ltr"><strong>SLA</strong> Service Level Agreement, ossia cosa fa il servizio e con quali vincoli (es. una risposta entro 10ms)</p>
+<p dir="ltr"><strong>Repcoin</strong> (RPC) = rete p2p monetaria come namecoin/bitcoin con un cambio USD/RPC (solo teorica)</p>
+<p dir="ltr"><strong>Blockchain,</strong> database distribuito delle transazioni organizzato in blocchi (come il BTC).</p>
+<p dir="ltr"><strong>Pagamento:</strong> semplice transazione in RPC che vengono trasferiti da un wallet RPC ad un altro.</p>
+<p dir="ltr"><strong>Voucher</strong> V, uno speciale wallet usa e getta che può essere speso solo per votare (+1) un certo servizio S. Il producer può generare un voucher associandolo ad una vero Pagamento. Il Voucher contiene un valore in RPC pari o superiore alla fee per votare. Tale fee è pari 10% del Pagamento e comunque sempre superiore ad un minimale. Il valore del Voucher in eccesso alla fee può essere intascato dal consumer Charlie.</p>
+<p dir="ltr"><strong>REP</strong> sono transazioni speciali articolate come &lt;servizio&gt; (+1) che indicano che un certo servizio guadagna un +1 in reputazione. Una transasione tipo REP deve sempre essre pagata con un Voucher V che deve contenere almeno il valore necessario a pagare la fee per votare (10% del costo del servizio S).</p>
+<p dir="ltr" id="docs-internal-guid-2e4098a6-2151-548c-8751-cafdd5439e5e">Per incentivare il voto Paul può consegnare un voucher con una somma riscattabile da Charlie e al netto della fee di voto solo se Charlie valida il contratto eseguito con un voto positivo. </p>
+<p dir="ltr">Scenario:</p>
+<p dir="ltr">1. Paul dichiara il cost ad esempio 100RPC e la SLA</p>
+<p dir="ltr">2. Charlie accetta i termini del servizio S e paga a Paul i 100RPC</p>
+<p dir="ltr">3. Paul trasmette a Charlie un voucher V=20 utilizzabile per votare il servizio S</p>
+<p dir="ltr">4. Charlie usa il servizio S</p>
+<p dir="ltr">5. Charlie è soddisfatto del risultato e vota usando il Voucher V</p>
+<p dir="ltr">6. La rete salva nella blockchain la validazione (+1) -&gt; S, 10RPC vanno a Charlie, 10RPC sono fee</p>
+<p> </p>

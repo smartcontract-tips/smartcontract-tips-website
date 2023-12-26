@@ -1,0 +1,138 @@
+---
+layout: post
+title: 'Come risparmiare gas sviluppando gli smart contracts: Guida completa.'
+date: 2023-09-04 16:40:54.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Approfondimenti
+tags: []
+meta:
+  _wpas_done_all: '1'
+  _thumbnail_id: '6221'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/articoli/come-risparmiare-gas-usando-gli-smart-contracts-guida-completa-su-blockchain/"
+excerpt: Quando si sviluppano smart contract sulla blockchain di Ethereum, uno degli
+  aspetti più cruciali da considerare è il consumo di gas. Il gas è una misura del
+  lavoro computazionale su Ethereum e costa denaro reale agli utenti. Pertanto, ottimizzare
+  i vostri smart contract per utilizzare meno gas non è solo un miglioramento delle
+  prestazioni, ma anche una strategia di risparmio dei costi.
+---
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1640px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:56.34146499633789%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/09/how+to+save+on+gas+using+smartcontracts+solidity.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/4fea2cb5-8ffb-4920-90be-bfdaa2b66156/how+to+save+on+gas+using+smartcontracts+solidity.png" data-image-dimensions="1640x924" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1640" height="924" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/4fea2cb5-8ffb-4920-90be-bfdaa2b66156/how+to+save+on+gas+using+smartcontracts+solidity.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/4fea2cb5-8ffb-4920-90be-bfdaa2b66156/how+to+save+on+gas+using+smartcontracts+solidity.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/4fea2cb5-8ffb-4920-90be-bfdaa2b66156/how+to+save+on+gas+using+smartcontracts+solidity.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/4fea2cb5-8ffb-4920-90be-bfdaa2b66156/how+to+save+on+gas+using+smartcontracts+solidity.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/4fea2cb5-8ffb-4920-90be-bfdaa2b66156/how+to+save+on+gas+using+smartcontracts+solidity.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/4fea2cb5-8ffb-4920-90be-bfdaa2b66156/how+to+save+on+gas+using+smartcontracts+solidity.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/4fea2cb5-8ffb-4920-90be-bfdaa2b66156/how+to+save+on+gas+using+smartcontracts+solidity.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Quando si sviluppano smart contract sulla blockchain di Ethereum, uno degli aspetti più cruciali da considerare è il consumo di gas. Il gas è una misura del lavoro computazionale su Ethereum e costa denaro reale agli utenti. Pertanto, ottimizzare i vostri smart contract per utilizzare meno gas non è solo un miglioramento delle prestazioni, ma anche una strategia di risparmio dei costi.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Il costo totale del gas viene calcolato come: <strong>Costo Totale del Gas = Gas Utilizzato × Prezzo del Gas</strong></p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Il prezzo del gas fluttua in base alla congestione della rete, mentre il gas utilizzato dipende dalle operazioni del vostro smart contract. Approfondiamo le varie tecniche per ottimizzare l'uso del gas in uno smart contract Solidity.</p>
+<h1 style="white-space:pre-wrap;">Lo scenario</h1>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Inizieremo con un semplice smart contract Solidity che calcola la somma dei numeri pari inferiori a 99 da un array di interi. Di seguito è riportato il codice iniziale:</p>
+<h2 style="white-space:pre-wrap;">Codice iniziale</h2>
+</div>
+<p><script src="https://gist.github.com/beknownagency/b192d8f8f885bd2222559dcbb5171805.js"></script></p>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gas utilizzato prima di qualsiasi ottimizzazione: 297069 (quando si usa <code>[1,2,3,4,5,6,7,8,9,10,53,44,76,32,100,400,500]</code> come oggetto).</p>
+<h2 style="white-space:pre-wrap;">1. Usare <code>calldata</code> invece che <code>memory</code></h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In Solidity, <code>calldata</code> è una posizione dei dati più economica rispetto a <code>memory</code> perché è di sola lettura ed esterna al contratto intelligente. Ciò la rende adatta per i parametri delle funzioni che non devono essere modificati all'interno della funzione stessa.</p>
+<h2 style="white-space:pre-wrap;">Codice ottimizzato</h2>
+</div>
+<p><script src="https://gist.github.com/beknownagency/b743f0c77bc092837d8f4e28d92190ad.js"></script></p>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gas utilizzato: 59585</p>
+<h2 style="white-space:pre-wrap;">2. Usare Local Variables invece che State Variables</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Le state variebles sono archiviate sulla blockchain, rendendole più “costose” da utilizzare rispetto alle variabili locali. Utilizzando una variabile locale, è possibile ridurre il costo del gas.</p>
+<h2 style="white-space:pre-wrap;">Codice ottimizzato</h2>
+</div>
+<p><script src="https://gist.github.com/beknownagency/7d6f3494134a522a75795a208d6d6c2a.js"></script></p>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gas utilizzato: 58729</p>
+<h2 style="white-space:pre-wrap;">3. Short-Circuit Condition Checks</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Si possono combinare più condizioni in un singolo <code>if</code> statement per evitare controlli non necessari.</p>
+<h2 style="white-space:pre-wrap;">Codice ottimizzato</h2>
+</div>
+<p><script src="https://gist.github.com/beknownagency/7471c000501e465978260e5a81950617.js"></script></p>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Quando due condizioni sono combinate con un &amp;&amp;, la seconda condizione non verrà valutata se la prima è falsa, a causa del comportamento di short-circuiting. Questo comportamento di short-circuiting si applica anche alle istruzioni if nidificate: se la condizione if esterna è falsa, la condizione if interna non verrà valutata. Non c'è un significativo ottimizzazione del gas da ottenere dall'uso di istruzioni if nidificate rispetto a una condizione combinata if con un operatore &amp;&amp;. Entrambe avranno approssimativamente lo stesso costo in gas, poiché entrambe sfruttano il comportamento di short-circuiting.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gas utilizzato: 57450</p>
+<h2 style="white-space:pre-wrap;">4. Usare <code>++i</code> invece che <code>i++</code></h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">L'incremento prefisso (<code>++i</code>) è leggermente più efficiente del postfix (<code>i++</code>) perché non richiede una variabile temporanea.</p>
+<h2 style="white-space:pre-wrap;">Codice ottimizzato</h2>
+</div>
+<p><script src="https://gist.github.com/beknownagency/8b646d7076f966485267845a6b4902d6.js"></script></p>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gas utilizzato: 56400</p>
+<h2 style="white-space:pre-wrap;">5. Cache Array Length</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Memorizzare nella cache la lunghezza dell'array può risparmiare gas, poiché evita molteplici chiamate per recuperare la lunghezza dell'array.</p>
+<h4 style="white-space:pre-wrap;">Codice ottimizzato</h4>
+</div>
+<p><script src="https://gist.github.com/beknownagency/8807bba0b306932da212dcfbb18b6630.js"></script></p>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gas utilizzaato: 55200</p>
+<h2 style="white-space:pre-wrap;">6. Caricare elementi di Array sulla memoria</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Caricare elementi di Array sulla memoria fa risparmiare Gas quando l’elemento è utilizzato più di una volta.</p>
+<h2 style="white-space:pre-wrap;">Codice ottimizzato</h2>
+</div>
+<p><script src="https://gist.github.com/beknownagency/de499ed0ba99b9c9432ea76b284d9d59.js"></script></p>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gas utilizzato: 54300</p>
+<h1 style="white-space:pre-wrap;">Altri strumenti per l’ottimizzazione:</h1>
+<h2 style="white-space:pre-wrap;"><strong>Inc</strong>remento non verificato</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Poiché siamo certi che il ciclo non eseguirà più di (2^{256} - 1) volte, possiamo utilizzare il blocco <strong>unchecked</strong> per saltare i controlli di overflow, risparmiando così del gas</p>
+</div>
+<p><script src="https://gist.github.com/beknownagency/e23922626a31fa5d804e1d87bff9a945.js"></script></p>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Utilizzare Errori Personalizzati Invece di Revert</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">A partire da Solidity v0.8.4, è possibile definire errori personalizzati per fornire informazioni più dettagliate sulle situazioni di fallimento in modo efficiente dal punto di vista del gas.</p>
+</div>
+<p><script src="https://gist.github.com/beknownagency/a93dd72394e862107fb3684cdc1dfbb1.js"></script></p>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Spostamento dei Bit Invece di Divisione/Moltiplicazione</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Lo spostamento dei bit può essere più efficiente della divisione o della moltiplicazione quando si lavora con potenze di 2</p>
+</div>
+<p><script src="https://gist.github.com/beknownagency/8d9fd4602c6b40e9c8191c3698091c2f.js"></script></p>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Priorità delle Funzioni</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">L'ordine delle funzioni in un contratto può influire sul consumo di gas a causa del modo in cui la Ethereum Virtual Machine (EVM) gestisce gli ID dei metodi. Posizionare le funzioni più utilizzate all'inizio del contratto può permettere di risparmiare gas.</p>
+<h2 style="white-space:pre-wrap;">Ottimizzatore del compilatore Solidity</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Puoi anche utilizzare l'ottimizzatore del compilatore Solidity aggiungendo il seguente snippet al tuo truffle-config.js se stai usando Truffle:</p>
+</div>
+<p><script src="https://gist.github.com/beknownagency/430ed20f7fc0f0bbcbe642cc53f8054f.js"></script></p>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">O se stai usando Hardhat, aggiungilo al tuo <code>hardhat.config.js</code>:</p>
+</div>
+<p><script src="https://gist.github.com/beknownagency/c69f7320263e928c70d083a6131ba98e.js"></script></p>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">Queste impostazioni abilitano l'ottimizzatore e lo configurano per eseguire 200 iterazioni, un numero che mira a bilanciare il costo di distribuzione rispetto ai costi di esecuzione.</p>
+<h2 style="white-space:pre-wrap;">Conclusione</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">L'ottimizzazione del gas è cruciale per l'esecuzione efficiente e l'interazione dei contratti intelligenti sulla blockchain Ethereum. Applicando queste tecniche, è possibile ridurre significativamente il costo del gas, rendendo i vostri contratti intelligenti più efficienti e user-friendly. Ricordate sempre di testare accuratamente per garantire che le ottimizzazioni non introducano bug o vulnerabilità.</p>
+</div>

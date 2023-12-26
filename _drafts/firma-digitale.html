@@ -1,0 +1,119 @@
+---
+layout: post
+title: 'Firma digitale: applicazioni e funzionamento'
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: pending
+categories:
+- Academy
+tags: []
+meta:
+  _last_editor_used_jetpack: block-editor
+  _wpas_done_all: '1'
+  _edit_last: '48926058'
+  _aioseo_title: ''
+  _aioseo_description: ''
+  _aioseo_keywords: ''
+  _aioseo_og_title: ''
+  _aioseo_og_description: ''
+  _aioseo_og_article_section: ''
+  _aioseo_og_article_tags: ''
+  _aioseo_twitter_title: ''
+  _aioseo_twitter_description: ''
+  _thumbnail_id: '5619'
+  _wp_old_date: '2022-12-30'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+---
+<p><!-- wp:paragraph --></p>
+<p>Una delle applicazioni più interessanti della crittografia con chiave pubblica/privata è la cosiddetta <strong>firma digitale</strong>. Questa serve appunto per firmare i pagamenti in bitcoin (e tante altre cose). E’ l’equivalente della firma fisica nel mondo digitale ma molto più sicura. Senza entrare nei dettagli operativi, con la nostra chiave privata possiamo generare una firma digitale per un certo documento, e chiunque riceve il documento con la firma potrà verificare grazie alla nostra chiave pubblica che noi e nessun altro abbiamo firmato e trasmesso quel documento.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:group {"layout":{"type":"constrained"}} --></p>
+<div class="wp-block-group"><!-- wp:coblocks/alert --></p>
+<div class="wp-block-coblocks-alert" aria-label="Alert section">
+<p class="wp-block-coblocks-alert__text">Abbiamo parlato di crittografia a chiave pubblica in <a href="https://smartcontract.tips/2022/12/28/dalla-cifratura-simmetrica-alla-crittografia-a-chiave-pubblica/">questo articolo</a> e di funzioni di hashing in <a href="https://smartcontract.tips/2022/12/29/funzioni-di-hashing/">questo</a></p>
+</div>
+<p><!-- /wp:coblocks/alert --></div>
+<p><!-- /wp:group --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Applicazioni della firma digitale</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>La firma digitale è una tecnologia che permette di verificare l'autenticità e l'integrità di un documento elettronico, in modo simile alla firma autografa su un documento cartaceo. Le applicazioni della firma digitale sono molteplici, una fra tutte è la possibilità di firmare le transazioni su blockchain come Bitcoin o l'esecuzione di transazioni complesse e smart contract su Ethereum. Oltre queste due applicazioni legate al settore delle criptovalute possono essere utilizzate anche in molti altri ambiti più tradizionali, come ad esempio:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list {"ordered":true} --></p>
+<ol><!-- wp:list-item --></p>
+<li>Firma di contratti e documenti legali: la firma digitale può essere utilizzata per firmare contratti, accordi commerciali e altri documenti legali in modo sicuro e verificabile.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Trasmissione di documenti sensibili: la firma digitale può essere utilizzata per inviare documenti sensibili, come ad esempio certificati medici o documenti bancari, in modo sicuro e protetto.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Autenticazione di utenti online: la firma digitale può essere utilizzata per autenticare gli utenti che accedono a servizi online, come ad esempio il login a un sito web o l'accesso a un'applicazione mobile.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Firma di messaggi di posta elettronica: la firma digitale può essere utilizzata per firmare i messaggi di posta elettronica in modo da garantirne l'autenticità e l'integrità.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Gestione dei documenti aziendali: la firma digitale può essere utilizzata per gestire i documenti aziendali, come ad esempio le fatture o i rapporti, in modo sicuro e tracciabile.</li>
+<p><!-- /wp:list-item --></ol>
+<p><!-- /wp:list --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Come funziona la firma digitale</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Unendo la funzione di hashing con un sistema di cifratura a chiave pubblica è possibile costruire le basi di un sistema di firma digitale. E’ bene sottolineare che in Bitcoin la crittografia non è utilizzata per cifrare il contenuto delle transazioni ma è utilizzata per verificare l’autenticità e la legittimità delle stesse grazie al fatto che queste possono essere firmate digitalmente e verificate successivamente da chiunque.&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>La <a href="https://smartcontract.tips/2022/12/29/funzioni-di-hashing/">funzione di hashing </a>è il punto di partenza con cui costruire la firma digitale. Infatti tramite la funziona di hashing generiamo un identificativo unico e di lunghezza fissa, ad esempio 32 byte, a partire dal documento originale. Grazie poi alla cifratura con chiave privata generiamo una versione cifrata di tale hash, il risultato che otteniamo a valle della cifratura dell’hash è la firma.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Il documento originale potrà essere trasmesso insieme alla firma senza preoccupazioni che questo possa essere alterato, infatti chiunque dotato della nostra chiave pubblica potrà facilmente decifrare la firma e confrontare l’hash del documento ricevuto con l’hash decifrato dalla firma. Se i due coincidono la verifica della firma è completa.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image --></p>
+<figure class="wp-block-image"><img src="{{ site.baseurl }}/assets/UWCsTUlnZGfZXa0r28Hc5fjIMFHz4FVWh8WxhHlh1KhIW2KQbiV1fB6_RY2UP_vOKzfll8UW9cmq4gNDa7sx7AWPpYuMpnK7RSyScL1g6-5Oy7JeHgpsyHYMnaw1AGjrK1SCh98FU2oUe_OBJ6DDrzSi_GgSNFPaAEsPsEbAoLy3gIm_jMkhX7YNL2MN" alt="" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p><em>Nella figura è illustrato il flusso di firma digitale tra Alice che firma e Bob che verifica . Alice trasmette a Bob la sua chiave pubblica, successivamente Alice crea una firma digitale a partire dal suo documento. Bob riceve sia il documento che la firma e può verificare l’autenticità del document grazie alla chiave privata di Alice.</em></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Conclusioni</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Abbiamo visto come la combinazione di funzioni di hashing e tecniche di cifratura a chiave pubblica possano realizzare una soluzione completa di firma digitale.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>La prima realizzazione della crittografia a chiave pubblica è storicamente quella basata sul sistema RSA che parte dall’ipotesi che dati due numeri primi p e q ed il loro prodotto n= p * q, la fattorizzazione di n, quando questo è un numero molto grande, sia un problema molto difficile da risolvere per un calcolatore in tempi ragionevoli, a questo scopo si dice che il problema è impraticabile per ogni attaccante con le attuali conoscenze e tecnologie informatiche. Va detto che impraticabile non significa impossibile ma semplicemente che lo sforzo necessario supera di gran lunga le capacità di calcolo disponibili al giorno d’oggi. La fattorizzazione di grandissimi numeri ricade in questa categoria di problemi e come tale può essere sfruttata per generare le chiavi.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>In altre parole, mentre è facile per un computer calcolare in pochi istanti il prodotto p * q = n è molto difficile il contrario, ovvero a partire da n capire che i fattori sono p e q. Questo ovviamente per numeri molto grandi.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Tuttavia non tutte le soluzioni di firma digitale adottano il problema della fattorizzazione come barriera matematica. Esiste una categoria di problemi che risultano più complessi. Questi problemi sono quelli del Discrete Logarithm Problem (DLP), ovvero calcolare il logaritmo di un numero intero all’interno di un campo finito. Senza entrare nei dettagli matematici ci limitiamo a dire che confrontato con il sistema RSA basato sulla fattorizzazione di grandi numeri, la crittografia basata su DLP garantisce la stessa robustezza agli attacchi ma con delle chiavi crittografiche di taglia più piccola e quindi più comode da trattare dalle applicazioni.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>I sistemi di firma digitali basati sul problema DLP sono chiamati Digital Signature Algorithm (DSA). E’ stato dimostrato che, rispetto alla fattorizzazione dei grandi numeri di RSA,&nbsp; il problema del logaritmo discreto di un numero intero in un campo finito sia un problema molto più arduo.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Per completezza di informazione va detto che allo stato dell’arte, lo standard di firma più utilizzato è denominato con la sigla ECDSA (Elliptic Curve Digital Signature Algorithm).&nbsp; Tale standard è basato su una generalizzazione del problema del logaritmo discreto su una curva ellittica.&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>In questo metodo di cui non affrontiamo i dettagli matematici ci basta sapere che a parità di lunghezza delle chiavi la cifratura risulta più forte sia di quella basata su RSA (fattorizzazione) che di quella DSA (logaritmo discreto di interi) e quindi, a parità di resistenza ad eventuali attacchi, consente l’uso di chiavi più piccole e pertanto più facilmente trattabili dalle applicazioni.&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>L’algoritmo ECDSA è anche quello scelto da Satoshi Nakamoto per l’implementazione di Bitcoin.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>La sicurezza garantita da una firma ECDSA con chiave a 256 bit è quasi equivalente a quella che risulta garantita dall’algoritmo RSA usando una chiave lunga 3072 bit.</p>
+<p><!-- /wp:paragraph --></p>

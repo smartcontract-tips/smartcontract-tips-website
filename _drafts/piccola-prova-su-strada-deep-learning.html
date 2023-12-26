@@ -1,0 +1,49 @@
+---
+layout: post
+title: Piccola prova su strada deep learning
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: pending
+categories: []
+tags: []
+meta:
+  _elasticsearch_indexed_on: '1970-01-01 00:00:00'
+  jabber_published: '1479330429'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '28988860980'
+  _oembed_e4b5049da1f110911ddab886d57986f3: "{{unknown}}"
+  email_notification: '1479330430'
+  _oembed_a2ee0ddb5e0379862d207dd30ecd4fda: "{{unknown}}"
+  _oembed_4359cbc60376c1997d49dba8c39419b4: "{{unknown}}"
+  _oembed_7704b41978236446f03e4c666ff8e2bd: "{{unknown}}"
+  _oembed_4408b6108dde69ba4b9de256ef68ab33: "{{unknown}}"
+  _oembed_63db166477bd77257fb2623625aa5577: "{{unknown}}"
+  _oembed_e21449ad05cc2e7bbb7895bb34b1692f: "{{unknown}}"
+  _oembed_d58aea5324023410ee7c8b4f049ccd9f: "{{unknown}}"
+  _oembed_827ada3391ed4f8676bc6d688189f26a: "{{unknown}}"
+  _edit_last: '48926058'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+---
+<h5><strong>attenzione</strong>: contenuto vagamente nerd</h5>
+<p>Può Il deep learning essere considerato oggi alla stregua di un altro tool a disposizione degli sviluppatori? Forse non ancora. Forse richiede ancora competenze specifiche su classificazione, reti neurali, statistica etc. che non tutti gli sviluppatori hanno. Tuttavia nel corso degli ultimi anni la quantità e la qualità dei framework per scrivere il proprio modello predittivo sono aumentate notevolmente, e si sa, uno inizia con la pratica, brancola nel buio per un po', ma se è determinato prima o poi impara anche la teoria.</p>
+<p>Nel caso opposto, a studiare la teoria per anni senza mai metterla in pratica si rischia di annoiarsi o peggio, di diventare un guru.</p>
+<p>In fondo la figura del <strong>data scientist che cos'è</strong>? Visto da uno statistico il data scientist è uno <strong>sviluppatore che sa poco e male di statistica</strong>, visto da uno sviluppatore un data scientist è <strong>uno statistico che sa un po' di Python</strong>. Visto da un recruiter, un data scientist è uno <strong>che sa usare Hadoop, Spark e ha lavorato con i Big data</strong> (senza precisare quanto big).</p>
+<p><img class="alignnone size-full wp-image-1679" src="{{ site.baseurl }}/assets/screenshot-2016-11-16-20-55-53.png" alt="screenshot-2016-11-16-20-55-53" width="1170" height="480" /></p>
+<p>Nel mio percorso, guidato da curiosità intellettuale e necessità di imparare ed aggiornarmi mi sono trovato a voler e dover cercare un framework per il deep learning. Se volete sapere cos'è il deep learning vi consiglio un mio <a href="http://smartcontract.tips/2016/09/13/che-cose-veramente-il-deep-learning/" target="_blank" rel="noopener">precedente</a> articolo. Per la mia investigazione mi sono rivolto a tre framework: <strong>TensorFlow</strong>, <strong>MXNet</strong> e <strong>H2O</strong>. Perché questi e non anche Caffe, Torch, Theano e tutti gli altri che vi possono venire in mente? Perché TensorFlow, MXNet e H2O hanno una decente capacità di lavorare con il linguaggio R. Non che questo sia indispensabile per fare deep learning, ma insomma, quando si manipolano dati e numeri è moooolto scomodo ritornare a Python o Java dopo che si è usato R.</p>
+<p>Premetto, quella che segue è una classifica molto personale, non scientifica e soprattutto <strong>non quantitativa</strong>. Una serie di opinioni insomma. Se volete un confronto più strutturato e ragionato leggete questo su wikipedia.</p>
+<p>https://en.wikipedia.org/wiki/Comparison_of_deep_learning_software</p>
+<p>Quindi alla luce dei miei criteri opinabili nonché segreti quale dei tre framework alla fine preferisco? Beh, ci sono pro e contro ma alla fine per me il vincente è TensorFlow. Vediamo perché.</p>
+<p><strong>TensorFlow</strong> è ben documentato, molto aggiornato (c'è Google che finanzia), la community sembra in crescita ed è facile trovare aiuto. L'interfaccia in R è ottima e documentata. Supporta le GPU e in futuro immagino le TPU (cosa <a href="https://en.wikipedia.org/wiki/Tensor_processing_unit" target="_blank" rel="noopener">sono</a>?). Comincia a diventare keyword anche per i recruiter. <strong>Difetti</strong>: l'installazione è comunque un incubo. Sì, lo so che conta poco ma a me le piccole fastidiose bazzecole come versioni di Numpy , compilazioni infinite e dipendenze un po' sparse possono far perdere la pazienza e tempo. Rivolto a Google dico: fate un installer decente per tutte le piattaforme! Grosso problema poi se vuoi installare il supporto GPU su Mac. Io ho desistito. Quando vedi che parte una compilazione di codice sorgente che poi si blocca è un brutto segno. Troppo prematuro per chi non vuole perdere tempo.</p>
+<p><strong>MXNet</strong> sembra un progettino di due studentelli, la company che ci lavora si chiama DMCL, e in questo momento il loro sito non risponde! :o  Invece guardando bene c'è tanto lavoro dietro e un'ottima reputazione per questo progetto open source. Il pregio principale per me è che supporta CPU e GPU in modo molto immediato. <strong>Difetti</strong>: purtroppo non una grande community, la documentazione per R abbastanza incompleta e  le API sono ridotte rispetto a TensorFlow.</p>
+<p><strong>H2O</strong> viene da una startup che ha raccolto un bel po' di fondi e di attenzione in Silicon Valley. Il prodotto è bello, basato su Java ed è molto facile installarlo e partire con qualche modello. Ha tuttavia alcune limitazioni secondo me inaccettabili. Primo problema: non supporta le GPU. Secondo problema non supporta le reti ConvNet (<a href="https://en.wikipedia.org/wiki/Convolutional_neural_network#Distinguishing_features" target="_blank" rel="noopener">perché sono importanti?)</a>. Ho posto la domanda direttamente a uno dei loro ingegneri che presentava il prodotto in una fiera e mi ha risposto che volendo H2O può integrare MXNet o TensorFlow nel backend e ottenere anche le loro funzionalità :o Beh, ma allora perché installare H2O e non direttamente TensorFlow.</p>

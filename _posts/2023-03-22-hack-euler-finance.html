@@ -1,0 +1,184 @@
+---
+layout: post
+title: Attacco hacker a Euler Finance
+date: 2023-03-22 19:33:00.000000000 +01:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Approfondimenti
+tags: []
+meta:
+  _wpas_done_all: '1'
+  passthrough_url: ''
+  _thumbnail_id: '6186'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/articoli/hack-euler-finance/"
+excerpt: Attacco a Euler Finance.
+---
+<div class="sqs-html-content">
+<p class="" style="white-space:pre-wrap;">Tempo di lettura: 5 minuti.</p>
+</div>
+<hr />
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1101px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:53.31517028808594%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/03/Screenshot+2023-03-28+at+22.42.18.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ce65cc9f-1c53-4942-a310-7c45f67ba0c7/Screenshot+2023-03-28+at+22.42.18.png" data-image-dimensions="1101x587" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1101" height="587" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ce65cc9f-1c53-4942-a310-7c45f67ba0c7/Screenshot+2023-03-28+at+22.42.18.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ce65cc9f-1c53-4942-a310-7c45f67ba0c7/Screenshot+2023-03-28+at+22.42.18.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ce65cc9f-1c53-4942-a310-7c45f67ba0c7/Screenshot+2023-03-28+at+22.42.18.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ce65cc9f-1c53-4942-a310-7c45f67ba0c7/Screenshot+2023-03-28+at+22.42.18.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ce65cc9f-1c53-4942-a310-7c45f67ba0c7/Screenshot+2023-03-28+at+22.42.18.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ce65cc9f-1c53-4942-a310-7c45f67ba0c7/Screenshot+2023-03-28+at+22.42.18.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/ce65cc9f-1c53-4942-a310-7c45f67ba0c7/Screenshot+2023-03-28+at+22.42.18.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;"><span class="sqsrte-text-color--accent">Cosa troverai in questo articolo:</span></h2>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Una descrizione dettagliata dell'attacco di flash loan che ha colpito Euler Finance.</p>
+</li>
+</ul>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">I dettagli della strategia utilizzata dall'attaccante, inclusi i codici degli exploit e le linee di codice vulnerabili all'interno del contratto smart di Euler.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Una spiegazione del danno causato dall'attacco.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Raccomandazioni per prevenire vulnerabilità simili in futuro.</p>
+</li>
+</ul>
+</div>
+<p>&nbsp;</p>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;"><span class="sqsrte-text-color--accent"><strong>Cos’è Euler Finance e come funziona?</strong></span></h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Euler Finance è una piattaforma di finanza decentralizzata (DeFi) basata sulla blockchain Ethereum che consente agli utenti di creare e scambiare opzioni su criptovalute. In particolare, Euler Finance si concentra sulla creazione di opzioni di tipo europeo, ovvero opzioni che possono essere esercitate solo alla scadenza del contratto.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Il funzionamento di Euler Finance si basa su un sistema di smart contract che permettono agli utenti di creare opzioni personalizzate con una varietà di parametri, come il prezzo di esercizio, la data di scadenza, la quantità di criptovaluta coinvolta e così via. Queste opzioni possono poi essere scambiate sulla piattaforma Euler Finance da altri utenti interessati.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Gli utenti che creano opzioni su Euler Finance sono incentivati a farlo attraverso un sistema di incentivazione basato sui token EULER, il token nativo della piattaforma. Ad esempio, gli utenti che creano opzioni possono ricevere una parte delle commissioni di negoziazione pagate dagli utenti che scambiano quelle opzioni sulla piattaforma.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Per garantire la sicurezza delle transazioni e la corretta esecuzione degli smart contract, Euler Finance utilizza diverse tecnologie e protocolli, come il protocollo di consenso Proof of Stake di Ethereum, il sistema di identità decentralizzato KYC on-chain e il sistema di governance basato sui token.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In generale, Euler Finance cerca di fornire un'alternativa decentralizzata alle opzioni tradizionali, permettendo agli utenti di creare e scambiare opzioni personalizzate in modo sicuro e affidabile sulla blockchain Ethereum.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;"></p>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><span class="sqsrte-text-color--accent"><strong>L’attacco ha sfruttato la tecnica del flash loan, che cos’è un flash loan?</strong></span></p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Un flash loan è un tipo di prestito crittografico disponibile su alcune piattaforme di finanza decentralizzata (DeFi) che consente agli utenti di accedere a fondi senza la necessità di fornire garanzie o di avere una buona posizione finanziaria.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In pratica, un flash loan permette a un utente di prendere in prestito una grande quantità di criptovaluta per un breve periodo di tempo, solitamente pochi secondi o minuti, senza dover fornire alcuna garanzia. Inoltre, i flash loan non richiedono alcun controllo del credito o della storia finanziaria dell'utente.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">I flash loan sono utilizzati principalmente per scopi di arbitraggio, ovvero per sfruttare le differenze di prezzo tra diverse criptovalute o mercati. Un utente può prendere in prestito criptovaluta su una piattaforma DeFi, utilizzarla per effettuare uno scambio o un'operazione di arbitraggio e quindi restituirla prima della scadenza del prestito, pagando solo una piccola commissione. Tuttavia, i flash loan possono anche essere utilizzati per scopi malevoli, come la manipolazione del mercato, il riciclaggio di denaro o il furto di fondi. Per questo motivo, molte piattaforme DeFi hanno introdotto restrizioni sui flash loan o li hanno completamente vietati.</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:522px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:86.78160858154297%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/03/bLBBIiL03DtdAxBKXJ_WGYxuMBaGg-iIUzFUmNdKJ6xHlpT1AQKCYBDfotcSatGELKdqd29eqCZu4AcUyB5Gneu_pfm7nhj0ar02e46Bu6jbWTbKOGWpPSKksKT_MxAACRRGZrtlTlsJb2KSTzBxp-54UMBmuyPuTRFpmsjyzYPLSNGtZEO652qtv2ao6YjN8uQIyIBHEsCH55vOz1BGZcCBAJVR6BuBj0ejPhk7wvlirXo_.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/85da8cf1-cb0f-4403-a5e8-8393efa27fe0/bLBBIiL03DtdAxBKXJ_WGYxuMBaGg-iIUzFUmNdKJ6xHlpT1AQKCYBDfotcSatGELKdqd29eqCZu4AcUyB5Gneu_pfm7nhj0ar02e46Bu6jbWTbKOGWpPSKksKT_MxAACRRGZrtlTlsJb2KSTzBxp-54UMBmuyPuTRFpmsjyzYPLSNGtZEO652qtv2ao6YjN8uQIyIBHEsCH55vOz1BGZcCBAJVR6BuBj0ejPhk7wvlirXo_.png" data-image-dimensions="522x453" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="522" height="453" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/85da8cf1-cb0f-4403-a5e8-8393efa27fe0/bLBBIiL03DtdAxBKXJ_WGYxuMBaGg-iIUzFUmNdKJ6xHlpT1AQKCYBDfotcSatGELKdqd29eqCZu4AcUyB5Gneu_pfm7nhj0ar02e46Bu6jbWTbKOGWpPSKksKT_MxAACRRGZrtlTlsJb2KSTzBxp-54UMBmuyPuTRFpmsjyzYPLSNGtZEO652qtv2ao6YjN8uQIyIBHEsCH55vOz1BGZcCBAJVR6BuBj0ejPhk7wvlirXo_.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/85da8cf1-cb0f-4403-a5e8-8393efa27fe0/bLBBIiL03DtdAxBKXJ_WGYxuMBaGg-iIUzFUmNdKJ6xHlpT1AQKCYBDfotcSatGELKdqd29eqCZu4AcUyB5Gneu_pfm7nhj0ar02e46Bu6jbWTbKOGWpPSKksKT_MxAACRRGZrtlTlsJb2KSTzBxp-54UMBmuyPuTRFpmsjyzYPLSNGtZEO652qtv2ao6YjN8uQIyIBHEsCH55vOz1BGZcCBAJVR6BuBj0ejPhk7wvlirXo_.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/85da8cf1-cb0f-4403-a5e8-8393efa27fe0/bLBBIiL03DtdAxBKXJ_WGYxuMBaGg-iIUzFUmNdKJ6xHlpT1AQKCYBDfotcSatGELKdqd29eqCZu4AcUyB5Gneu_pfm7nhj0ar02e46Bu6jbWTbKOGWpPSKksKT_MxAACRRGZrtlTlsJb2KSTzBxp-54UMBmuyPuTRFpmsjyzYPLSNGtZEO652qtv2ao6YjN8uQIyIBHEsCH55vOz1BGZcCBAJVR6BuBj0ejPhk7wvlirXo_.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/85da8cf1-cb0f-4403-a5e8-8393efa27fe0/bLBBIiL03DtdAxBKXJ_WGYxuMBaGg-iIUzFUmNdKJ6xHlpT1AQKCYBDfotcSatGELKdqd29eqCZu4AcUyB5Gneu_pfm7nhj0ar02e46Bu6jbWTbKOGWpPSKksKT_MxAACRRGZrtlTlsJb2KSTzBxp-54UMBmuyPuTRFpmsjyzYPLSNGtZEO652qtv2ao6YjN8uQIyIBHEsCH55vOz1BGZcCBAJVR6BuBj0ejPhk7wvlirXo_.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/85da8cf1-cb0f-4403-a5e8-8393efa27fe0/bLBBIiL03DtdAxBKXJ_WGYxuMBaGg-iIUzFUmNdKJ6xHlpT1AQKCYBDfotcSatGELKdqd29eqCZu4AcUyB5Gneu_pfm7nhj0ar02e46Bu6jbWTbKOGWpPSKksKT_MxAACRRGZrtlTlsJb2KSTzBxp-54UMBmuyPuTRFpmsjyzYPLSNGtZEO652qtv2ao6YjN8uQIyIBHEsCH55vOz1BGZcCBAJVR6BuBj0ejPhk7wvlirXo_.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/85da8cf1-cb0f-4403-a5e8-8393efa27fe0/bLBBIiL03DtdAxBKXJ_WGYxuMBaGg-iIUzFUmNdKJ6xHlpT1AQKCYBDfotcSatGELKdqd29eqCZu4AcUyB5Gneu_pfm7nhj0ar02e46Bu6jbWTbKOGWpPSKksKT_MxAACRRGZrtlTlsJb2KSTzBxp-54UMBmuyPuTRFpmsjyzYPLSNGtZEO652qtv2ao6YjN8uQIyIBHEsCH55vOz1BGZcCBAJVR6BuBj0ejPhk7wvlirXo_.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/85da8cf1-cb0f-4403-a5e8-8393efa27fe0/bLBBIiL03DtdAxBKXJ_WGYxuMBaGg-iIUzFUmNdKJ6xHlpT1AQKCYBDfotcSatGELKdqd29eqCZu4AcUyB5Gneu_pfm7nhj0ar02e46Bu6jbWTbKOGWpPSKksKT_MxAACRRGZrtlTlsJb2KSTzBxp-54UMBmuyPuTRFpmsjyzYPLSNGtZEO652qtv2ao6YjN8uQIyIBHEsCH55vOz1BGZcCBAJVR6BuBj0ejPhk7wvlirXo_.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<figcaption class="image-caption-wrapper">
+<div class="image-caption">
+<p class="" style="white-space:pre-wrap;">Sequenza di azioni in un Flash Loan</p>
+</div>
+</figcaption>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">La caratteristica che li rende molto interessanti è che il prestito e la sua restituzione avvengono contestualmente nella stessa transazione e quindi non fa correre nessun rischio al prestatore, infatti in caso di fallimento di una delle operazioni speculative o della restituzione stessa, il prestito risulta come se non fosse mai stato erogato.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">
+<h2 style="white-space:pre-wrap;"><span class="sqsrte-text-color--accent"><strong>Lista degli smart contract e indirizzi coinvolti:</strong></span></h2>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Exploit Contract: 0xebc291,0x036ce,0xD3b7CE,0x0b812c</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Attacker’s Address: 0x5f259, 0xb2698c</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Attacker’s Transaction: 0xc310a0,0x47ac3</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Vulnerable Code: #L232, #354</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Euler’s Contract: 0xe025e3</p>
+</li>
+</ul>
+<p class="sqsrte-large" style="white-space:pre-wrap;">
+<h2 style="white-space:pre-wrap;"><span class="sqsrte-text-color--accent"><strong>Come è stato orchestrato l’attacco?</strong></span></h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">La mattina del 13 marzo 2023, Euler Finance, una piattaforma DeFi che aveva recentemente lanciato la sua funzionalità di deposito di liquidità, è caduta vittima di un attacco flash loan che ha sfruttato una falla logica nello smart contract della piattaforma. </p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">L'attaccante, il cui indirizzo è stato successivamente identificato come 0x5f259, ha avviato l'attacco acquisendo un prestito flash di 30 milioni di DAI da AaveV2 e creando due account: uno come mutuatario e l'altro come liquidatore.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">L'attaccante ha trasferito 30 milioni di DAI sull'account del mutuatario e ha utilizzato 20 milioni di DAI per creare 195 milioni di e-DAI e 200 milioni di d-DAI. </p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Dopo aver rimborsato 10 milioni di DAI utilizzando l'account del mutuatario, l'attaccante ha causato la diminuzione del valore dei token d-DAI di 10 milioni di DAI, rendendo la situazione liquida. </p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Il mutuatario ha quindi creato nuovamente 195 milioni di token e-DAI e 200 milioni di token d-DAI. Tuttavia, un errore logico nel metodo donateToReserve() ha portato alla bruciatura dei token e-DAI ma non dei token d-DAI, causando un debito di token "d-DAI" non coperto che non verrà mai ripagato.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Il liquidatore ha liquidato il debito e lo ha preso in prestito, ottenendo un profitto di 310 milioni di e-DAI che sono stati convertiti in un equivalente di 38,9 milioni di DAI. L'attaccante ha poi restituito il prestito flash e ha ottenuto un profitto netto di 8,8 milioni di DAI. </p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">L'attacco è continuato fino a quando gli attaccanti hanno svuotato i fondi del progetto, causando una perdita totale di 197 milioni di dollari per Euler Finance.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Il contratto di exploit utilizzato dall'attaccante è stato identificato come 0xebc291,0x036ce,0xD3b7CE,0x0b812c, mentre il codice vulnerabile è stato trovato alle righe 232 e 354. Il contratto di Euler, d'altra parte, è stato identificato come 0xe025e3.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Per prevenire tali vulnerabilità in futuro, gli auditor degli smart contract devono esaminare accuratamente il codice degli smart contract per individuare problemi logici. </p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">È importante chiamare correttamente il metodo burn e assicurarsi che entrambi i token siano bruciati se qualcuno sposta fondi ad un altro account. Il debito dovrebbe anche essere calcolato senza errori logici.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Inoltre, la funzione donateToReserves dovrebbe verificare il valore di mercato attuale del collaterale e confrontarlo con il valore attuale del prestito in sospeso per garantire che il donatore sia ancora sovra-collateralizzato. Se il valore del collaterale del donatore è inferiore al valore del prestito in sospeso, la transazione dovrebbe fallire.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Inoltre, sarebbe utile implementare ulteriori misure di sicurezza, come la definizione di un tasso di collaterale minimo per prevenire l'eccessiva leva finanziaria e la limitazione dell'importo di prestito che può essere ottenuto in un dato momento.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In sintesi, la caduta di Euler Finance è stata causata da un attacco di flash loan che ha sfruttato una falla logica nello smart contract della piattaforma. Per evitare simili situazioni in futuro, è necessario che gli auditor degli smart contract esaminino attentamente il codice alla ricerca di errori logici, che il metodo di donazione e il calcolo del debito siano correttamente implementati, che le funzioni di donazione controllino il valore corrente del collaterale e che vengano implementati ulteriori meccanismi di sicurezza. In questo modo, le piattaforme DeFi possono minimizzare il rischio di subire attacchi e di conseguenza ridurre al minimo le perdite finanziarie.</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:489px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:178.73211669921875%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/03/attacco.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1057429f-3995-4e52-9fdf-4f7ba9d1d961/attacco.png" data-image-dimensions="489x874" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="489" height="874" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1057429f-3995-4e52-9fdf-4f7ba9d1d961/attacco.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1057429f-3995-4e52-9fdf-4f7ba9d1d961/attacco.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1057429f-3995-4e52-9fdf-4f7ba9d1d961/attacco.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1057429f-3995-4e52-9fdf-4f7ba9d1d961/attacco.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1057429f-3995-4e52-9fdf-4f7ba9d1d961/attacco.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1057429f-3995-4e52-9fdf-4f7ba9d1d961/attacco.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1057429f-3995-4e52-9fdf-4f7ba9d1d961/attacco.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">
+<h2 style="white-space:pre-wrap;">Sviluppi e restituzione dei fondi</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In seguito all'attacco informatico subito da Euler Finance, l'azienda ha dapprima offerto agli hacker di tenersi 20 milioni di dollari, in cambio della restituzione del resto dei fondi entro 24 ore. Successivamente, Euler ha emesso una taglia di 1 milione di dollari come incentivo per l'arresto dell'aggressore e il recupero dei fondi rubati.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">È stato successivamente rivelato che parte dei fondi rubati sono stati inviati a un indirizzo di portafoglio precedentemente coinvolto nell'hack di Poly Network, il che ha suggerito la possibile responsabilità del gruppo nordcoreano Lazarus. Tuttavia, la società di transaction analytics Chainalysis ha avvertito che il movimento dei fondi potrebbe essere un tentativo di depistaggio da parte di un altro gruppo di hacker.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Questa situazione sottolinea l'importanza di implementare misure di sicurezza solide in tutte le piattaforme DeFi e l'importanza di collaborare con le autorità competenti per prevenire futuri attacchi.</p>
+</div>

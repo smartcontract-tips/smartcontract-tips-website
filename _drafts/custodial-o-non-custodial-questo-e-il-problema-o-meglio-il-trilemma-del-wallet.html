@@ -1,0 +1,116 @@
+---
+layout: post
+title: 'Custodial o non-custodial: questo è il problema, o meglio il trilemma del
+  wallet'
+date:
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: pending
+categories:
+- wallets
+tags: []
+meta:
+  _last_editor_used_jetpack: block-editor
+  _wpas_done_all: '1'
+  _thumbnail_id: '5127'
+  _edit_last: '48926058'
+  _aioseo_title: ''
+  _aioseo_description: ''
+  _aioseo_keywords: ''
+  _aioseo_og_title: ''
+  _aioseo_og_description: ''
+  _aioseo_og_article_section: ''
+  _aioseo_og_article_tags: ''
+  _aioseo_twitter_title: ''
+  _aioseo_twitter_description: ''
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/"
+---
+<p><!-- wp:paragraph --></p>
+<p>Ormai mi trovo spesso a dirlo ma lo ripeto anche qui: "<strong>la blockchain è una cosa brutta, difficile ed inefficiente</strong>". Non risolve tutti i problemi che i sedicenti esperti blockchain possono promettervi, ma almeno un problema lo risolve: <strong>fare un pagamento elettronico senza bisogno di intermediari.</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Una specie di denaro contante che potete spedire a distanza, <strong>cosa che non ha equivalenti nel mondo fisico a meno che non vi dotiate di una catapulta con gittata enorme e di una mira infallibile&nbsp;</strong></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Ma questa cosa è vera soprattutto se gli utenti usano dei wallet non-custodial, ovvero wallet in cui gli utenti stessi controllano le chiavi. Altrimenti torniamo agli intermediari.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"fontSize":"medium"} --></p>
+<h2 class="has-medium-font-size">Trilemma del wallet</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Tuttavia abbiamo forse un trilemma per il wallet: dovrebbe essere contemporaneamente <strong>facile da usare, sicuro e self-custodial.</strong> Ma sembra che i tre requisiti siano sempre in tensione ed al massimo 2 su 3 possono essere ottenuti.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Un wallet self-custodial può essere sicuro se adotta tutte le misure per custodire le chiavi in modo CIA (Confidentiality, Integrity and Availability) ma non potrà essere "facile da usare". Avete mai configurato un wallet hardware? Non ditemi che è facile.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Un wallet potrebbe essere sicuro e facile da usare ma non potrà essere self-custodial.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Oppure un wallet potrebbe essere self-custodial e facile da usare ma con qualche compromesso sulla gestione delle chiavi (che magari sono esposte in memoria alla merce di virus e malware).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Il trilemma qui proposto è solo una congettura e sarei lieto di essere smentito</strong>. Sono sempre interessato a scoprire soluzioni nuove per i wallet che siano self-custodial, facili e sicure. La sfida per la "blockchain" è proprio nella semplicità d'utilizzo.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"fontSize":"medium"} --></p>
+<h2 class="has-medium-font-size">La quasi soluzione di Fortmatic</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Una soluzione interessante è il client <a href="https://fortmatic.com/" target="_blank" aria-label="Fortmatic (opens in a new tab)" rel="noreferrer noopener">Fortmatic</a>.<br />Si può definire un quasi-self custodial. Le chiavi vere e proprie sono custodite in un HSM su cloud (ad esempio Amazon AWS) e tramite l’emissione di token di autenticazione di Cognito (altro servizio Amazon) l’utente si autentica e ottiene le sue chiavi con le quali firma le transazioni. Tutto questo senza dare mai a Fortmatic accesso alle stesse chiavi che si limita a fornire la user interface.&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Chiaramente Amazon rappresenta un elemento fiduciario e questo rovina un po’ il gusto della soluzione ma rispetto ad una soluzione full custodial qui abbiamo due attori, uno ci fornisce il wallet (Fortmatic) e l’altro gestisce i segreti (le chiavi). Secondo Amazon il suo Cloud HSM permette l’accesso alle chiavi solo al legittimo proprietario, neanche Amazon potrebbe ottenerle. Certo è un’affermazione forte e bisogna fidarsi.&nbsp;Fortmatic ha depositato un brevetto su questa soluzione.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:quote {"fontSize":"medium"} --></p>
+<blockquote class="wp-block-quote has-medium-font-size"><p>Il problema di aver a che fare con un intermediario, come Amazon, è che non solo ti devi fidare di quello che dice, ma potrebbe anche negarti il servizio.[...] Oppure che lo faccia di sua volontà, come quando Paypal e i maggiori circuiti di carte di credito rifiutarono i pagamenti vs Wikileaks. (<a aria-label=" (opens in a new tab)" href="https://www.linkedin.com/in/gianneschi" target="_blank" rel="noreferrer noopener">F. Gianneschi</a>)</p>
+</blockquote>
+<p><!-- /wp:quote --></p>
+<p><!-- wp:paragraph --></p>
+<p>Questa è un'ottima considerazione. Ovviamente do per scontanto che l'utente abbia sempre a disposizione un meccanismo di backup delle sue chiavi attraverso la passphrase. Ma effettivamente niente può essere dato per scontato o per "semplice" da usare che è uno dei requisiti del trilemma in questione.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"fontSize":"medium"} --></p>
+<h2 class="has-medium-font-size">I wallet come MyEtherWallet sono un buon compromesso?</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>In molti casi forse sì, ma lo sono per la Signora Maria o una casalinga di Voghera che un domani vorrà custodire le sue Crypto? Esisterà mai una tale figura mitologica in questo mercato pazzo delle crypto?</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:quote {"fontSize":"medium"} --></p>
+<blockquote class="wp-block-quote has-medium-font-size"><p>Che mi dici di <a href="https://www.myetherwallet.com/" target="_blank" aria-label="Mew (opens in a new tab)" rel="noreferrer noopener">Mew</a> ( my Ethereum wallet) , é semplicissimo da usare e self custodial, se il tuo telefono è nelle tue mani anche le chiavi sono nelle tue mani... E puoi sempre disinstallarlo e reinstallarlo solo quando devi fare una transazione, tenendo le passphrase ben custodite su carta...</p>
+<p><cite>(<a href="https://www.linkedin.com/in/tinobruno/" target="_blank" aria-label="Tino Bruno, (opens in a new tab)" rel="noreferrer noopener">Tino Bruno,</a> utente Linkedin)</cite></p></blockquote>
+<p><!-- /wp:quote --></p>
+<p><!-- wp:paragraph --></p>
+<p>Trovo MEW un wallet molto valido, tuttavia l'idea stessa di dover fare backup e restore frequenti della famosa mnemonic (la passphrase dalla quale derivare tutte le chiavi private) non lo rende secondo me così sicuro. Poi c'è da distinguere la versione web da quella mobile. In effetti quella web sembra più adatta ad un utente molto esperto che può interagire con gli smart contract e gestire in modo disinvolto le chiavi private. Quella mobile invece si avvicina molto di più ad un prodotto con una UX facilitata e tutto sommato abbastanza sicura o comunque sicura quanto può essere sicura la gestione di segreti crittografici in un moderno smartphone. E non è poco aggiungerei.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"fontSize":"medium"} --></p>
+<h2 class="has-medium-font-size">E i paper wallet sono sicuri?</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>In molti ritengono il paper wallet la soluzione più sicura poiché per definizione non risiede nella memoria di un computer, quindi non potrà mai andare online e quindi è inattaccabile da hacker e malware.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Ma non sono d'accordo che il paper wallet sia la cosa più sicura in assoluto. <strong>In realtà il paper wallet non è nemmeno un wallet</strong>, è un modo per custodire un segreto e non è esente da rischi (distruzione, perdita, violazione, contraffazione ...)</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Per me un <strong>wallet deve essere composto di almeno 3 elementi</strong>: </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>la app che acquisisce l'input utente e costruisce il payload da firmare; </li>
+<li>il signer che usa le chiavi per firmare il payload </li>
+<li>ed infine il key storage sicuro che tiene le chiavi. </li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>Diciamo che un paper wallet è solo un key storage e neanche così sicuro se poi devi spesso "consultarlo" per inserire il mnemonic a mano in qualche app. <strong>Ci sono diversi vettori di attacco che colpiscono proprio l'utilizzo del mnemonic in un computer compromesso</strong>. Il paper wallet è un backup di ultima istanza in caso di disaster recovery e naturalmente non necessariamente deve stare su carta.<br />Ma certamente sono d'accordo che nel caso di una somma modesta o un utilizzo poco frequente un paper wallet può essere un buon modo per conservare le chiavi.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>

@@ -1,0 +1,256 @@
+---
+layout: post
+title: Metamorphic contracts, How do they work? Are they safe? Tornado Cash Hack explained.
+date: 2023-07-04 14:06:11.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- English
+- Insights
+tags: []
+meta:
+  _wpas_done_all: '1'
+  _oembed_e21d660ee0fd47ef31e32666eecf9648: "{{unknown}}"
+  _thumbnail_id: '6206'
+  _edit_last: '48926058'
+  ppma_authors_name: Davide
+author:
+  login: divisionista
+  email: dcarboni@gmail.com
+  display_name: Davide
+  first_name: Davide
+  last_name: ''
+permalink: "/articoli/markdown-test/"
+excerpt: Metamorphic contracts are a revolutionary concept in the realm of smart contracts,
+  introducing dynamic adaptability and flexibility. Unlike traditional contracts with
+  fixed terms, metamorphic contracts can autonomously modify their code and behaviour
+  based on predefined triggers or conditions. This feature allows them to adjust and
+  evolve in response to changing circumstances, making them highly versatile and adaptable.
+---
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1640px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:56.34146499633789%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/07/upload_e021dc0208e20410fcc3c7b4d1521602.png" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1fb91714-ab58-41d0-b565-0770ad9ca582/upload_e021dc0208e20410fcc3c7b4d1521602.png" data-image-dimensions="1640x924" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1640" height="924" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1fb91714-ab58-41d0-b565-0770ad9ca582/upload_e021dc0208e20410fcc3c7b4d1521602.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1fb91714-ab58-41d0-b565-0770ad9ca582/upload_e021dc0208e20410fcc3c7b4d1521602.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1fb91714-ab58-41d0-b565-0770ad9ca582/upload_e021dc0208e20410fcc3c7b4d1521602.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1fb91714-ab58-41d0-b565-0770ad9ca582/upload_e021dc0208e20410fcc3c7b4d1521602.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1fb91714-ab58-41d0-b565-0770ad9ca582/upload_e021dc0208e20410fcc3c7b4d1521602.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1fb91714-ab58-41d0-b565-0770ad9ca582/upload_e021dc0208e20410fcc3c7b4d1521602.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1fb91714-ab58-41d0-b565-0770ad9ca582/upload_e021dc0208e20410fcc3c7b4d1521602.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="" style="white-space:pre-wrap;">
+<p></p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Metamorphic contracts are a revolutionary concept in the realm of smart contracts, introducing dynamic adaptability and flexibility. Unlike traditional contracts with fixed terms, metamorphic contracts can autonomously modify their code and behaviour based on predefined triggers or conditions. This feature allows them to adjust and evolve in response to changing circumstances, making them highly versatile and adaptable.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Metamorphic contracts offer unparalleled adaptability and flexibility, revolutionising the concept of smart contracts. They enable versatile applications across various industries. For instance, in subscription-based services, the contract can automatically adjust pricing, terms, or service levels based on user behaviour or market conditions. In supply chain management, the contract can adapt to changes in logistics, pricing agreements, or regulatory requirements. DeFi applications can benefit from self-modifying contracts by updating interest rates, collateral requirements, or other parameters in response to market fluctuations.</p>
+<h1 style="white-space:pre-wrap;"><strong>Key concepts and design patterns for metamorphic contracts</strong></h1>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Key concepts and design patterns are crucial for the successful implementation of metamorphic contracts. Conditionals and triggers within the contract’s code define the circumstances under which the contract modifies its behaviour or updates its terms. Separating core logic from upgradeable modules enhances security and maintainability, enabling smooth upgrades while ensuring backward compatibility. Smart contract upgradability and modularity play pivotal roles in the effectiveness of metamorphic contracts. Upgradability empowers contract owners to introduce changes or improvements without redeployment, minimising disruptions to ongoing transactions. Modular design allows for the independent upgradability of specific contract functionalities, providing granular control over adaptive features.</p>
+<h2 style="white-space:pre-wrap;">Creating metamorphic Contracts</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">There are various ways to create metamorphic contracts, but a relatively straightforward approach involves the following steps:</p>
+<ol data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Initially, deploy an implementation contract that doesn’t rely on a constructor but can have a regular function (such as <code>initialize</code>) that performs a similar role. This implementation contract should also have the ability to self-destruct.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Store a reference to the implementation contract’s address in storage at a fixed, known location. The factory contract, which initiates the <code>CREATE2</code> call, is a suitable choice for this purpose.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Utilize <code>CREATE2</code> to deploy a metamorphic contract with fixed, non-deterministic initialization code. This code retrieves the implementation address from the factory function, clones the runtime bytecode at that location, and deploys the runtime bytecode for the metamorphic contract. Alternatively, you can use an intermediate transient contract with fixed initialization code that deploys the metamorphic contract using CREATE and then immediately self-destructs.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">When you need to change the metamorphic contract, simply <code>self-destruct</code>the existing contract, deploy and reference a new implementation, and redeploy the contract. As the initialization code remains the same, the address of the metamorphic contract will also remain unchanged.</p>
+</li>
+</ol>
+<h2 style="white-space:pre-wrap;">Changing Contract Bytecode Using CREATE2, CREATE, and SELFDESTRUCT</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In Ethereum, it is possible to modify the bytecode of a fixed account by utilizing a sequence of <code>CREATE/CREATE2</code> and <code>SELFDESTRUCT</code> calls. These operations involve deploying and destructing contracts in a specific order. Understanding these operations is essential for comprehending the concepts discussed in this article. While the Ethereum documentation provides detailed explanations, here’s a brief overview:</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><code>CREATE</code> and <code>CREATE2</code> are unique Ethereum Virtual Machine (EVM) operations used to create new accounts. A contract can only be created if the targeted account is considered “empty,” meaning it has a codesize of 0 and a nonce of 0. When a contract is created, its codesize becomes greater than 0, and the nonce becomes 1. Although this information is commonly known, it is worth highlighting a few key details about <code>CREATE</code> and <code>CREATE2</code>:</p>
+<ul data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><code>CREATE</code>: It calculates the address of the new contract using the formula keccak256(deployer_addr, deployer_nonce) (specifically, keccak256(rlp([deployer_addr, deployer_nonce]))[12:]).</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><code>CREATE2</code>: It calculates the address of the new contract using the formula keccak256(_0xFF, deployer_addr, salt, bytecode) (specifically, keccak256(_0xFF, deployer_addr, salt, bytecode)[12:]).</p>
+</li>
+</ul>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In contrast, <code>SELFDESTRUCT</code> “clears” an account by resetting its bytecode and nonce. For the purposes of this article, it is crucial to note that <code>SELFDESTRUCT</code> resets the nonce of the account, enabling the use of <code>CREATE</code> multiple times from the same address with the same nonce.</p>
+<h2 style="white-space:pre-wrap;">The Process:</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Using the sequence <code>CREATE</code> -&gt; <code>SELFDESTRUCT</code> -&gt; <code>CREATE</code> -&gt; <code>SELFDESTRUCT</code> -&gt; … with the same bytecode from the same address results in each new CREATE operation deploying a contract to a new address because the deployer_nonce increases with each transaction.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">On the other hand, if we utilize <code>CREATE2</code> -&gt; <code>SELFDESTRUCT</code> -&gt; <code>CREATE2</code> -&gt; <code>SELFDESTRUCT</code> -&gt; … with the same bytecode and salt, the resulting address will remain the same in each iteration.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">However, it is worth noting that in the first case (with <code>CREATE</code>), the deployment address can be the same if the “deployer_nonce” remains unchanged. Here’s the trick: using <code>SELFDESTRUCT</code>, we can reset the nonce of the address where the contract created with <code>CREATE2</code> resides, allowing it to be redeployed. Then, using <code>CREATE</code>, we can deploy a new contract from the same address but with different code.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">By combining these operations, we can implement the following example scenario:</p>
+<ol data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Deploy the <code>MutDeployer</code> contract using <code>CREATE2</code>. The new contract account has a nonce of 1 (according to EIP161).</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">MutDeployer deploys MutableV1 (the first version of mutable code) using <code>CREATE</code>. The new contract is deployed at the address keccak256(MutDeployerAddr, MutDeployerNonce == 1).</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Users interact with <code>MutableV1</code>, assuming that its code remains constant.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The owner executes <code>SELFDESTRUCT</code> on <code>MutableV1</code> to later deploy MutableV2 at the same address.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The owner executes <code>SELFDESTRUCT</code> on <code>MutDeployer</code>, making its account empty (codesize == 0 and nonce == 0).</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The user repeats step 1, deploying the same MutDeployer contract using CREATE2 at the same address. Now, MutDeployer has a nonce of 1, just like in step 1.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;"><code>MutDeployer</code> deploys <code>MutableV2</code> with new bytecode using CREATE (similar to step 2). The new contract is deployed at the same address, keccak256(MutDeployerAddr, MutDeployerNonce == 1).</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Users continue to interact with <code>MutableV2</code> using the same address as MutableV1.</p>
+</li>
+</ol>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Please note that this process allows for the modification of contract code while maintaining the same address, enabling seamless updates to contracts without requiring users to change the address they interact with. The same scenario in code:</p>
+</div>
+<p><script src="https://gist.github.com/ddbit/dfba4f7a89c944f02df6eb4513a0bfe6.js"></script></p>
+<div class="sqs-html-content">
+<h2 style="white-space:pre-wrap;">Potential risks and vulnerabilities associated with dynamic code modification</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">However, dynamic code modification also introduces potential risks and vulnerabilities. Ensuring the security and integrity of adaptive capabilities becomes crucial, necessitating robust security measures and thorough testing to prevent unauthorized modifications or exploits. The complexity of metamorphic contracts raises legal and regulatory concerns regarding enforceability and contractual obligations. Collaboration with regulatory bodies and careful legal analysis are imperative to ensure compliance. Striking a balance between autonomy and governance is vital to prevent unintended consequences or abuse of adaptive features, necessitating clear governance frameworks and oversight mechanisms.</p>
+<h2 style="white-space:pre-wrap;">How to defend from malicious metamorphic contracts</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">To protect against metamorphic contracts, thorough checks and detection mechanisms are necessary. The detection process is extensively explained in the detector and article mentioned, which allows verification of whether an address can have mutable code. Here is a summary of the key checks:</p>
+<ol data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Ensure that the contract does not contain the <code>SELFDESTRUCT</code> opcode or utilize <code>DELEGATECALL</code> to a contract with <code>SELFDESTRUCT</code>.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Check if <code>CREATE2</code> was used for deployment, among other indicators.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Ensure that the contract was initially deployed from a source that doesn’t allow redeployments. This can be achieved by avoiding the use of <code>CREATE2</code> or by keeping track of each deployment and preventing duplicate deployments. Additionally, you need to verify that the deployer itself is not capable of metamorphosis.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Before proceeding with the transaction, confirm that the contract you’re interacting with hasn’t changed using methods like <code>EXTCODEHASH</code> or similar mechanisms at the beginning of the transaction.</p>
+</li>
+</ol>
+<p class="sqsrte-large" style="white-space:pre-wrap;">For most legitimate applications of <code>CREATE2</code>, such as in-state channels and for counterfactual instantiation, these precautions shouldn’t pose significant challenges. In general, exercise caution when interacting with any contract that can self-destruct or undergo dangerous changes. However, if you’re seeking a lightweight upgradeable contract with appropriate controls and governance, then you need not look any further.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">By conducting these checks, you can ascertain that the contract’s code is immutable. However, it’s important to note that in security scenarios, there is always a possibility of avoiding detection by constructing complex scenarios using <code>DELEGATECALL</code> chains or other techniques. Therefore, caution should be exercised.</p>
+<h2 style="white-space:pre-wrap;">The Ugly Step-Sibling to Transparent Proxies</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">To summarize the comparison between metamorphic contracts and transparent proxies, we can highlight the following points:</p>
+<ol data-rte-list="default">
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Storage persistence: Transparent proxies preserve storage upon upgrades, whereas metamorphic contracts completely wipe the state, including the account balance. Transparent proxies are commonly used for upgradeable ERC20 or ERC721 contracts, while metamorphic contracts may be more suitable for ERC725 identity contracts or other self-sovereign contracts.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Overhead of contract calls: Calling into a metamorphic contract incurs less overhead compared to calling into a transparent proxy. Transparent proxies need to verify the caller and then delegate the call to a logic contract.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Upgrade process: Upgrading metamorphic contracts is less seamless because <code>selfdestruct</code> operations are recorded in the transaction substate and executed at the end of a transaction. This means that an upgrade requires two transactions, resulting in a temporary empty contract code (which can be susceptible to intermediate usage) between the transactions. On the other hand, if a transparent proxy encounters a <code>selfdestruct</code>, it will be completely destroyed, whereas a metamorphic contract can still be recovered.</p>
+</li>
+<li>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Constructor usage: Neither method allows the constructor to be used during contract initialization. Instead, an initialize function is typically used immediately after setting up the new contract with the cloned implementation. The exception to this rule is when using an intermediate transient contract deployed via CREATE2 to deploy the metamorphic contract via CREATE. In such cases, constructors can still be used during metamorphic contract deployment.</p>
+</li>
+</ol>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Please note that these are general considerations, and the suitability of each approach depends on the specific requirements and use cases of the contract being developed.</p>
+<h2 style="white-space:pre-wrap;">
+</h2>
+<h1 style="white-space:pre-wrap;">A case study: the attack on Tornado Cash Governance contracts.</h1>
+<p class="" style="white-space:pre-wrap;">
+<p class="sqsrte-large" style="white-space:pre-wrap;">An individual with malicious intentions successfully submitted a deceitful proposal that went unnoticed and was subsequently approved by the voters of the DAO token. As a result, they managed to obtain 1.2 million votes and take control of the situation.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Through a series of unforeseen events, Tornado Cash’s governance has been hijacked by means of a deceptive proposal, resembling a trojan horse. Consequently, this proposal has effectively bestowed complete control of the DAO upon a single address.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Despite the smart contracts preventing the draining of approximately $275 million from the privacy pools, the exploiter managed to obtain control over the TORN governance token. This granted them the ability to modify the router and redirect deposits and withdrawals, as well as administrative privileges over Nova, the Gnosis chain deployment.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Nevertheless, there is still a glimmer of hope, suggesting that not all hope is lost.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Shortly before midday UTC, the exploiter released a new proposal to undo the previously made alterations.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Assuming there are no unforeseen complications, this turn of events could be considered a fortunate escape for the Tornado Cash community, avoiding potentially disastrous consequences.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The past year has presented numerous challenges for the prominent crypto mixer in the DeFi ecosystem.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Throughout the year, DeFi’s go-to crypto mixer has faced a series of difficulties. These include the imposition of OFAC sanctions in August and the incarceration of core developer Alexey Pertsev, who has since been released pending trial.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">In addition, concerns arose a few weeks ago regarding potential exploitation of Tornado’s governance system. This involved the creation of multiple addresses and the locking of 0 TORN tokens in the governance vault. However, since no immediate consequences were observed, it was ultimately disregarded as an unsuccessful endeavor.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Decoy Or perhaps Or preparatory move ?</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The addresses of the exploiters involved are as follows:</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Exploiter address 1:</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">0x092123663804f8801b9b086b03b98d706f77bd59</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Exploiter address 2:</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">0x592340957ebc9e4afb0e9af221d06fdddf789de9</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The Proposal contract:</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">https://etherscan.io/address/0xC503893b3e3c0C6b909222b45f2a3a259a52752D</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The attack was executed discreetly, concealed within a proposal aimed at penalizing specific relayers suspected of dishonest behavior. Although the code appeared to employ similar logic to a previous proposal, the attacker had incorporated an additional function that enabled them to trigger self-destruction of the contract.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The proposal contract was released through a deployer contract, utilizing a combination of CREATE and CREATE2 opcodes. Leveraging the deterministic deployment process, the attacker exploited the ability to deploy new code to the address authorized by the governance.</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:3456px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:50%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/07/metamorphic+contracts+phases+of+implementation" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1f93492b-df81-4347-b9a7-6bdafa65915f/metamorphic+contracts+phases+of+implementation" data-image-dimensions="3456x1728" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="3456" height="1728" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1f93492b-df81-4347-b9a7-6bdafa65915f/metamorphic+contracts+phases+of+implementation?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1f93492b-df81-4347-b9a7-6bdafa65915f/metamorphic+contracts+phases+of+implementation?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1f93492b-df81-4347-b9a7-6bdafa65915f/metamorphic+contracts+phases+of+implementation?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1f93492b-df81-4347-b9a7-6bdafa65915f/metamorphic+contracts+phases+of+implementation?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1f93492b-df81-4347-b9a7-6bdafa65915f/metamorphic+contracts+phases+of+implementation?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1f93492b-df81-4347-b9a7-6bdafa65915f/metamorphic+contracts+phases+of+implementation?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/1f93492b-df81-4347-b9a7-6bdafa65915f/metamorphic+contracts+phases+of+implementation?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">By leveraging the selfDestruct function, the hacker successfully eradicated the authorized code, thereby resetting their nonce in the process. This manipulation enabled them to redeploy the malicious contract at the exact same address.</p>
+<h2 style="white-space:pre-wrap;">Details:</h2>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Option A: Use CREATE2 opcode to create a malicious proposal contract. This will raise a flag since CREATE2 and self-destruct are used together.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Option B: Use CREATE2 to create the deployer contract (0x7dc8), which further deploys the malicious proposal contract (0xc503) using CREATE.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Then the deployer contract is self-destructed (to reset the nonce), and it can create a new proposal at the same address (0xc503).</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The reason behind this lies in the fact that the address of the deployed contract using CREATE is determined by the sender and nonce value (in this case, nonce = 1). Exploiting this, the attacker was able to generate a new proposal with an identical address (0xc503).</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">These techniques for creating ‘metamorphic contracts’ are one reason that some have called for the selfDestruct opcode to be deprecated.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">The malicious proposal then assigned 10,000 TORN to all addresses created in last week’s (presumed) failed exploit. These were unlocked and withdrawn from the vault, granting the exploiter 1.2M votes (against 700k legitimate votes) and full control of Tornado governance.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Refer to BlockSec’s chart for a comprehensive breakdown of the various stages involved in the attack:</p>
+</div>
+<div class="<br />
+          image-block-outer-wrapper<br />
+          layout-caption-below<br />
+          design-layout-inline<br />
+          combination-animation-site-default<br />
+          individual-animation-site-default<br />
+          individual-text-animation-site-default<br />
+        " data-test="image-block-inline-outer-wrapper"><br />
+<figure class="<br />
+              sqs-block-image-figure<br />
+              intrinsic<br />
+            " style="max-width:1092px;">
+<div class="image-block-wrapper" data-animation-role="image">
+<div class="sqs-image-shape-container-element</p>
+<p>              has-aspect-ratio<br />
+            " style="<br />
+                position: relative;</p>
+<p>                  padding-bottom:55.31135940551758%;</p>
+<p>                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);<br />
+              "></p></div>
+</div>
+<p><img data-stretch="false" src="{{ site.baseurl }}/assets/2023/07/Block+sec+chart+breakdown+of+stages+involved+in+tornado+cash+hack" data-image="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e06e12d8-2fd1-4ddc-b904-a8b6c4f0006c/Block+sec+chart+breakdown+of+stages+involved+in+tornado+cash+hack" data-image-dimensions="1092x604" data-image-focal-point="0.5,0.5" alt="" data-load="false" width="1092" height="604" sizes="100vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" srcset="https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e06e12d8-2fd1-4ddc-b904-a8b6c4f0006c/Block+sec+chart+breakdown+of+stages+involved+in+tornado+cash+hack?format=100w 100w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e06e12d8-2fd1-4ddc-b904-a8b6c4f0006c/Block+sec+chart+breakdown+of+stages+involved+in+tornado+cash+hack?format=300w 300w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e06e12d8-2fd1-4ddc-b904-a8b6c4f0006c/Block+sec+chart+breakdown+of+stages+involved+in+tornado+cash+hack?format=500w 500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e06e12d8-2fd1-4ddc-b904-a8b6c4f0006c/Block+sec+chart+breakdown+of+stages+involved+in+tornado+cash+hack?format=750w 750w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e06e12d8-2fd1-4ddc-b904-a8b6c4f0006c/Block+sec+chart+breakdown+of+stages+involved+in+tornado+cash+hack?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e06e12d8-2fd1-4ddc-b904-a8b6c4f0006c/Block+sec+chart+breakdown+of+stages+involved+in+tornado+cash+hack?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/640a182d9182d66162be74d6/e06e12d8-2fd1-4ddc-b904-a8b6c4f0006c/Block+sec+chart+breakdown+of+stages+involved+in+tornado+cash+hack?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs" /></p>
+</figure>
+</div>
+<div class="sqs-html-content">
+<p class="sqsrte-large" style="white-space:pre-wrap;">In an unforeseen twist, the exploiter eventually submitted a proposal to undo the consequences of their hostile takeover, effectively returning control to the DAO as it was prior to the attack.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Apart from the 430 ETH (~$750k) profit from dumping TORN (any guesses where the attacker chose to launder the profits?), the hacker may have other motivations:</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Either they’re giga trolling or it will end up being an expensive but not disastrous lesson in Governance security.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">As community member Tornadosaurus-Hex pointed out:</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">I mean note that we don’t even have a choice in regards to this proposal but it is still important nonetheless.</p>
+<h3 style="white-space:pre-wrap;">CONCLUSION (Importance of thorough testing and auditing)</h3>
+<p class="sqsrte-large" style="white-space:pre-wrap;">Thorough testing and auditing are of paramount importance in mitigating risks associated with metamorphic contracts. Rigorous testing ensures the reliability and functionality of the contract’s adaptive capabilities. Comprehensive audits help identify vulnerabilities and potential exploits, bolstering the overall security of the contract.</p>
+<p class="sqsrte-large" style="white-space:pre-wrap;">SCT ITALIA, as a network of experts specializing in smart contract security, plays a crucial role in preventing such attacks. By conducting thorough security audits, they can identify vulnerabilities and weaknesses in smart contracts, helping to protect against malicious exploits and ensuring the integrity of governance systems. The incident with Tornado Cash emphasizes the necessity of such audits to maintain trust and security within the DeFi ecosystem.</p>
+</div>
