@@ -3525,6 +3525,10 @@ input, select, textarea {
 	#sidebar {
 		padding: 2.5em 2.5em 0.5em 2.5em ;
 		background: #312450;
+		background-image: url("images/sct-logo-dark.png");
+		background-repeat: no-repeat;
+		background-origin: content-box;
+		background-size: 200px;
 		cursor: default;
 		height: 100vh;
 		left: 0;
