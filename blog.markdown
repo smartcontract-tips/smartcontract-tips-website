@@ -11,12 +11,12 @@ permalink: /blog
 <style>
     .post-date {
         font-size: 0.8em; /* Imposta il font più piccolo */
-        color: #666; /* Opzionale: Cambia il colore se desiderato */
+        color: #aaaaaa; /* Opzionale: Cambia il colore se desiderato */
     }
 
     .post-title {
         font-size: 1.6em; /* Imposta il font più piccolo */
-        color: #444; /* Opzionale: Cambia il colore se desiderato */
+        color: #ffffff
     }
 
     .excerpt {
@@ -31,12 +31,13 @@ permalink: /blog
     <li>
       <span class="post-date">{{ post.date | date: "%d %B %Y" }}</span>
       <br/>
-      <a href="{{ post.url }}" class="post-title">
+      <a class="post-title" href="{{ post.url }}" >
       {{ post.title }}
       </a>
       
-      <br/>
-      <span class="excerpt">{{ post.excerpt | strip_html | truncatewords:50 }}</span>
+      <br />
+      <span >{{ post.excerpt | strip_html | truncatewords:50 }}</span>
+      <br /><br />
     </li>
   {% endfor %}
 </ul>
