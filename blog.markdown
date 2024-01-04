@@ -3,6 +3,8 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
+pagination:
+  enabled: true
 permalink: /blog
 ---
 
@@ -12,21 +14,30 @@ permalink: /blog
         color: #666; /* Opzionale: Cambia il colore se desiderato */
     }
 
+    .post-title {
+        font-size: 1.6em; /* Imposta il font più piccolo */
+        color: #444; /* Opzionale: Cambia il colore se desiderato */
+    }
+
     .excerpt {
-        font-size: 0.8em; /* Imposta il font più piccolo */
+        font-size: 1.0em; /* Imposta il font più piccolo */
         color: #999; /* Opzionale: Cambia il colore se desiderato */
     }
 </style>
 
 <ul>
+  
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}">
-      {{ post.title }}
-      </a>
       <span class="post-date">{{ post.date | date: "%d %B %Y" }}</span>
       <br/>
-      <span class="excerpt">{{ post.excerpt }}</span>
+      <a href="{{ post.url }}" class="post-title">
+      {{ post.title }}
+      </a>
+      
+      <br/>
+      <span class="excerpt">{{ post.excerpt | strip_html | truncatewords:50 }}</span>
     </li>
   {% endfor %}
 </ul>
+
