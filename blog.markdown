@@ -16,7 +16,6 @@ permalink: /blog
 
     .post-title {
         font-size: 1.6em; /* Imposta il font più piccolo */
-        color: #ffffff
     }
 
     .excerpt {
@@ -29,15 +28,16 @@ permalink: /blog
   
   {% for post in site.posts %}
     <li>
-      <span class="post-date">{{ post.date | date: "%d %B %Y" }}</span>
-      <br/>
-      <a class="post-title" href="{{ post.url }}" >
-      {{ post.title }}
-      </a>
-      
-      <br />
-      <span >{{ post.excerpt | strip_html | truncatewords:50 }}</span>
-      <br /><br />
+            <div>
+              <img width="100px" src="/sct-logo-dark.png" alt="" />
+              <a class="post-title" href="{{ post.url }}" >
+            
+            {{ post.title }}
+            </a>
+            </div>
+           <div >{{ post.excerpt | strip_html | truncatewords:50 }}</div>
+           <div class="post-date">{{ post.date | date: "%d %B %Y" }}</div>
+           <br/><br/>
     </li>
   {% endfor %}
 </ul>
