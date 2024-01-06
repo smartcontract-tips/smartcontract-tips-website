@@ -28,14 +28,14 @@ permalink: /blog
   
   {% for post in site.posts %}
     <li>
-            <div>
-              <img width="200px" src="{{ post.featured_image }}" alt="" />
-              <a class="post-title" href="{{ post.url }}" >
             
-            {{ post.title }}
-            </a>
+            <img width="100%" src="{{ post.featured_image }}" alt="" />
+            <div>
+              <a class="post-title" href="{{ post.url }}" >
+                {{ post.title }}
+              </a>
             </div>
-           <div >{{ post.excerpt | strip_html | truncatewords:50 }}</div>
+            <div >{{ post.excerpt | strip_html | truncatewords:50 }}</div>
            <div class="post-date">{{ post.date | date: "%d %B %Y" }}</div>
            <br/><br/>
     </li>
