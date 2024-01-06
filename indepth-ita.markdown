@@ -3,10 +3,8 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
-permalink: /blog
+permalink: /in-depth
 ---
-
-![A library but futuristic](blog.png)
 
 <style>
     .post-date {
@@ -39,7 +37,7 @@ permalink: /blog
       --tw-bg-opacity: 1;
       background-color: rgb(219 234 254/var(--tw-bg-opacity));
     }
-
+    
 </style>
 
 
@@ -47,8 +45,12 @@ permalink: /blog
 
 <ul>
   
-  {% for post in site.posts %}
+  {% assign filtered_posts = site.posts | where_exp:"post", "post.categories contains 'In-Depth'" %}
+
+  {% for post in filtered_posts  %}
     <li>
+            
+            <img width="100%" src="{{ post.featured_image }}" alt="" />
             <div>
               <a class="post-title" href="{{ post.url }}" >
                 {{ post.title }}
