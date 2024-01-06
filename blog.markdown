@@ -29,7 +29,7 @@ permalink: /blog
   {% for post in site.posts %}
     <li>
             <div>
-              <img width="100px" src="/sct-logo-dark.png" alt="" />
+              <img width="200px" src="{{ post.featured_image }}" alt="" />
               <a class="post-title" href="{{ post.url }}" >
             
             {{ post.title }}
