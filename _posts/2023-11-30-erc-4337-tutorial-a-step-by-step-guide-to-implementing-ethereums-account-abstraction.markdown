@@ -66,9 +66,7 @@ Requirements:
 SimpleAccount.sol: A Basic ERC-4337 Contract Illustration
 ---------------------------------------------------------
 
-Ethereum's core team has developed a straightforward and minimal example of an ERC-4337 compliant contract, named SimpleAccount.sol.
-
-https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/samples/SimpleAccount.sol
+Ethereum's core team has developed a straightforward and minimal example of an ERC-4337 compliant contract, named [SimpleAccount.sol](https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/samples/SimpleAccount.sol)
 
 We will spend some time examining the code provided below. While it's not necessary to replicate this code in a file, reviewing it will help us grasp its functionalities better.
 
