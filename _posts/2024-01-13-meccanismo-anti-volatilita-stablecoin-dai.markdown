@@ -14,7 +14,7 @@ featured_image: featured_images/Screenshot-2023-12-26-alle-11.59.12.png
 
 La stablecoin DAI è stata creata dalla MakerDAO, un'organizzazione autonoma decentralizzata (DAO). Il protocollo alla base di DAI, noto come Maker Protocol, è stato sviluppato da Rune Christensen, co-fondatore della MakerDAO. Il protocollo Maker consente a chiunque di produrre la stablecoin DAI utilizzando una varietà di criptovalute come collaterale. Questo approccio decentralizzato e basato su Ethereum rende DAI unica tra le stablecoin, in quanto è sostenuta non da valuta fiat, ma da posizioni debitorie collaterali in criptovalute.
 
-## Com'è collateralizzata la stablecoin DAI
+## Come funziona la stablecoin DAI
 
 DAI è una stablecoin cripto-collateralizzata, il che significa che ogni token DAI è garantito da un collaterale in criptovaluta, principalmente Ethereum (ETH), bloccato in contratti intelligenti all'interno del Maker Protocol, conosciuti come Maker Vaults. 
 
