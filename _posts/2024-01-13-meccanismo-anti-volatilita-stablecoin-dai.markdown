@@ -59,22 +59,28 @@ Il **Modulo di Sicurezza degli Oracoli** (Oracle Security Module, OSM) introduce
   background-color: lightgrey;
   padding: 25px;
 }
-.refbutton {
-  
-  background-color: #04AA6D; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+.sponsored-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: darkorange;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.sponsored-button:hover {
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
 }
 </style>
 <div class="reflink">
 <p><b>📚 Consigli di lettura</b></p>
 <img src="https://m.media-amazon.com/images/I/71SniqxeWvL._SY466_.jpg" width="120px">
-<button class="refbutton" onclick="window.open('https://amzn.to/48PmbQ8', '_blank');">Go to Amazon</button>
+<a href="https://amzn.to/48PmbQ8" class="sponsored-button" target="_blank" rel="sponsored">Go to Amazon</a>
 <p>Di Edoardo Porrato <i>...questo testo ha l'obiettivo di accompagnare il lettore in un percorso attraverso la consapevolezza finanziaria e l'illustrazione delle principali forme di investimento in ambito Decentralized Finance (DeFi)...</i></p>
 </div>
 
