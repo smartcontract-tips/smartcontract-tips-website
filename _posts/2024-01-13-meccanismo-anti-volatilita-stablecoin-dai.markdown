@@ -53,6 +53,33 @@ Per garantire la sicurezza e ridurre il rischio di manipolazione dei prezzi, il 
 
 Il **Modulo di Sicurezza degli Oracoli** (Oracle Security Module, OSM) introduce un ritardo (ad esempio, un'ora) nell'applicazione dei nuovi prezzi al sistema. Questo ritardo consente alla comunità di reagire a eventuali anomalie o tentativi di manipolazione del prezzo prima che influenzino il sistema.
 
+
+<style>
+.reflink {
+  background-color: lightgrey;
+  padding: 25px;
+}
+.refbutton {
+  
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>
+<div class="reflink">
+<p><b>📚 Consigli di lettura</b></p>
+<img src="https://m.media-amazon.com/images/I/71SniqxeWvL._SY466_.jpg" width="120px">
+<button class="refbutton" onclick="window.open('https://amzn.to/48PmbQ8', '_blank');">Go to Amazon</button>
+<p>Di Edoardo Porrato <i>...questo testo ha l'obiettivo di accompagnare il lettore in un percorso attraverso la consapevolezza finanziaria e l'illustrazione delle principali forme di investimento in ambito Decentralized Finance (DeFi)...</i></p>
+</div>
+
+
+
 ## Opportunità di guadagno con DAI
 
 Sì, è possibile guadagnare agendo come liquidatore nel sistema di criptovalute, in particolare in piattaforme come il Maker Protocol che gestisce la stablecoin DAI. I liquidatori svolgono un ruolo cruciale nel mantenimento della stabilità del sistema, ed ecco come possono guadagnare:
