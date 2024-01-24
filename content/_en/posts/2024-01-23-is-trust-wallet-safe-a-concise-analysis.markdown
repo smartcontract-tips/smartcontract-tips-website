@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Is Trust Wallet Safe? A Concise Analysis'
-date: 2024-01-23 15:25:55.000000000 +02:00
+date: 2024-01-22 15:25:55.000000000 +02:00
 type: post
 
 published: true
@@ -11,7 +11,7 @@ categories:
 - Wallet
 
 tags: [Trust Wallet]
-permalink: "/articoli/is-trust-wallet-safe-a-concise-analysis/"
+
 featured_image: featured_images/d711f263-a8ee-411b-8207-632d06a954f8-copia.jpg
 ---
 
