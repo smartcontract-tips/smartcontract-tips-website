@@ -110,8 +110,37 @@ Academy
 </button>
 <hr/>
 <br/><br/>
+
+
+
 <ul>
-  
+
+  {% for collection in site.collections %}
+      {% if collection.label == 'en' %}
+          {% for post in site[collection.label] %}
+          <li>
+            <div>
+              <a class="post-title" href="{{ post.url }}" >
+                {{ post.title }}
+              </a>
+            </div>
+            <div >{{ post.excerpt | strip_html | truncatewords:50 }}</div>
+            {% for cat in post.categories %} 
+              <a href="javascript:categoryClick('{{ cat }}')">
+                <span class="label">{{ cat }}
+                </span> 
+              </a>
+            {% endfor %}
+           <div class="post-date">{{ post.date | date: "%d %B %Y" }}</div>
+           
+           <br/><br/>
+          </li>
+              
+          {% endfor %}
+      {% endif %}
+  {% endfor %}
+
+
   {% for post in site.posts %}
     <li>
             <div>
