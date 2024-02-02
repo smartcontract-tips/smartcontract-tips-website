@@ -13,14 +13,15 @@ categories:
 tags: []
 permalink: "/articoli/truffle-hardhat-foundry-compare/"
 featured_image: featured_images/Screenshot2023-09-27at01.20.42.png
-excerpt: In the decentralized realm of Web3, the emergence of tools designed to facilitate
-  the crafting of smart contracts and DApps has transformed the developer experience.
-  Leading the pack are HardHat, Truffle, and Foundry. This comprehensive guide delves
-  into their evolution, technical functionalities, and practical use cases.
+description: web3 framework, comparison of web3 frameworks, hardhat vs. foundry.
 ---
+In the decentralized realm of Web3, the emergence of web3 frameworks designed to facilitate the crafting of smart contracts and DApps has transformed the developer experience. Leading the pack are HardHat, Truffle, and Foundry. This comprehensive guide delves into the evolution, technical functionalities, and practical use cases of the most popular web3 frameworks.
+
+
+
 Edit: Truffle has been discontinued recently. Read here about the [migration](https://consensys.io/blog/consensys-announces-the-sunset-of-truffle-and-ganache-and-new-hardhat?utm_source=github&utm_medium=referral&utm_campaign=2023_Sep_truffle-sunset-2023_announcement_).
 
-In the decentralized realm of Web3, the emergence of tools designed to facilitate the crafting of smart contracts and DApps has transformed the developer experience. Leading the pack are HardHat, Truffle, and Foundry. This comprehensive guide delves into their evolution, technical functionalities, and practical use cases.
+
 
 **TL;DR**
 
@@ -57,7 +58,7 @@ A quick comparison among main smart contract tools: Truffle, Hardhat and Foundry
 | **Better Fit For** | Projects requiring advanced TypeScript integration and a rich plugin ecosystem. | Multi-chain projects and those prioritizing comprehensive development tools and security. | Developers targeting Substrate and Polkadot ecosystems, and those needing fast testing and innovative testing features. |
 
 
-### A Glimpse into Their Evolution
+### A Glimpse into The Evolution of Most Popular Web3 Frameworks
 
 -   **Truffle**: As the pioneering smart contract framework, Truffle blazed the trail, introducing an integrated ecosystem for developers.
 
@@ -201,4 +202,4 @@ Should one aim to launch a parachain on Polkadot, Foundry's Substrate Node Templ
 To Conclude:
 ------------
 
-The choice between HardHat, Truffle, or Foundry hinges on your specific project needs and development preferences. As Web3 continues its meteoric rise, these dynamic frameworks promise to continually reshape the contours of the developer journey.
+The choice between HardHat, Truffle, or Foundry hinges on your specific project needs and development preferences. As the blockchain industry continues its meteoric rise, these dynamic web3 frameworks promise to continually reshape the contours of the developer journey.
