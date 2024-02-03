@@ -10,6 +10,7 @@ status: publish
 categories:
 - In-Depth
 tags: []
+toc: true
 permalink: "/articoli/cosa-sono-gli-smart-contract-definizione-ed-esempi/"
 featured_image: featured_images/copertinasmartcontract-min.png
 ---
@@ -19,6 +20,7 @@ Gli smart contract sono una nuova categoria di programmi software legati alle cr
 
 * TOC
 {:toc}
+
 
 
 E' bene considerare che gli smart contract sono un caso di misnaming. Essi infatti non sono legalmente dei contratti e non sono neanche smart se per smart intendiamo qualcosa in grado di prendere decisioni sulla base di informazioni ridotte o insufficienti.
