@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cosa sono gli smart contract, definizione ed esempi
+title: Test
 date: 2023-10-15 10:29:19.000000000 +02:00
 type: post
 toc: true
