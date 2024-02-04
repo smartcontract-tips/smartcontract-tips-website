@@ -32,6 +32,29 @@ Lo stesso Vitalik Buterin, uno dei fondatori di Ethereum, ha ammesso che la scel
 
 Gli smart contract sono programmi dunque ma l'aspetto economico e l'aspetto tecnologico sono legati in modo molto stretto. Un errore nella logica o nell'implementazione di uno smart contract può causare un danno diretto con possibile distruzione della quantità di criptovaluta coinvolta.
 
+
+## Quale può essere un esempio di smart contract
+
+Partiamo con tre esempi semplici e poi più in fondo nell'articolo ne vedremo altri con maggiori dettagli.
+
+### Esempio di smart contract 1: i token fungibili
+
+> Voglio costruire un sistema di loyalty basato su un token che permette a chi lo accumula di avere sconti e benefici sulla mia piattaforma.
+
+Questo è il classico esempio di token fungibile che può essere definito dall'utente (in questo caso lo sviluppatore) e che diventa a tutti gli effetti come una moneta privata ma interoperabile con i wallet della blockchain. Come vedremo ci sono vari standard di smart contract per token di questo tipo, il più famoso e diffuso si chiama [ERC20](https://ethereum.org/developers/docs/standards/tokens/erc-20).
+
+
+### Esempio di smart contract 2: i token non fungibili (NFT)
+
+I Non Fungible Token (NFT) sono oggetti digitali unici e collezionabili, essi hanno invaso le cronache negli anni 2021 e 2022 per la loro immensa popolarità. Questi token sono anch'essi degli smart contract che permettono di essere scambiati tra utenti attraverso i wallet e che hanno la possibilità anche di incorporare o linkare degli asset digitali esterni come ad esempio immagini o suoni, garantendo una forma di "notarizzazione" degli stessi. Qui [una panoramica delle possibili applicazioni degli NFT](https://tomatosrl.com/blog/practical-application-nft-business.html)
+
+
+### Esempio di smart contract 3: l'escrow
+
+La logica di escrow è ben nota nel mondo delle vendite immobiliari, almeno nel mondo anglosassone e un po' meno da noi. Ma il concetto è quello del deposito a garanzia con un agente terzo, banca o notaio, che ha il compito di eseguire il pagamento solo se sono soddisfatti i requisiti dell'affare.
+Gli smart contract permettono di eseguire questa logica quando i pagamenti sono effettuati con cripto valute. Qui un [esempio di applicazione degli smart contract alla logica di escrow](https://uniscrow.com).
+
+
 ## Smart contract in Bitcoin
 
 
