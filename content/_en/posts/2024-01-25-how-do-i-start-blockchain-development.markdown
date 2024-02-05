@@ -22,8 +22,8 @@ But with so much confusion about blockchain, especially in its development, skil
 
 Here's the good news: You don't need a degree in computer science to understand and develop blockchain. We'll simplify blockchain technology and its development, removing any obstacles that may be stopping you from a successful career as a developer.
 
-## What Is a Blockchain?
 
+## What Is a Blockchain?
 
 A blockchain is a database or digital ledger that stores and organizes information. Unlike traditional databases that use tables with rows and columns, blockchains organize data into blocks, each with a limited storage capacity. When a block is full, it closes and connects to the preceding one using cryptography, creating a chain.
 
@@ -99,6 +99,24 @@ Blockchain technology is always evolving and learning never stops. Here's how yo
 -   Follow industry leaders and influencers sharing valuable insights and news.
 
 -   Subscribe to relevant blogs and publications, read white papers on cutting-edge blockchain projects, and participate in online hackathons to test your skills and learn from others.
+
+
+## Technical skills are not enough: Remember to be human
+
+Blockchain developers, like any professionals in the technology sector, need a blend of both technical expertise and soft skills to truly excel in their field. The rapid pace of blockchain technology's evolution demands developers who are not only proficient in coding and system design but also adept in various non-technical skills that facilitate effective communication, collaboration, and project management. Here's why both sets of skills are crucial:
+
+### Technical Skills
+- **Essential for Development**: Proficiency in programming languages (like Solidity for Ethereum-based applications, or Python and JavaScript for blockchain development), understanding of blockchain protocols, and knowledge of cryptographic principles are fundamental.
+- **Innovation and Problem Solving**: The ability to innovate and solve complex problems is rooted in deep technical knowledge, which is critical in a field that is as fast-evolving and as technically challenging as blockchain.
+
+### Soft Skills
+- **Communication**: Clear communication is essential for explaining complex blockchain concepts to non-technical team members, stakeholders, and potential users. It's also vital for effective teamwork and collaboration.
+- **Teamwork and Collaboration**: Blockchain projects often require multidisciplinary teams. Developers must work alongside individuals with varied expertise, from legal professionals understanding blockchain's regulatory implications to business analysts assessing market needs.
+- **Adaptability**: The blockchain space is rapidly changing, with new technologies, protocols, and use cases emerging regularly. Developers need to be adaptable, ready to learn new skills, and open to changing project requirements.
+- **Problem-solving**: Beyond technical problem-solving, developers often face challenges that require creative thinking and strategic planning, such as optimizing blockchain applications for speed and efficiency or addressing security vulnerabilities.
+- **Leadership and Project Management**: As developers progress in their careers, the ability to lead projects, manage teams, and navigate the complexities of blockchain application development from conception to deployment becomes increasingly important.
+
+In essence, while technical acumen forms the core of a blockchain developer's skill set, soft skills are indispensable for career advancement, effective collaboration, and the successful implementation of blockchain projects. The integration of technical expertise with strong interpersonal abilities facilitates innovation, enhances team dynamics, fosters a culture of continuous learning, and contributes to the development of blockchain solutions that meet both technical and user
 
 ## Build Your Future, Block by Block
 
