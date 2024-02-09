@@ -173,6 +173,38 @@ Dove S' è lo stato della blockchain successivo alla transazione TX.
 
 A differenza di Bitcoin, Ethereum non esclude la possibilità di scrivere codice contenente cicli di iterazione, anzi fa proprio della Turing completezza un fattore distintivo rispetto a Bitcoin. Inoltre definisce un modello di computazione stateful, ovvero i suoi script possono avere visibilità sia dei registri in memoria interni, che chiamiamo variabili di stato, che di variabili esterne agli stessi script ma legate allo stato generale della blockchain come ad esempio il saldo di un determinato account, il numero di blocco precedente, il suo timestamp e così via.
 
+
+
+## Come si scrive uno smart contract
+
+Da un punto di vista operativo ogni nodo Ethereum mette in esecuzione una Ethereum Virtual Machine (EVM), ovvero un modulo software in grado di emulare il comportamento di uno pseudo-processore dotato di istruzioni elementari che possono compiere operazioni aritmetiche, crittografiche e di controllo del flusso di esecuzione come IF e cicli FOR. Senza entrare nei dettagli tecnici della EVM, diciamo semplicemente che è come una CPU ma virtuale, ed è dedicata all'esecuzione di un set di istruzioni pensate per l'esecuzione di codice in blockchain e non un set di istruzioni "general purpose" come quelle ad esempio eseguite da un PC.
+
+Il linguaggio macchina finale eseguito dalla EVM sarebbe costituito solo da numeri (bytecode) e come tale poco leggibile e non sarebbe utile riportarne qui un esempio. I programmatori utilizzano un linguaggio detto di alto livello che possa essere successivamente tradotto in istruzioni macchina elementari da un apposito software chiamato "compilatore". 
+
+![Write Compile and Deploy a Smart Contract](/assets/images/write-compile-deploy.png)
+*source @lightrainstech*
+
+Tra questi linguaggi di alto livello, quello che va per la maggiore su Ethereum è il linguaggio Solidity ed un semplice contratto potrebbe essere scritto come segue:
+
+```
+pragma solidity >=0.4.0 <0.6.0;
+contract SimpleStorage {
+   uint storedData;
+   function set(uint x) public {
+      storedData = x;
+   }
+   function get() public view returns (uint) {
+      return storedData;
+   }
+}
+```
+
+Nell'esempio precedente il contratto di nome SimpleStorage dichiara di contenere un registro chiamato ```storedData```, di tipo "intero" senza segno e inizializzato al valore zero e poi fornisce anche una funzione ```set(uint x)``` per assegnare un valore a tale registro attraverso una transazione.
+
+L'esempio riportato è minimalista e privo di qualsiasi utilità se non quella di mostrare pochi elementi della sintassi. 
+
+Gli smart contract, sebbene in genere non lunghissimi, possono essere costituiti da centinaia o migliaia di linee di codice. Naturalmente lo spazio occupato dallo smart contract durante la sua esecuzione, spazio che include anche il suo codice eseguibile, è un costo per la rete e come tale viene tassato. Questo pone agli sviluppatori un ulteriore requisito, quello di scrivere smart contract brevi e compatti oltreché **sicuri**.
+
 ## Come funziona uno smart contract nei dettagli
 
 
@@ -180,20 +212,7 @@ Quando un miner riceve una transazione indirizzata ad un contratto, se tale rich
 
 Questa esecuzione appare terribilmente inefficiente  ma risulta essere praticamente inarrestabile, infatti una volta che il contratto è in esecuzione questo non può essere interrotto o sospeso da nessuno a meno che tali stati di interruzione e sospensione non siano stati previsti dai suoi programmatori. Questa caratteristica rende gli smart contract resistenti alla censura. Tale resistenza in realtà dipende dalla capacità della blockchain sottostante di assorbire un attacco, anzi più in generale possiamo dire che uno smart contract potrà essere resistente al massimo quanto lo è la blockchain in cui viene eseguito ma in realtà lo sarà di meno in quanto le istruzioni e la logica dello smart contract potrebbero contenere errori di programmazione e risultare quindi meno sicuri della blockchain sottostante. In una rete di fatto controllata da poche entità, qualunque programma potrebbe essere fermato o manipolato facilmente se gli attori che governano il sistema si mettono d'accordo. La varietà e la quantità dei partecipanti ad una rete e alla scrittura della sua blockchain sono fattori essenziali per garantirne la sicurezza. Per tale motivo l'esecuzione di smart contract su una blockchain privata, di consorzio o, come spesso accade, denominata ledger distribuito (DL) in contrapposizione alle blockchain di tipo pubblico, non può essere considerata né immutabile né resistente alla censura.
 
-Da un punto di vista operativo ogni nodo Ethereum mette in esecuzione una Ethereum Virtual Machine (EVM), ovvero un modulo software in grado di emulare il comportamento di uno pseudo-processore dotato di istruzioni elementari che possono compiere operazioni aritmetiche, crittografiche e di controllo del flusso di esecuzione come IF e cicli FOR. Senza entrare nei dettagli tecnici della EVM, diciamo semplicemente che è come una CPU ma virtuale, ed è dedicata all'esecuzione di un set di istruzioni pensate per l'esecuzione di codice in blockchain e non un set di istruzioni "general purpose" come quelle ad esempio eseguite da un PC.
 
-## Come si scrive uno smart contract
-
-
-Il linguaggio macchina finale eseguito dalla EVM sarebbe costituito solo da numeri (bytecode) e come tale poco leggibile e non sarebbe utile riportarne qui un esempio. I programmatori utilizzano un linguaggio detto di alto livello che possa essere successivamente tradotto in istruzioni macchina elementari da un apposito software chiamato "compilatore". Tra questi linguaggi di alto livello, quello che va per la maggiore su Ethereum è il linguaggio Solidity ed un semplice contratto potrebbe essere scritto come segue:
-
-> contract Hello{
->
-> uint public x=0;
->
-> }
-
-Nell'esempio precedente il contratto di nome Hello dichiara di contenere un registro chiamato x, di tipo "intero" senza segno e inizializzato al valore zero. L'esempio riportato è minimalista e privo di qualsiasi utilità se non quella di mostrare pochi elementi della sintassi. Gli smart contract, sebbene in genere non lunghissimi, possono essere costituiti da centinaia o migliaia di linee di codice. Naturalmente lo spazio occupato dallo smart contract durante la sua esecuzione, spazio che include anche il suo codice eseguibile, è un costo per la rete e come tale viene tassato. Questo pone agli sviluppatori un ulteriore requisito, quello di scrivere smart contract brevi e compatti oltreché **sicuri**.
 
 ## Smart contract e gas
 
