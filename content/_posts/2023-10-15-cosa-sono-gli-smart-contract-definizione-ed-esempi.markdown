@@ -23,12 +23,24 @@ Gli smart contract sono una nuova categoria di programmi software legati alle cr
 
 
 
-E' bene considerare che gli smart contract sono un caso di misnaming. Essi infatti non sono legalmente dei contratti e non sono neanche smart se per smart intendiamo qualcosa in grado di prendere decisioni sulla base di informazioni ridotte o insufficienti.
+La prima menzione al termine *Smart Contract* la dobbiamo a Nick Szabo nel lontano 1994.
+
+> *A smart contract is a computerized transaction protocol that executes the terms of a contract. The general objectives of smart contract design are to satisfy common contractual conditions (such as payment terms, liens, confidentiality, and even enforcement), minimize exceptions both malicious and accidental, and minimize the need for trusted intermediaries. Related economic goals include lowering fraud loss, arbitration and enforcement costs, and other transaction costs
+[Nick Szabo](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html)*
+
+
+Come vedremo di seguito, la prassi e l'implementazione del concetto di smart contract ha raggiunto una grande popolarità con la nascita della rete Ethereum, nata proprio con lo scopo di permettere agli utenti di scrivere e mettere in esecuzione sui nodi della blockchain del codice contenente delle business logic arbitrarie.
+
+E' bene considerare che gli smart contract come realizzati nella rete Ethereum sono un caso di misnaming. Essi infatti non sono legalmente dei contratti e non sono neanche smart se per smart intendiamo qualcosa in grado di prendere decisioni sulla base di informazioni ridotte o insufficienti.
 
 > **Smart contracts are neither smart nor contracts.**
 
 
-Lo stesso Vitalik Buterin, uno dei fondatori di Ethereum, ha ammesso che la scelta di chiamare Smart Contract i programmi in esecuzione su Ethereum è stato probabilmente un errore e che forse il termine tecnicamente più adatto sarebbe dovuto essere "persistent script".
+Lo stesso Vitalik Buterin, uno dei fondatori di Ethereum, ha ammesso che la scelta di chiamare Smart Contract i programmi in esecuzione su Ethereum è stato probabilmente un errore e che [forse il termine tecnicamente più adatto sarebbe dovuto essere "persistent script"](https://twitter.com/VitalikButerin/status/1051160932699770882).
+
+![persistent-script](/assets/images/persistent-script.png)
+
+
 
 Gli smart contract sono programmi dunque ma l'aspetto economico e l'aspetto tecnologico sono legati in modo molto stretto. Un errore nella logica o nell'implementazione di uno smart contract può causare un danno diretto con possibile distruzione della quantità di criptovaluta coinvolta.
 
