@@ -48,7 +48,8 @@ Unlock the potential of UniSat Wallet's latest feature – the ability to transf
 
 Before you begin, confirm that your UniSat Wallet is running the last version. Navigate to the 'Settings' tab, scroll to the bottom, and verify the version number to ensure compatibility.
 
-![image](https://hackmd.io/_uploads/Hk_3YdQjp.png)
+![image](/assets/hackmd_uploads/upload_fa860415f8917f2d23bc8e444bb3635e.png)
+
 #### 2. Explore Your brc-20 Assets
 
 Switch to the 'Home' tab and click on the 'brc-20' tag. Each card represents a specific brc-20 token, such as 'ordi,' housing various associated inscriptions. Note the two balance components: 'Transferable' (immediately transferable) and 'Available' (requires inscription into a TRANSFER inscription for transfer).
@@ -57,13 +58,13 @@ Switch to the 'Home' tab and click on the 'brc-20' tag. Each card represents a s
 
 Click on a specific brc-20 token to view associated inscriptions. Green inscriptions indicate transferable amounts. If none are visible, follow the steps below to inscribe a TRANSFER.
 
-![image](https://hackmd.io/_uploads/B1EM5dQi6.png)
+![image](/assets/hackmd_uploads/upload_d5f298eaaa13bafbe0ef18ac10d615fd.png)
 
 #### 4. Initiate the TRANSFER Process
 
 Click 'TRANSFER' to enter the transfer process. All transferable inscriptions are listed for you to choose from. The transfer amount is calculated based on the chosen amounts of TRANSFER inscriptions.
 
-![image](https://hackmd.io/_uploads/r1qScuXsa.png)
+![image](/assets/hackmd_uploads/upload_93d2e99909b60f01249514ad358e303a.png)
 
 #### 5. Prepare TRANSFER
 
@@ -72,7 +73,7 @@ Click 'Inscribe TRANSFER' and input the desired amount. Choose a suitable fee ra
  
 Preview the details of the TRANSFER inscription and click 'Pay & Inscribe' to execute. You can review and modify values before submitting.
 
-![image](https://hackmd.io/_uploads/rJqwcumjp.png)
+![image](/assets/hackmd_uploads/upload_3fd4c7dbe977f7a74e00920389f605e7.png)
 
 
 #### 6. Select TRANSFER Inscriptions
@@ -83,11 +84,13 @@ Choose TRANSFER inscriptions and proceed by entering the receiver's address or .
 #### 7. Confirm and Send
 Preview the transaction details before sending. Click 'Sign & Send' to execute the transfer operation.
 
-![image](https://hackmd.io/_uploads/BJSYcO7sT.png)
+![image](/assets/hackmd_uploads/upload_586ca7657770a4d2699c8785d0fe03e8.png)
+
+
 
 #### 8. Congratulations! The Transfer is Complete
 
-![image](https://hackmd.io/_uploads/BJzcYO7ip.png)
+![image](/assets/hackmd_uploads/upload_ea0333e822790c3be4510b228d133f42.png)
 
 Your brc-20 tokens have been successfully transferred using UniSat Wallet. 
 ## Security and Audits
