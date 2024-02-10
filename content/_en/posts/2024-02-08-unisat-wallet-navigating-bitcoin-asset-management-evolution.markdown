@@ -9,7 +9,7 @@ categories:
 - Wallet
 - In-Depth
 
-tags: [Unisat]
+tags: [Unisat, Wallet]
 
 Description: Unisat Wallet, a specialized wallet designed for managing assets on the Bitcoin network, including BRC-20 tokens and Ordinals/Inscriptions. This wallet marks a significant departure from traditional Ethereum-based solutions, offering users a unique set of features tailored to Bitcoin's emerging asset landscape
 ---
