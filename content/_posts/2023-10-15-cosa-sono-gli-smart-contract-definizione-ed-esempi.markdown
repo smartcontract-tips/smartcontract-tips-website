@@ -31,7 +31,7 @@ La prima menzione al termine *Smart Contract* la dobbiamo a Nick Szabo nel lonta
 
 Come vedremo di seguito, la prassi e l'implementazione del concetto di smart contract ha raggiunto una grande popolarità con la nascita della rete Ethereum, nata proprio con lo scopo di permettere agli utenti di scrivere e mettere in esecuzione sui nodi della blockchain del codice contenente delle business logic arbitrarie.
 
-E' bene considerare che gli smart contract come realizzati nella rete Ethereum sono un caso di misnaming. Essi infatti non sono legalmente dei contratti e non sono neanche smart se per smart intendiamo qualcosa in grado di prendere decisioni sulla base di informazioni ridotte o insufficienti.
+E' bene considerare che gli smart contract come realizzati nella rete Ethereum sono un caso di misnaming. Essi infatti [non sono legalmente dei contratti e non sono neanche smart](/it/post/smart-contract-significato-del-termine.html) se per smart intendiamo qualcosa in grado di prendere decisioni sulla base di informazioni ridotte o insufficienti.
 
 > **Smart contracts are neither smart nor contracts.**
 
