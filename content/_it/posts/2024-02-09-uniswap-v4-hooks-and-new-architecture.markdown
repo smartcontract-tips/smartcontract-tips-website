@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Uniswap v4: Come cambia?"
+title: "Uniswap v4: Come cambierà l'exchange decentralizzato più famoso?"
 date: 2024-02-09 
 type: post
 
@@ -30,6 +30,9 @@ Nel modello a istanze multiple di Uniswap V3, per fare uno swap tra ETH e DAI us
 Fare uno swap attraverso pool intermedie in Uniswap V3 comporta un costo in termini di fee. Ogni volta che fai uno swap in una pool, paghi una commissione (fee) basata sulla quantità di token scambiati. Quindi, se passi da ETH a USDC e poi da USDC a DAI, pagherai due volte le commissioni: una per ogni transazione. Questo può aumentare il costo complessivo dello swap rispetto a uno swap diretto in una singola pool, se fosse disponibile.
 
 Nel modello singleton di Uniswap V4, **la situazione migliora grazie all'architettura più efficiente in termini di gas** e alla possibilità di personalizzare le fee attraverso gli "hooks". Questo modello può ridurre i costi delle transazioni complessive, anche quando si effettuano scambi attraverso pool intermedie, poiché l'infrastruttura ottimizzata mira a ridurre le spese di gas per ogni operazione.
+
+![uniswap v4](/assets/images/uniswap4-1.jpg)
+*source uniswap.com*
 
 ## Cosa sono gli hook di Uniswap v4?
 
