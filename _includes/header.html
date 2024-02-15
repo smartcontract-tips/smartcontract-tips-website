@@ -1,21 +1,25 @@
 
 <style>
-.my-header {
-  position: sticky;
+
+.my-header{  background-color: #5e42a6; }
+@media screen and (min-width: 600px) {
+  .page-link{
+    color: #fdfdfd !important;
+  }
+  .my-header {
+  position: sticky; 
   top: 0;
   width: 100%;
   z-index: 1000; /* To ensure the header stays on top of other content */
   /* Add other styling as needed (background, padding, etc.) */
   
-  background-color: #5e42a6;
   cursor: default;
   padding: 1.75em 2em;  
+}  
 }
-.page-link{
-  color: #fdfdfd !important;
-}
+
 </style>
-<header class="my-header">
+<header class="my-header site-header">
     <div class="wrapper">
       {%- assign default_paths = site.pages | map: "path" -%}
       {%- assign page_paths = site.header_pages | default: default_paths -%}
