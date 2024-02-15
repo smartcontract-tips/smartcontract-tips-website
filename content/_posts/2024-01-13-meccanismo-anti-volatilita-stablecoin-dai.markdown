@@ -9,8 +9,10 @@ categories:
 
 excerpt: Il meccanismo anti-volatilità usato dalla stablecoin DAI è basato sul principio di generazione del token a fronte di un deposito di altri asset volatili dentro uno smart contract. Il deposito deve essere sovra-collateralizzato per garantire la stabilità ed i liquidatori sono i soggetti con appetito di rischio tale da acquisire gli asset volatili posti a garanzia della stablecoin.
 permalink: "/articoli/meccanismo-anti-voltalitita-stablecoin-dai"
-featured_image: featured_images/Screenshot-2023-12-26-alle-11.59.12.png
+
 ---
+
+![dai logo](/assets/images/dai.png)
 
 La stablecoin DAI è stata creata dalla MakerDAO, un'organizzazione autonoma decentralizzata (DAO). Il protocollo alla base di DAI, noto come Maker Protocol, è stato sviluppato da Rune Christensen, co-fondatore della MakerDAO. Il protocollo Maker consente a chiunque di produrre la stablecoin DAI utilizzando una varietà di criptovalute come collaterale. Questo approccio decentralizzato e basato su Ethereum rende DAI unica tra le stablecoin, in quanto è sostenuta non da valuta fiat, ma da posizioni debitorie collaterali in criptovalute.
 
@@ -33,7 +35,10 @@ MakerDAO, un'organizzazione autonoma decentralizzata (DAO), governa il Maker Pro
 
 
 
-Per generare DAI, gli utenti depositano la loro criptovaluta in questi vault, ricevendo in cambio DAI​​​​​​. [link](https://moneymade.io/learn/article/maker-protocol-dai)
+Per generare DAI, gli utenti depositano la loro criptovaluta in questi vault, ricevendo in cambio DAI​​​​​​. 
+
+![maker dao valuation](/assets/images/maker-dao-valuation.webp)
+*Make DAO Valuation [(source Messari)](https://messari.io/article/makerdao-valuation)*
 
 ## Rapporto di liquidazione
 
