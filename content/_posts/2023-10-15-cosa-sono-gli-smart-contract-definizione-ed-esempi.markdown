@@ -61,6 +61,9 @@ Questo è il classico esempio di token fungibile che può essere definito dall'u
 I Non Fungible Token (NFT) sono oggetti digitali unici e collezionabili, essi hanno invaso le cronache negli anni 2021 e 2022 per la loro immensa popolarità. Questi token sono anch'essi degli smart contract che permettono di essere scambiati tra utenti attraverso i wallet e che hanno la possibilità anche di incorporare o linkare degli asset digitali esterni come ad esempio immagini o suoni, garantendo una forma di "notarizzazione" degli stessi. Qui [una panoramica delle possibili applicazioni degli NFT](https://tomatosrl.com/blog/practical-application-nft-business.html)
 
 
+![fungible vs non fungible assets](/assets/images/fungible-non-fungible.png)
+
+
 ### Esempio di smart contract 3: l'escrow
 
 La logica di escrow è ben nota nel mondo delle vendite immobiliari, almeno nel mondo anglosassone e un po' meno da noi. Ma il concetto è quello del deposito a garanzia con un agente terzo, banca o notaio, che ha il compito di eseguire il pagamento solo se sono soddisfatti i requisiti dell'affare.
