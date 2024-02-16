@@ -34,6 +34,7 @@ github_username:  ddbit
 # Build settings
 theme: minima
 #remote_theme: jekyll/minima
+markdown: kramdown
 
 minima:
   skin: dark
