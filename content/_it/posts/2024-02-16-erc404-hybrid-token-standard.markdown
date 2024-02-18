@@ -16,7 +16,7 @@ Il post introduce ERC-404, uno standard di token sperimentale su Ethereum che un
 
 ![cover](/assets/images/erc-404-cover.png)
 
-## Cosa significa "Hybrid Token Standard"?
+## Cosa significa "Hybrid Token Standard": Fungibile e Infungibile allo stesso tempo?
 
 Un "hybrid token standard" (standard di token ibrido) si riferisce a un formato di token digitale su una blockchain che combina le caratteristiche di due o più tipi diversi di token, tipicamente token fungibili e non fungibili (NFT). In altre parole, è uno standard di tokenizzazione che integra le funzionalità e i benefici sia dei token fungibili, come le criptovalute (per esempio, Ether su Ethereum), che possono essere scambiati uno per uno in modo indistinguibile, sia dei token non fungibili, che rappresentano beni unici e collezionabili digitali con proprietà distintive.
 
