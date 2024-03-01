@@ -25,7 +25,7 @@
 					<description>
                         {% if post.featured_image %}
                         <![CDATA[
-                                <br/><br/><img src='{{ post.featured_image}}' ><br/><br/>
+                                <br/><br/><img src='{{ site.url }}{{ site.baseurl }}{{ post.featured_image }}' ><br/><br/>
                         ]]>
                         {% endif %}
                     {{ post.excerpt | xml_escape }}

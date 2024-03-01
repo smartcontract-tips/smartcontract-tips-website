@@ -24,8 +24,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Questo sito promuove la cultura della sicurezza informatica nel web3.
   This website advocates the practices of secure coding in web3.
   Donate-to 0x850521064b85587C376B709deA1687ae8f3F8640 on any EVM chain  ❤️ 🙏.  
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://smartcontract.tips" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: digitaldavide
 github_username:  ddbit
 
