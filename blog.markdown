@@ -8,7 +8,6 @@ permalink: /blog
 
 # Articoli / Articles
 
-![A library but futuristic](blog.png)
 
 <script>
   function categoryClick(category) {
@@ -116,7 +115,7 @@ Academy
 <ul>
 
   {% for collection in site.collections %}
-      {% if collection.label == 'en' %}
+      {% if collection.label == 'it' or collection.label == 'en' %}
           {% for post in site[collection.label] %}
           <li>
             <div>
