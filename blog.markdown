@@ -148,11 +148,13 @@ permalink: /blog
       <div class="container">
         <div class="left-column">
           <!-- Sostituire 'image-src.jpg' con il percorso della tua immagine -->
-          {% if post.featured_image %}
-          <img src="{{ post.featured_image }}" alt="cover image">
-          {% else %}
-          <img src="/assets/images/awesome-post-placeholder.png" alt="cover image">
-          {% endif %}
+          <a href="{{ post.url }}" >
+            {% if post.featured_image %}
+            <img src="{{ post.featured_image }}" alt="cover image">
+            {% else %}
+            <img src="/assets/images/awesome-post-placeholder.png" alt="cover image">
+            {% endif %}
+          </a>
         </div>
         <div class="right-column">
           <a class="post-title" href="{{ post.url }}" >
