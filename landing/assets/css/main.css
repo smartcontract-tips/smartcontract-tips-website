@@ -3911,3 +3911,48 @@ input, select, textarea {
 			}
 
 		}
+
+/* added by davide for card layout **/
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 0;
+    overflow: hidden;
+    margin: 10px; /* Spazio intorno alle card per non farle attaccare */
+    flex-basis: calc(33.333% - 20px); /* Base per tre card per riga escludendo il gap */
+    flex-grow: 1;
+    min-width: 320px; /* Larghezza minima simile a quella di un telefono cellulare */
+    max-width: 100%; /* Permette alle card di espandersi se c'è più spazio disponibile */
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+  }
+  
+  .card-description {
+    margin: 0 0 15px 0;
+  }
+  
+  .card-footer {
+    /* font-size: 16px;  Font più piccolo per la data */
+    text-align: right;
+    padding: 0 15px 10px 15px; /* Padding per allineare con il contenuto sopra */
+    color: orange; /* Colore del testo un po' più tenue */
+  }
