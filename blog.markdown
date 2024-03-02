@@ -19,7 +19,7 @@ permalink: /blog
     var paramValue = category;
     
     // Construct the new URL with the parameter
-    var newUrl = `${baseUrl}?${paramName}=${paramValue}`;
+    var newUrl = category=="All" ? `${baseUrl}` : `${baseUrl}?${paramName}=${paramValue}`;
     
     // Change the location of the window to reload and add the parameter
     window.location.href = newUrl;
@@ -90,74 +90,87 @@ permalink: /blog
       background-color: rgb(219 234 254/var(--tw-bg-opacity));
     }
 
+  .container {
+    display: flex;
+    margin-bottom: 25px;
+  }
+  
+  .left-column {
+    min-width: 200px;
+    width: 40%;
+  }
+  
+  .left-column img {
+    width: 90%;
+  }
+  
+  .right-column {
+    flex-grow: 1;
+  }
+  
+  .post-title {
+    /* Stili per il titolo, ad esempio: */
+    font-size: 24px;
+    font-weight: bold;
+  }
+
 </style>
 
 
-<button style="border: none; background-color: rgb(30,128,20); color: white;" onclick="categoryClick('In-Depth')">
-  In-Depth
-</button>
+{% assign articles = site.posts | concat: site['it'] | concat: site['en'] | sort: 'date' | reverse %}
+
+<!-- create categories array-->
+{% assign categories_array = "" | split:"|" %}
+
+{% for post in articles %}
+    {% for category in post.categories %}
+        {% assign categories_array = categories_array | push: category | uniq %}
+    {% endfor %}
+{% endfor %}
+
+<!--Output the categories-->
+{%- for category in categories_array -%}
+  <button style="border: none; background-color: rgb(30,128,20); color: white;" onclick="categoryClick('{{ category }}')">
+    {{ category }}
+  </button>
+{%- endfor -%}
+
 <button 
-  style="border: none; background-color: rgb(20,20,128); color: white;" onclick="categoryClick('English')">
-English
+  style="border: none; background-color: rgb(128,20,20); color: white;" onclick="categoryClick('All')">All
 </button>
-<button 
-  style="border: none; background-color: rgb(128,20,20); color: white;" onclick="categoryClick('Incident Report')">Incident Report
-</button>
-<button 
-  style="border: none; background-color: rgb(20,20,20); color: white;" onclick="categoryClick('Academy')">
-Academy
-</button>
+
 <hr/>
 <br/><br/>
 
-
-
-<ul>
-
-  {% for collection in site.collections %}
-      {% if collection.label == 'it' or collection.label == 'en' %}
-          {% for post in site[collection.label] %}
-          <li>
-            <div>
-              <a class="post-title" href="{{ post.url }}" >
-                {{ post.title }}
-              </a>
-            </div>
-            <div >{{ post.excerpt | strip_html | truncatewords:50 }}</div>
-            {% for cat in post.categories %} 
-              <a href="javascript:categoryClick('{{ cat }}')">
-                <span class="label">{{ cat }}
-                </span> 
-              </a>
-            {% endfor %}
-           <div class="post-date">{{ post.date | date: "%d %B %Y" }}</div>
-           
-           <br/><br/>
-          </li>
-              
-          {% endfor %}
-      {% endif %}
-  {% endfor %}
-
-
-  {% for post in site.posts %}
+  <ul style="list-style-type: none">
+    {% for post in articles %}
     <li>
-            <div>
-              <a class="post-title" href="{{ post.url }}" >
+      <div class="container">
+        <div class="left-column">
+          <!-- Sostituire 'image-src.jpg' con il percorso della tua immagine -->
+          {% if post.featured_image %}
+          <img src="{{ post.featured_image }}" alt="cover image">
+          {% else %}
+          <img src="/assets/images/awesome-post-placeholder.png" alt="cover image">
+          {% endif %}
+        </div>
+        <div class="right-column">
+          <a class="post-title" href="{{ post.url }}" >
                 {{ post.title }}
-              </a>
-            </div>
-            <div >{{ post.excerpt | strip_html | truncatewords:50 }}</div>
+          </a>
+          <div class="post-date"><i class="fa-regular fa-calendar"></i>
+          {{ post.date | date: "%d %B %Y" }}</div>
+          <p>{{ post.excerpt | strip_html | truncatewords:50 }}</p>
             {% for cat in post.categories %} 
               <a href="javascript:categoryClick('{{ cat }}')">
-                <span class="label">{{ cat }}
-                </span> 
+                <span class="label">{{ cat }}</span> 
               </a>
             {% endfor %}
-           <div class="post-date">{{ post.date | date: "%d %B %Y" }}</div>
-           
-           <br/><br/>
+          <!-- Qui puoi aggiungere altro contenuto se necessario -->
+        </div>     
+      </div>
+      
     </li>
-  {% endfor %}
-</ul>
+    {% endfor %}  
+  </ul>
 
