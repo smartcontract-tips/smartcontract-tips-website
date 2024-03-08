@@ -59,6 +59,11 @@ collections:
   en:
     output: true
     permalink: /:collection/:slug
+  authors:
+    people: true
+    output: true 
+    permalink: /:collection/:slug
+
 
 defaults:
   -
