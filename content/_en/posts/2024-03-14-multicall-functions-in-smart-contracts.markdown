@@ -16,6 +16,10 @@ In the Ethereum blockchain, a multicall transaction is a way to execute multiple
 
 If you have ventured to check the blockchain explorer for a Uniswap transaction you might have notices that the name of the function is an obscure ```multicall```.
 
+![etherscan screenshot](/pics/posts/etherscan-multicall.png)
+
+
+
 A multicall transaction is a way to execute multiple function calls across different smart contracts within a single transaction. This can significantly save on gas fees and reduce network congestion by batching together many actions into one.
 
 In the Ethereum blockchain, a multicall transaction is a way to execute multiple function calls across different smart contracts within a single transaction. This can significantly save on gas fees and reduce network congestion by batching together many actions into one. The Multicall pattern is especially useful for decentralized applications (dApps) that need to interact with several contracts simultaneously.
