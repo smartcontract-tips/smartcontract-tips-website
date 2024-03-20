@@ -8,12 +8,7 @@ categories:
 - In-Depth
 tags: [stablecoin]
 permalink: "/articoli/guida-stablecoin-cosa-sono-a-cosa-servono-paypal/"
-excerpt: Le stablecoin sono probabilmente una killer application delle blockchain,
-  sembra che la scena sia già sovraffollata, ora anche i governi stanno lavorando
-  su valute digitali non basate su blockchain (#cbdc). Le stablecoin private hanno
-  dimostrato che esiste una forte domanda di alternative per i pagamenti. USDT da solo
-  genera volumi significativi, superiori a quelli di ether e bitcoin messi insieme
-  almeno secondo il sito coinmarketcap.
+excerpt: Stablecoin cosa sono? Per quale caratteristica le stablecoin si differenziano dalle altre criptovalute? Da chi è emessa la stablecoin usdc. Di seguito una guida completa.
 
 featured_image: featured_images/copertinaguida.png
 toc: false
@@ -46,6 +41,8 @@ toc: false
 
 * TOC
 {:toc}
+
+Stablecoin cosa sono? Per quale caratteristica le stablecoin si differenziano dalle altre criptovalute? Da chi è emessa la stablecoin usdc. Proviamo a dare delle risposte in questa guida completa.
 
 La scena delle stablecoin nel 2023 è vibrante e affollata da molti progetti e tante menti brillanti stanno lavorando in questo campo. Cominciamo.
 
