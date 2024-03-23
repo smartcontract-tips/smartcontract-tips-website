@@ -50,6 +50,8 @@ GEM
       sass-embedded (~> 1.54)
     jekyll-seo-tag (2.8.0)
       jekyll (>= 3.8, < 5.0)
+    jekyll-tagging-related_posts (1.3.0)
+      jekyll (>= 3.9, < 5.0)
     jekyll-toc (0.18.0)
       jekyll (>= 3.9)
       nokogiri (~> 1.12)
@@ -158,6 +160,7 @@ DEPENDENCIES
   jekyll (~> 4.3.2)
   jekyll-feed (~> 0.12)
   jekyll-gist
+  jekyll-tagging-related_posts
   jekyll-toc
   minima (~> 2.5)
   tzinfo (>= 1, < 3)
