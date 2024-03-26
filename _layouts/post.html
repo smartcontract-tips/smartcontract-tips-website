@@ -57,4 +57,11 @@ layout: default
   </div>
   {% endif %}
 
+
+  <div style="background-color: antiquewhite; padding: 30px;">
+    {% assign author = site.authors | where: 'authorId', page.author | first %}
+    {% if author %}
+      {% include author.html name=author.name picture=author.picture web=author.web linkedin=author.linkedin bio=author.bio %}
+    {% endif %}
+  </div>
 </article>
