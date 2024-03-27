@@ -5,5 +5,5 @@ picture: /pics/authors/zaryab.jpeg
 web: "https://zaryabs.com"
 linkedin: "https://linkedin.com/in/zaryab-afser-97085b157"
 layout: author
-
+authorId: zaryab
 ---

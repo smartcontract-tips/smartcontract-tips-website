@@ -5,6 +5,6 @@ picture: /pics/authors/alessandro.jpeg
 web: "https://www.abeatbeyond.com/"
 linkedin: "https://www.linkedin.com/in/morandialessandro/"
 layout: author
-
+authorId: alessandro
 ---
 

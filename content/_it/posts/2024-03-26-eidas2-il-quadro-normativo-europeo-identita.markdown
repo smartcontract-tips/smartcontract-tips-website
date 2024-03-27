@@ -9,7 +9,7 @@ categories:
 - News
 
 tags: [identity, wallet, regulation]
-
+author: davide
 ---
 Parliamo di eIDAS2, la proposta legislativa dell'Unione Europea mirata a creare un ecosistema europeo di identificazione elettronica sicuro e sostenibile. Oggi, il Parlamento Europeo e il Consiglio dell'UE hanno raggiunto un accordo su un nuovo quadro per l'identità digitale europea, che include la regolamentazione sui portafogli di identità digitale
 

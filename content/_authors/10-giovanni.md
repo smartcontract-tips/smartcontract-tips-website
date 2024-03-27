@@ -5,5 +5,5 @@ picture: /pics/authors/giovanni.jpeg
 web: "https://www.radixgroup.it"
 linkedin: "https://www.linkedin.com/in/giovannicasu/"
 layout: author
-
+authorId: giovanni
 ---

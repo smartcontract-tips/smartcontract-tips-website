@@ -9,6 +9,7 @@ categories:
 
 tags: [CBDC, stablecoin]
 featured_image: /pics/fmt-16-9/digital-euro.jpg
+author: davide
 ---
 Euro digitale e CBDC, cosa sono e quando arrivano? Nel panorama delle criptovalute vengono spesso accomunate anche quelle che vengono chiamate CBDC, ovvero Central Bank Digital Currency. Tuttavia bisogna fare alcuni distinguo. Vediamo quali
 

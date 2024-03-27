@@ -36,6 +36,11 @@ layout: default
     <h1 class="post-title">{{ page.title | escape }}</h1>
   </header>
 
+  <div class="post-date"><i class="fa-regular fa-calendar"></i>
+    {{ page.date | date: "%d %B %Y" }}
+  </div>
+  <br>
+
   <div id="table-of-contents">
     {{ content | toc_only }}
   </div>
