@@ -6,9 +6,11 @@ type: post
 
 usemathjax: true
 
-category: DeFi
+category: Basic
 
-tags: [Uniswap, DeFi]
+tags: 
+    - Uniswap
+    - DeFi
 ---
 Le liquidity pool permettono a chiunque di diventare una specie di azionista di un exchange e ricavare delle commissioni dagli scambi effettuati dagli utenti.
 Questa possibilità potrebbe essere remunerativa, ma al tempo stesso comporta dei rischi. Non si tratta tanto del rischio di perdere il capitale, quanto piuttosto del rischio che parcheggiare dei fondi dentro una liquidity pool possa rendere meno di quanto renderebbe tenerli nel proprio wallet. Questo tipo di perdite si chiamano “impermanent loss” e sono in qualche modo specifiche per questa categoria di prodotti.

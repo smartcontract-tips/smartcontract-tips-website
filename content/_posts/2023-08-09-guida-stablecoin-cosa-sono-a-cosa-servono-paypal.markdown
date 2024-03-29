@@ -3,13 +3,14 @@ layout: post
 title: "Stablecoin: Una guida completa. Cosa sono e a cosa servono"
 date: 2023-08-09 11:06:04.000000000 +02:00
 type: post
+slug: guida-stablecoin
 
 category: In-Depth
 tags: [stablecoin]
 permalink: "/articoli/guida-stablecoin-cosa-sono-a-cosa-servono-paypal/"
 excerpt: Stablecoin cosa sono? Per quale caratteristica le stablecoin si differenziano dalle altre criptovalute? Da chi è emessa la stablecoin usdc. Di seguito una guida completa.
 
-featured_image: featured_images/copertinaguida.png
+featured_image: /featured_images/copertinaguida.png
 toc: false
 ---
 
@@ -156,8 +157,7 @@ Ecco come funziona:
 
 **Tasso di stabilità**: MakerDAO utilizza anche un "tasso di stabilità", che è essenzialmente un tasso di interesse che gli utenti devono pagare quando rimborsano i loro DAI. Questo tasso può essere regolato per influenzare il costo della generazione di DAI, che a sua volta può aiutare a mantenere il valore di DAI stabile.
 
-{% include infobox.html message="Per approfondire la stablecoin DAI segui il link di seguito" link="/articoli/meccanismo-anti-voltalitita-stablecoin-dai" %}
-
+{% include related.html message="Per approfondire la stablecoin DAI segui il link" slug="dai" %}
 
 Caso studio: Terra/Luna ed il loro terrificante crollo
 ======================================================

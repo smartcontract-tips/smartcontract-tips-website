@@ -43,7 +43,9 @@ plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-toc
-  - jekyll-tagging-related_posts
+
+
+
 
 landing_path: landing
 

@@ -5,9 +5,11 @@ date: 2024-02-09
 type: post
 
 
-category: DeFi
+category: Basic
 
-tags: [Uniswap, DeFi]
+tags: 
+ - Uniswap
+ - DeFi
 ---
 
 Uniswap V4 introduce funzionalità innovative come gli "hook" personalizzabili per l'aggiustamento dinamico delle commissioni e funzionalità migliorate nelle pool di liquidità, insieme a un'architettura "singleton model" efficiente in termini di costi. Pone l'accento sull'efficienza del gas e sulla personalizzazione, con l'obiettivo di rivoluzionare il trading decentralizzato. Il rilascio è previsto dopo l'aggiornamento Cancun di Ethereum nel primo trimestre del 2024, sotto una Business Source License che passerà a GPL dopo quattro anni. Questi aggiornamenti promettono trading DeFi e gestione della liquidità più flessibili ed economici.

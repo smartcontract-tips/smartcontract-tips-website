@@ -40,6 +40,14 @@ layout: default
   </div>
   <br>
 
+  <div style="color: darkgrey;">
+    {%- for tag in page.tags -%}
+      <i class="fa-solid fa-tag"></i> &nbsp; {{ tag }} &nbsp;
+    {%- endfor -%}
+  </div>
+  <br>
+
+
   <div id="table-of-contents">
     {{ content | toc_only }}
   </div>
@@ -49,17 +57,6 @@ layout: default
     {{ content }}
   </div>
 
-
-  {% if site.related_posts.size >= 1 %}
-  <div>
-    <h3>Related Posts</h3>
-    <ul>
-      {% for related_post in site.related_posts limit: 5 %}
-      <li><a href="{{ related_post.url }}">{{ related_post.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
-  {% endif %}
 
 
   <div style="background-color: antiquewhite; padding: 30px;">

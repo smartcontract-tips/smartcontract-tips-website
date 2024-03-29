@@ -34,5 +34,4 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 
 gem 'jekyll-gist'
-gem "jekyll-tagging-related_posts"
 gem 'jekyll-toc'

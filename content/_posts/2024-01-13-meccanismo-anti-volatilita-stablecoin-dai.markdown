@@ -4,10 +4,11 @@ title: Qual'è il meccanismo anti-volatilità usato dalla stablecoin DAI
 date: 2024-01-13 10:59:49.000000000 +01:00
 
 category: In-Depth
+slug: dai
 
 excerpt: Il meccanismo anti-volatilità usato dalla stablecoin DAI è basato sul principio di generazione del token a fronte di un deposito di altri asset volatili dentro uno smart contract. Il deposito deve essere sovra-collateralizzato per garantire la stabilità ed i liquidatori sono i soggetti con appetito di rischio tale da acquisire gli asset volatili posti a garanzia della stablecoin.
 permalink: "/articoli/meccanismo-anti-voltalitita-stablecoin-dai"
-
+featured_image: /assets/images/dai.png
 author: davide
 
 ---
@@ -28,11 +29,9 @@ MakerDAO, un'organizzazione autonoma decentralizzata (DAO), governa il Maker Pro
   padding: 25px;
 }
 </style>
-<div class="info">
-ℹ️ Abbiamo trattato le varie modalità di stabilizzazione possibili per le stablecoin in un precedente articolo:
-<a href="/articoli/guida-stablecoin-cosa-sono-a-cosa-servono-paypal/">Una guida alle Stablecoin</a><br/>
-</div>
 
+
+{% include related.html message="Per approfondire la stablecoin DAI segui il link" slug="guida-stablecoin" %}
 
 
 Per generare DAI, gli utenti depositano la loro criptovaluta in questi vault, ricevendo in cambio DAI​​​​​​. 
