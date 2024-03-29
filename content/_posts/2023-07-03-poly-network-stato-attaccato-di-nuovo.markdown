@@ -7,7 +7,7 @@ parent_id: '0'
 published: true
 password: ''
 status: publish
-category: Incident Report
+category: Case Study
 tags: []
 permalink: "/articoli/poly-network-stato-attaccato-di-nuovo/"
 excerpt: 'Il 2 luglio è avvenuto un attacco alla piattaforma di bridge cross-chain
