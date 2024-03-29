@@ -5,9 +5,7 @@ date: 2024-02-09
 type: post
 
 
-categories:
-- DeFi
-- In-Depth
+category: DeFi
 
 tags: [Uniswap, DeFi]
 ---

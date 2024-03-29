@@ -5,9 +5,7 @@ date: 2024-02-08
 type: post
 
 
-categories:
-- Wallet
-- In-Depth
+category: Wallet
 
 tags: [Unisat, Wallet]
 

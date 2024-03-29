@@ -5,8 +5,7 @@ layout: post
 date: 2024-03-06 
 type: post
 
-categories:
-- Basic
+category: Basic
 
 featured_image: assets/images/oracoli-cover-1.png
 tags: [Oracles]

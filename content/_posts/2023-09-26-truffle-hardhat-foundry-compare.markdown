@@ -8,8 +8,7 @@ parent_id: '0'
 published: true
 password: ''
 status: publish
-categories:
-- English
+category: English
 tags: []
 permalink: "/articoli/truffle-hardhat-foundry-compare/"
 featured_image: featured_images/Screenshot2023-09-27at01.20.42.png

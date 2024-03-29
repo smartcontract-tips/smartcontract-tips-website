@@ -4,8 +4,7 @@ title: "Stablecoin: Una guida completa. Cosa sono e a cosa servono"
 date: 2023-08-09 11:06:04.000000000 +02:00
 type: post
 
-categories:
-- In-Depth
+category: In-Depth
 tags: [stablecoin]
 permalink: "/articoli/guida-stablecoin-cosa-sono-a-cosa-servono-paypal/"
 excerpt: Stablecoin cosa sono? Per quale caratteristica le stablecoin si differenziano dalle altre criptovalute? Da chi è emessa la stablecoin usdc. Di seguito una guida completa.

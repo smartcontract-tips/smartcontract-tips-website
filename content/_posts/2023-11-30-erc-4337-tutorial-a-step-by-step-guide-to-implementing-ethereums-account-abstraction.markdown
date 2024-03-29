@@ -8,9 +8,7 @@ parent_id: '0'
 published: true
 password: ''
 status: publish
-categories:
-- English
-- In-Depth
+category: English
 tags: []
 permalink: "/articoli/erc-4337-tutorial-a-step-by-step-guide-to-implementing-ethereums-account-abstraction/"
 excerpt: 'Welcome to the second part of our exploration into Ethereum''s groundbreaking

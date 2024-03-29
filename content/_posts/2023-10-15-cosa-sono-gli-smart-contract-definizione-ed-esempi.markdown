@@ -7,8 +7,7 @@ parent_id: '0'
 published: true
 password: ''
 status: publish
-categories:
-- In-Depth
+category: In-Depth
 tags: []
 toc: true
 permalink: "/articoli/cosa-sono-gli-smart-contract-definizione-ed-esempi/"

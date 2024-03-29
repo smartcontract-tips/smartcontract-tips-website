@@ -6,9 +6,7 @@ type: post
 
 published: true
 
-categories:
-- In-Depth
-- Wallet
+category: In-Depth
 
 tags: [Trust Wallet]
 

@@ -6,8 +6,7 @@ type: post
 
 published: true
 
-categories:
-- Academy
+category: Academy
 
 tags: [Blockchain Development]
 

@@ -4,9 +4,7 @@ title: "Investimenti cripto e rischio sicurezza: un confronto fra Uniswap e lo S
 date: 2024-02-22 
 type: post
 
-categories:
-- DeFi
-- In-Depth
+category: DeFi
 
 tags: [Uniswap, Staking]
 ---

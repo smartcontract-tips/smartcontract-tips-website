@@ -7,8 +7,7 @@ parent_id: '0'
 published: true
 password: ''
 status: publish
-categories:
-- In-Depth
+category: In-Depth
 tags: []
 permalink: "/articoli/forta-network/"
 excerpt: Nel panorama in continua evoluzione della tecnologia blockchain, la sicurezza

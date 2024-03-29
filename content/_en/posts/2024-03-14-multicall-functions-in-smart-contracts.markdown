@@ -4,8 +4,7 @@ title: "Multicall functions in Smart Contracts"
 date: 2024-03-14 
 type: post
 
-categories:
-- In-Depth
+category: In-Depth
 
 tags: [Solidity]
 

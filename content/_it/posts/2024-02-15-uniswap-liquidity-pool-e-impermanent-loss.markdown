@@ -6,9 +6,7 @@ type: post
 
 usemathjax: true
 
-categories:
-- DeFi
-- In-Depth
+category: DeFi
 
 tags: [Uniswap, DeFi]
 ---

@@ -4,8 +4,7 @@ layout: post
 date: 2024-03-20 
 type: post
 
-categories:
-- Basic
+category: Basic
 
 tags: [CBDC, stablecoin]
 featured_image: /pics/fmt-16-9/digital-euro.jpg

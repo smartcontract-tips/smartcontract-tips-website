@@ -5,8 +5,7 @@ layout: post
 date: 2024-03-26 
 type: post
 
-categories:
-- News
+category: News
 
 tags: [identity, wallet, regulation]
 author: davide

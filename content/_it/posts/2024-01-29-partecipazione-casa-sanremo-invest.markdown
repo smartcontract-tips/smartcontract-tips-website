@@ -6,8 +6,7 @@ type: post
 
 published: true
 
-categories:
-- Event
+category: Event
 
 tags: [Event]
 

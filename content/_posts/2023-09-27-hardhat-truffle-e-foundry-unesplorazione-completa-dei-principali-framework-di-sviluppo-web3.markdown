@@ -8,9 +8,7 @@ parent_id: '0'
 published: true
 password: ''
 status: publish
-categories:
-- In-Depth
-- In-Depth
+category: In-Depth
 tags: []
 permalink: "/articoli/hardhat-truffle-e-foundry-unesplorazione-completa-dei-principali-framework-di-sviluppo-web3/"
 description: web3 framework, comparison of web3 frameworks, hardhat vs. foundry
