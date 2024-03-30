@@ -55,6 +55,9 @@ Le stablecoin private hanno dimostrato che esite una forte domanda di alternativ
 
 La tecnologia e i protocolli dietro le stablecoin private appaiono superiori a quelli utilizzati nei canali di pagamento tradizionali come SEPA, Swift o persino le carte di credito, tuttavia la stabilizzazione di una valuta in blockchain è al momento o inefficiente o rischiosa (nel caso di monete algoritmiche), ma nonostante ciò le stablecoin sono una parte essenziale del percorso di **adozione della massa verso il web3**.
 
+
+## Per quale caratteristica le stablecoin si differenziano dalle altre criptovalute?
+
 Come il nome suggerisce le stablecoin sono, o dovrebbero essere, delle valute digitali che godono di una proprietà non trascurabile, **la stabilità del loro prezzo sui mercati di scambio**. 
 
 Di fatto le stablecoin funzionano come delle rappresentazioni delle monete a corso legale ma dentro la blockchain. La frase **dentro la blockchain** è già di per sé ambigua dato che "non esiste la blockchain" ma ne esistono tante, ognuna con il suo protocollo di consenso per la validazione delle transazioni e le sue regole per codificare i dati e le transazioni.
