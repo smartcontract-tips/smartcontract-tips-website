@@ -96,8 +96,8 @@ permalink: /blog
   }
   
   .left-column {
-    min-width: 200px;
-    width: 40%;
+    min-width: 300px;
+    width: 50%;
   }
   
   .left-column img {
