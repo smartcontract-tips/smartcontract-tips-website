@@ -103,20 +103,24 @@ permalink: /
 
 						  	<!-- Card 4 -->
 							<div class="card">
-								<img src="/assets/images/oracoli-cover-1.png" alt="last-post">
+								{% assign z = site['it'] | reverse %}
+								<img src="{{ z[0].featured_image }}" alt="last-post">
 								<div class="card-content">
 								  
-									  <h2 class="card-title">Cosa sono gli Oracoli negli Smart Contract</h2>
+									  <h2 class="card-title">{{ z[0].title }}</h2>
 								  
 								  <p class="card-description">
-									Gli oracoli degli smart contract fungono da ponte tra la blockchain e il mondo reale, consentendo agli smart contract di interagire con dati esterni alla catena. 
+									{{ z[0].excerpt }}
 								  </p>
-								  <a class="card-title" href="/it/post/cosa-sono-gli-oracoli-negli-smart-contract">
+								  <a class="card-title" href="{{ z[0].url }}">
 									  <div class="card-footer">...continua</div>
 								  </a>
 								  
 								</div>
-							</div>
+							</div>			
+											
+							<br>
+							
 						</div><!-- END Cards container -->
 						<div class="inner">
 							<blockquote>
