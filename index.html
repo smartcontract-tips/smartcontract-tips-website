@@ -110,7 +110,7 @@ permalink: /
 									  <h2 class="card-title">{{ z[0].title }}</h2>
 								  
 								  <p class="card-description">
-									{{ z[0].excerpt }}
+									{{ z[0].excerpt| strip_html | truncatewords:24 }}
 								  </p>
 								  <a class="card-title" href="{{ z[0].url }}">
 									  <div class="card-footer">...continua</div>

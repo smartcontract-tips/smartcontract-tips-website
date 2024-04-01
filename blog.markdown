@@ -95,13 +95,10 @@ permalink: /blog
     margin-bottom: 25px;
   }
   
-  .left-column {
-    min-width: 300px;
-    width: 50%;
-  }
+
   
   .left-column img {
-    width: 90%;
+    display: none;
   }
   
   .right-column {
@@ -112,6 +109,12 @@ permalink: /blog
     /* Stili per il titolo, ad esempio: */
     font-size: 24px;
     font-weight: bold;
+  }
+
+  .left-column {
+    display: none; /* Hide by default */
+  }
+
   }
 
 </style>
@@ -145,16 +148,6 @@ permalink: /blog
     {% for post in articles %}
     <li>
       <div class="container">
-        <div class="left-column">
-          <!-- Sostituire 'image-src.jpg' con il percorso della tua immagine -->
-          <a href="{{ post.url }}" >
-            {% if post.featured_image %}
-            <img src="{{ post.featured_image }}" alt="cover image">
-            {% else %}
-            <img src="/assets/images/awesome-post-placeholder.png" alt="cover image">
-            {% endif %}
-          </a>
-        </div>
         <div class="right-column">
           <a class="post-title" href="{{ post.url }}" >
                 {{ post.title }}
@@ -164,12 +157,10 @@ permalink: /blog
           <p>{{ post.excerpt | strip_html | truncatewords:50 }}</p>
               <a href="javascript:categoryClick('{{ cat }}')">
                 <span class="label">{{ post.category }}</span> 
-              </a>
-           
+              </a>   
           <!-- Qui puoi aggiungere altro contenuto se necessario -->
         </div>     
       </div>
-      
     </li>
     {% endfor %}  
   </ul>
