@@ -28,5 +28,8 @@
     <meta name="google-adsense-account" content="ca-pub-1834107151487683">
 
     <!-- X preview format -->
-    <meta name="twitter:card" content="summary_large_image"></meta>
+    {% if page.featured_image %}
+    <meta name="twitter:card"  content="summary_large_image">
+    <meta name="twitter:image" content="{{ site.url }}{{ page.featured_image }}">
+    {% endif %}
   </head>
