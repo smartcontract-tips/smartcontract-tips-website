@@ -38,6 +38,48 @@
             color: #31708f;
         }
 
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Spaziatura tra le card */
+    justify-content: center;
+  }
+  
+  .card {
+    flex: 1;
+    max-width: 300px; /* Larghezza massima di ogni card */
+    border: 1px solid #ccc; /* Bordo delle card */
+    border-radius: 8px; /* Angoli arrotondati */
+    overflow: hidden; /* Nasconde il contenuto che supera i bordi */
+  }
+  
+  .card img {
+    width: 100%; /* L'immagine si adatta alla larghezza della card */
+    height: auto; /* Mantieni l'aspect ratio dell'immagine */
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    margin: 0 0 10px 0; /* Margine inferiore */
+  }
+  
+  .card-description {
+    margin: 0 0 15px 0; /* Margine inferiore */
+  }
+  
+  .card-footer {
+    font-size: 14px; /* Font più piccolo per la data */
+    text-align: right;
+    padding: 0 15px 10px 15px; /* Padding per allineare con il contenuto sopra */
+    color: #666; /* Colore del testo un po' più tenue */
+  }
+
+
 </style>
 <header class="my-header site-header">
     <div class="wrapper">

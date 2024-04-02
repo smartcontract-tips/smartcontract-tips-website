@@ -1,5 +1,5 @@
 <div class="info-box">
-    <i class="fa-solid fa-paperclip fa-lg">&nbsp;Related</i>&nbsp;
+    <i class="fa-solid fa-paperclip fa-lg">Related</i>&nbsp;
     {% assign articles = site.posts | concat: site['it'] | concat: site['en'] | sort: 'date' | reverse %}
     {% assign filtered_posts = articles | where: "slug", include.slug %}
     {% assign post = filtered_posts[0] %}
