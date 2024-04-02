@@ -54,11 +54,9 @@ Requirements:
 -------------
 
 -   Yarn software installed on your system
--   Access to Stackup API Key:\
-    https://app.stackup.sh/
--   Stackup repository setup\
-    https://github.com/stackup-wallet/erc-4337-examples
--   VScode Or Any code editor.
+-   Access to Stackup API Key: [https://app.stackup.sh](https://app.stackup.sh)
+-   [Stackup repository setup](https://github.com/stackup-wallet/erc-4337-examples)
+-   VScode Or Any code editor
 -   An operational terminal window for executing commands
 
 SimpleAccount.sol: A Basic ERC-4337 Contract Illustration
@@ -87,7 +85,7 @@ For practical application, we'll utilize Stackup's SDK, which simplifies deployi
 Creating ERC-4337 Smart Contracts Using Stackup
 -----------------------------------------------
 
-In this segment, we focus on constructing an ERC-4337 compliant contract using Stackup (https://docs.stackup.sh/) This particular contract serves as an excellent foundational template for developers venturing into Account Abstraction with Stackup.
+In this segment, we focus on constructing an ERC-4337 compliant contract using [Stackup](https://docs.stackup.sh/) This particular contract serves as an excellent foundational template for developers venturing into Account Abstraction with Stackup.
 
 ### Setting Up for Developers
 
