@@ -2,14 +2,12 @@
 layout: post
 title: 'ERC-4337 Tutorial: A Step-by-Step Guide to Implementing Ethereum’s Account
   Abstraction'
-date: 2023-11-30 21:20:33.000000000 +01:00
+date: 2023-11-30 
 type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-category: English
-tags: []
+lang: EN
+category: Advanced
+tags: [erc4337, abstract account]
+author: davide
 permalink: "/articoli/erc-4337-tutorial-a-step-by-step-guide-to-implementing-ethereums-account-abstraction/"
 excerpt: 'Welcome to the second part of our exploration into Ethereum''s groundbreaking
   ERC-4337 protocol. 
@@ -45,6 +43,8 @@ How does ERC-4337 work? The Essential Components of Account Abstraction
 6.  **Aggregators**: These optional smart contracts work with the Contract Account to collectively validate signatures from multiple UserOperations.
 
 In essence, ERC-4337 introduces new elements into Ethereum's architecture, each playing a crucial role in the transaction process.
+
+![sequence diagram](/pics/posts/erc4337-sequence.png)
 
 Requirements:
 -------------
@@ -140,7 +140,7 @@ and sign up for an account. After registration, you will be asked to choose a bl
 
 The completed `config.json` file should resemble the following structure:
 
-```
+{% highlight json %}
 {
   "rpcUrl":
  "https://api.stackup.sh/v1/node/b5...16",
@@ -154,7 +154,7 @@ The completed `config.json` file should resemble the following structure:
   }
 }
 
-```
+{% endhighlight %}
 
 ### Create Our Smart Contract Address
 
@@ -286,6 +286,9 @@ Here's a breakdown of the key steps reflecting the process and structure of this
 9. **Post-Operation Handling**: After attempting the operation, the system handles post-operation tasks, which could include updating nonces, refunding unused funds, and logging the operation's outcome. This ensures that the system's state is correctly updated following the transaction.
 
 10. **Compensation and Cleanup**: The transaction ends with steps to compensate the involved parties (if applicable) and clean up any temporary states or data. This might involve returning funds to the sender or paying out rewards to relayers or other intermediaries involved in the transaction process.
+
+
+
 
 This transaction showcases the complex interactions and steps involved in executing a smart contract-based operation on Ethereum, particularly under the Account Abstraction model, where traditional wallet-based transactions are abstracted into more flexible smart contract operations.
 
