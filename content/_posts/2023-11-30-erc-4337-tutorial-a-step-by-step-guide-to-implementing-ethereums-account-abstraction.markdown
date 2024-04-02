@@ -12,13 +12,9 @@ category: English
 tags: []
 permalink: "/articoli/erc-4337-tutorial-a-step-by-step-guide-to-implementing-ethereums-account-abstraction/"
 excerpt: 'Welcome to the second part of our exploration into Ethereum''s groundbreaking
-  ERC-4337 protocol. Having explored the theoretical underpinnings in our previous
-  guide, "ERC-4337: Revolutionizing Ethereum''s Account Management " (add the first
-  article link here)", we now turn our attention to the actionable side of this innovation.
+  ERC-4337 protocol. 
   In this guide, we''ll walk you through the intricate process of creating and launching
-  an ERC-4337-compliant smart contract, with a focus on using the Stackup platform.
-  This article provide you with the practical know-how to effectively leverage ERC-4337''s
-  capabilities, paving the way for enhanced account management on the Ethereum network.'
+  an ERC-4337-compliant smart contract, with a focus on using the Stackup platform.'
 featured_image: featured_images/upload_19a05114a19f6c48e9d4fc3e47e9a56d.png
 ---
 
@@ -87,29 +83,38 @@ Creating ERC-4337 Smart Contracts Using Stackup
 
 In this segment, we focus on constructing an ERC-4337 compliant contract using [Stackup](https://docs.stackup.sh/) This particular contract serves as an excellent foundational template for developers venturing into Account Abstraction with Stackup.
 
-### Setting Up for Developers
+### Setup the project
 
 1.  Begin by opening your terminal window and executing the following commands:
 
     Setting up a local copy of an example ERC-4337 project from Stackup. Here's a breakdown of each command:
 
-`git clone https://github.com/stackup-wallet/erc-4337-examples.git`:
+```
+git clone https://github.com/stackup-wallet/erc-4337-examples.git
+```
 
 -   This command uses Git to clone repository . The repository contains example code for ERC-4337 projects developed by Stackup.
 
-    `cd erc-4337-examples`:
+```
+cd erc-4337-examples
+```
 
 -   After cloning the repository, this command changes the current directory in your terminal to the newly created 'erc-4337-examples' directory. This directory contains the cloned project files.
 
-    `yarn install`:
+```
+yarn install
+```
+
 
 -   This command uses Yarn, a package manager for JavaScript, to install all the dependencies required for the ERC-4337 project. These dependencies are specified in a file named 'package.json' in the project directory. Running `yarn install` ensures that you have all the necessary packages and their correct versions to run and work on the project.
 
-1.  Moving forward, we'll proceed with setting up our ERC-4337 contract. This is achieved by utilizing the initialization command provided by Yarn:
+### Init the project folder
 
-    `yarn run init`
+Moving forward, we'll proceed with setting up our ERC-4337 contract. This is achieved by utilizing the initialization command provided by Yarn:
 
-    -   This command is a crucial step in the setup process. It initializes the project configuration for your ERC-4337 contract. Essentially, when you run `yarn run init`, it executes a predefined script in the project's `package.json` file. This script is tailored to set up various aspects of the ERC-4337 environment, such as default parameters, network settings, and other necessary configurations that are required for the contract to function correctly within the Ethereum framework. It ensures that your development environment is correctly aligned with the requirements of the ERC-4337 standard, facilitating a smoother development process as you start building and customizing your smart contract.
+```
+yarn run init
+```
 
 Upon running the initialization command, a `config.json` file is generated. This file contains important configuration values for your ERC-4337 contract, such as:
 
@@ -125,7 +130,13 @@ Each of these fields plays a specific role in configuring the ERC-4337 contract,
 
 ### Generate an API Key for Stackup
 
-1.  Once the `config.json` file is in place, it's time to input specific details like the RPC URL. Start by visiting <https://app.stackup.sh/sign-in> and sign up for an account. After registration, you will be asked to choose a blockchain network. For this tutorial, opt for the Ethereum Sepolia chain. Click 'Next' to proceed. Following that, access your newly created bundler instance and select the 'API Key' option to obtain your key. Copy this API Key and return to your `config.json` file, where you'll insert this key into the relevant rpcUrl fields.
+Once the `config.json` file is in place, it's time to input specific details like the RPC URL. Start by visiting:
+ 
+
+<a href="https://app.stackup.sh/sign-in" target="_blank"> https://app.stackup.sh/sign-in </a>
+
+
+and sign up for an account. After registration, you will be asked to choose a blockchain network. For this tutorial, opt for the Ethereum Sepolia chain. Click 'Next' to proceed. Following that, access your newly created bundler instance and select the 'API Key' option to obtain your key. Copy this API Key and return to your `config.json` file, where you'll insert this key into the relevant rpcUrl fields.
 
 The completed `config.json` file should resemble the following structure:
 
@@ -134,10 +145,10 @@ The completed `config.json` file should resemble the following structure:
   "rpcUrl":
  "https://api.stackup.sh/v1/node/b5...16",
 
-  "signingKey": "0xc3e72...17bc",
+  "signingKey": "0xc3e72...",
 
   "paymaster": {
-    "rpcUrl": "https://api.stackup.sh/v1/paymaster/8f92...4d74",
+    "rpcUrl": "https://api.stackup.sh/v1/paymaster/8f92...",
 
     "context": {}
   }
@@ -147,11 +158,13 @@ The completed `config.json` file should resemble the following structure:
 
 ### Create Our Smart Contract Address
 
-1.  Now that our configuration is established, it's time to generate a smart contract account, as specified in our configuration file. To do this, execute the following command in your terminal:
+Now that our configuration is established, it's time to generate a smart contract account, as specified in our configuration file. To do this, execute the following command in your terminal:
 
-    `yarn run simpleAccount address`
+```
+yarn run simpleAccount address
+```
 
-    -   This command will produce an address, which is the identifier for the smart contract account you're about to create. It's important to note that at this stage, the smart contract account has not been deployed to the Ethereum network. However, generating this address is a crucial step, as it allows us to know the address of our smart contract account in advance. This preliminary step is essential for organizing and preparing for the subsequent deployment process of the smart contract.
+This command will produce an address, which is the identifier for the smart contract account you're about to create. It's important to note that at this stage, the smart contract account has not been deployed to the Ethereum network. However, generating this address is a crucial step, as it allows us to know the address of our smart contract account in advance. This preliminary step is essential for organizing and preparing for the subsequent deployment process of the smart contract.
 
 After running the command, your terminal should display an output similar to the following:
 
@@ -164,15 +177,16 @@ SimpleAccount address: 0x37662167966c7d2566b28ed8d4bea9d1d09d3ffd
 
 This output indicates that the command to generate the address for your SimpleAccount has been successfully executed. The address displayed (`0x37662167966c7d2566b28ed8d4bea9d1d09d3ffd`) is a randomly generated Ethereum address, which serves as a placeholder for the actual address that will be assigned to your smart contract account. The completion time of the process is also indicated, demonstrating the efficiency and quickness of the operation.
 
--   In the upcoming section, we will focus on adding funds to the SimpleAccount address that was just created. It's important to remember, however, that the contract itself has not yet been deployed.
+In the upcoming section, we will focus on adding funds to the SimpleAccount address that was just created. It's important to remember, however, that the contract itself has not yet been deployed.
 
 ### Add Funds to the Smart Contract Account Using a Faucet
 
 Let's proceed to add funds to the address of our smart contract account (for instance, SimpleAccount) that we generated previously.
 
-To do this, you might utilize the QuickNode Multi-Chain Faucet.(https://faucet.quicknode.com/drip) This allows you to obtain some testnet ETH, which you can initially send to your personal wallet. From there, you can transfer it to the SimpleAccount address. It's important to be aware that the Faucet necessitates having a mainnet balance in the address that is to be funded. Alternatively, if you already possess test ETH in a different wallet, you can directly transfer it to your smart contract (SimpleAccount) address, bypassing the need to use the Faucet initially.
+To do this, you might utilize the <a href="https://faucet.quicknode.com/drip" target="_blank">QuickNode Multi-Chain Faucet.</a> This allows you to obtain some testnet ETH, which you can initially send to your personal wallet. 
 
-![](https://smartcontract.tips/assets/2023/11/Screenshot-2023-12-03-alle-11.30.08.png)
+From there, you can transfer it to the SimpleAccount address. Alternatively, if you already possess test ETH in a different wallet, you can directly transfer it to your smart contract (SimpleAccount) address, bypassing the need to use the Faucet initially.
+
 
 ### Start a Transaction from SimpleAccount to a Different Address
 
@@ -193,6 +207,7 @@ The command provided is used to initiate a transfer of Ethereum (ETH) from your 
 
 It's important to ensure that the SimpleAccount has enough ETH to cover both the amount you intend to transfer and the gas fees associated with the transaction. This command will initiate a transaction on the Ethereum network, transferring the specified amount of ETH from your SimpleAccount to the provided recipient address.
 
+
 The process involves:
 
 -   Accepting the destination address (`t`) and the amount of ether (`amt`) as inputs in the primary function.
@@ -202,9 +217,77 @@ The process involves:
 -   Signing the transaction and invoking the `execute` function with the aforementioned values.
 -   Generating and returning both the UserOperation hash and the transaction hash as outputs.
 
+### Running the example
+
+Our simple account was created at
+
+```
+0x1007a90Ac0962c46C108e908BCf7796B4b334196
+```
+
+It is worth noticing that until we require an user operation the account exists, it can acquire assets but the smart contract it is not yet deployed. It will be deployed in a lazy initialization only during the first operation handling.
+
+We run the following
+
+```
+yarn run simpleAccount transfer --to 0xE2318e2bdE7d66DBB8C84C19aC8B56c55dEf2F9D --amount 0.0018
+
+```
+and as a result we obtain:
+
+```
+$ ts-node scripts/simpleAccount/index.ts transfer --to 0xE2318e2bdE7d66DBB8C84C19aC8B56c55dEf2F9D --amount 0.0018
+Signed UserOperation: {
+  sender: '0x1007a90Ac0962c46C108e908BCf7796B4b334196',
+  nonce: '0x0',
+  initCode: '0x9406cc6185a346906296840746125a0e449764545fbfb9cf000000000000000000000000686153b8e9a5c1833e79776c5ded768ba86333c10000000000000000000000000000000000000000000000000000000000000000',
+  callData: '0xb61d27f6000000000000000000000000e2318e2bde7d66dbb8c84c19ac8b56c55def2f9d000000000000000000000000000000000000000000000000000665172898800000000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000000',
+  callGasLimit: '0x4443',
+  verificationGasLimit: '0x684eb',
+  preVerificationGas: '0xc3bc',
+  maxFeePerGas: '0xd779c219',
+  maxPriorityFeePerGas: '0x3c05f0c9',
+  paymasterAndData: '0x',
+  signature: '0xa43e7a3d0c280e5d7d648490ef1d54db1ca71d4219b3e2a4cd15c958d98e13e93e3cad716f9cdf0ddb2a5db860a4bcccf0adb9fbe72fec4b1d19a3213e8ccbcb1c'
+}
+UserOpHash: 0xff218e48c3276dc7fac9022438a540f2209fa475281501800b6c1ce9af88f18d
+Waiting for transaction...
+Transaction hash: 0x32bf4ce09c13bed3ec089a56e044d519ab0560700621272257cacfa32b42a01f
+✨  Done in 50.47s.
+```
+
+
 ### The Transaction Process of a Smart Contract Account
 
-In a general overview, when a transfer is initiated from a smart contract account, a complex process unfolds in the background. It begins with the creation of a UserOperation object, which outlines the desired transaction. This object is then sent to a group of Bundlers, entities responsible for managing these operations. The Bundlers, after receiving the UserOperation, create a transaction that interacts with a specific contract, commonly known as the EntryPoint contract. This contract plays a critical role in the execution of bundled UserOperations. It's at this EntryPoint where the transaction is processed, executing the transfer as per the instructions in the UserOperation. This process involves various transfers, contract calls, and the management of gas fees, all orchestrated to facilitate the smooth execution of the transfer from the smart contract account to the specified destination.
+This Ethereum testnet transaction stack trace outlines the sequence of operations for an ether transfer from an abstract account, presumably using Account Abstraction (AA) through ERC-4337. 
+
+If you want to follow step-by-step the execution trace of the transaction we suggest to check it in the great tool Tenderly directly [from this link](https://dashboard.tenderly.co/tx/sepolia/0x32bf4ce09c13bed3ec089a56e044d519ab0560700621272257cacfa32b42a01f?trace=0)
+
+
+
+Here's a breakdown of the key steps reflecting the process and structure of this kind of transaction:
+
+1. **Operation Initiation**: The sequence starts with the sender initiating a user operation. This sender is an abstract account, indicating that this account is a smart contract capable of initiating transactions on its own behalf, a core feature of Account Abstraction.
+
+2. **Handling Operations**: The `handleOps` function is called, where an operation array (`ops`) is passed. This includes details like the sender, nonce, `initCode`, `callData`, `callGasLimit`, `verificationGasLimit`, `preVerificationGas`, `maxFeePerGas`, `maxPriorityFeePerGas`, and a signature. This data collectively describes the transaction to be executed, including the contract creation and execution details.
+
+3. **Creating the Sender Account**: Through a call to a factory contract (`SimpleAccountFactory`), a new smart contract account is created for the sender if it doesn't already exist. The `createAccount` function is called with the owner's address and a salt for deterministic contract creation using `CREATE2`. This step is indicative of the first-time use of this abstract account.
+
+4. **Validating and Preparing for Execution**: Several internal validation steps occur, including checking reentrancy guards (`_nonReentrantBefore`), validating prepayment (`_validatePrepayment`), and preparing user operation data (`_copyUserOpToMemory`, `getUserOpHash`). These steps ensure the operation is legitimate and the contract is ready to execute it.
+
+5. **Prefunding the Operation**: The transaction involves calculating the required prefunding (`_getRequiredPrefund`) for the operation, ensuring that there are sufficient funds to cover the execution costs, including gas.
+
+6. **Executing the User Operation**: The core transaction, specified in the user operation's `callData`, is executed. This includes interacting with another contract (`SimpleAccount`) to perform the ether transfer. The `execute` function within the `SimpleAccount` contract is likely called to facilitate this transfer.
+
+7. **Signature Validation**: The `SimpleAccount` contract validates the user operation's signature to ensure that the transaction is authorized by the account owner. This step is crucial for security, ensuring that only valid transactions are executed.
+
+8. **Transaction Execution and Error Handling**: The operation attempts to execute the transfer (`_call`). If the call fails (as indicated by a `REVERT`), the contract handles the error accordingly. This might involve logging the error or taking corrective action.
+
+9. **Post-Operation Handling**: After attempting the operation, the system handles post-operation tasks, which could include updating nonces, refunding unused funds, and logging the operation's outcome. This ensures that the system's state is correctly updated following the transaction.
+
+10. **Compensation and Cleanup**: The transaction ends with steps to compensate the involved parties (if applicable) and clean up any temporary states or data. This might involve returning funds to the sender or paying out rewards to relayers or other intermediaries involved in the transaction process.
+
+This transaction showcases the complex interactions and steps involved in executing a smart contract-based operation on Ethereum, particularly under the Account Abstraction model, where traditional wallet-based transactions are abstracted into more flexible smart contract operations.
 
 Conclusion
 ----------
