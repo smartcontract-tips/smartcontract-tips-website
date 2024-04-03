@@ -9,10 +9,8 @@ category: Advanced
 tags: [erc4337, abstract account]
 author: davide
 permalink: "/articoli/erc-4337-tutorial-a-step-by-step-guide-to-implementing-ethereums-account-abstraction/"
-excerpt: 'Welcome to the second part of our exploration into Ethereum''s groundbreaking
-  ERC-4337 protocol. 
-  In this guide, we''ll walk you through the intricate process of creating and launching
-  an ERC-4337-compliant smart contract, with a focus on using the Stackup platform.'
+excerpt: "Welcome to the second part of our exploration into Ethereum''s groundbreaking
+  ERC-4337 protocol for account abstraction. In this guide, we'll walk you through the intricate process of creating and launching an ERC-4337-compliant smart contract, with a focus on using the Stackup platform."
 featured_image: featured_images/upload_19a05114a19f6c48e9d4fc3e47e9a56d.png
 ---
 
@@ -256,7 +254,7 @@ Transaction hash: 0x32bf4ce09c13bed3ec089a56e044d519ab0560700621272257cacfa32b42
 ✨  Done in 50.47s.
 ```
 
-## Gas considerations
+### Gas considerations
 
 The gas used by our transaction with the abstract account is `398899` which is very big compared with the `21000` usually needed for a eth transfer.
 However in this specific case we have also "deployed" the smart contract account for the first time. Let's make a second transfer to see the actual gas cost.
