@@ -256,6 +256,17 @@ Transaction hash: 0x32bf4ce09c13bed3ec089a56e044d519ab0560700621272257cacfa32b42
 ✨  Done in 50.47s.
 ```
 
+## Gas considerations
+
+The gas used by our transaction with the abstract account is `398899` which is very big compared with the `21000` usually needed for a eth transfer.
+However in this specific case we have also "deployed" the smart contract account for the first time. Let's make a second transfer to see the actual gas cost.
+
+The second transaction (another send of 0.001 eth) is available here 
+
+[https://sepolia.etherscan.io/tx/0xdd40202983674a950a775e64b75eda57da0c203ea6cb620609965a79fc2793e1](https://sepolia.etherscan.io/tx/0xdd40202983674a950a775e64b75eda57da0c203ea6cb620609965a79fc2793e1)
+
+and the gas used is `87690`. Still much higher than a plain old send from EOA, but somehow aligned with a regular ERC20 transfer.
+
 
 ### The Transaction Process of a Smart Contract Account
 
@@ -286,8 +297,6 @@ Here's a breakdown of the key steps reflecting the process and structure of this
 9. **Post-Operation Handling**: After attempting the operation, the system handles post-operation tasks, which could include updating nonces, refunding unused funds, and logging the operation's outcome. This ensures that the system's state is correctly updated following the transaction.
 
 10. **Compensation and Cleanup**: The transaction ends with steps to compensate the involved parties (if applicable) and clean up any temporary states or data. This might involve returning funds to the sender or paying out rewards to relayers or other intermediaries involved in the transaction process.
-
-
 
 
 This transaction showcases the complex interactions and steps involved in executing a smart contract-based operation on Ethereum, particularly under the Account Abstraction model, where traditional wallet-based transactions are abstracted into more flexible smart contract operations.
