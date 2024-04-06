@@ -8,7 +8,7 @@ published: true
 password: ''
 status: publish
 category: In-Depth
-tags: []
+tags: [smart contract]
 toc: true
 permalink: "/articoli/cosa-sono-gli-smart-contract-definizione-ed-esempi/"
 featured_image: featured_images/copertinasmartcontract-min.png

@@ -44,6 +44,9 @@ plugins:
   - jekyll-gist
   - jekyll-toc
 
+toc:
+  - min-level: 1
+  - max-level: 2
 
 
 
