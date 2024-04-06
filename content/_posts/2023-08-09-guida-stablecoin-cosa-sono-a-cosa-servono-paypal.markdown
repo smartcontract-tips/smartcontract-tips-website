@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Stablecoin: Una guida completa. Cosa sono e a cosa servono"
+title: "Stablecoin: 💵 Una guida completa. Cosa sono e a cosa servono"
 date: 2023-08-09 11:06:04.000000000 +02:00
 type: post
 slug: guida-stablecoin
