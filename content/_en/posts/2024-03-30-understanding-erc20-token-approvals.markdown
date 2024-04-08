@@ -22,7 +22,7 @@ The ERC20 token standard has become a cornerstone of Ethereum's vast ecosystem, 
 In the ERC20 standard, the `approve` function enables token holders to authorize another address—typically a smart contract—to spend a specified amount of their tokens. This permission mechanism is pivotal for executing various decentralized operations without transferring token ownership.
 
 The ERC20 standard enables token holders to grant permission to other addresses, allowing them to transfer a specified token amount on their behalf. This authorization is facilitated through the use of the `approve` function:
-``` solidity
+```c
     function approve(address spender, uint256 amount) public virtual returns (bool) {
         address owner = _msgSender();
         _approve(owner, spender, amount);
@@ -34,7 +34,7 @@ Subsequent to approval, the ERC20 standard employs allowances to monitor the amo
 
 After an address has received approval, it gains the ability to utilize the `transferFrom` function to transfer the approved tokens. The `allowance` function enables checking the permitted amount an address can transfer on another's behalf:
 
-``` solidity
+```c
     function allowance(address owner, address spender) public view virtual returns (uint256) {
         return _allowances[owner][spender];
     }
@@ -46,14 +46,6 @@ This framework of granting approvals and managing allowances plays a vital role 
 ## The Significance of ERC20 Approvals in Decentralized Protocols
 
 ERC20 approvals are indispensable for the seamless interaction between different smart contracts and decentralized applications (dApps). They enable scenarios where tokens can be traded, staked, or contributed to liquidity pools without requiring users to relinquish control of their assets prematurely. This mechanism supports a vast array of financial activities on the blockchain, including but not limited to, decentralized exchanges (DEXs), lending platforms, and automated market makers (AMMs).
-
-
-
-
-
-
-
-
 
 
 ## Navigating ERC20 Challenges and Solutions for Enhanced Token Interoperability
