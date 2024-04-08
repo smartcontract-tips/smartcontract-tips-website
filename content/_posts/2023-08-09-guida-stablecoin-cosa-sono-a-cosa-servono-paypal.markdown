@@ -314,7 +314,7 @@ BDO Italia è la filiale italiana di BDO International, una rete globale di soci
 Chi fa l'audit finanziario di Circle USDC?
 ==========================================
 
-Circle, l'azienda che emette USDC (USD Coin), ha dichiarato che le sue riserve di dollari USA sono soggette a audit mensili da parte di Grant Thornton LLP, una delle più grandi società di revisione contabile e consulenza al mondo.
+Se vi siete mai chiesti da chi è emessa la stablecoin USDC, ebbene la risposta è Circle, la quale ha dichiarato che le sue riserve di dollari USA sono soggette a audit mensili da parte di Grant Thornton LLP, una delle più grandi società di revisione contabile e consulenza al mondo.
 
 Questi audit sono progettati per verificare che Circle detenga effettivamente un dollaro USA per ogni USDC in circolazione, fornendo così una garanzia di trasparenza e sicurezza per gli utenti di USDC.
 
