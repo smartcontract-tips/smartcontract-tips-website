@@ -1,9 +1,14 @@
 ---
 layout: post
 title: 'Ethereum’s Wallet Evolution: Comparing EIP-3074 and ERC-4337'
-date: 2023-12-26 10:59:49.000000000 +01:00
+date: 2024-04-11 10:59:49.000000000 +01:00
 
-category: English
+category: Advanced
+
+tags:
+  - erc4337
+  - erc3074
+  - account abstraction
 
 
 excerpt: Account Abstraction in Ethereum brings programmability to five key functionalities traditionally hardcoded in Externally Owned Accounts. Here a comparison among the two standards EIP 3074 and EIP 4337.
