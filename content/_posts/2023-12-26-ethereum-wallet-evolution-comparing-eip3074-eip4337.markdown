@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 'Ethereum’s Wallet Evolution: Comparing EIP-3074 and ERC-4337'
-date: 2024-04-11 10:59:49.000000000 +01:00
-
+date: 2023-12-26 10:59:49.000000000 +01:00
+last_modified: 2024-04-11 10:59:49.000000000 +01:00
 category: Advanced
 
 tags:
@@ -16,8 +16,8 @@ permalink: "/articoli/ethereums-wallet-evolution-comparing-eip-3074-and-erc-4337
 featured_image: featured_images/Screenshot-2023-12-26-alle-11.59.12.png
 ---
 
-Introduction
-------------
+
+![cover](/featured_images/Screenshot-2023-12-26-alle-11.59.12.png)
 
 Currently, Ethereum's wallet system exhibits significant limitations. Initially, to ensure simplicity and reliability, Ethereum adopted its wallet mechanism from pre-existing, thoroughly vetted blockchain models. However, developers quickly recognized its constraints and the potential for more advanced solutions in future Ethereum iterations. Following numerous proposals and refinements, it appears that a definitive solution for Ethereum's wallets is now within reach.
 

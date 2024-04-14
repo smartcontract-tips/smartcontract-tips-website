@@ -37,9 +37,15 @@ layout: default
     <h1 class="post-title">{{ page.title | escape }}</h1>
   </header>
 
-  <div class="post-date"><i class="fa-regular fa-calendar"></i>
-    {{ page.date | date: "%d %B %Y" }}
+  <div class="post-date" style="color: grey;"><i class="fa-regular fa-calendar"></i>
+   published &nbsp; {{ page.date | date: "%d %B %Y" }}
   </div>
+
+  {% if page.last_modified %}
+  <div class="post-date" style="color: grey;"><i class="fa-regular fa-calendar"></i>
+    last modified &nbsp; {{ page.last_modified | date: "%d %B %Y" }}
+   </div>
+  {% endif %}
   <br>
 
   <div style="color: darkgrey;">
