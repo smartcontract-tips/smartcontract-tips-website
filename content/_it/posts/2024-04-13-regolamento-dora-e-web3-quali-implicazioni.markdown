@@ -13,6 +13,10 @@ tags:
 featured_image: /pics/fmt-16-9/dora.png
 ---
 
+**TL;DR** Gli sviluppatori di smart contract devono preoccuparsi dell'imminente entrata in vigore del regolamento europeo DORA? La risposta breve è: **Probabilmente sì.**
+
+*Leggi di seguito per approfondire* 
+
 ## Il Regolamento DORA e gli asset crittografici
 
 La Digital Operational Resilience Act (DORA) si applica a una vasta gamma di entità finanziarie, incluse le piattaforme che offrono servizi relativi agli asset crittografici. In particolare, DORA specifica che i fornitori di servizi di asset crittografici autorizzati secondo il Regolamento sui mercati degli asset crittografici e gli emittenti di token riferiti ad asset rientrano nel suo ambito di applicazione, e la loro conformità con DORA è garantita dall'autorità competente designata in base alla disposizione pertinente di tale regolamento.
