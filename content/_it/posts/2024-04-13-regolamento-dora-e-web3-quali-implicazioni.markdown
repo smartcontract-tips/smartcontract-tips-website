@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Regolamento DORA sulla Resilienza digitale ed implicazione per gli sviluppatori Web3"
+title: "Regolamento DORA sulla Resilienza digitale ed implicazioni per gli sviluppatori Web3"
 date: 2024-04-13 
 type: post
 
