@@ -117,13 +117,13 @@ La categorizzazione degli sviluppatori di smart contract come fornitori di servi
 
 ### Casi particolari
 
-Come dovrebbe comportarsi lo sviluppatore che realizza uno smart contract per un cliente che dovrebbe essere autorizzato ai sensi della MiCA **ma non lo è?**
+Come deve comportarsi lo sviluppatore che realizza uno smart contract per un cliente che opera un'attività che prevederebbe autorizzazione ai sensi della MiCA **ma il committente ignora di proposito o involontariamente quest'obbligo?**
 
 In questa circostanza potremmo essere portati a pensare che non è un problema dello sviluppatore occuparsi di questa mancanza e di conseguenza potrebbe rilasciare il suo codice senza preoccuparsi dei dettami del DORA.
 
 In realtà, sarebbe meglio fare un'adeguata due diligence e adottare le necessarie misure di sicurezza previste dalla norma e comunque farsi manlevare per ogni potenziale inandepimento del committente.
 
-Ma la considerazione più importante è che non si devono adottare le misure previste dalla DORA solo perché sono obbligatorie per legge, le best practice di sicurezza e **fornire le adeguate garanzie di continuità operativa digitale dovrebbe essere sempre una priorità del professionista del web3**.
+Ma la considerazione più importante è che non si devono adottare le misure previste dalla DORA solo perché sono obbligatorie per legge, **fornire le adeguate garanzie di continuità operativa digitale dovrebbe essere sempre una priorità del professionista del web3**. Dovrebbe essere un obbligo etico e professionale prima ancora che un regolamento calato dall'alto.
 
 
 ## Conclusioni
