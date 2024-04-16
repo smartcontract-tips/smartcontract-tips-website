@@ -12,6 +12,7 @@ tags:
 
 featured_image: /pics/fmt-16-9/dora.png
 ---
+![cover](/pics/fmt-16-9/dora.png)
 
 **TL;DR** Gli sviluppatori di smart contract devono preoccuparsi dell'imminente entrata in vigore del regolamento europeo DORA? La risposta breve è: **Probabilmente sì.**
 
@@ -27,7 +28,7 @@ L'articolo che stabilisce il campo di applicazione di DORA ai fornitori di servi
 
 Ecco il testo rilevante tratto dal documento:
 
-> "This Regulation applies to crypto-asset service providers authorised under the Regulation on markets in crypto-assets and to issuers of asset-referenced tokens as referred to in Article 1(2)."【9:0†source】.
+> "This Regulation applies to crypto-asset service providers authorised under the Regulation on markets in crypto-assets and to issuers of asset-referenced tokens as referred to in Article 1(2).".
 
 Questo articolo conferma che i fornitori di servizi di asset crittografici sono compresi nel campo di applicazione di DORA e devono quindi aderire ai suoi requisiti di resilienza operativa digitale.
 
@@ -112,6 +113,16 @@ Gli sviluppatori di smart contract devono essere pronti a cooperare con le autor
 ### Implicazioni Pratiche
 
 La categorizzazione degli sviluppatori di smart contract come fornitori di servizi ICT critici dipenderà dalle specifiche delle loro operazioni e dalla rilevanza dei loro prodotti per il sistema finanziario. Essi dovranno valutare la loro conformità con DORA in collaborazione con le entità finanziarie che utilizzano i loro smart contract, assicurando che tutte le misure di resilienza operativa siano in atto e siano adeguatamente documentate.
+
+### Casi particolari
+
+Come dovrebbe comportarsi lo sviluppatore che realizza uno smart contract per un cliente che dovrebbe essere autorizzato ai sensi della MiCA **ma non lo è?**
+
+In questa circostanza potremmo essere portati a pensare che non è un problema dello sviluppatore occuparsi di questa mancanza e di conseguenza potrebbe rilasciare il suo codice senza preoccuparsi dei dettami del DORA.
+
+In realtà, sarebbe meglio fare un'adeguata due diligence e adottare le necessarie misure di sicurezza previste dalla norma e comunque farsi manlevare per ogni potenziale inandepimento del committente.
+
+Ma la considerazione più importante è che non si devono adottare le misure previste dalla DORA solo perché sono obbligatorie per legge, le best practice di sicurezza e **fornire le adeguate garanzie di continuità operativa digitale dovrebbe essere sempre una priorità del professionista del web3**.
 
 
 ## Conclusioni
