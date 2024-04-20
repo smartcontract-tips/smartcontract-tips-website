@@ -4,6 +4,7 @@ title: "Regolamento DORA sulla Resilienza digitale ed implicazioni per gli svilu
 date: 2024-04-13 
 last_modified: 2023-04-16
 type: post
+author: davide
 
 category: Basic
 
@@ -13,11 +14,11 @@ tags:
 
 featured_image: /pics/fmt-16-9/dora.png
 ---
-![cover](/pics/fmt-16-9/dora.png)
-
 **TL;DR** Gli sviluppatori di smart contract devono preoccuparsi dell'imminente entrata in vigore del regolamento europeo DORA? La risposta breve è: **Probabilmente sì.**
 
 *Leggi di seguito per approfondire* 
+
+![cover](/pics/fmt-16-9/dora.png)
 
 ## Il Regolamento DORA e gli asset crittografici
 
@@ -131,3 +132,6 @@ Ma la considerazione più importante è che non si devono adottare le misure pre
 Mentre DORA non menziona esplicitamente gli sviluppatori di smart contract, le sue disposizioni si applicano a loro se fornitori di smart contract che agiscono come servizi ICT cruciali per le entità finanziarie vigilate. 
 La conformità con DORA sarà quindi essenziale per integrare la sicurezza e la resilienza nell'uso degli smart contract nel settore finanziario.
 
+## Ringraziamenti
+
+Si ringrazia [l'Avv. Simbula](https://studiolegalesimbula.com/) per la sua revisione e gli spunti di riflessione che ne sono derivati.
