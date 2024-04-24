@@ -22,7 +22,7 @@ featured_image: /pics/fmt-16-9/dora.png
 
 ## Il Regolamento DORA e gli asset crittografici
 
-La Digital Operational Resilience Act (DORA) si applica a una vasta gamma di entità finanziarie, incluse le piattaforme che offrono servizi relativi agli asset crittografici. In particolare, DORA specifica che i fornitori di servizi di asset crittografici autorizzati secondo il Regolamento sui mercati degli asset crittografici e gli emittenti di token riferiti ad asset rientrano nel suo ambito di applicazione, e la loro conformità con DORA è garantita dall'autorità competente designata in base alla disposizione pertinente di tale regolamento.
+La Digital Operational Resilience Act (DORA) si applica a una vasta gamma di entità finanziarie, incluse le piattaforme che offrono servizi relativi agli asset crittografici che vengono scambiati attraverso tecnologie blockchain. In particolare, DORA specifica che i fornitori di servizi di asset crittografici autorizzati secondo il Regolamento sui mercati degli asset crittografici e gli emittenti di token riferiti ad asset rientrano nel suo ambito di applicazione, e la loro conformità con DORA è garantita dall'autorità competente designata in base alla disposizione pertinente di tale regolamento.
 
 ## Il campo di applicazione di DORA include le criptovalute
 
@@ -32,7 +32,7 @@ Ecco il testo rilevante tratto dal documento:
 
 > "This Regulation applies to crypto-asset service providers authorised under the Regulation on markets in crypto-assets and to issuers of asset-referenced tokens as referred to in Article 1(2).".
 
-Questo articolo conferma che i fornitori di servizi di asset crittografici sono compresi nel campo di applicazione di DORA e devono quindi aderire ai suoi requisiti di resilienza operativa digitale.
+Questo articolo conferma che i fornitori di servizi di asset crittografici, e quindi anche gli sviluppatori blockchain di tali servizi, sono compresi nel campo di applicazione di DORA e devono quindi aderire ai suoi requisiti di resilienza operativa digitale.
 
 
 Inoltre nell'Art. 2 Ambito di applicazione, lett. f
@@ -90,7 +90,7 @@ DORA si concentra sulla resilienza operativa digitale delle entità finanziarie 
 
 ### 1. **Inclusione nel Campo di Applicazione come Fornitori di Servizi ICT di Terze Parti**
 
-Gli sviluppatori di smart contract possono essere considerati fornitori di servizi ICT di terze parti se i contratti intelligenti che sviluppano sono utilizzati da entità finanziarie regolamentate. Questo è particolarmente rilevante se gli smart contract sono essenziali per le operazioni finanziarie, come nel caso di piattaforme di trading basate su blockchain o prodotti finanziari decentralizzati (DeFi).
+I consulenti che operano nel settore blockchain e gli sviluppatori di smart contract possono essere considerati fornitori di servizi ICT di terze parti se i contratti intelligenti che sviluppano sono utilizzati da entità finanziarie regolamentate. Questo è particolarmente rilevante se gli smart contract sono essenziali per le operazioni finanziarie, come nel caso di piattaforme di trading basate su blockchain o prodotti finanziari decentralizzati (DeFi).
 
 ### 2. **Obblighi di Gestione del Rischio ICT**
 
@@ -130,7 +130,7 @@ Ma la considerazione più importante è che non si devono adottare le misure pre
 ## Conclusioni
 
 Mentre DORA non menziona esplicitamente gli sviluppatori di smart contract, le sue disposizioni si applicano a loro se fornitori di smart contract che agiscono come servizi ICT cruciali per le entità finanziarie vigilate. 
-La conformità con DORA sarà quindi essenziale per integrare la sicurezza e la resilienza nell'uso degli smart contract nel settore finanziario.
+La conformità con DORA sarà quindi essenziale per integrare la sicurezza e la resilienza nell'uso degli smart contract e della blockchain nel settore finanziario.
 
 ## Ringraziamenti
 
