@@ -7,7 +7,7 @@ type: post
 category: In-Depth
 
 tags: [Solidity]
-
+featured_image: /pics/posts/etherscan-multicall.png
 ---
 In the Ethereum blockchain, a multicall transaction is a way to execute multiple function calls across different smart contracts within a single transaction. This can significantly save on gas fees and reduce network congestion by batching together many actions into one. 
 
