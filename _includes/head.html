@@ -10,16 +10,7 @@
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
       {%- include google-analytics.html -%}
     {%- endif -%}
-
-    <!-- for mathjax support -->
-    {% if page.usemathjax %}
-      <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-        TeX: { equationNumbers: { autoNumber: "AMS" } }
-        });
-      </script>
-      <script type="text/javascript" async src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    {% endif %}    
+  
     
     <!--font awesome-->
     <script src="https://kit.fontawesome.com/4c0de2340c.js" crossorigin="anonymous"></script>
@@ -32,4 +23,8 @@
     <meta name="twitter:card"  content="summary_large_image">
     <meta name="twitter:image" content="{{ site.url }}{{ page.featured_image }}">
     {% endif %}
+
+
+    {% include mathjax.html %}
+
   </head>
