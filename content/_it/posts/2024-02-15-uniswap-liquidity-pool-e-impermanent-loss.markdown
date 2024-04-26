@@ -4,7 +4,7 @@ title: "Uniswap Liquidity Pool e Impermanent Loss: Cosa c'è da Sapere"
 date: 2024-02-15 
 type: post
 
-usemathjax: true
+math: true
 
 category: Basic
 

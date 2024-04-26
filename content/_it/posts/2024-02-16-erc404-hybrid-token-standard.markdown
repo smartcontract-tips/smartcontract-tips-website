@@ -4,8 +4,6 @@ title: "ERC-404: Lo standard ibrido per i token semi-fungibili"
 date: 2024-02-16 
 type: post
 
-#usemathjax: true
-
 category: DeFi
 
 tags: [NFT, Tokens, ERC-404, ERC]

@@ -24,7 +24,8 @@
     <meta name="twitter:image" content="{{ site.url }}{{ page.featured_image }}">
     {% endif %}
 
-
-    {% include mathjax.html %}
+    {% if page.math %}
+      {% include mathjax.html %}
+    {% endif %}
 
   </head>
