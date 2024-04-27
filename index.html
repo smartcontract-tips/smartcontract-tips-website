@@ -105,7 +105,7 @@ permalink: /
 
 						  	<!-- Card 4 -->
 							<div class="card">
-								{% assign z = site['it'] | reverse %}
+								{% assign z = site['it'] | where:"draft",false | reverse %}
 								<img src="{{ z[0].featured_image }}" alt="last-post">
 								<div class="card-content">
 								  

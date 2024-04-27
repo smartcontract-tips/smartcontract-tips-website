@@ -3,11 +3,7 @@ layout: post
 title: Cosa sono gli smart contract, definizione ed esempi
 date: 2023-10-15 10:29:19.000000000 +02:00
 type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-category: In-Depth
+category: Mid
 tags: [smart contract]
 toc: true
 permalink: "/articoli/cosa-sono-gli-smart-contract-definizione-ed-esempi/"
