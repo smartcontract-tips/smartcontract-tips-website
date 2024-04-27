@@ -45,8 +45,8 @@ plugins:
   - jekyll-toc
 
 toc:
-  - min-level: 1
-  - max-level: 2
+  min_level: 2 # default: 1
+  max_level: 2 # default: 6
 
 
 

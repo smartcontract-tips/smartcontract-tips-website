@@ -18,10 +18,6 @@ Gli smart contract sono una nuova categoria di programmi software legati alle cr
 
 ![Robot and Man signing a contract](/assets/images/robot-and-signed-contract.webp)
 
-* TOC
-{:toc}
-
-
 
 La prima menzione al termine *Smart Contract* la dobbiamo a Nick Szabo nel lontano 1994.
 
@@ -113,8 +109,8 @@ Dove con <Alice> intendiamo la chiave pubblica di Alice e così via. Un possibil
 
 > OP_0 <Firma di Alice> <Firma di Trent>
 
-## Gli smart contract come escrow
 
+## Gli smart contract come escrow
 
 Questa tipologia di script consente di implementare gli escrow, ovvero degli arbitri che decidono sulla regolarità di una transazione. Supponiamo che Alice acquisti una bicicletta online da Bob e paghi con i bitcoin. Nel caso di acquisto senza escrow potrebbero verificarsi tre diverse situazioni:
 

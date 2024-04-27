@@ -4,7 +4,7 @@ type: post
 title: "DORA: i cinque passi essenziali per prepararsi al nuovo regolamento su resilienza digitale"
 date: 2024-04-19
 layout: post
-category: basic
+category: Basic
 tags:
   - DORA
 
