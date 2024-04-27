@@ -85,5 +85,40 @@ Per illustrare meglio il concetto di funzionamento degli Automated Market Makers
 
 Questa tabella mostra chiaramente come la creazione di una pool AMM e le variazioni di prezzo influenzano il valore del capitale investito. Inizialmente, l'investimento totale vale 2000 DAI (considerando il prezzo di 1 Ether uguale a 1000 DAI). Tuttavia, se il prezzo di Ether aumenta a 4000 DAI, l'equilibrio della pool si modifica per mantenere la parità di valore, risultando in 0.5 Ether e 2000 DAI, il che porta il valore totale della partecipazione nella pool a 4000 DAI. Questo è inferiore al valore che si avrebbe mantenendo l'Ether fuori dalla pool, che sarebbe di 5000 DAI data la valorizzazione individuale dei componenti (1 Ether a 4000 DAI più 1000 DAI in contanti).
 
+## Cosa cambia da Uniswap v2 a Uniswap v3? La 'concentrated liquidity'
 
+La principale differenza introdotta da Uniswap v3 riguarda la curva di prezzo xy=k utilizzata per gli scambi.
+
+Nella versione precedente di Uniswap (v2), la liquidità fornita dai liquidity provider (LP) doveva coprire l'intero range di prezzo da 0 a infinito, seguendo la formula xy=k.
+
+Ciò significava che gran parte della liquidità rimaneva inutilizzata, in quanto gli scambi effettivi avvenivano solo in una porzione limitata del range di prezzo. 
+
+Con Uniswap v3, i LP possono ora fornire liquidità su range di prezzo molto più ristretti, ad esempio tra $1.900 e $2.100.
+
+Questa caratteristica si chiama **Concentrated Liquidity**
+
+## Maggior efficienza di capitale per Uniswap v3
+
+Questo permette di aumentare l'efficienza del capitale utilizzato, in quanto una porzione molto maggiore della liquidità fornita viene effettivamente impiegata per gli scambi.
+
+In pratica, invece di avere un'unica curva xy=k su tutto il range di prezzo, in Uniswap v3 si hanno più "curve virtuali" all'interno di range di prezzo specifici definiti dai LP.
+
+![uniswap v3 Vs v2](/pics/posts/uniswapv3-curve.png)
+
+Questa maggiore flessibilità e granularità nella gestione della liquidità è uno dei principali miglioramenti introdotti dalla versione 3 di Uniswap.
+
+## L'impermanent loss di Uniswap v3 è peggiorata rispetto alla v2
+
+l'impermanent loss in Uniswap V3 è peggiorata rispetto alla versione precedente, Uniswap V2. 
+
+Secondo [uno studio recente](https://it.cointelegraph.com/news/half-of-uniswap-v3-liquidity-providers-are-losing-money-new-research), il 49,5% dei fornitori di liquidità su Uniswap V3 ha subito rendimenti negativi a causa dell'impermanent loss.
+
+Rispetto a Uniswap V2, Uniswap V3 consente una maggiore concentrazione della liquidità in specifici range di prezzo. **Questo aumenta il rischio di impermanent loss**, poiché i fornitori di liquidità sono più esposti alle fluttuazioni di prezzo al di fuori del loro range.
+
+
+
+Link utili:
+
+- [https://blog.uniswap.org/uniswap-v3-math-primer-2](https://blog.uniswap.org/uniswap-v3-math-primer-2)
+- [https://blog.uniswap.org/uniswap-v3-math-primer](https://blog.uniswap.org/uniswap-v3-math-primer)
 
