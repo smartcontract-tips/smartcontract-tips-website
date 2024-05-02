@@ -3,6 +3,7 @@ type: post
 title: "Understanding Runes Protocol: Revolutionizing Bitcoin's Token Ecosystem"
 featured_image: /pics/hackmd.io/rysUSeJMA.png
 date: 2024-05-01
+last_modified: 2024-05-02
 category: Basic
 tags:
   - bitcoin
@@ -84,7 +85,7 @@ Runes Protocol and BRC-20 both facilitate the creation of tokens on the Bitcoin 
 
 | Feature                | Runes                        | BRC-20                       |
 |------------------------|------------------------------|------------------------------|
-| **Purpose**            | Issuance of Nonfungible Tokens | Issuance of Fungible Tokens   |
+| **Purpose**            | Issuance of Fungible Tokens | Issuance of Fungible Tokens   |
 | **Creator**            | Casey Rodarmor               | Domo                         |
 | **Date of Launch**     | April 2024                   | March 2023                   |
 | **Model**              | UTXO-Based                   | Ordinals-Based               |
