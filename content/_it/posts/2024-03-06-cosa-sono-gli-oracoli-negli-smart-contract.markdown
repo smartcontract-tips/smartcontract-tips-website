@@ -12,6 +12,8 @@ tags: [Oracles]
 ---
 Gli oracoli degli smart contract fungono da ponte tra la blockchain e il mondo reale, consentendo agli smart contract di interagire con dati esterni alla catena. Questa interazione è essenziale per la funzionalità e la sicurezza delle applicazioni decentralizzate (DApps), poiché gli smart contract, per loro progettazione, non possono accedere o verificare dati al di fuori della loro rete blockchain nativa. Gli oracoli superano questo limite recuperando dati dal mondo reale e rendendoli disponibili agli smart contract, consentendo loro di eseguire azioni basate su condizioni che dipendono da informazioni esterne.
 
+<div id="toc"></div>
+
 ## Introduzione
 
 L'avvento della tecnologia blockchain e degli smart contract ha rivoluzionato il modo in cui gli accordi digitali vengono eseguiti. gli smart contract automatizzano transazioni e accordi, assicurando che tutte le parti adempiano ai loro obblighi senza la necessità di intermediari. Tuttavia, esiste una limitazione significativa: gli smart contract non possono accedere nativamente ai dati al di fuori della loro blockchain. Qui entrano in gioco gli oracoli, agendo come flussi di dati che forniscono agli smart contract informazioni esterne, cruciali per molteplici casi d'uso in finanza, assicurazioni, logistica e oltre.
