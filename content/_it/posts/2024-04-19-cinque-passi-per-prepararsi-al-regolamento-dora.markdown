@@ -39,7 +39,7 @@ Questa esenzione mira a ridurre il carico normativo sulle piccole imprese, ricon
 
 ## Conclusioni
 
-In questo blog scriviamo spesso di sicurezza degli smart contract e buone pratiche per lo sviluppo di applicazioni blockchain e può sembrare quasi che questo regolamento non sia rilevante per chi opera in questi settori. In realtà non è corretto. Per un approfondimento su web3 e regolamento DORA ti invito leggere [questo articolo](it/post/regolamento-dora-e-web3-quali-implicazioni).
+In questo blog scriviamo spesso di sicurezza degli smart contract e buone pratiche per lo sviluppo di applicazioni blockchain e può sembrare quasi che questo regolamento non sia rilevante per chi opera in questi settori. In realtà non è corretto. Per un approfondimento su web3 e regolamento DORA ti invito leggere [questo articolo](regolamento-dora-e-web3-quali-implicazioni).
 
 
 
