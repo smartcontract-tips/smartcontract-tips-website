@@ -9,7 +9,7 @@ tags:
     - erc20
 excerpt: At the heart of ERC20's innovation are the concepts of token approvals and allowances. This article delves into the mechanics of ERC20 approvals, the reasons behind their widespread adoption, the risks involved, and the best practices for mitigating these risks.
 
-featured_image: /pics/fmt-16-9/erc20-token-approvals.png
+image: /pics/fmt-16-9/erc20-token-approvals.png
 ---
 ![cover erc20 approvals](/pics/fmt-16-9/erc20-token-approvals.png)
 

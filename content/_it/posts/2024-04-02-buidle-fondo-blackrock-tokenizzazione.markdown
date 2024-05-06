@@ -11,7 +11,7 @@ tags:
     - Tokenizzazione
     - Blackrock
 
-featured_image: /pics/fmt-16-9/blackrock-tokenization.png
+image: /pics/fmt-16-9/blackrock-tokenization.png
 ---
 
 BlackRock ha lanciato un fondo basato su Ethereum chiamato BUIDL, raccogliendo 280 milioni di dollari in token Ethereum in una settimana. Questo fondo investe in contanti, titoli del Tesoro USA e accordi di riacquisto, mirando a mantenere un valore equivalente a 1 dollaro USA per token. La partecipazione di Ondo Finance, che ha trasferito 95 milioni di dollari nel fondo, sottolinea il crescente interesse per la tokenizzazione di asset tradizionali su blockchain pubbliche come prossimo passo nell'evoluzione dei mercati finanziari -> [link](https://decrypt.co/223802/blackrock-buidl-ethereum-tokenized-fund-245-million).

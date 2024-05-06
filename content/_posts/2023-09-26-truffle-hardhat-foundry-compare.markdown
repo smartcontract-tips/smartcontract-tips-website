@@ -11,7 +11,7 @@ status: publish
 category: English
 tags: []
 permalink: "/articoli/truffle-hardhat-foundry-compare/"
-featured_image: featured_images/Screenshot2023-09-27at01.20.42.png
+image: featured_images/Screenshot2023-09-27at01.20.42.png
 description: web3 framework, comparison of web3 frameworks, hardhat vs. foundry.
 ---
 In the decentralized realm of Web3, the emergence of web3 frameworks designed to facilitate the crafting of smart contracts and DApps has transformed the developer experience. Leading the pack are HardHat, Truffle, and Foundry. This comprehensive guide delves into the evolution, technical functionalities, and practical use cases of the most popular web3 frameworks.

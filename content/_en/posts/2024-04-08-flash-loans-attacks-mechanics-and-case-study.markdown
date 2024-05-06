@@ -1,7 +1,7 @@
 ---
 type: post
 title: Exploring the Mechanics of Flash Loan Exploits with a Real-World Case Study
-featured_image: /pics/hackmd.io/r1_fmpglR.png
+image: /pics/hackmd.io/r1_fmpglR.png
 date: 2024-04-08
 category: Advanced
 tags:

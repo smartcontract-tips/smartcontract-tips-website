@@ -7,7 +7,7 @@ category: Mid
 tags: [smart contract]
 toc: true
 permalink: "/articoli/cosa-sono-gli-smart-contract-definizione-ed-esempi/"
-featured_image: featured_images/copertinasmartcontract-min.png
+image: featured_images/copertinasmartcontract-min.png
 author: davide
 ---
 Gli smart contract sono una nuova categoria di programmi software legati alle criptovalute. In un certo senso possiamo considerare le criptovalute come denaro programmabile e gli smart contract sono esattamente il risultato di tale programmazione. Che relazione c'è tra smart contract e contratti più tradizionali? Quali sono le applicazioni reali degli smart contract? Come funzionano gli smart contract? Esistono gli smart contract in Bitcoin? Proviamo a rispondere a tutte queste domande in questa guida.

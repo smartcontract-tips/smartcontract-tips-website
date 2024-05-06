@@ -16,7 +16,7 @@ excerpt: Nel panorama in continua evoluzione della tecnologia blockchain, la sic
   affrontate dalle aziende blockchain. Fondata da imprenditori visionari, Forta Network
   combina tecnologie avanzate e partecipazione incentivata per migliorare la sicurezza
   e l'integrità delle reti blockchain.
-featured_image: featured_images/upload_996e77415aab480f8283f8b51e2eccec.png
+image: featured_images/upload_996e77415aab480f8283f8b51e2eccec.png
 author: alessandro
 ---
 Forta Network, cos'è e come funziona?

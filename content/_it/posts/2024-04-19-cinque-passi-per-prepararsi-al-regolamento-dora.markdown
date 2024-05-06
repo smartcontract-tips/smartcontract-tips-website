@@ -8,7 +8,7 @@ category: Basic
 tags:
   - DORA
 
-featured_image: /pics/fmt-16-9/dora-2.png
+image: /pics/fmt-16-9/dora-2.png
 ---
 Il Regolamento DORA (Digital Operational Resilience Act) entrerà in vigore il 17 gennaio 2025. Le organizzazioni interessate dovranno dimostrare la conformità con i requisiti di DORA entro quella data.
 

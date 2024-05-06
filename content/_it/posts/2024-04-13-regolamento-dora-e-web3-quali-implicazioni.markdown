@@ -12,7 +12,7 @@ tags:
     - DORA
     - MiCA
 
-featured_image: /pics/fmt-16-9/dora.png
+image: /pics/fmt-16-9/dora.png
 ---
 **TL;DR** Gli sviluppatori di smart contract devono preoccuparsi dell'imminente entrata in vigore del regolamento europeo DORA? La risposta breve è: **Probabilmente sì.**
 

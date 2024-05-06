@@ -1,7 +1,7 @@
 ---
 type: post
 title: "Understanding Runes Protocol: Revolutionizing Bitcoin's Token Ecosystem"
-featured_image: /pics/hackmd.io/rysUSeJMA.png
+image: /pics/hackmd.io/rysUSeJMA.png
 date: 2024-05-01
 last_modified: 2024-05-02
 category: Basic

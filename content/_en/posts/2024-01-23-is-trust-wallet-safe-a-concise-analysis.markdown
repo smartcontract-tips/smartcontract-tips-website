@@ -10,7 +10,7 @@ category: In-Depth
 
 tags: [Trust Wallet]
 
-featured_image: featured_images/d711f263-a8ee-411b-8207-632d06a954f8-copia.jpg
+image: featured_images/d711f263-a8ee-411b-8207-632d06a954f8-copia.jpg
 ---
 
 

@@ -8,7 +8,7 @@ category: In-Depth
 excerpt: "With a whopping number of 800M users worldwide, Telegram is the perfect channel to distribute web3 functionalities, so a Telegram Wallet to send/receive cryptocoins is a straighforward idea to implement. But the story of Telegram and blockchain is more than that, it's a full and vibrant ecosystem"
 
 permalink: "/articoli/ton-telegram-open-network-and-its-wallet"
-featured_image: /assets/telegram-network-wallet.png
+image: /assets/telegram-network-wallet.png
 toc: true
 ---
 

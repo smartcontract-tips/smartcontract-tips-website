@@ -6,7 +6,7 @@ date: 2024-03-26
 type: post
 
 category: News
-featured_image: /pics/fmt-16-9/eidas2.png
+image: /pics/fmt-16-9/eidas2.png
 tags: [identity, wallet, regulation]
 author: davide
 ---

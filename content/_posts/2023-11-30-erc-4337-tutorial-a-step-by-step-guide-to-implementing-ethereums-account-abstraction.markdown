@@ -11,7 +11,7 @@ author: davide
 permalink: "/articoli/erc-4337-tutorial-a-step-by-step-guide-to-implementing-ethereums-account-abstraction/"
 excerpt: "Welcome to the second part of our exploration into Ethereum''s groundbreaking
   ERC-4337 protocol for account abstraction. In this guide, we'll walk you through the intricate process of creating and launching an ERC-4337-compliant smart contract, with a focus on using the Stackup platform."
-featured_image: featured_images/upload_19a05114a19f6c48e9d4fc3e47e9a56d.png
+image: featured_images/upload_19a05114a19f6c48e9d4fc3e47e9a56d.png
 ---
 
 This is an article for advanced readers, for a quick understanding of 

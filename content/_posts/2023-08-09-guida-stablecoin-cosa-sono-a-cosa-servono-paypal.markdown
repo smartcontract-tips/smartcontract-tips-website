@@ -4,44 +4,15 @@ title: "Stablecoin: 💵 Una guida completa. Cosa sono e a cosa servono"
 date: 2023-08-09 11:06:04.000000000 +02:00
 type: post
 slug: guida-stablecoin
-
-category: In-Depth
+last_modified: 2024-05-05
+category: Mid
 tags: [stablecoin]
 permalink: "/articoli/guida-stablecoin-cosa-sono-a-cosa-servono-paypal/"
 excerpt: Stablecoin cosa sono? Per quale caratteristica le stablecoin si differenziano dalle altre criptovalute? Da chi è emessa la stablecoin usdc. Di seguito una guida completa.
 
-featured_image: /featured_images/copertinaguida.png
-toc: false
+image: /featured_images/copertinaguida.png
+
 ---
-
-<style>
-    #markdown-toc {
-        overflow: hidden;
-        transition: max-height 0.5s ease-out;
-        background-color: #f1f1f1;
-        max-height: 0;
-    }
-</style>
-
-
-
-
-<script>
-    function toggleDiv() {
-        var div = document.getElementById("markdown-toc");
-        if (div.style.maxHeight){
-            div.style.maxHeight = null;
-        } else {
-            div.style.maxHeight = div.scrollHeight + "px";
-        } 
-    }
-</script>
-
-<button onclick="toggleDiv()">Indice dei contenuti</button>
-
-* TOC
-{:toc}
-
 Stablecoin cosa sono? Per quale caratteristica le stablecoin si differenziano dalle altre criptovalute? Da chi è emessa la stablecoin usdc. Proviamo a dare delle risposte in questa guida completa.
 
 La scena delle stablecoin nel 2023 è vibrante e affollata da molti progetti e tante menti brillanti stanno lavorando in questo campo. Cominciamo.
