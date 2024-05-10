@@ -3,7 +3,7 @@ type: post
 title: "Understanding Runes Protocol: Revolutionizing Bitcoin's Token Ecosystem"
 image: /pics/hackmd.io/rysUSeJMA.png
 date: 2024-05-01
-last_modified: 2024-05-02
+last_modified: 2024-05-10
 category: Basic
 tags:
   - bitcoin
@@ -26,9 +26,11 @@ The Runes Protocol is a novel token standard designed by Casey Rodarmor, who is 
 - **User-Friendly Interface**: Unlike other token standards that may require complex knowledge of blockchain technology, Runes Protocol offers a simplified and accessible approach, making it easier for users and developers to adopt.
 - **Compatibility**: It integrates seamlessly with existing Bitcoin infrastructure, meaning users don’t need to adopt new tools or wallets to use Runes tokens
 
-## How the Runes Protocol Operates
+## How the Runes Protocol Operates to improve Efficiency
 
-The Runes protocol utilizes a UTXO-based model compatible with Bitcoin’s existing architecture, effectively minimizing the creation of unnecessary "junk" UTXOs that can burden the network.
+If you're asking what unique transaction method do bitcoin runes introduce to enhance efficiency the answer is simple but would require a step-by-step investigation of various Bitcoin protocol aspects.
+
+First and foremost, the Runes protocol utilizes a UTXO-based model compatible with Bitcoin’s existing architecture, effectively minimizing the creation of unnecessary "junk" UTXOs that can burden the network.
 
 ### Understanding UTXOs
 In the Bitcoin system, a UTXO represents unspent output from previous transactions, available for use in future transactions. It remains unspent until it is used as an input in another transaction.
@@ -37,6 +39,7 @@ In the Bitcoin system, a UTXO represents unspent output from previous transactio
 Runes are linked to UTXOs using a protocol message in an OP_RETURN output, a method used for embedding data that does not affect the UTXO set because it generates provably unspendable outputs. This message specifies the output index, the Rune's ID, and the quantity of tokens to be transferred.
 
 ### Token Management and Transfers
+
 Operations related to Runes, such as their creation (etching) and transfer, are consolidated into a single OP_RETURN output. This setup includes necessary details like divisibility, name, and other metadata. The entire supply of a Rune is contained within a single UTXO, represented as a 128-bit integer, with divisibility allowing for fractional usage similar to decimals in ERC-20 tokens.
 
 Runes are transferred via Bitcoin transactions that include an OP_RETURN output, specifying the movement of tokens from input UTXOs to specific output UTXOs. This approach maintains an efficient record of token balances without tying them directly to a wallet address, instead linking them to UTXOs for better scalability and network performance.
