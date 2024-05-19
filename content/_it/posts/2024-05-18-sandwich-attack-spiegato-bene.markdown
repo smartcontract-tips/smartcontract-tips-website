@@ -3,6 +3,7 @@ type: post
 
 title: "Sandwich Attack: Un Esempio pratico, illustrato e spiegato passo per passo"
 date: 2024-05-18
+last_modified: 2024-05-19
 layout: post
 category: Advanced
 math: true
@@ -12,9 +13,13 @@ tags:
   - Attack
   - Frontrunning
 
-#image: /pics/fmt-16-9/dora-2.png
+image: /pics/posts/sandwich-attack/cover.png
 ---
-Il "sandwich attack" è una tipologia di attacco utilizzato nel contesto delle blockchain, in particolare su Ethereum, per sfruttare le transazioni di trading degli utenti. Questo attacco prende di mira le operazioni su piattaforme di finanza decentralizzata (DeFi) come gli exchange decentralizzati (DEX), dove le transazioni vengono trasmesse pubblicamente prima di essere incluse in un blocco. Ecco una descrizione dettagliata di come funziona:
+Il "sandwich attack" è una tipologia di attacco utilizzato nel contesto delle blockchain, in particolare su Ethereum, per sfruttare le transazioni di trading degli utenti. Questo attacco prende di mira le operazioni su piattaforme di finanza decentralizzata (DeFi) come gli exchange decentralizzati (DEX), dove le transazioni vengono trasmesse pubblicamente prima di essere incluse in un blocco. 
+
+![cover](/pics/posts/sandwich-attack/cover.png)
+
+Ecco una descrizione dettagliata di come funziona:
 I sandwich attack ricadono nella categoria di azioni [rivolte al MEV](/articoli/mev-la-tassa-nascosta-web3-sue-implicazioni/). 
 
 ## Come Funziona un Sandwich Attack
