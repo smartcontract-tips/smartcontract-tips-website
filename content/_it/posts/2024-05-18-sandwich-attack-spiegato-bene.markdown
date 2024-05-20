@@ -3,7 +3,7 @@ type: post
 
 title: "Sandwich Attack: Un Esempio pratico, illustrato e spiegato passo per passo"
 date: 2024-05-18
-last_modified: 2024-05-19
+last_modified: 2024-05-20
 layout: post
 category: Advanced
 math: true
@@ -81,7 +81,16 @@ Ecco il diagramma che traccia la curva $ x \cdot y = k $ con il punto iniziale:
 
 La curva rappresenta la relazione tra USDT (X) ed ETH (Y) mantenendo la costante $ k = 300000 $. Il punto rosso evidenzia lo stato iniziale della pool.
 
-L'attaccante inserisce 1000 USDT nella pool. Dobbiamo ricalcolare i bilanci per mantenere la costante $ k = 300000 $.
+
+## Fase di Frontrunning
+
+
+L'attaccante monitora continuamente la mempool dove sono visibili le transazioni non ancora inserite in un blocco. Individuata una transazione di swap dell'utente verso la pool ne inserisce una sua.
+Supponiamo che l'utente abbia inserito una transazione che scambia 1000 usdt e ottiene un corrispettivo in ether al prezzo determinato dalle attuali riserve.
+
+L'attaccante inserisce una transazione simile, con 1000 USDT verso pool. E' essenziale che inserisca la sua transazione prima di quella dell'utente e nello stesso blocco, a questo scopo inserisce la transazione con un gas price più alto per essere servito prima.
+
+Dobbiamo ricalcolare i bilanci per mantenere la costante $ k = 300000 $.
 
 ### Calcolo
 
@@ -121,8 +130,9 @@ $$ 10 \, \text{ETH} - 9.677 \, \text{ETH} = 0.323 \, \text{ETH} $$
 
 L'attaccante ha acquistato 0.323 ETH inserendo 1000 USDT nella pool.
 
+## Esecuzione della transazione bersaglio
 
-L'utente inserisce 1000 USDT nella pool. Dobbiamo ricalcolare i bilanci per mantenere la costante $ k = 300000 $.
+A questo punto la transazione dell'utente viene inserita nel blocco, ricordiamo che intende spendere 1000 USDT in cambio di ether. Dobbiamo ricalcolare i bilanci per mantenere la costante $ k = 300000 $.
 
 ### Calcolo
 
@@ -164,6 +174,9 @@ $$ 9.677 \, \text{ETH} - 9.375 \, \text{ETH} = 0.302 \, \text{ETH} $$
 
 L'utente ha acquistato 0.302 ETH inserendo 1000 USDT nella pool.
 
+**Una quantità di ETH inferiore a quella che ha acquistato l'attaccante con la stessa spesa**
+
+## Fase di backrunning. L'attacante trae profitto
 
 Ora, l'attaccante rivende gli ETH che aveva comprato (0.323 ETH) nella pool. Dobbiamo ricalcolare i bilanci per mantenere la costante $ k = 300000 $.
 
@@ -198,7 +211,7 @@ Ecco il diagramma aggiornato che traccia la curva $ x \cdot y = k $ con i quattr
 3. **Post User Transaction (Dopo la Transazione dell'Utente)**: $ (32000, 9.375) $
 4. **Post Back-Running (Dopo il Back-Running)**: $ (30927.21, 9.698) $
 
-### Conclusioni
+## Conclusioni
 
 - **Costo per l'Utente**: L'utente ha speso 1000 USDT per acquistare 0.302 ETH.
 - **Profitto per l'Attaccante**: L'attaccante ha speso 1000 USDT per acquistare 0.323 ETH e ha venduto 0.323 ETH per 1072.79 USDT. Profitto netto: $ 1072.79 - 1000 = 72.79 $ USDT.
