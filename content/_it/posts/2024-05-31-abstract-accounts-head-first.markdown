@@ -5,7 +5,7 @@ date: 2024-05-31
 type: post
 
 category: Basic
-
+image: /pics/posts/abstract-accounts-head-first/13.webp
 tags: 
     - ERC-4337
     - Abstract Accounts
