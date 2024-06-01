@@ -3,6 +3,7 @@ layout: post
 title: "Abstract Accounts in Ethereum: una Guida illustrata, ragionata e ragionevole."
 date: 2024-05-31 
 type: post
+related: true
 
 category: Basic
 image: /pics/posts/abstract-accounts-head-first/image.png

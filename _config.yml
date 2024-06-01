@@ -99,6 +99,16 @@ defaults:
       permalink: /en/post/:slug
 
 
+
+## section for related.html
+
+related_by: tags      # Match on both categories and tags
+related_limit: 5      # Include 5 related pages
+related_tags: 1       # Match with at least 1 tags.
+
+## end of related section
+
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

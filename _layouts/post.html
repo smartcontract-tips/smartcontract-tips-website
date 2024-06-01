@@ -25,6 +25,7 @@ layout: default
   <br>
 
 
+
   <div id="toc"></div>
 
   
@@ -32,7 +33,15 @@ layout: default
     {{ content }}
   </div>
 
-
+  {% comment %}
+  <!-- Only show related pages on a page when `related: true` -->
+  {% endcomment %}
+  {% if page.id and page.related %}
+    <div class="related-posts">
+      <h3>See also</h3>
+      {% include related.html %}
+    </div>
+  {% endif %}
 
   <div style="background-color: antiquewhite; padding: 30px;">
     {% assign author = site.authors | where: 'authorId', page.author | first %}
