@@ -183,7 +183,7 @@ Una cosa che non abbiamo visto nella slide precedente è che l'entry point può 
 
 A questo scopo, nasce anche la figura del "Paymaster", che è un altro smart contract che si occupa di pagare il gas per conto dell'utente senza che l'utente tenga criptovalute nel suo smart wallet. A questo punto, abbiamo completato il cerchio, creando una struttura molto flessibile che si sovrappone alla struttura già esistente. Gli utenti creano delle richieste, che non sono transazioni, e queste richieste vengono poi trasformate in vere e proprie transazioni blockchain da altri operatori, disaccoppiando così la funzione dell'utente.
 
-## Il Protocollo ERC-4337 puà funzionare subito. No Hard Fork 
+## Il Protocollo ERC-4337 può funzionare subito. No Hard Fork 
 
 Una cosa interessante di questo protocollo, che si chiama ERC-4337 o, in modo equivalente, EIP-4337 (Ethereum Improvement Proposal), è che non richiede un hard fork. Questo significa che il protocollo di consenso di Ethereum, così com'è, non deve essere cambiato per far funzionare questo nuovo protocollo di account abstraction. Può funzionare direttamente con le caratteristiche che la blockchain ha già oggi, senza bisogno di modificare il protocollo di consenso di Ethereum. Questo è sicuramente un grande vantaggio. 
 
