@@ -32,6 +32,9 @@ Dopo vent'anni, la situazione è completamente cambiata: le prime cinque aziende
 
 ## Il Web3, affascinante idea ma ha anche dei difetti
 
+Se volessimo individuare una sola proprietà che distingue in modo netto il web3 dal web più tradizionale potremmo dire che è il controllo. Il controllo dei dati, dei contenuti, degli asset e soprattutto della propria identità, non è più intermediato da un servizio terzo, ma in teoria sta nelle nostre mani e gestito dal nostro wallet attraverso le nostre chiavi.
+
+Però le cose nella realtà non funzionano bene come ce le immaginiamo.
 
 {% include imagebox.html text="Basta con il WEB3. Cercati un lavoro vero!" imgurl="/pics/posts/abstract-accounts-head-first/1.webp" %}
 
@@ -139,6 +142,31 @@ In questo caso, abbiamo un flusso più complicato ma che può funzionare. L'uten
 
 
 A questo punto, abbiamo l'entry point, un altro smart contract che calcola quanto gas deve essere pagato per svolgere quella determinata transazione e inoltra il comando vero e proprio al wallet. L'entry point trattiene la quantità di gas necessaria per rimborsare il Bundler.
+
+Il flusso descritto può essere suddiviso in diversi step chiari e ben definiti. Ecco come si articola il processo:
+
+1. **Inizializzazione dell'utente:**
+   - L’utente decide di effettuare un'operazione, come il trasferimento di fondi.
+   - Avvia l'operazione firmando un comando. La firma serve per autenticare la richiesta specifica.
+
+2. **Intervento del Bundler:**
+   - Il Bundler, una sorta di intermediario, raccoglie la richiesta firmata dall'utente.
+   - Inserisce questa richiesta all'interno di una transazione sulla blockchain e anticipa il costo del gas necessario per eseguirla, pagando con i suoi Ether (ETH).
+
+3. **Aspettativa di rimborso:**
+   - Dopo aver anticipato il gas, il Bundler si aspetta un rimborso per il gas speso, possibilmente aggiungendo un interesse, poiché sta fornendo un servizio di facilitazione.
+
+4. **Interazione con l'Entry Point:**
+   - La transazione mette in azione un altro smart contract, definito come entry point.
+   - Questo smart contract è unico nella rete, tecnicamente si dice **singleton** 
+
+5. **Esecuzione e rimborso:**
+   - L'entry point inoltra il comando al wallet per completare l'operazione.
+   - Trattiene la quantità di gas che sarà usata per rimborsare il Bundler, assicurando che non ci siano perdite per l'intermediario.
+
+Questo flusso assicura che tutte le parti coinvolte nella transazione, dall'utente al Bundler, siano correttamente compensate o rimborsate per i loro servizi e spese. In questo modo, si crea un sistema economico e funzionale che beneficia tutti gli attori coinvolti.
+
+
 
 Quindi, abbiamo ottenuto un flusso decentralizzato, perché non abbiamo bisogno di prendere accordi specifici con un singolo Bundler. Possiamo immaginare che essi competano per raccogliere le richieste di molti utenti. Abbiamo un unico entry point, che è unico per ogni chain e rappresenta quello che si dice un Singleton.
 
