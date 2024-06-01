@@ -1,5 +1,5 @@
 ---
-name: Giovanni Casu
+name: Francesco Cabras
 bio: "Co-Founder & CTO presso Radix Srls"
 picture: /pics/authors/francesco.jpeg 
 web: "https://www.radixgroup.it"
