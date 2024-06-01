@@ -18,12 +18,12 @@ L'Account Abstraction è sicuramente uno dei temi del momento nel mondo del web3
 
 ## Un po' di contesto
 
-Correva l'anno 1998: l'economista Paul Krugman lancia una provocazione contro il nascente Internet, dicendo che non avrebbe avuto alcun impatto significativo, paragonandolo al fax. Questo era in parte giustificato dal fatto che all'epoca le grandi aziende americane erano per lo più aziende tradizionali. Sì, c'erano anche Microsoft e Intel, ma non esisteva ancora una vera e propria web economy. 
+Correva l'anno 1998: l'economista Paul Krugman [lancia una provocazione contro il nascente Internet](https://www.laphamsquarterly.org/revolutions/miscellany/paul-krugmans-poor-prediction), dicendo che non avrebbe avuto alcun impatto significativo, paragonandolo al fax. Questo era in parte giustificato dal fatto che all'epoca le grandi aziende americane erano per lo più aziende tradizionali. Sì, c'erano anche Microsoft e Intel, ma non esisteva ancora una vera e propria web economy. 
 
 
 {% include imagebox.html text="Basta con il web. Cercati un lavoro vero!" imgurl="/pics/posts/abstract-accounts-head-first/1.webp" %}
 
-Dopo vent'anni, la situazione è completamente cambiata: le prime cinque aziende americane sono tutte digitali e operano nel web, ribaltando le proporzioni tra i due modi di fare industria. Nel 2018, Krugman inizia a criticare le criptovalute e il mondo della blockchain, dicendo che presentavano una regressione rispetto allo stato dell'arte dell'epoca. Anche qui, c'è stato un momento in cui un'industria è diventata tradizionale, quella del web digitale, ma il Web 3 è ancora qualcosa che non ha preso piede.
+Dopo vent'anni, la situazione è completamente cambiata: le prime cinque aziende americane sono tutte digitali e operano nel web, ribaltando le proporzioni tra i due modi di fare industria. Nel 2018, [Krugman inizia a criticare le criptovalute e il mondo della blockchain](https://www.investopedia.com/news/what-paul-krugmans-problem-bitcoin/), dicendo che rappresentavano una regressione rispetto allo stato dell'arte dell'epoca. Anche qui, c'è stato un momento in cui un'industria è diventata tradizionale, quella del web digitale, ma il Web 3 è ancora qualcosa che non ha preso piede.
 
 
 
@@ -80,7 +80,7 @@ Dobbiamo ridurre al minimo la complessità visibile agli utenti, ma questo non s
 
 ### Una congettura su facilità, sicurezza e auto-custodia.
 
-L'idea o la congettura che non possiamo avere contemporaneamente dei sistemi che siano sicuri, facili da usare e anche self-custodial, sotto il nostro controllo, è facilmente verificabile. Infatti, scegliere due a caso tra queste caratteristiche è facilmente realizzabile, ma metterle tutte e tre insieme potrebbe invece essere una sfida molto difficile da raccogliere. 
+L'idea o la congettura che [non possiamo avere contemporaneamente dei sistemi che siano sicuri, facili da usare e anche self-custodial](/articoli/transazioni-gasless-per-facilitare-lonboarding-degli-utenti-ethereum/), sotto il nostro controllo, è facilmente verificabile. Infatti, scegliere due a caso tra queste caratteristiche è facilmente realizzabile, ma metterle tutte e tre insieme potrebbe invece essere una sfida molto difficile da raccogliere. 
 
 ![conjecture web3](/featured_images/image-e1699635470183.png)
 
@@ -112,9 +112,9 @@ Questi contratti consentono di implementare logiche molto più flessibili del se
 Resta comunque il fatto che bisogna pagare il gas direttamente, quindi avere il cosiddetto coin nativo, come Ether o Matic, per poter effettuare le transazioni sulla blockchain. Quindi, questa è una soluzione parziale.
 
 
-## Introduciamo il primo elemento dell'Account Abstraction: il Bundler.
+## Introduciamo il primo elemento dell'Account Abstraction secondo il protocollo ERC-4337: il Bundler.
 
-Potremmo chiedere a qualcuno, che nella terminologia dell'Account Abstraction si chiama Bundler, di raccogliere la richiesta, quindi il comando dell'utente off-chain, senza fare una transazione e senza usare il gas per pagare. Chiediamo a questo Bundler di raccogliere la richiesta dell'utente e trasformarla in una transazione sulla chain. 
+Potremmo chiedere a qualcuno, che nella [terminologia dell'Account Abstraction](https://www.erc4337.io/docs) si chiama Bundler, di raccogliere la richiesta, quindi il comando dell'utente off-chain, senza fare una transazione e senza usare il gas per pagare. Chiediamo a questo Bundler di raccogliere la richiesta dell'utente e trasformarla in una transazione sulla chain. 
 
 
 Il flusso diventa un po' così: l'utente ha la sua chiave, con questa chiave firma un comando ma non paga il gas perché non sta facendo una vera e propria transazione on-chain. Metta la firma per autenticare la provenienza e l'autenticità di questa richiesta. 
@@ -192,7 +192,7 @@ Questa è una slide un po' più tecnica, ma mostra esattamente gli stessi concet
 
 ## Adozione di ERC-4337
 
-È una soluzione nata relativamente da poco, che comunque ha visto nell'ultimo anno un crescente tasso di adozione. Infatti, questo grafico tratto dal sito di Dune, che presenta sempre un gran numero di statistiche interessantissime sui protocolli del Web 3, ci mostra il numero di utenti, o meglio di smart account attivi, mese per mese negli ultimi 12 mesi circa. Una cosa interessante è che il grafico è disaggregato per le diverse chain. Come si può vedere molto facilmente, il colore che domina è quello di Polygon. Quindi, Polygon è la chain in cui si sta sperimentando e utilizzando maggiormente, o comunque il numero di smart account è preponderante.
+È una soluzione nata relativamente da poco, che comunque ha visto nell'ultimo anno un crescente tasso di adozione. Infatti, questo grafico tratto dal sito di [Dune](https://dune.com/niftytable/account-abstraction), che presenta sempre un gran numero di statistiche interessantissime sui protocolli del Web 3, ci mostra il numero di utenti, o meglio di smart account attivi, mese per mese negli ultimi 12 mesi circa. Una cosa interessante è che il grafico è disaggregato per le diverse chain. Come si può vedere molto facilmente, il colore che domina è quello di Polygon. Quindi, Polygon è la chain in cui si sta sperimentando e utilizzando maggiormente, o comunque il numero di smart account è preponderante.
 
 ![erc-4337 analytics](/pics/posts/abstract-accounts-head-first/dune0.png)
 
@@ -218,7 +218,9 @@ Questo apre anche alla possibilità di recuperare l'accesso a un wallet, poiché
 
 ## ERC-3074 come alternativa a ERC-4337:
 
-ERC-4337 non è l'unica proposta in campo per l'astrazione degli account. In particolare, esiste un'altra proposta chiamata ERC-3074, che è sostanzialmente un'alternativa, ma richiede un hard fork. Cosa significa? Richiede che il protocollo di consenso di Ethereum venga modificato e che vengano inseriti nuovi opcode. Gli opcode sono istruzioni elementari eseguite dalla Ethereum Virtual Machine (EVM). Queste nuove istruzioni permetterebbero a uno smart contract, delegato dall'utente, di eseguire operazioni per conto dell'utente.
+ERC-4337 non è l'unica proposta in campo per l'astrazione degli account. In particolare, esiste un'altra proposta chiamata [ERC-3074](https://eips.ethereum.org/EIPS/eip-3074), che è sostanzialmente un'alternativa, ma richiede un hard fork. Cosa significa? Richiede che il protocollo di consenso di Ethereum venga modificato e che vengano inseriti nuovi opcode. 
+
+Gli opcode sono istruzioni elementari eseguite dalla Ethereum Virtual Machine (EVM). Queste nuove istruzioni permetterebbero a uno smart contract, delegato dall'utente, di eseguire operazioni per conto dell'utente.
 
 | AUTH | sets an authorized context variable based on an ECDSA signature, allowing a smart contract to temporarily assume the identity of an EOA |
 | AUTHCALL | Similar to the existing CALL opcode, AUTHCALL enables a smart contract to make calls as if it were the authorized EOA |
@@ -230,7 +232,7 @@ L'hard fork è già stato approvato, nel senso che queste istruzioni sono state 
 
 ## Conclusioni
 
-Chi vincerà alla fine? Sembrano due alternative, ma è più probabile che le vedremo lavorare insieme. Per il momento, quella che abbiamo è ERC-4337, che è già immediatamente utilizzabile. Esistono tutta una serie di presentazioni che lo illustrano, ma fare una fork non è del tutto positivo, soprattutto perché alcuni critici vedono il problema che i wallet maker possono richiedere subito autorizzazioni che poi non vengono mai revocate, dando così potere a chi già ne ha.
+Chi vincerà alla fine? [Sembrano due alternative](/articoli/ethereums-wallet-evolution-comparing-eip-3074-and-erc-4337/), ma è più probabile che le vedremo lavorare insieme. Per il momento, quella che abbiamo è ERC-4337, che è già immediatamente utilizzabile. Esistono tutta una serie di presentazioni che lo illustrano, ma fare una fork non è del tutto positivo, soprattutto perché alcuni critici vedono il problema che i wallet maker possono richiedere subito autorizzazioni che poi non vengono mai revocate, dando così potere a chi già ne ha.
 
 Questa è una critica che viene dibattuta nella community, e solo col tempo vedremo quale delle due soluzioni prenderà maggiormente piede e quale si rivelerà la più adatta a rispondere alle esigenze degli utenti. Probabilmente, ERC-4337 con la sua architettura a vari player garantisce una grande flessibilità, che non so se sarà eguagliata dalle implementazioni che utilizzeranno solo ERC-3074. Tuttavia, questo è tutto da verificare.
 
