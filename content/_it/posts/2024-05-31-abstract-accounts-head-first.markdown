@@ -192,7 +192,7 @@ Questa è una slide un po' più tecnica, ma mostra esattamente gli stessi concet
 
 ## Adozione di ERC-4337
 
-È una soluzione nata relativamente da poco, che comunque ha visto nell'ultimo anno un crescente tasso di adozione. Infatti, questo grafico tratto dal sito di [Dune](https://dune.com/niftytable/account-abstraction), che presenta sempre un gran numero di statistiche interessantissime sui protocolli del Web 3, ci mostra il numero di utenti, o meglio di smart account attivi, mese per mese negli ultimi 12 mesi circa. Una cosa interessante è che il grafico è disaggregato per le diverse chain. Come si può vedere molto facilmente, il colore che domina è quello di Polygon. Quindi, Polygon è la chain in cui si sta sperimentando e utilizzando maggiormente, o comunque il numero di smart account è preponderante.
+È una soluzione nata relativamente da poco, che comunque ha visto nell'ultimo anno un crescente tasso di adozione. Infatti, [questo grafico tratto dal sito di Dune](https://dune.com/niftytable/account-abstraction), che presenta sempre un gran numero di statistiche interessantissime sui protocolli del Web 3, ci mostra il numero di utenti, o meglio di smart account attivi, mese per mese negli ultimi 12 mesi circa. Una cosa interessante è che il grafico è disaggregato per le diverse chain. Come si può vedere molto facilmente, il colore che domina è quello di Polygon. Quindi, Polygon è la chain in cui si sta sperimentando e utilizzando maggiormente, o comunque il numero di smart account è preponderante.
 
 ![erc-4337 analytics](/pics/posts/abstract-accounts-head-first/dune0.png)
 
@@ -232,7 +232,7 @@ L'hard fork è già stato approvato, nel senso che queste istruzioni sono state 
 
 ## Conclusioni
 
-Chi vincerà alla fine? [Sembrano due alternative](/articoli/ethereums-wallet-evolution-comparing-eip-3074-and-erc-4337/), ma è più probabile che le vedremo lavorare insieme. Per il momento, quella che abbiamo è ERC-4337, che è già immediatamente utilizzabile. Esistono tutta una serie di presentazioni che lo illustrano, ma fare una fork non è del tutto positivo, soprattutto perché alcuni critici vedono il problema che i wallet maker possono richiedere subito autorizzazioni che poi non vengono mai revocate, dando così potere a chi già ne ha.
+[Tra ERC-4337 e ERC-3074Chi vincerà alla fine? Sembrano due alternative](/articoli/ethereums-wallet-evolution-comparing-eip-3074-and-erc-4337/), ma è più probabile che le vedremo lavorare insieme. Per il momento, quella che abbiamo è ERC-4337, che è già immediatamente utilizzabile. Esistono tutta una serie di presentazioni che lo illustrano, ma fare una fork non è del tutto positivo, soprattutto perché alcuni critici vedono il problema che i wallet maker possono richiedere subito autorizzazioni che poi non vengono mai revocate, dando così potere a chi già ne ha.
 
 Questa è una critica che viene dibattuta nella community, e solo col tempo vedremo quale delle due soluzioni prenderà maggiormente piede e quale si rivelerà la più adatta a rispondere alle esigenze degli utenti. Probabilmente, ERC-4337 con la sua architettura a vari player garantisce una grande flessibilità, che non so se sarà eguagliata dalle implementazioni che utilizzeranno solo ERC-3074. Tuttavia, questo è tutto da verificare.
 
