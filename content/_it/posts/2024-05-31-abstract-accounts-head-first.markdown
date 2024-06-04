@@ -108,7 +108,7 @@ Per esempio, in Ethereum esistono i contratti multi-sig, ovvero wallet condivisi
 
 Questi contratti consentono di implementare logiche molto più flessibili del semplice wallet. Tuttavia, la perdita o lo smarrimento della chiave privata rimane un problema, così come una chiave compromessa perché copiata o filtrata da un hacker. 
 
-{% include imagebox.html text="Non mi sembra questa grande idea. Comunque serve la tua chiave e devi fare delle transazioni, e poi devi avere il tanto per pagare il gas nel tuo wallet eoa" imgurl="/pics/posts/abstract-accounts-head-first/3.webp" %}
+{% include imagebox.html text="Non mi sembra questa grande idea. Comunque per **votare** le transazioni multisig ti serve un EOA per interagire con lo smart contract e per pagare il gas" imgurl="/pics/posts/abstract-accounts-head-first/3.webp" %}
 
 Resta comunque il fatto che bisogna pagare il gas direttamente, quindi avere il cosiddetto coin nativo, come Ether o Matic, per poter effettuare le transazioni sulla blockchain. Quindi, questa è una soluzione parziale.
 
@@ -117,6 +117,7 @@ Resta comunque il fatto che bisogna pagare il gas direttamente, quindi avere il 
 
 Potremmo chiedere a qualcuno, che nella [terminologia dell'Account Abstraction](https://www.erc4337.io/docs) si chiama Bundler, di raccogliere la richiesta, quindi il comando dell'utente off-chain, senza fare una transazione e senza usare il gas per pagare. Chiediamo a questo Bundler di raccogliere la richiesta dell'utente e trasformarla in una transazione sulla chain. 
 
+![erc4337 diagram](/assets/4337-diagram.webp)
 
 Il flusso diventa un po' così: l'utente ha la sua chiave, con questa chiave firma un comando ma non paga il gas perché non sta facendo una vera e propria transazione on-chain. Metta la firma per autenticare la provenienza e l'autenticità di questa richiesta. 
 
@@ -139,7 +140,6 @@ Quindi viene inserito un ulteriore elemento che si chiama entry point. L'entry p
 {% include imagebox.html text="Io calcolo quanti ether servono per il gas, inoltro il comando al wallet e prendo il rimborso da mandare al bundler" imgurl="/pics/posts/abstract-accounts-head-first/16.webp" %}
 
 In questo caso, abbiamo un flusso più complicato ma che può funzionare. L'utente paga e firma un comando, autenticandolo con la sua firma su una certa richiesta, per esempio di trasferire dei fondi. Il Bundler raccoglie questa richiesta, la inserisce in una transazione e anticipa il gas, pagando con i suoi Ether. Poi si aspetta di ricevere un rimborso, magari con degli interessi, perché sta svolgendo un servizio.
-
 
 
 A questo punto, abbiamo l'entry point, un altro smart contract che calcola quanto gas deve essere pagato per svolgere quella determinata transazione e inoltra il comando vero e proprio al wallet. L'entry point trattiene la quantità di gas necessaria per rimborsare il Bundler.
@@ -166,7 +166,6 @@ Il flusso descritto può essere suddiviso in diversi step chiari e ben definiti.
    - Trattiene la quantità di gas che sarà usata per rimborsare il Bundler, assicurando che non ci siano perdite per l'intermediario.
 
 Questo flusso assicura che tutte le parti coinvolte nella transazione, dall'utente al Bundler, siano correttamente compensate o rimborsate per i loro servizi e spese. In questo modo, si crea un sistema economico e funzionale che beneficia tutti gli attori coinvolti.
-
 
 
 Quindi, abbiamo ottenuto un flusso decentralizzato, perché non abbiamo bisogno di prendere accordi specifici con un singolo Bundler. Possiamo immaginare che essi competano per raccogliere le richieste di molti utenti. Abbiamo un unico entry point, che è unico per ogni chain e rappresenta quello che si dice un Singleton.
