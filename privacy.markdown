@@ -6,11 +6,11 @@ permalink: /privacy/
 
 (aggiornata al 12/12/2023)
 
-Questa Privacy Policy è resa ai sensi dell’art. 13 del Regolamento Europeo n. 679/2016 e si applica esclusivamente a tutti i Dati raccolti attraverso il Sito web cripovaluta.it. La presente Privacy Policy è soggetta ad aggiornamenti che verranno pubblicati puntualmente sul Sito web. La presente Privacy Policy e la Cookie Policy, stabiliscono le basi sulle quali verranno elaborati i Dati personali dell’Utente.
+Questa Privacy Policy è resa ai sensi dell’art. 13 del Regolamento Europeo n. 679/2016 e si applica esclusivamente a tutti i Dati raccolti attraverso il Sito web smartcontract.tips. La presente Privacy Policy è soggetta ad aggiornamenti che verranno pubblicati puntualmente sul Sito web. La presente Privacy Policy e la Cookie Policy, stabiliscono le basi sulle quali verranno elaborati i Dati personali dell’Utente.
 
 ## Titolare del Trattamento
 
-Il Titolare del Trattamento dei Dati raccolti da questo Sito web è Davide Carboni, con sede operativa in viala La Plaia 15, 09123 Cagliari. 
+Il Titolare del Trattamento dei Dati raccolti da questo Sito web è Davide Carboni, con sede operativa in viale La Plaia 15, 09123 Cagliari. 
 
 PEC: davide.carboni@ingpec.eu
 
