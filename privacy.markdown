@@ -95,8 +95,7 @@ Con la registrazione alla newsletter, l’indirizzo email dell’Utente viene au
 
 I servizi di statistica permettono al Titolare del Trattamento esclusivamente di monitorare e analizzare i dati di traffico e servono a tener traccia del comportamento dell’Utente. Questo Sito web utilizza i seguenti servizi:
 
-(al momento non sono installati servizi di analytics)
-
+- Umami Analytics
 
 
 ## Modifiche a questa Privacy Policy
