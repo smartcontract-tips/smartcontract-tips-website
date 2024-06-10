@@ -6,7 +6,7 @@ type: post
 category: Mid
 tags: [smart contract, bitcoin]
 toc: true
-image: smart-contract-in-bitcoin/image.webp
+image: /pics/posts/smart-contract-in-bitcoin/image.webp
 
 ---
 
