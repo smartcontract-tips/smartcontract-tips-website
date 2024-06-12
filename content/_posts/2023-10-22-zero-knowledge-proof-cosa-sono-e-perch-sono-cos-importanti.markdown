@@ -2,8 +2,9 @@
 layout: post
 title: 'Zero-knowledge proof: cosa sono e perché sono importanti.'
 date: 2023-10-22 
+last_modified: 2024-06-10
 type: post
-parent_id: '0'
+related: true
 category: Mid
 tags: [zkp, cryptography, zero knowledge, zksnark]
 permalink: "/articoli/zero-knowledge-proof-cosa-sono-e-perch-sono-cos-importanti/"
