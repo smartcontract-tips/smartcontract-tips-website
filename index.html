@@ -3,277 +3,331 @@ permalink: /
 ---
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Smart Contract Tips</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{{ site.landing_path }}/assets/css/main.css" />
 
-		<script defer src="https://eu.umami.is/script.js" data-website-id="3f363256-ccba-47e6-b575-8a46686833b2"></script>
-		<script src="https://kit.fontawesome.com/4c0de2340c.js" crossorigin="anonymous"></script>
+<head>
+	<title>Smart Contract Tips</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="{{ site.landing_path }}/assets/css/main.css" />
 
-		<noscript><link rel="stylesheet" href="{{ site.landing_path }}/assets/css/noscript.css" /></noscript>
+	<script defer src="https://eu.umami.is/script.js" data-website-id="3f363256-ccba-47e6-b575-8a46686833b2"></script>
+	<script src="https://kit.fontawesome.com/4c0de2340c.js" crossorigin="anonymous"></script>
 
-		<!-- google adsense -->
-		<meta name="google-adsense-account" content="ca-pub-1834107151487683">
-	
-	</head>
-	<body class="is-preload">
+	<noscript>
+		<link rel="stylesheet" href="{{ site.landing_path }}/assets/css/noscript.css" />
+	</noscript>
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					
-					<nav>
-						<ul>
-							<li><a href="#intro">Benvenuto</a></li>
-							<li><a href="authors">Chi</a></li>
-							<li><a href="#two">Cosa</a></li>
-							<li><a href="#three">Contatti</a></li>
-							<li><a href="articoli">Articoli</a></li>
-							<li><a href="index-en.html">English 🇬🇧 </a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+	<!-- google adsense -->
+	<meta name="google-adsense-account" content="ca-pub-1834107151487683">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+</head>
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Smart Contract Tips</h1>
-							<p><a href="index.html">IT 🇮🇹 </a><a href="index-en.html">EN 🇬🇧 </a></p>
-							<p>La vera sfida oggi non è cavalcare la tecnologia del web3,
-								ma piuttosto scrivere 
-								<a style="color: orange;" href="articoli/cosa-sono-gli-smart-contract-definizione-ed-esempi/">smart contract</a> sicuri che rispettino i requisiti attesi dagli utenti 
-								e non espongano i loro fondi ad hacker e truffatori. Blockchain e sicurezza, sembra scontato ma non lo è!
-							</p>
-							<ul class="actions">
-								<li><a href="/articoli" class="button">Articoli</a></li>
-							</ul>
-						</div>
+<body class="is-preload">
 
+	<!-- Sidebar -->
+	<section id="sidebar">
+		<div class="inner">
 
-						<div class="cards-container">
-							<!-- Card 1 -->
-							<div class="card">
-							  <img src="/pics/fmt-16-9/smartcontract-1000x564.jpg" alt="cyber-gears-machinery">
-							  <div class="card-content">
-								<h2 class="card-title">
-									Cosa sono gli smart contract, definizione ed esempi
-									</h2>
-								<p class="card-description">Gli smart contract sono una nuova categoria di programmi software legati alle criptovalute. Come funzionano</p>
-								<a class="card-title" href="/articoli/cosa-sono-gli-smart-contract-definizione-ed-esempi/">
-									<div class="card-footer">...continua</div>
-								</a>
-							  </div>
-							</div>
-						  
-							<!-- Card 2 -->
-							<div class="card">
-							  <img src="/featured_images/DALL%C2%B7E2023-10-1921.26.58-Photoin16_9formatofavastdigitallandscapewithpatternsrepresentingencrypteddata.AmagnifyingglasshoversrevealingthewordsZeroKnowl.png" alt="zero-knoweledge-proofs">
-							  <div class="card-content">
-								<h2 class="card-title">
-									Zero-knowledge proof: cosa sono e perché sono importanti.</h2>
-								<p class="card-description">Le Zero Knowledge Proof (ZKP) consentono di dimostrare il possesso di dati senza svelarne il contenuto e senza scambiare alcuna informazione riservata.</p>
-								<a class="card-title" href="/articoli/zero-knowledge-proof-cosa-sono-e-perch-sono-cos-importanti/">
-									<div class="card-footer">...continua</div>
-								</a>
-							  </div>
-							</div>
-						  
-							<!-- Card 3 -->
-							<div class="card">
-							  <img src="/featured_images/copertinaguida.png" alt="stablecoin-guida">
-							  <div class="card-content">
-								
-									<h2 class="card-title">Una (poi non così) piccola guida alle Stablecoin</h2>
-								
-								<p class="card-description">
-									Le stablecoin sono probabilmente una killer application delle blockchain, sembra che la scena sia già
-								</p>
-								<a class="card-title" href="/articoli/guida-stablecoin-cosa-sono-a-cosa-servono-paypal/">
-									<div class="card-footer">...continua</div>
-								</a>
-								
-							  </div>
-							</div>
-						  
+			<nav>
+				<ul>
+					<li><a href="#intro">Benvenuto</a></li>
+					<li><a href="authors">Chi</a></li>
+					<li><a href="#two">Cosa</a></li>
+					<li><a href="#three">Contatti</a></li>
+					<li><a href="articoli">Articoli</a></li>
+					<li><a href="index-en.html">English 🇬🇧 </a></li>
+				</ul>
+			</nav>
+		</div>
+	</section>
 
-						  	<!-- Card 4 -->
-							<div class="card">
-								{% assign z = site['it'] | where:"draft",false | reverse %}
-								<img src="{{ z[0].image }}" alt="last-post">
-								<div class="card-content">
-								  
-									  <h2 class="card-title">{{ z[0].title }}</h2>
-								  
-								  <p class="card-description">
-									{{ z[0].excerpt| strip_html | truncatewords:24 }}
-								  </p>
-								  <a class="card-title" href="{{ z[0].url }}">
-									  <div class="card-footer">...continua</div>
-								  </a>
-								  
-								</div>
-							</div>			
-											
-							<br>
-							
-						</div><!-- END Cards container -->
-						<div class="inner">
-							<blockquote>
-								Smart contracts on Ethereum are worse 
-								than even non-financial commercial code; 
-								as of May 2016, Ethereum contracts averaged 
-								100 obvious bugs per 1000 lines of code. 
-								For comparison, Microsoft code averages 
-								15 bugs per 1000 lines, NASA code around 0 per 500,000 
-								lines. (Excerpt from chapter 10 of Attack of the 50 Foot Blockchain by David Gerard)
-							</blockquote>
-						</div>
-						
-					</section>
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-				<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
-						
-						<section>
-							
-							
-							<div class="content">
-								<div class="inner">
-									<h2>I nostri sponsor</h2>
-									<p> Grazie alle aziende partner e al supporto del quadratic funding della comunità
-										italiana Spaghett.eth il nostro sito viene aggiornato con nuovi contenuti ogni settimana.
-										Se vuoi unirti ai nostri sponsor contattaci oppure 
-										<a style="color: orange;" href="https://www.buymeacoffee.com/smartcontract.tips" 
-										target="_blank" rel="noreferrer noopener">
-										<i class="fa-solid fa-mug-hot"></i>
-										Buy me a coffee 
-										</a>
-									</p>
-										
-									<div >
-										
-
-											<a href="https://www.uniscrow.com" 
-											target="_blank" rel="noreferrer noopener">
-											UNISCROW
-											</a>
-											<br/>
-
-
-
-
-
-											<a href="https://radixgroup.org" 
-												target="_blank" rel="noreferrer noopener">
-												RADIX SRL
-											</a><br/>
-
-											<a href="https://qf.spaghett-eth.com/#/leaderboards/0x96FBFf5171C38e8dbdEB1E8F559b94436A14529b/networks/arbitrum" 
-											target="_blank" rel="noreferrer noopener">
-											SPAGHETT.ETH
-											</a><br/>
-
-
-											
-
-									</div>
-							</div>
-						</section>
-
-					</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>Cosa facciamo</h2>
-							<p>
-								Siamo qui per aiutarvi a creare, verificare 
-								e migliorare la sicurezza dei vostri 
-								smart contract attraverso un audit professionale e approfondito.
-							</p>
-							<img src="talking-about-smart-contracts.jpeg" height="300">
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Best Practice del Codice</h3>
-									<p>Nel mondo dello sviluppo di dApps e smart contract, l'adozione di best practice di codifica è fondamentale. Una scrittura codice chiara e ben documentata non solo facilita la manutenzione e l'aggiornamento delle applicazioni, ma riduce anche il rischio di errori e vulnerabilità.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-lock"></span>
-									<h3>Analisi di Incidenti di Sicurezza</h3>
-									<p>Studiare gli incidenti di sicurezza passati è un passo vitale per migliorare le pratiche di sicurezza nelle dApps. L'analisi dettagliata di attacchi e violazioni aiuta a comprendere le tecniche utilizzate dai malintenzionati e a identificare le aree vulnerabili.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Approfondimento sugli Standard</h3>
-									<p>Gli standard di sicurezza giocano un ruolo cruciale nello sviluppo di smart contract. Con l'evoluzione continua della tecnologia blockchain, è fondamentale rimanere aggiornati sugli ultimi standard e protocolli.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>Tutorial e Corsi</h3>
-									<p>L'educazione e la formazione continua sono componenti chiave per mantenere un alto livello di sicurezza nelle dApps. Sono disponibili numerosi tutorial e corsi online che coprono vari aspetti dello sviluppo di smart contract.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Condivisione e Feed di Alert</h3>
-									<p>Mantenere una rete di comunicazione attiva e informata è essenziale nella comunità di sviluppo di dApps. La condivisione di informazioni, come alert di sicurezza e aggiornamenti su vulnerabilità recentemente scoperte, aiuta a prevenire la diffusione di attacchi.</p>
-								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Servizi Premium attraverso la Rete dei Partner</h3>
-									<p>Collaborare con una rete di partner affidabili può migliorare significativamente la sicurezza delle dApps. Attraverso servizi premium come audit di sicurezza professionali, consulenze esperte e accesso a strumenti di monitoraggio avanzati, gli sviluppatori possono beneficiare di una maggiore protezione.</p>
-								</section>
-							</div>
-						</div>
-					</section>
-
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Contattaci</h2>
-							<p>
-								Se vuoi scrivere un articolo oppure hai bisogno di 
-								un esperto di smart contract contattaci
-							</p>
-							
-							
-
-							<a 	href="mailto:team@smartcontract.tips?subject=[SCT]%20Contact%20request" 
-								class="button submit"
-								target="_blank">
-								Send Message
-							</a>
-
-						</div>
-					</section>
-
+		<!-- Intro -->
+		<section id="intro" class="wrapper style1 fullscreen fade-up">
+			<div class="inner">
+				<h1>Smart Contract Tips</h1>
+				<p><a href="index.html">IT 🇮🇹 </a><a href="index-en.html">EN 🇬🇧 </a></p>
+				<p>La vera sfida oggi non è cavalcare la tecnologia del web3,
+					ma piuttosto scrivere
+					<a style="color: orange;" href="articoli/cosa-sono-gli-smart-contract-definizione-ed-esempi/">smart
+						contract</a> sicuri che rispettino i requisiti attesi dagli utenti
+					e non espongano i loro fondi ad hacker e truffatori. Blockchain e sicurezza, sembra scontato ma non
+					lo è!
+				</p>
+				<ul class="actions">
+					<li><a href="/articoli" class="button">Articoli</a></li>
+				</ul>
 			</div>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Davide Carboni. All rights reserved.</li>
-						<li><a href="/privacy">Privacy policy.</a></li>
-						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+
+			<div class="cards-container">
+				<!-- Card 1 -->
+				<div class="card">
+					<img src="/pics/fmt-16-9/smartcontract-1000x564.jpg" alt="cyber-gears-machinery">
+					<div class="card-content">
+						<h2 class="card-title">
+							Cosa sono gli smart contract, definizione ed esempi
+						</h2>
+						<p class="card-description">Gli smart contract sono una nuova categoria di programmi software
+							legati alle criptovalute. Come funzionano</p>
+						<a class="card-title" href="/articoli/cosa-sono-gli-smart-contract-definizione-ed-esempi/">
+							<div class="card-footer">...continua</div>
+						</a>
+					</div>
 				</div>
-			</footer>
 
-		<!-- Scripts -->
-			<script src="{{ site.landing_path }}/assets/js/jquery.min.js"></script>
-			<script src="{{ site.landing_path }}/assets/js/jquery.scrollex.min.js"></script>
-			<script src="{{ site.landing_path }}/assets/js/jquery.scrolly.min.js"></script>
-			<script src="{{ site.landing_path }}/assets/js/browser.min.js"></script>
-			<script src="{{ site.landing_path }}/assets/js/breakpoints.min.js"></script>
-			<script src="{{ site.landing_path }}/assets/js/util.js"></script>
-			<script src="{{ site.landing_path }}/assets/js/main.js"></script>
+				<!-- Card 2 -->
+				<div class="card">
+					<img src="/featured_images/DALL%C2%B7E2023-10-1921.26.58-Photoin16_9formatofavastdigitallandscapewithpatternsrepresentingencrypteddata.AmagnifyingglasshoversrevealingthewordsZeroKnowl.png"
+						alt="zero-knoweledge-proofs">
+					<div class="card-content">
+						<h2 class="card-title">
+							Zero-knowledge proof: cosa sono e perché sono importanti.</h2>
+						<p class="card-description">Le Zero Knowledge Proof (ZKP) consentono di dimostrare il possesso
+							di dati senza svelarne il contenuto e senza scambiare alcuna informazione riservata.</p>
+						<a class="card-title"
+							href="/articoli/zero-knowledge-proof-cosa-sono-e-perch-sono-cos-importanti/">
+							<div class="card-footer">...continua</div>
+						</a>
+					</div>
+				</div>
 
-	</body>
+				<!-- Card 3 -->
+				<div class="card">
+					<img src="/featured_images/copertinaguida.png" alt="stablecoin-guida">
+					<div class="card-content">
+
+						<h2 class="card-title">Una (poi non così) piccola guida alle Stablecoin</h2>
+
+						<p class="card-description">
+							Le stablecoin sono probabilmente una killer application delle blockchain, sembra che la
+							scena sia già
+						</p>
+						<a class="card-title" href="/articoli/guida-stablecoin-cosa-sono-a-cosa-servono-paypal/">
+							<div class="card-footer">...continua</div>
+						</a>
+
+					</div>
+				</div>
+
+
+				<!-- Card 4 -->
+				<div class="card">
+					{% assign z = site['it'] | where:"draft",false | reverse %}
+					<img src="{{ z[0].image }}" alt="last-post">
+					<div class="card-content">
+
+						<h2 class="card-title">{{ z[0].title }}</h2>
+
+						<p class="card-description">
+							{{ z[0].excerpt| strip_html | truncatewords:24 }}
+						</p>
+						<a class="card-title" href="{{ z[0].url }}">
+							<div class="card-footer">...continua</div>
+						</a>
+					</div>
+				</div>
+				<!-- Card 5 -->
+				<div class="card">
+					{% assign z = site['it'] | where:"draft",false | reverse %}
+					<img src="{{ z[1].image }}" alt="last-post">
+					<div class="card-content">
+
+						<h2 class="card-title">{{ z[1].title }}</h2>
+
+						<p class="card-description">
+							{{ z[1].excerpt| strip_html | truncatewords:24 }}
+						</p>
+						<a class="card-title" href="{{ z[1].url }}">
+							<div class="card-footer">...continua</div>
+						</a>
+					</div>
+				</div>
+				<!-- Card 6 -->
+				<div class="card">
+					{% assign z = site['it'] | where:"draft",false | reverse %}
+					<img src="{{ z[2].image }}" alt="last-post">
+					<div class="card-content">
+
+						<h2 class="card-title">{{ z[2].title }}</h2>
+
+						<p class="card-description">
+							{{ z[2].excerpt| strip_html | truncatewords:24 }}
+						</p>
+						<a class="card-title" href="{{ z[2].url }}">
+							<div class="card-footer">...continua</div>
+						</a>
+					</div>
+				</div>
+
+				<br>
+
+			</div><!-- END Cards container -->
+			<div class="inner">
+				<blockquote>
+					Smart contracts on Ethereum are worse
+					than even non-financial commercial code;
+					as of May 2016, Ethereum contracts averaged
+					100 obvious bugs per 1000 lines of code.
+					For comparison, Microsoft code averages
+					15 bugs per 1000 lines, NASA code around 0 per 500,000
+					lines. (Excerpt from chapter 10 of Attack of the 50 Foot Blockchain by David Gerard)
+				</blockquote>
+			</div>
+
+		</section>
+
+		<!-- One -->
+		<section id="one" class="wrapper style2 spotlights">
+
+			<section>
+
+
+				<div class="content">
+					<div class="inner">
+						<h2>I nostri sponsor</h2>
+						<p> Grazie alle aziende partner e al supporto del quadratic funding della comunità
+							italiana Spaghett.eth il nostro sito viene aggiornato con nuovi contenuti ogni settimana.
+							Se vuoi unirti ai nostri sponsor contattaci oppure
+							<a style="color: orange;" href="https://www.buymeacoffee.com/smartcontract.tips"
+								target="_blank" rel="noreferrer noopener">
+								<i class="fa-solid fa-mug-hot"></i>
+								Buy me a coffee
+							</a>
+						</p>
+
+						<div>
+
+
+							<a href="https://www.uniscrow.com" target="_blank" rel="noreferrer noopener">
+								UNISCROW
+							</a>
+							<br />
+
+
+
+
+
+							<a href="https://radixgroup.org" target="_blank" rel="noreferrer noopener">
+								RADIX SRL
+							</a><br />
+
+							<a href="https://qf.spaghett-eth.com/#/leaderboards/0x96FBFf5171C38e8dbdEB1E8F559b94436A14529b/networks/arbitrum"
+								target="_blank" rel="noreferrer noopener">
+								SPAGHETT.ETH
+							</a><br />
+
+
+
+
+						</div>
+					</div>
+			</section>
+
+		</section>
+
+		<!-- Two -->
+		<section id="two" class="wrapper style3 fade-up">
+			<div class="inner">
+				<h2>Cosa facciamo</h2>
+				<p>
+					Siamo qui per aiutarvi a creare, verificare
+					e migliorare la sicurezza dei vostri
+					smart contract attraverso un audit professionale e approfondito.
+				</p>
+				<img src="talking-about-smart-contracts.jpeg" height="300">
+				<div class="features">
+					<section>
+						<span class="icon solid major fa-code"></span>
+						<h3>Best Practice del Codice</h3>
+						<p>Nel mondo dello sviluppo di dApps e smart contract, l'adozione di best practice di codifica è
+							fondamentale. Una scrittura codice chiara e ben documentata non solo facilita la
+							manutenzione e l'aggiornamento delle applicazioni, ma riduce anche il rischio di errori e
+							vulnerabilità.</p>
+					</section>
+					<section>
+						<span class="icon solid major fa-lock"></span>
+						<h3>Analisi di Incidenti di Sicurezza</h3>
+						<p>Studiare gli incidenti di sicurezza passati è un passo vitale per migliorare le pratiche di
+							sicurezza nelle dApps. L'analisi dettagliata di attacchi e violazioni aiuta a comprendere le
+							tecniche utilizzate dai malintenzionati e a identificare le aree vulnerabili.</p>
+					</section>
+					<section>
+						<span class="icon solid major fa-cog"></span>
+						<h3>Approfondimento sugli Standard</h3>
+						<p>Gli standard di sicurezza giocano un ruolo cruciale nello sviluppo di smart contract. Con
+							l'evoluzione continua della tecnologia blockchain, è fondamentale rimanere aggiornati sugli
+							ultimi standard e protocolli.</p>
+					</section>
+					<section>
+						<span class="icon solid major fa-desktop"></span>
+						<h3>Tutorial e Corsi</h3>
+						<p>L'educazione e la formazione continua sono componenti chiave per mantenere un alto livello di
+							sicurezza nelle dApps. Sono disponibili numerosi tutorial e corsi online che coprono vari
+							aspetti dello sviluppo di smart contract.</p>
+					</section>
+					<section>
+						<span class="icon solid major fa-link"></span>
+						<h3>Condivisione e Feed di Alert</h3>
+						<p>Mantenere una rete di comunicazione attiva e informata è essenziale nella comunità di
+							sviluppo di dApps. La condivisione di informazioni, come alert di sicurezza e aggiornamenti
+							su vulnerabilità recentemente scoperte, aiuta a prevenire la diffusione di attacchi.</p>
+					</section>
+					<section>
+						<span class="icon major fa-gem"></span>
+						<h3>Servizi Premium attraverso la Rete dei Partner</h3>
+						<p>Collaborare con una rete di partner affidabili può migliorare significativamente la sicurezza
+							delle dApps. Attraverso servizi premium come audit di sicurezza professionali, consulenze
+							esperte e accesso a strumenti di monitoraggio avanzati, gli sviluppatori possono beneficiare
+							di una maggiore protezione.</p>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- Three -->
+		<section id="three" class="wrapper style1 fade-up">
+			<div class="inner">
+				<h2>Contattaci</h2>
+				<p>
+					Se vuoi scrivere un articolo oppure hai bisogno di
+					un esperto di smart contract contattaci
+				</p>
+
+
+
+				<a href="mailto:team@smartcontract.tips?subject=[SCT]%20Contact%20request" class="button submit"
+					target="_blank">
+					Send Message
+				</a>
+
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer" class="wrapper style1-alt">
+		<div class="inner">
+			<ul class="menu">
+				<li>&copy; Davide Carboni. All rights reserved.</li>
+				<li><a href="/privacy">Privacy policy.</a></li>
+				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="{{ site.landing_path }}/assets/js/jquery.min.js"></script>
+	<script src="{{ site.landing_path }}/assets/js/jquery.scrollex.min.js"></script>
+	<script src="{{ site.landing_path }}/assets/js/jquery.scrolly.min.js"></script>
+	<script src="{{ site.landing_path }}/assets/js/browser.min.js"></script>
+	<script src="{{ site.landing_path }}/assets/js/breakpoints.min.js"></script>
+	<script src="{{ site.landing_path }}/assets/js/util.js"></script>
+	<script src="{{ site.landing_path }}/assets/js/main.js"></script>
+
+</body>
+
 </html>
