@@ -2,7 +2,7 @@
 layout: post
 title: 'Zero-knowledge proof: cosa sono e perché sono importanti.'
 date: 2023-10-22 
-last_modified: 2024-06-10
+last_modified: 2024-06-14
 type: post
 related: true
 category: Mid
@@ -126,13 +126,21 @@ Un passo indietro, problemi P e NP
 
 Per comprendere appieno la logica che sta alla base dei protocolli ZKP dobbiamo fare un passo indietro e parlare di complessità computazionale. Sembra un parolone complicato ma in realtà è facile da capire: i problemi in informatica sono classificati sulla base di quante istruzioni o unità di tempo sono necessarie per essere risolti a partire dalla dimensione dell'input che in genere si indica con n.
 
-Un problema con complessità O(n) ci indica che il tempo di esecuzione per la risoluzione del problema cresce linearmente con il crescere dell'input. Ad esempio se l'input è una lista di 1000 contatti e noi vogliamo ordinarli in ordine alfabetico secondo il cognome esistono varie soluzioni alcune più efficienti di altre e generalmente si può trovare un algoritmo che lo risolve in O(n * log n), il che significa che se per 1000 contatti il computer ci mette 1s allora per 1,000,000 di contatti (che equivale a n = 1000 volte l'input originale) ci metterebbe circa 1000 * 3 = 3000 volte tanto.
+Un problema con complessità O(n) ci indica che il tempo di esecuzione per la risoluzione del problema cresce linearmente con il crescere dell'input. 
 
-Se l'algoritmo fosse stato meno efficiente, ad esempio O(n^2) le cose sarebbero state ben diverse. Se per 1000 contatti il tempo di calcolo è 1s allora per 1,000,000 di contatti sarebbe pari a circa 1,000,000 di secondi.
+Ad esempio se abbiamo una lista di 1000 contatti e noi vogliamo ordinarli in ordine alfabetico secondo il cognome esistono varie soluzioni alcune più efficienti di altre e generalmente si può trovare un algoritmo che lo risolve in O(n * log n), il che significa che se per 1000 contatti il computer ci mette 1s allora per 10 000 contatti (che equivale a n = 10 volte il problema originale) ci metterebbe circa 10 * 3 = 30 volte tanto.
+
+Se l'algoritmo fosse stato meno efficiente, ad esempio O(n^2) le cose sarebbero state ben diverse. Se per 1000 contatti il tempo di calcolo è 1s allora per 10 000 contatti sarebbe pari a circa 100 secondi.
 
 In generale chiamiamo P la classe dei problemi che può essere risolta in un tempo ragionevole, diciamo con complessità polinomiale (ad esempio il tempo di soluzione cresce con il quadrato del numero di elementi dell'input).
 
 Tuttavia esistono una serie di problemi chiamati NP che invece non sono risolvibili in tempo polinomiale ed in un certo senso sono intrattabili. Tuttavia di questi problemi quello che invece è trattabile è la verifica della soluzione.
+
+```
+P: classe dei problemi la cui soluzione si può trovare in tempo polinomiale
+NP: classe dei problemi la cui soluzione si può verificare in tempo polinomiale
+```
+
 
 La differenza principale tra i due è che i problemi P possono essere risolti in modo efficiente, mentre i problemi NP non possono essere risolti in modo efficiente ma possono essere verificati in modo efficiente.
 
