@@ -6,7 +6,7 @@ type: post
 
 category: In-Depth
 
-tags: [Solidity]
+tags: [solidity, multicall]
 image: /pics/posts/etherscan-multicall.png
 ---
 In the Ethereum blockchain, a multicall transaction is a way to execute multiple function calls across different smart contracts within a single transaction. This can significantly save on gas fees and reduce network congestion by batching together many actions into one. 
@@ -27,7 +27,7 @@ To illustrate, I'll provide a simple example with two smart contracts, `A` and `
 
 **Smart Contract A**
 
-```solidity
+```js
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -44,7 +44,7 @@ contract A {
 
 **Smart Contract B**
 
-```solidity
+```js
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -73,7 +73,7 @@ The Multicall contract works by accepting a list of calls, where each call is sp
 
 Here is a simple implementation of a Multicall contract:
 
-```solidity
+```js
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
