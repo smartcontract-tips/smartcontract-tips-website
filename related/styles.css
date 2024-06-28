@@ -1,6 +1,6 @@
 .related-posts {
     position: absolute;  
-    top: 160px;        /* Distanza dal bordo superiore della finestra */
+    top: 600px;        /* Distanza dal bordo superiore della finestra */
     right: 20px;      /* Distanza dal bordo destro della finestra */
     max-width: 300px;      /* Larghezza del div */
     width: auto;
