@@ -1,14 +1,10 @@
 ---
 layout: post
 title: 'Smart Contract, Significato del Termine e Altre Curiosità'
-date: 2024-01-26 15:25:55.000000000 +02:00
+date: 2024-01-26 
 type: post
-
-published: true
-
 category: Academy
-
-tags: [Smart Contract]
+tags: [smart-contract]
 
 ---
 Il termine "smart contract" (contratto intelligente) si riferisce a un protocollo informatico che facilita, verifica, o esegue la negoziazione o l'attuazione di un contratto, in modo automatico. Gli smart contract sono programmi autoeseguibili con le condizioni dell'accordo tra le parti direttamente scritte nel codice. Questi programmi vengono eseguiti su una blockchain, che è una piattaforma distribuita e immutabile, garantendo che il contratto sia eseguito esattamente come programmato senza alcuna possibilità di censura, downtime, frode o interferenza di terzi.
