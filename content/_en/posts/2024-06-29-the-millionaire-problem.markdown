@@ -6,7 +6,7 @@ type: post
 related: true
 
 category: Academy
-image: /pics/posts/cryptography/image.png
+image: /pics/posts/millionaire-problem/image.png
 tags: 
     - multipart
     - cryptography
