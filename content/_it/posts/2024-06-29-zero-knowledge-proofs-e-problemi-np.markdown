@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Zero-Knowledge Proofs (ZKP) e Problemi NP"
-date: 2024-06-09 
+date: 2024-06-29 
 type: post
 category: Mid
 tags: [zkp, zero-knowledge, zero-knowledge-proof, np-problem, cryptography]
