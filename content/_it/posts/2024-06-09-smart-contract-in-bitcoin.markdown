@@ -30,6 +30,10 @@ Nasconde un procedimento sottostante piuttosto complesso. Per essere più precis
 
 Sembra complicato perché di fatto input ed output sono dei veri e propri programmi, o smart contract se si preferisce, scritti in un linguaggio di programmazione chiamato **Script** che ha una sintassi simile a quella del linguaggio **Forth**. Il programma che risiede sull'output di una transazione viene chiamato script di blocco. Questo significa che Alice ha bloccato un coin attraverso uno script e chiunque potrebbe in teoria fornire un script di sblocco.
 
+![utxo](/pics/posts/smart-contract-in-bitcoin/utxo.jpg)
+[Source](https://scrypt.io/scrypt-ts/overview/#utxo-model)
+
+
 Durante la validazione di una transazione i miner caricano lo script di blocco e quello di sblocco, li mettono in esecuzione uno di seguito all'altro e se il risultato complessivo dell'operazione è "**true**" (vero booleano) allora il coin viene speso, ovvero messo a disposizione di un successivo script di blocco, altrimenti no.
 
 Storicamente lo script di blocco è stato chiamato con il codename scriptPubKey mentre quello di sblocco è stato chiamato scriptSig.

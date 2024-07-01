@@ -71,6 +71,9 @@ Tecnicamente si definisce Turing completo un sistema di regole, e quindi anche u
 
 Abbiamo visto come [la programmabilità di Bitcoin consenta di andare oltre il mero trasferimento diretto da un partecipante ad un altro](/it/posts/smart-contract-in-bitcoin). Gli scripts possono anche essere usati per pagamenti multifirma, per sbloccare premi per la soluzione di problemi di calcolo e si può anche costruire uno script che affermi qualcosa come "questo Bitcoin UTXO è tuo se sei in grado di provare tramite Merkle tree che tu mi invii una transazione di Dogecoin di questo valore", consentendo essenzialmente la funzione di cambio fra criptovalute diverse.
 
+![utxo](/pics/posts/smart-contract-in-bitcoin/utxo.jpg)
+[Source](https://scrypt.io/scrypt-ts/overview/#utxo-model)
+
 Tuttavia gli script eseguibili dai nodi Bitcoin sono limitati "by design" in diversi ambiti:
 
 non sono Turing completi in quanto non possono eseguire costrutti iterativi;
