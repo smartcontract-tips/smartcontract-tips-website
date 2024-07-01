@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Cosa sono gli smart contract, definizione ed esempi
-date: 2023-10-15 10:29:19.000000000 +02:00
+date: 2023-10-15
+last_modified: 2024-07-01
 type: post
 category: Mid
 tags: [smart contract]

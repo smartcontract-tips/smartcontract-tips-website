@@ -2,6 +2,7 @@
 layout: post
 title: "Smart Contract in Bitcoin: esempi e funzionamento"
 date: 2024-06-09 
+last_modified: 2024-07-01
 type: post
 category: Mid
 tags: [smart contract, bitcoin]
