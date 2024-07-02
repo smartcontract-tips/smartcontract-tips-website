@@ -14,6 +14,7 @@ tags:
     - Account Abstraction
     - ERC-3074
     - Smart contract wallet
+    - gasless
 ---
 The Account Abstraction is certainly one of the topics of the moment in the world of web3. But in general the descriptions of this protocol and its architecture oscillate between banal and superficial articles that announce a sort of revolution in a sensationalistic and empty way and the actual technical articles which instead immediately delve into technical detail, losing sight of the vision of together, and above all the reason for some technical choices. With this article we try to remedy this.
 
