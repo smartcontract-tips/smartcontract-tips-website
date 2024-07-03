@@ -3,9 +3,9 @@ layout: post
 type: post
 date: 2024-07-02
 title: Unlocking Seamless Token Transfers. Exploring Permit Anywhere, Permit2, and ERC2612
-category: Mid
+category: Advanced
 tags: ['ERC2612','2612','gasless','permit','approve','ERC20','EIP-2612','permit2','permit-anywhere','uniswap']
-image: /pics/posts/permit2/4.png
+image: /pics/posts/permit2/0.png
 
 ---
 
@@ -99,6 +99,9 @@ PermitEverywhere is a set of smart contracts enabling permit-style approvals for
 For more details, visit the [GitHub repository](https://github.com/merklejerk/permit-everywhere).
 
 ### Step-by-Step Workflow with PermitEverywhere
+
+![sequence](/pics/posts/permit2/3.png)
+
 
 1. **Setup Allowance**:
    - User sets allowances on `ERC20PermitEverywhere` or `ERC721PermitEverywhere` contracts. This is done by sending a transaction to the `approve` method on the `PermitEverywhere` contract.
