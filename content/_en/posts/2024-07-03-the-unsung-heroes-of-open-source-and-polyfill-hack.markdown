@@ -3,6 +3,7 @@ title: "Stop Blaming the Open Source: Navigating the Complexity Crisis"
 layout: post
 type: post
 date: 2024-07-02
+last_modified: 2024-07-04
 category: Editorial
 tags: ['hack','open-source','polyfill','cybersecurity','complexity','crisis','legacy code']
 image: /pics/posts/stop-blaming-the-open-source/cover.png
@@ -18,6 +19,8 @@ Game theory provides an insightful lens to understand this phenomenon. On one ha
 ## Open Source vs. Proprietary Software: A False Dichotomy
 
 The narrative that open-source software is inherently less secure than proprietary software is both simplistic and misleading. When a proprietary system gets hacked, the blame is squarely placed on the hackers. However, when an open-source project is compromised, critics often point to the model itself as the problem. This double standard ignores the fact that proprietary software is equally susceptible to breaches and mismanagement.
+
+Moreover, in [a old github issue](https://github.com/formatjs/formatjs/issues/4363) it was clarly recommended **to not rely on the polyfill.io distribution since** the web domain was acquired by a so described "weird cdn chinese company"
 
 Proprietary software companies, motivated by profit, have a vested interest in maintaining security to retain their customer base. However, this doesn’t make them immune to attacks. High-profile breaches, like the LastPass incident, demonstrate that even security-focused products can fail spectacularly. The key difference lies in the economic framework: proprietary software firms are driven by market pressures and financial incentives, whereas open-source projects rely heavily on community goodwill and volunteerism.
 
