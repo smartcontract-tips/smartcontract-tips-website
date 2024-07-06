@@ -20,13 +20,13 @@ With a whopping number of 800M users worldwide, Telegram is the perfect channel 
 
 
 ## Introduction
-The emergence of TON (The Open Network), particularly its integration with the Telegram messaging app, has generated considerable buzz in the cryptocurrency and blockchain communities. This in-depth analysis aims to elucidate the nature of TON, its wallet services, and its standing in the blockchain ecosystem, particularly in comparison to other wallets like MetaMask.
+The emergence of [TON (The Open Network)](https://ton.org/), particularly its integration with the Telegram messaging app, has generated considerable buzz in the cryptocurrency and blockchain communities. This in-depth analysis aims to elucidate the nature of TON, its wallet services, and its standing in the blockchain ecosystem, particularly in comparison to other wallets like MetaMask.
 
 
 ## The Evolution of TON
 Initially known as the Telegram Open Network, TON was conceptualized to leverage the popularity of the Telegram app for introducing users to cryptocurrencies. Developed by the Durov brothers, Nikolai and Pavel, TON aimed to create a seamless connection between internet users, blockchain technology, and cryptocurrency. 
 
-The network faced regulatory challenges from the SEC regarding its native coin, GRAM, leading to a pause in development. The project refunded investors and distanced itself from Telegram, eventually relaunching as The Open Network (TON) with Toncoin as its native token and a shift to a Proof of Stake (PoS) consensus model.
+The network [faced regulatory challenges from the SEC](https://finance.yahoo.com/news/telegram-sued-investment-firm-over-083216126.html) regarding its native coin, GRAM, leading to a pause in development. The project refunded investors and distanced itself from Telegram, eventually relaunching as The Open Network (TON) with Toncoin as its native token and a shift to a Proof of Stake (PoS) consensus model.
 
 ## Introduction to TON
 TON is a decentralized Layer 1 smart contract network, designed to support both routine and specialized financial applications. It boasts the creation of over a million NFTs, reflecting its capacity for a wide range of tokenization. TON's commitment to scalability and efficiency is evident in its design, tailored to accommodate billions of users while maintaining high performance.
