@@ -2,8 +2,8 @@
 title: "Exploring Wallet Options for The Open Network (TON): A Comprehensive Guide for Crypto Enthusiasts"
 layout: post
 type: post
-date: 2024-07-02
-last_modified: 2024-07-04
+date: 2024-07-06
+
 category: Guide
 tags: ['wallet','ton','telegram','the-open-network','metamask','tonkeeper']
 image: /pics/posts/ton-network/cover.png
