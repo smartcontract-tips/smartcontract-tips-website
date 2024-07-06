@@ -165,3 +165,22 @@ Sharing critical security advice for managing crypto assets on TON, this segment
 
 ## Conclusion:
 While the direct integration of MetaMask with The Open Network (TON) remains off the table due to incompatible technologies, several robust alternatives offer tailored features and enhanced security for TON users. By choosing the right wallet—be it Tonkeeper, Telegram Wallet, or another option—you can effectively manage your TON transactions and enjoy the full benefits of its blockchain ecosystem. Whether you're a seasoned crypto enthusiast or new to blockchain, understanding these tools is crucial for navigating the TON landscape effectively.
+
+## References
+
+Here are the wallet options for the TON network mentioned on the article:
+
+1. **Tonkeeper**
+   - URL: [Tonkeeper](https://tonkeeper.com)
+
+2. **OpenMask**
+   - URL: [OpenMask](https://openmask.app)
+
+3. **Trust Wallet**
+   - URL: [Trust Wallet](https://trustwallet.com)
+
+4. **SafePal**
+   - URL: [SafePal](https://safepal.io)
+
+5. **Coin98**
+   - URL: [Coin98](https://coin98.com)
