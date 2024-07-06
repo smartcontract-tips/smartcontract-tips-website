@@ -8,7 +8,7 @@ permalink: /index-en.html
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{{ site.landing_path }}/assets/css/main.css" />
-
+		<link rel="stylesheet" href="/extras/preview-card.css" />
 		<script defer src="https://eu.umami.is/script.js" data-website-id="3f363256-ccba-47e6-b575-8a46686833b2"></script>
 		<script src="https://kit.fontawesome.com/4c0de2340c.js" crossorigin="anonymous"></script>
 
@@ -56,90 +56,28 @@ permalink: /index-en.html
 						{% assign z = site['en'] | reverse %}
 						<div class="cards-container">
 
-							<!-- Card 1 -->
-							<div class="card">
-								<img src="/pics/posts/blockchain-developer/image.webp" alt="last-post">
-								<div class="card-content">
-									
-										<h2 class="card-title">What Is a Blockchain Developer & How Do I Become One?</h2>
-									
-									<p class="card-description">
-										The demand for blockchain developers/engineers is at an all-time high because industries today recognize the value of blockchain technology ... 
-									</p>
-									<a class="button" href="/en/post/how-do-i-start-blockchain-development">
-									<div class="card-footer">read more...</div>
-									</a>
-									
-								</div>
-							</div>	
 
-							<!-- Card 1 -->
-							  <div class="card">
-								<img src="{{ z[0].image }}" alt="last-post">
-								<div class="card-content">
-								  
-									  <h2 class="card-title">{{ z[0].title }}</h2>
-								  
-								  <p class="card-description">
-									{{ z[0].excerpt| strip_html | truncatewords:24 }}
-								  </p>
-								  <a class="button" href="{{ z[0].url }}">
-									<div class="card-footer">read more...</div>
-								  </a>
-								  
-								</div>
-							</div>	
-						
-							<!-- Card 2 -->
-							<div class="card">
-								<img src="{{ z[1].image }}" alt="last-post">
-								<div class="card-content">
-								  
-									  <h2 class="card-title">{{ z[1].title }}</h2>
-								  
-								  <p class="card-description">
-									{{ z[1].excerpt| strip_html | truncatewords:24 }}
-								  </p>
-								  <a class="button" href="{{ z[1].url }}">
-									  <div class="card-footer">read more...</div>
-								  </a>
-								  
-								</div>
-							</div>	
+							{% include 
+								card.html image='/pics/posts/blockchain-developer/image.webp' 
+								
+								title='What Is a Blockchain Developer & How Do I Become One?' 
+								
+								url='/en/post/how-do-i-start-blockchain-development'  
+								
+								excerpt='The demand for blockchain developers/engineers is at an all-time high because industries today recognize the value of blockchain technology ... ' 
+							%}
 
-							<!-- Card 3 -->
-							<div class="card">
-								<img src="{{ z[2].image }}" alt="last-post">
-								<div class="card-content">
-								  
-									  <h2 class="card-title">{{ z[2].title }}</h2>
-								  
-								  <p class="card-description">
-									{{ z[2].excerpt| strip_html | truncatewords:24 }}
-								  </p>
-								  <a class="button" href="{{ z[2].url }}">
-									<div class="card-footer">read more...</div>
-								  </a>
-								  
-								</div>
-							</div>	
 
-							<!-- Card 4 -->
-							<div class="card">
-								<img src="{{ z[3].image }}" alt="last-post">
-								<div class="card-content">
-								  
-									  <h2 class="card-title">{{ z[3].title }}</h2>
-								  
-								  <p class="card-description">
-									{{ z[3].excerpt| strip_html | truncatewords:24 }}
-								  </p>
-								  <a class="button" href="{{ z[3].url }}">
-									<div class="card-footer">read more...</div>
-								  </a>
-								  
-								</div>
-							</div>	
+							{% assign posts = site['en'] | reverse %}
+							{% for post in posts limit:5 %}
+								{% if post.image %}
+									{% assign image_url = post.image %} 
+									{% else %}
+									{% assign image_url = "/blog.png" %}
+								{% endif %}
+			
+								{% include card.html image=image_url title=post.title url=post.url  excerpt=post.excerpt %}
+							{% endfor %}							
 		
 											
 							<br>
