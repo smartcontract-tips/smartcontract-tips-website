@@ -1,0 +1,17 @@
+/* Css for card layout >>BEGIN*/
+
+.preview-card-container {
+    position: relative;
+    width: 100%; /* Adjust this width as needed */
+    padding-top: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
+    overflow: hidden;
+}
+.preview-card-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Css for card layout END<<*/

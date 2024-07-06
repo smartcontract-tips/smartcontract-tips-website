@@ -15,7 +15,6 @@ excerpt: "This guide will explore these challenges and provide an in-depth look 
 In the rapidly evolving landscape of blockchain technology, The Open Network (TON) stands out, particularly for its seamless integration with Telegram and its capability to handle swift transactions. As highlighted in our previous article: https://smartcontract.tips/articoli/ton-telegram-open-network-and-its-wallet, TON offers a distinctive approach to digital wallets and transactions. Yet, this unique architecture brings about certain challenges, especially when attempting to use popular wallets like MetaMask with TON. This guide will explore these challenges and provide an in-depth look at alternative wallet options tailored for TON. We’ll delve into a comparison of key wallets, offer practical setup tips, and address common queries to assist you in securely managing your digital assets on TON.
 
 
-
 ## Understanding The Open Network (TON)
 
 ### Overview of TON
