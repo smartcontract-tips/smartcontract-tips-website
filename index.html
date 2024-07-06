@@ -64,103 +64,52 @@ permalink: /
 
 			<div class="cards-container">
 				<!-- Card 1 -->
-				<div class="card">
-					<img src="/pics/fmt-16-9/smartcontract-1000x564.jpg" alt="cyber-gears-machinery">
-					<div class="card-content">
-						<h2 class="card-title">
-							Cosa sono gli smart contract, definizione ed esempi
-						</h2>
-						<p class="card-description">Gli smart contract sono una nuova categoria di programmi software
-							legati alle criptovalute. Come funzionano</p>
-						<a class="card-title" href="/articoli/cosa-sono-gli-smart-contract-definizione-ed-esempi/">
-							<div class="card-footer">...continua</div>
-						</a>
-					</div>
-				</div>
 
-				<!-- Card 2 -->
-				<div class="card">
-					<img src="/featured_images/DALL%C2%B7E2023-10-1921.26.58-Photoin16_9formatofavastdigitallandscapewithpatternsrepresentingencrypteddata.AmagnifyingglasshoversrevealingthewordsZeroKnowl.png"
-						alt="zero-knoweledge-proofs">
-					<div class="card-content">
-						<h2 class="card-title">
-							Zero-knowledge proof: cosa sono e perché sono importanti.</h2>
-						<p class="card-description">Le Zero Knowledge Proof (ZKP) consentono di dimostrare il possesso
-							di dati senza svelarne il contenuto e senza scambiare alcuna informazione riservata.</p>
-						<a class="card-title"
-							href="/articoli/zero-knowledge-proof-cosa-sono-e-perch-sono-cos-importanti/">
-							<div class="card-footer">...continua</div>
-						</a>
-					</div>
-				</div>
-
-				<!-- Card 3 -->
-				<div class="card">
-					<img src="/featured_images/copertinaguida.png" alt="stablecoin-guida">
-					<div class="card-content">
-
-						<h2 class="card-title">Una (poi non così) piccola guida alle Stablecoin</h2>
-
-						<p class="card-description">
-							Le stablecoin sono probabilmente una killer application delle blockchain, sembra che la
-							scena sia già
-						</p>
-						<a class="card-title" href="/articoli/guida-stablecoin-cosa-sono-a-cosa-servono-paypal/">
-							<div class="card-footer">...continua</div>
-						</a>
-
-					</div>
-				</div>
+				{% include 
+					card.html image='/pics/fmt-16-9/smartcontract-1000x564.jpg' 
+					
+					title='Cosa sono gli smart contract, definizione ed esempi' 
+					
+					url='/articoli/cosa-sono-gli-smart-contract-definizione-ed-esempi/'  
+					
+					excerpt='Gli smart contract sono una nuova categoria di programmi software legati alle criptovalute. Come funzionano' 
+				%}
 
 
-				<!-- Card 4 -->
-				<div class="card">
-					{% assign z = site['it'] | where:"draft",false | reverse %}
-					<img src="{{ z[0].image }}" alt="last-post">
-					<div class="card-content">
+				{% include card.html 
+					
+					image='/featured_images/DALL%C2%B7E2023-10-1921.26.58-Photoin16_9formatofavastdigitallandscapewithpatternsrepresentingencrypteddata.AmagnifyingglasshoversrevealingthewordsZeroKnowl.png' 
+					
+					title='Zero-knowledge proof: cosa sono e perché sono importanti.' 
+					
+					url='/articoli/zero-knowledge-proof-cosa-sono-e-perch-sono-cos-importanti/'  
+					
+					excerpt='Le Zero Knowledge Proof (ZKP) consentono di dimostrare il possesso di dati senza svelarne il contenuto e senza scambiare alcuna informazione riservata' 
+				%}
 
-						<h2 class="card-title">{{ z[0].title }}</h2>
+				{% include card.html 
+					
+					image='/featured_images/copertinaguida.png' 
+					
+					title='Una (poi non così) piccola guida alle Stablecoin' 
+					
+					url='/articoli/guida-stablecoin-cosa-sono-a-cosa-servono-paypal/'  
+					
+					excerpt='Le stablecoin sono probabilmente una killer application delle blockchain, sembra che la
+					scena sia già' 
+				%}
 
-						<p class="card-description">
-							{{ z[0].excerpt| strip_html | truncatewords:24 }}
-						</p>
-						<a class="card-title" href="{{ z[0].url }}">
-							<div class="card-footer">...continua</div>
-						</a>
-					</div>
-				</div>
-				<!-- Card 5 -->
-				<div class="card">
-					{% assign z = site['it'] | where:"draft",false | reverse %}
-					<img src="{{ z[1].image }}" alt="last-post">
-					<div class="card-content">
+				{% assign posts = site['it'] | reverse %}
+				{% for post in posts limit:5 %}
+					{% if post.image %}
+						{% assign image_url = post.image %} 
+						{% else %}
+						{% assign image_url = "/blog.png" %}
+					{% endif %}
 
-						<h2 class="card-title">{{ z[1].title }}</h2>
+					{% include card.html image=image_url title=post.title url=post.url  excerpt=post.excerpt %}
+				{% endfor %}
 
-						<p class="card-description">
-							{{ z[1].excerpt| strip_html | truncatewords:24 }}
-						</p>
-						<a class="card-title" href="{{ z[1].url }}">
-							<div class="card-footer">...continua</div>
-						</a>
-					</div>
-				</div>
-				<!-- Card 6 -->
-				<div class="card">
-					{% assign z = site['it'] | where:"draft",false | reverse %}
-					<img src="{{ z[2].image }}" alt="last-post">
-					<div class="card-content">
-
-						<h2 class="card-title">{{ z[2].title }}</h2>
-
-						<p class="card-description">
-							{{ z[2].excerpt| strip_html | truncatewords:24 }}
-						</p>
-						<a class="card-title" href="{{ z[2].url }}">
-							<div class="card-footer">...continua</div>
-						</a>
-					</div>
-				</div>
 
 				<br>
 

@@ -1,0 +1,19 @@
+
+<div class="card">
+    
+    <div class="preview-card-container">
+        <img src="{{ include.image }}" alt="cover-image-of-post">
+    </div>
+    
+    <div class="card-content">
+
+        <h2 class="card-title">{{ include.title }}</h2>
+
+        <p class="card-description">
+            {{ include.excerpt | strip_html | truncatewords:24 }}
+        </p>
+        <a class="button" href="{{ include.url }}">
+            <div class="card-footer">...continue</div>
+        </a>
+    </div>
+</div>
