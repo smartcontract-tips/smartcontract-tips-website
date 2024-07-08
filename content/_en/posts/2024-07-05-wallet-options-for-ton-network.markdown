@@ -3,7 +3,7 @@ title: "Exploring Wallet Options for The Open Network (TON): A Comprehensive Gui
 layout: post
 type: post
 date: 2024-07-06
-
+author: hania
 category: Guide
 tags: ['wallet','ton','telegram','the-open-network','metamask','tonkeeper']
 image: /pics/posts/ton-network/cover.png
