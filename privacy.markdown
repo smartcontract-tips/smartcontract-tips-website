@@ -88,7 +88,7 @@ Questi servizi consentono di gestire un database di contatti email, contatti tel
 
 ### Newsletter
 
-Con la registrazione alla newsletter, l’indirizzo email dell’Utente viene automaticamente inserito in una lista di contatti a cui potranno essere trasmessi messaggi email contenenti informazioni, anche di natura commerciale e promozionale, relative a questo Sito web. L’indirizzo email dell’Utente potrebbe anche essere aggiunto a questa lista come risultato della registrazione a questo Sito o dopo aver effettuato un acquisto. L’Utente può scegliere in qualsiasi momento di cancellarsi dalla newsletter cliccando su un tasto specifico che troverà all’interno delle email. Dopo aver cliccato sul tasto di cancellazione i Dati dell’Utente verranno cancellati immediatamente dal software di “email marketing”. Dati Personali raccolti: email e Nome. Questo Sito web utilizza il servizio di newsletter fornito da:
+Con la registrazione alla newsletter, l’indirizzo email dell’Utente viene automaticamente inserito in una lista di contatti a cui potranno essere trasmessi messaggi email contenenti informazioni, anche di natura commerciale e promozionale, relative a questo Sito web. L’indirizzo email dell’Utente potrebbe anche essere aggiunto a questa lista come risultato della registrazione a questo Sito o dopo aver effettuato un acquisto. L’Utente può scegliere in qualsiasi momento di cancellarsi dalla newsletter cliccando su un tasto specifico che troverà all’interno delle email. Dopo aver cliccato sul tasto di cancellazione i Dati dell’Utente verranno cancellati immediatamente dal software di “email marketing”. Dati Personali raccolti: email e Nome. Questo Sito web utilizza il servizio di newsletter fornito da: EmailOctopus
 
 
 ### STATISTICA
