@@ -70,7 +70,7 @@ Al termine del periodo di conservazione i Dati Personali saranno cancellati e pe
 
 ## Cookie
 
-Questo Sito web utilizza i cookie. I cookie sono piccoli file di testo che possono essere utilizzati dai siti web per rendere più efficiente l’esperienza per l’utente e per personalizzare contenuti e gli annunci, fornire le funzioni dei social network e analizzare il traffico. Cookie Policy
+Questo Sito web utilizza i cookie. I cookie sono piccoli file di testo che possono essere utilizzati dai siti web per rendere più efficiente l’esperienza per l’utente e per personalizzare contenuti e gli annunci, fornire le funzioni dei social network e analizzare il traffico. [Cookie Policy](/cookie/)
 
 ## Luogo del Trattamento e trasferimento dei Dati all’estero
 
