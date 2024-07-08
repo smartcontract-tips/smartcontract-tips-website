@@ -9,12 +9,16 @@ layout: default
   <div class="post-date" style="color: grey;"><i class="fa-regular fa-calendar"></i>
    published &nbsp; {{ page.date | date: "%d %B %Y" }}
   </div>
+ 
 
   {% if page.last_modified %}
   <div class="post-date" style="color: grey;"><i class="fa-regular fa-calendar"></i>
     last modified &nbsp; {{ page.last_modified | date: "%d %B %Y" }}
    </div>
   {% endif %}
+
+  <div>by <a href="#author">{{ page.author }}</a> </div>
+  
   <br>
 
   <div style="color: darkgrey;">
@@ -50,7 +54,7 @@ layout: default
     <a class="cta-button" href="/get-a-job-in-web3">Read more...</a>
   </div>  
 
-  <div style="background-color: antiquewhite; padding: 30px;">
+  <div style="background-color: antiquewhite; padding: 30px;" id="author">
     {% assign author = site.authors | where: 'authorId', page.author | first %}
     {% if author %}
       {% include author.html name=author.name picture=author.picture web=author.web linkedin=author.linkedin bio=author.bio %}
