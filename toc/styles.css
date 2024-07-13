@@ -1,22 +1,27 @@
-@media screen and (min-width: 768px){
+#toc {
+  position: fixed;
+  top: 9em;
+  left: 20px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: fit-content;
+  max-width: 250px;
+  max-height: 800px;
+}
+
+@media screen and (max-width: 1339px){
   #toc {
-    position: fixed;
-    top: 9em;
-    left: 20px;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: fit-content;
-    max-width: 250px;
-    max-height: 800px;
-  }
+    position: relative;
+    max-width: 100%;
+    top: 0;       /* Resetta la distanza dal bordo superiore */
+    left: 0;     /* Resetta la distanza dal bordo destro */
+    margin-bottom: 2em;
+  }  
 }
 
 
-  #toc {
-    display: none;
-  }  
 
 
   .toc-item {
