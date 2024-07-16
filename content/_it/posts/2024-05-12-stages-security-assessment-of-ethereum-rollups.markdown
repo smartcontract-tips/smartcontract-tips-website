@@ -5,14 +5,15 @@ date: 2024-05-12
 type: post
 draft: true
 category: Mid
+image: /pics/posts/stages/cover.png
 
 tags: [rollup, L2, layer-2, ethereum, scalability, zk-rollup, optimistic-rollup, optimism, arbitrum]
 ---
-Usare Arbitrum o Optimism invece di Ethereum perché le transazioni su qeust'ultimo sono troppo costose. Ma sappiamo cosa stiamo facendo e a cosa andiamo incontro? La questione della fiducia nelle soluzioni di Layer 2 (L2) su Ethereum è complessa e dipende da vari fattori. Le soluzioni L2, come Optimistic Rollups e ZK-Rollups, mirano a migliorare la scalabilità di Ethereum riducendo il carico sulla rete principale (Layer 1). Ma la domanda è: quanto sono sicuri?
+Usiamo Arbitrum o Optimism invece di Ethereum perché le transazioni su quest'ultimo sono troppo costose, ma sappiamo cosa stiamo facendo e a cosa andiamo incontro? Le soluzioni L2, come Optimistic Rollups e ZK-Rollups, mirano a migliorare la scalabilità di Ethereum riducendo il carico sulla rete principale (Layer 1). Ma la domanda è: quanto sono sicuri?
 
 ## Quando parliamo di sicurezza in un L2 cosa intendiamo in realtà?
 
-La sicurezza nelle soluzioni di Layer 2 (L2) su Ethereum riguarda principalmente la protezione dei fondi degli utenti e l'integrità delle transazioni. È essenziale garantire che i bridge, che permettono il trasferimento di asset tra Layer 1 e Layer 2, siano sicuri per evitare furti. In buona sostanza, quanto sono decentralizzati e quanto la mia volontà di prelevare i miei fondi non si scontra con la possibile discrezionalità di chi opera il rollup o altro protocollo L2?
+La sicurezza nelle soluzioni di Layer 2 (L2) su Ethereum riguarda principalmente la protezione dei fondi degli utenti e l'integrità delle transazioni. È essenziale garantire che i bridge, che permettono il trasferimento di asset tra Layer 1 e Layer 2 e viceversa, siano sicuri per evitare furti. In buona sostanza, quanto sono realmente decentralizzati e quanto la volontà dell'utente di prelevare i propri fondi non si scontra con la discrezionalità di chi opera il rollup o altro protocollo L2?
 
 
 ## Breve descrizione dell'architettura Rollup: termini e funzioni dei vari componenti
@@ -43,16 +44,15 @@ Il framework "STAGES" per valutare la maturità dei rollup si basa su una scala 
 Il framework STAGES aiuta gli sviluppatori, gli investitori e gli utenti a comprendere il livello di sviluppo di un rollup, facilitando decisioni più informate riguardo l'adozione o l'investimento in queste tecnologie.
 
 
-
 ## Come usare il framework per fare le nostre valutazioni
 
 TL;DR
 In pratica: 
-stage 0 è un rollup totalmente in mano agli operatori
-stage 1 è un rollup parzialmente in mano agli operatori e parzialmente autonomo
-stage 2 è totalmente autonomo e basato sugli smart contract
+**stage 0** è un rollup totalmente in mano agli operatori
+**stage 1** è un rollup parzialmente in mano agli operatori e parzialmente autonomo
+**stage 2** è totalmente autonomo e basato sugli smart contract
 
-Scendendo maggiornmente nei dettagli ecco i vari requisiti
+Scendendo maggiormente nei dettagli ecco i vari requisiti
 
 
 ### Stage 0
@@ -93,6 +93,8 @@ Il profilo di rischio è costituito da 5 attributi che rispondono sempre ad un c
 
 ![risk profile based on a pie with 5 attributes by color](/pics/posts/stages/2.png)
 
+[Source](https://l2beat.com/)
+
 **Data availability**: anche se alcuni i rollup usano le zero knowledge proof tutte i calldata delle transazioni devono essere disponibili. Ad esempio in caso di disastro i calldata sarebbero l’unico modo di ricostruire lo stato a partire da zero. Tenere i calldata in L1 è il modo più sicuro ma troppo costoso.
 
 **Exit Window**: un parametro opinionato di chi ha creato la metrica, in pratica risponde al requisito “Do users have at least 7 days to exit in case of unwanted upgrades”?
@@ -105,12 +107,12 @@ Il profilo di rischio è costituito da 5 attributi che rispondono sempre ad un c
 
 ![fig biggest L2 by value locked](/pics/posts/stages/1.png)
 
+[Source](https://l2beat.com/)
+
 Nella figura sono mostrati i Rollup con più di $1b di capitale, ma per brevità ci limitiamo ad analizzare i dati riportati per Arbitrum e per Optimism.
 
-## Arbitrum e Optimism sono sicuri?
 
-
-### Analisi di Arbitrum secondo il framework Stages
+## Analisi di Arbitrum secondo il framework Stages
 
 Secondo il sito [l2beat.com](https://l2beat.com/scaling/projects/arbitrum)  Arbitrum è uno Stage 1
 
@@ -133,6 +135,14 @@ e inoltre...
 Il problema che non consente lo Stage 2 è che Arbitrum essendo un rollup di tipo optimistic deve implementare un meccanismo di fraud proof, nel caso di Arbitrum questo meccanismo è attivabile solo da un set di attori whitelisted e la whitelist è governata centralmente. Chiaramente questo significa usare un protocollo teoricamente decentralizzato in una maniera "centralizzata".
 
 Inoltre, gli upgrade al protocollo possono essere resi effettivi in 3 giorni, considerato che ne serve almeno 1 per la transazione d'uscita, significa dare solo 2 giorni effettivi di exit window (ricordiamo che dovrebbero essere almeno 7).
+
+
+## Conclusioni
+
+Questo articolo non vuole essere assolutamente un attacco agli L2 come Arbitrum che, nonostante i limiti attuali di operatività, forniscono un valido strumento ed anche un caso pilota interessante all'interno dell'ecosistema Ethereum.
+
+Deve essere però chiaro a chi li usa la differenza tra la sicurezza e solidità di una transazione in L1 e quello che può avvenire in L2 che rappresentano sempre un compromesso. D'altronde se così non fosse allora anche Ethereum potrebbe implementare lui stesso la stessa architettura di un rollup ed essere più scalabile di come è in realtà, ma come abbiamo visto, un L2 ha senso se esiste un L1 che lo "supporta".
+
 
 
 
