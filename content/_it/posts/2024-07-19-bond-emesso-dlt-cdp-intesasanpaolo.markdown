@@ -11,7 +11,7 @@ image: /pics/commons/blockchain-washing.webp
 ---
 ![cover image](/pics/commons/blockchain-washing.webp)
 
-La Cassa Depositi e Prestiti (CDP) ha recentemente annunciato l'emissione del suo primo bond digitale sulla blockchain, con Intesa Sanpaolo come sottoscrittore principale. Questa notizia rappresenta un passo avanti nell'adozione delle tecnologie blockchain nel settore finanziario italiano, ma restano anche alcune domande riguardo all'esecuzione e motivazioni dietro questa operazione.
+La Cassa Depositi e Prestiti (CDP) ha recentemente annunciato l'emissione del suo primo bond digitale sulla blockchain, con Intesa Sanpaolo come sottoscrittore principale. Questa notizia rappresenta un passo avanti nell'adozione delle tecnologie blockchain nel settore finanziario italiano, ma restano anche alcune domande riguardo all'esecuzione e alle motivazioni dietro questa operazione.
 
 ## Dettagli dell'Operazione
 L'emissione del bond digitale da parte di CDP presenta alcune caratteristiche chiave:
