@@ -9,6 +9,7 @@ toc: true
 image: /pics/commons/blockchain-washing.webp
 
 ---
+![cover image](/pics/commons/blockchain-washing.webp)
 
 La Cassa Depositi e Prestiti (CDP) ha recentemente annunciato l'emissione del suo primo bond digitale sulla blockchain, con Intesa Sanpaolo come sottoscrittore principale. Questa notizia rappresenta un passo avanti nell'adozione delle tecnologie blockchain nel settore finanziario italiano, ma restano anche alcune domande riguardo all'esecuzione e motivazioni dietro questa operazione.
 
@@ -74,7 +75,3 @@ Per ulteriori dettagli, puoi consultare i seguenti link:
 - [Registro CONSOB degli Operatori DLT](https://www.consob.it/c/portal/layout?p_l_id=1455121&p_v_l_s_g_id=0)
 - [Informazioni su TIPS T2](https://www.bancaditalia.it/compiti/sistema-pagamenti/target2/index.html)
 - [Documento della Banca d'Italia su TIPS Hash Link](https://www.bancaditalia.it/pubblicazioni/mercati-infrastrutture-e-sistemi-di-pagamento/approfondimenti/2022-026/N.26-MISP.pdf)
-
----
-
-Spero che questa versione sia più in linea con le tue aspettative. Se hai bisogno di ulteriori modifiche o integrazioni, fammi sapere!
