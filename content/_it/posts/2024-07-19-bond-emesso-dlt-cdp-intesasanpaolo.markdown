@@ -6,7 +6,7 @@ type: post
 category: News
 tags: [bond, dlt, polygon, cdp, intesa-sanpaolo, banking]
 toc: true
-image: /pics/posts/commons/blockchain-washing.webp
+image: /pics/commons/blockchain-washing.webp
 
 ---
 
