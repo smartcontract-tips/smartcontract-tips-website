@@ -3,7 +3,7 @@ layout: post
 title: "Stages: il Framework per valutare il Rischio e la Sicurezza di un Rollup Ethereum"
 date: 2024-05-12 
 type: post
-draft: true
+
 category: Mid
 image: /pics/posts/stages/cover.png
 
