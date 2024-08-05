@@ -8,6 +8,9 @@ category: Mid
 image: /pics/posts/stages/cover.png
 
 tags: [rollup, L2, layer-2, ethereum, scalability, zk-rollup, optimistic-rollup, optimism, arbitrum]
+
+translation: '<a href="/it/post/stages-security-assessment-of-ethereum-rollups"> IT 🇮🇹 </a>'
+
 ---
 We use Arbitrum or Optimism instead of Ethereum because transactions on the latter are too expensive, but do we know what we are doing and what we are getting into? L2 solutions, such as Optimistic Rollups and ZK-Rollups, aim to improve the scalability of Ethereum by reducing the load on the core network (Layer 1). But the question is, how secure are they?
 

@@ -30,7 +30,10 @@ layout: default
   </div>
   <br>
 
-
+  {% if page.translation %}
+  <div>This article has a translation: {{ page.translation }}</div>
+  <hr><br>
+  {% endif %}
 
   <div id="toc"></div>
 
