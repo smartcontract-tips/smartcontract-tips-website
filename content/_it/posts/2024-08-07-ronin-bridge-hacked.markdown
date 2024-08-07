@@ -1,5 +1,5 @@
 ---
-title: "Titolo: Un'analisi dell'attacco al Ronin Bridge: dinamiche, responsabili e risoluzione"
+title: "Attacco al Ronin Bridge: dinamiche, responsabili e risoluzione"
 layout: post
 date: 2024-08-07 
 last_modified: 2024-08-07 
