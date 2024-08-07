@@ -20,7 +20,8 @@ Recentemente, il Ronin Network è stato vittima di un attacco al suo Ronin Bridg
 
 Il Ronin Bridge è una soluzione di interoperabilità progettata per facilitare il trasferimento di asset digitali tra la blockchain Ronin e altre reti blockchain, come Ethereum. Questo sistema consente agli utenti di spostare facilmente criptovalute e token tra diverse blockchain, migliorando l'accessibilità e l'efficienza dei servizi DeFi (Finanza Decentralizzata).
 
-## Dinamica dell'attacco
+## Dinamica dell'attacco
+
 
 L'attacco è stato scoperto grazie alla segnalazione di white-hats, esperti di sicurezza etici, che hanno notificato al team di Ronin Network una possibile vulnerabilità. Gli attaccanti sono riusciti a sfruttare un errore introdotto con un recente aggiornamento del bridge, che ha portato il sistema a interpretare erroneamente la soglia di voti necessaria dagli operatori del bridge per autorizzare i prelievi. Approfittando di questa falla, gli attaccanti hanno effettuato una transazione di prelievo massimo consentito, ritirando 4.000 ETH e 2 milioni di USDC.
 
