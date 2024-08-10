@@ -48,8 +48,6 @@ In risposta, Nexera continua a cooperare attivamente con le forze dell'ordine ne
 
 ## Conclusioni
 
-### Conclusione dell'Articolo
-
 Nexera, protocollo di infrastruttura blockchain specializzato nella tokenizzazione, ha subìto un grave exploit che ha portato al furto di $1.8 milioni in criptovaluta, inclusi 32,5 milioni di token NXRA. Questo attacco ha provocato un crollo del 40% nel prezzo del token NXRA. In risposta, Nexera ha sospeso i contratti intelligenti e bloccato il trading su exchange decentralizzati, collaborando con le autorità competenti per mitigare l'impatto del danno. L'attaccante è collegato a una serie di recenti exploit di chiavi private compromesse. 
 
 Referenze:
