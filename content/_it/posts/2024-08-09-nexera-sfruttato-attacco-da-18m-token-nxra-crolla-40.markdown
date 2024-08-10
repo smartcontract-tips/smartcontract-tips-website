@@ -1,5 +1,5 @@
 ---
-title: "Nexera: Sfruttato Attacco da $1.8M, Token NXRA Crolla 40%"
+title: "Nexera: Social Engineering con Attacco da $1.8M, Token NXRA Crolla 40%"
 date: 2024-08-09
 image: /pics/posts/nexera/nexera-hack.png
 tags: [nexera,exploit,tokenization]
