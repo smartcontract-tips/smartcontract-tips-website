@@ -3,7 +3,7 @@ title: "Nexera: Sfruttato Attacco da $1.8M, Token NXRA Crolla 40%"
 date: 2024-08-09
 image: /pics/posts/nexera/nexera-hack.png
 tags: [nexera,exploit,tokenization]
-excerpt: Il protocollo di infrastruttura blockchain Nexera, specializzato nella tokenizzazione, ha subito un grave exploit che ha portato al furto di $1.8 milioni in criptovaluta. Questo incidente ha causato un crollo del 40% del prezzo del token NXRA, ora fermo a $0.036
+excerpt: Il protocollo di infrastruttura blockchain Nexera, specializzato nella tokenizzazione, ha subito un grave exploit che ha portato al furto di $1.8 milioni in criptovaluta. Come è stato orchestrato l'attacco e cosa c'entra Linkedin?. 
 ---
 
 
@@ -32,6 +32,9 @@ Nexera continua a rappresentare una soluzione innovativa nel panorama blockchain
 ## Dettagli dello exploit
 
 Nexera, un protocollo di infrastruttura blockchain noto per il suo focus sulla tokenizzazione, ha subìto un exploit in cui sono stati sottratti $1,8 milioni. Secondo Cyvers, una società di sicurezza nel settore delle criptovalute, l'attaccante è collegato a una serie di recenti exploit di chiavi private compromesse, compreso l'incidente con OKX DEX.
+
+I dettagli dell'attacco sono descritti [qui](https://nexera.medium.com/240807-incident-understanding-the-malware-used-4d946ab20936) ed in sostanza si tratta di un attacco di **social engineering orchestrato attraverso una finta offerta di lavoro ad uno dei dipendenti di Nexera**.
+
 
 L'annuncio è stato diramato su X (precedentemente noto come Twitter) da Nexera, che ha dichiarato di aver identificato l'exploit e di essere in dialogo con le autorità di legge. A seguito dell'attacco, il contratto del token NXRA è stato sospeso e il trading è stato bloccato su exchange decentralizzati. Nexera ha inoltre comunicato ai principali exchange centralizzati di interrompere il trading sui loro mercati. Al momento, Kucoin e MEXC hanno già sospeso depositi e prelievi.
 
