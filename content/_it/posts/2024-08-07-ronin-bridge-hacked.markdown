@@ -9,7 +9,7 @@ category: News
 tags: [ronin, bridge, hack]
 toc: true
 image: /pics/commons/protocol-hacked.webp
-
+excerpt: 'il Ronin Network è stato vittima di un attacco al suo Ronin Bridge, che ha comportato il prelievo non autorizzato di 4.000 ETH e 2 milioni di USDC, per un valore complessivo di circa 12 milioni di dollari.'
 ---
 ![image of robot robbed by villain](/pics/commons/protocol-hacked.webp)
 
