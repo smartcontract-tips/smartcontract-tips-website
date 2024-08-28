@@ -5,10 +5,10 @@ date: 2023-10-15
 last_modified: 2024-07-01
 type: post
 category: Mid
-tags: [smart contract]
+tags: [smart-contract]
 toc: true
 permalink: "/articoli/cosa-sono-gli-smart-contract-definizione-ed-esempi/"
-image: featured_images/copertinasmartcontract-min.png
+image: /talking-about-smart-contracts.jpeg
 author: davide
 ---
 Gli smart contract sono una nuova categoria di programmi software legati alle criptovalute. In un certo senso possiamo considerare le criptovalute come denaro programmabile e gli smart contract sono esattamente il risultato di tale programmazione. Che relazione c'è tra smart contract e contratti più tradizionali? Quali sono le applicazioni reali degli smart contract? Come funzionano gli smart contract? Esistono gli smart contract in Bitcoin? Proviamo a rispondere a tutte queste domande in questa guida.
@@ -98,6 +98,8 @@ A differenza di Bitcoin, Ethereum non esclude la possibilità di scrivere codice
 
 
 ## Come si scrive uno smart contract
+
+![](/talking-about-smart-contracts.jpeg)
 
 Da un punto di vista operativo ogni nodo Ethereum mette in esecuzione una Ethereum Virtual Machine (EVM), ovvero un modulo software in grado di emulare il comportamento di uno pseudo-processore dotato di istruzioni elementari che possono compiere operazioni aritmetiche, crittografiche e di controllo del flusso di esecuzione come IF e cicli FOR. Senza entrare nei dettagli tecnici della EVM, diciamo semplicemente che è come una CPU ma virtuale, ed è dedicata all'esecuzione di un set di istruzioni pensate per l'esecuzione di codice in blockchain e non un set di istruzioni "general purpose" come quelle ad esempio eseguite da un PC.
 
