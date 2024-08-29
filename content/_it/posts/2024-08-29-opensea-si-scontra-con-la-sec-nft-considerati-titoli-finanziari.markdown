@@ -36,3 +36,5 @@ La ricezione di una Wells Notice dalla SEC da parte di OpenSea segnala un possib
 
 
 - [OpenSea Gets 'Wells Notice' From SEC, Calling NFTs Sold on Platform 'Securities'](https://www.coindesk.com/policy/2024/08/28/opensea-gets-wells-notice-from-sec-calling-nfts-sold-on-platform-securities/)
+
+- [Taking a stand for a better internet](https://opensea.io/blog/articles/taking-a-stand-for-a-better-internet)
