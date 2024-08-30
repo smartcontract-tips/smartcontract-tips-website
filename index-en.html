@@ -3,236 +3,251 @@ permalink: /index-en.html
 ---
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Smart Contract Tips</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{{ site.landing_path }}/assets/css/main.css" />
-		<link rel="stylesheet" href="/extras/preview-card.css" />
-		<script defer src="https://eu.umami.is/script.js" data-website-id="3f363256-ccba-47e6-b575-8a46686833b2"></script>
-		<script src="https://kit.fontawesome.com/4c0de2340c.js" crossorigin="anonymous"></script>
 
-		<noscript><link rel="stylesheet" href="{{ site.landing_path }}/assets/css/noscript.css" /></noscript>
+<head>
+	<title>Smart Contract Tips</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="{{ site.landing_path }}/assets/css/main.css" />
+	<link rel="stylesheet" href="/extras/preview-card.css" />
+	<script defer src="https://eu.umami.is/script.js" data-website-id="3f363256-ccba-47e6-b575-8a46686833b2"></script>
+	<script src="https://kit.fontawesome.com/4c0de2340c.js" crossorigin="anonymous"></script>
 
-		<!-- google adsense -->
-		<meta name="google-adsense-account" content="ca-pub-1834107151487683">
-	
-	</head>
-	<body class="is-preload">
+	<noscript>
+		<link rel="stylesheet" href="{{ site.landing_path }}/assets/css/noscript.css" />
+	</noscript>
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="authors">Who</a></li>
-							<li><a href="#two">What</a></li>
-							<li><a href="#three">Contact</a></li>
-							<li><a href="articles">Articles</a></li>
-							<li><a href="index.html">Italiano 🇮🇹 </a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+	<!-- google adsense -->
+	<meta name="google-adsense-account" content="ca-pub-1834107151487683">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+</head>
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Smart Contract Tips</h1>
-							<p><a href="index.html">IT 🇮🇹 </a><a href="index-en.html">EN 🇬🇧 </a></p>
-							<p>The real challenge today is not to ride the web3 technology, but rather to write 
-								<a style="color: orange;" href="articoli/cosa-sono-gli-smart-contract-definizione-ed-esempi/">smart contracts</a> that meet the requirements expected by users and do not expose their funds to hackers and scammers. Blockchain and security, it seems obvious but it is not!
-							</p>
-							<ul class="actions">
-								<li><a href="/articles" class="button">Articles</a></li>
-							</ul>
-						</div>
+<body class="is-preload">
 
-						{% assign z = site['en'] | reverse %}
-						<div class="cards-container">
+	<!-- Sidebar -->
+	<section id="sidebar">
+		<div class="inner">
 
+			<nav>
+				<ul>
+					<li><a href="#intro">Welcome</a></li>
+					<li><a href="authors">Who</a></li>
+					<li><a href="#two">What</a></li>
+					<li><a href="#three">Contact</a></li>
+					<li><a href="articles">Articles</a></li>
+					<li><a href="index.html">Italiano 🇮🇹 </a></li>
+				</ul>
+			</nav>
+		</div>
+	</section>
 
-							{% include 
-								card.html image='/pics/posts/blockchain-developer/image.webp' 
-								
-								title='What Is a Blockchain Developer & How Do I Become One?' 
-								
-								url='/en/post/how-do-i-start-blockchain-development'  
-								
-								excerpt='The demand for blockchain developers/engineers is at an all-time high because industries today recognize the value of blockchain technology ... ' 
-							%}
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Intro -->
+		<section id="intro" class="wrapper style1 fullscreen fade-up">
+			<div style="position: absolute; top: 0; right: 0; padding: 10px;">
+				<a href="index.html">IT 🇮🇹 </a>
+				&nbsp;&nbsp;
+				<a href="index-en.html">EN 🇬🇧 </a>
+			</div>
+			<div class="inner">
+				<h1>Smart Contract Tips</h1>
+				
+			</div>
+			{% assign z = site['en'] | reverse %}
+			<div class="cards-container">
 
 
-							{% assign posts = site['en'] | reverse %}
-							{% for post in posts limit:5 %}
-								{% if post.image %}
-									{% assign image_url = post.image %} 
-									{% else %}
-									{% assign image_url = "/blog.png" %}
-								{% endif %}
-			
-								{% include card.html image=image_url title=post.title url=post.url  excerpt=post.excerpt %}
-							{% endfor %}							
-		
-											
-							<br>
-							
-						</div><!-- END Cards container -->
-						<div class="inner">
-							<blockquote>
-								Smart contracts on Ethereum are worse 
-								than even non-financial commercial code; 
-								as of May 2016, Ethereum contracts averaged 
-								100 obvious bugs per 1000 lines of code. 
-								For comparison, Microsoft code averages 
-								15 bugs per 1000 lines, NASA code around 0 per 500,000 
-								lines. (Excerpt from chapter 10 of Attack of the 50 Foot Blockchain by David Gerard)
-							</blockquote>
-						</div>
-						
-					</section>
+				{% include
+				card.html image='/pics/posts/blockchain-developer/image.webp'
 
-				<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
-						
-						<section>
-							
-							
-							<div class="content">
-								<div class="inner">
-									<h2>Our sponsors</h2>
-									<p> Thanks to partner companies and the quadratic funding support of the Italian Spaghett.eth community, our site is updated with new content every week. If you would like to join our sponsors please contact us or 
-										<a style="color: orange;" href="https://www.buymeacoffee.com/smartcontract.tips" 
-										target="_blank" rel="noreferrer noopener">
-										<i class="fa-solid fa-mug-hot"></i>
-										Buy me a coffee 
-										</a>
-									</p>
-										
-									<div >
-										
+				title='What Is a Blockchain Developer & How Do I Become One?'
 
-											<a href="https://www.uniscrow.com" 
-											target="_blank" rel="noreferrer noopener">
-											UNISCROW
-											</a>
-											<br/>
+				url='/en/post/how-do-i-start-blockchain-development'
+
+				excerpt='The demand for blockchain developers/engineers is at an all-time high because industries today
+				recognize the value of blockchain technology ... '
+				%}
 
 
+				{% assign posts = site['en'] | reverse %}
+				{% for post in posts limit:5 %}
+				{% if post.image %}
+				{% assign image_url = post.image %}
+				{% else %}
+				{% assign image_url = "/blog.png" %}
+				{% endif %}
+
+				{% include card.html image=image_url title=post.title url=post.url excerpt=post.excerpt %}
+				{% endfor %}
 
 
+				<br>
 
-											<a href="https://radixgroup.org" 
-												target="_blank" rel="noreferrer noopener">
-												RADIX SRL
-											</a><br/>
-
-											<a href="https://qf.spaghett-eth.com/#/leaderboards/0x96FBFf5171C38e8dbdEB1E8F559b94436A14529b/networks/arbitrum" 
-											target="_blank" rel="noreferrer noopener">
-											SPAGHETT.ETH
-											</a><br/>
-
-
-											
-
-									</div>
-							</div>
-						</section>
-
-					</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>Our mission</h2>
-							<p>
-								We are here to help you create, verify 
-								and improve the security of your 
-								smart contracts through a professional and thorough audit.
-							</p>
-
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Best Practices</h3>
-									<p>In the world of dApps and smart contract development, the adoption of coding best practices is critical. Clear and well-documented code writing not only makes it easier to maintain and update applications, but also reduces the risk of errors and vulnerabilities.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-lock"></span>
-									<h3>Incident analysis and post-mortem</h3>
-									<p>Studying past security incidents is a vital step in improving security practices in dApps. Detailed analysis of attacks and breaches helps to understand the techniques used by attackers and identify vulnerable areas.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Standards: in-depth dive</h3>
-									<p>Security standards play a crucial role in smart contract development. As blockchain technology continues to evolve, it is critical to stay up-to-date on the latest standards and protocols.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>Tutorials & Courses</h3>
-									<p>Continuing education and training are key components to maintaining a high level of security in dApps. Numerous tutorials and online courses are available that cover various aspects of smart contract development.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Alert signals and incident feeds</h3>
-									<p>Maintaining an active and informed communication network is essential in the dApps development community. Sharing information, such as security alerts and updates on newly discovered vulnerabilities, helps prevent the spread of attacks.</p>
-								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Premium services from our partners</h3>
-									<p>Working with a network of trusted partners can significantly improve the security of dApps. Through premium services such as professional security audits, expert advice and access to advanced monitoring tools, developers can benefit from enhanced protection.</p>
-								</section>
-							</div>
-						</div>
-					</section>
-
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Contact us</h2>
-							<p>
-								If you would like to write an article or need an 
-								a smart contract expert contact us
-							</p>
-							
-							
-
-							<a 	href="mailto:team@smartcontract.tips?subject=[SCT]%20Contact%20request" 
-								class="button submit"
-								target="_blank">
-								Send Message
-							</a>
-
-						</div>
-					</section>
-
+			</div><!-- END Cards container -->
+			<div class="inner">
+				<blockquote>
+					Smart contracts on Ethereum are worse
+					than even non-financial commercial code;
+					as of May 2016, Ethereum contracts averaged
+					100 obvious bugs per 1000 lines of code.
+					For comparison, Microsoft code averages
+					15 bugs per 1000 lines, NASA code around 0 per 500,000
+					lines. (Excerpt from chapter 10 of Attack of the 50 Foot Blockchain by David Gerard)
+				</blockquote>
 			</div>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Davide Carboni. All rights reserved.</li>
-						<li><a href="/privacy">Privacy policy.</a></li>
-						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+		</section>
+
+		<!-- One -->
+		<section id="one" class="wrapper style2 spotlights">
+
+			<section>
+
+
+				<div class="content">
+					<div class="inner">
+						<h2>Our sponsors</h2>
+						<p> Thanks to partner companies and the quadratic funding support of the Italian Spaghett.eth
+							community, our site is updated with new content every week. If you would like to join our
+							sponsors please contact us or
+							<a style="color: orange;" href="https://www.buymeacoffee.com/smartcontract.tips"
+								target="_blank" rel="noreferrer noopener">
+								<i class="fa-solid fa-mug-hot"></i>
+								Buy me a coffee
+							</a>
+						</p>
+
+						<div>
+
+
+							<a href="https://www.uniscrow.com" target="_blank" rel="noreferrer noopener">
+								UNISCROW
+							</a>
+							<br />
+
+
+
+
+
+							<a href="https://radixgroup.org" target="_blank" rel="noreferrer noopener">
+								RADIX SRL
+							</a><br />
+
+							<a href="https://qf.spaghett-eth.com/#/leaderboards/0x96FBFf5171C38e8dbdEB1E8F559b94436A14529b/networks/arbitrum"
+								target="_blank" rel="noreferrer noopener">
+								SPAGHETT.ETH
+							</a><br />
+
+
+
+
+						</div>
+					</div>
+			</section>
+
+		</section>
+
+		<!-- Two -->
+		<section id="two" class="wrapper style3 fade-up">
+			<div class="inner">
+				<h2>Our mission</h2>
+				<p>
+					We are here to help you create, verify
+					and improve the security of your
+					smart contracts through a professional and thorough audit.
+				</p>
+
+				<div class="features">
+					<section>
+						<span class="icon solid major fa-code"></span>
+						<h3>Best Practices</h3>
+						<p>In the world of dApps and smart contract development, the adoption of coding best practices
+							is critical. Clear and well-documented code writing not only makes it easier to maintain and
+							update applications, but also reduces the risk of errors and vulnerabilities.</p>
+					</section>
+					<section>
+						<span class="icon solid major fa-lock"></span>
+						<h3>Incident analysis and post-mortem</h3>
+						<p>Studying past security incidents is a vital step in improving security practices in dApps.
+							Detailed analysis of attacks and breaches helps to understand the techniques used by
+							attackers and identify vulnerable areas.</p>
+					</section>
+					<section>
+						<span class="icon solid major fa-cog"></span>
+						<h3>Standards: in-depth dive</h3>
+						<p>Security standards play a crucial role in smart contract development. As blockchain
+							technology continues to evolve, it is critical to stay up-to-date on the latest standards
+							and protocols.</p>
+					</section>
+					<section>
+						<span class="icon solid major fa-desktop"></span>
+						<h3>Tutorials & Courses</h3>
+						<p>Continuing education and training are key components to maintaining a high level of security
+							in dApps. Numerous tutorials and online courses are available that cover various aspects of
+							smart contract development.</p>
+					</section>
+					<section>
+						<span class="icon solid major fa-link"></span>
+						<h3>Alert signals and incident feeds</h3>
+						<p>Maintaining an active and informed communication network is essential in the dApps
+							development community. Sharing information, such as security alerts and updates on newly
+							discovered vulnerabilities, helps prevent the spread of attacks.</p>
+					</section>
+					<section>
+						<span class="icon major fa-gem"></span>
+						<h3>Premium services from our partners</h3>
+						<p>Working with a network of trusted partners can significantly improve the security of dApps.
+							Through premium services such as professional security audits, expert advice and access to
+							advanced monitoring tools, developers can benefit from enhanced protection.</p>
+					</section>
 				</div>
-			</footer>
+			</div>
+		</section>
 
-		<!-- Scripts -->
-			<script src="{{ site.landing_path }}/assets/js/jquery.min.js"></script>
-			<script src="{{ site.landing_path }}/assets/js/jquery.scrollex.min.js"></script>
-			<script src="{{ site.landing_path }}/assets/js/jquery.scrolly.min.js"></script>
-			<script src="{{ site.landing_path }}/assets/js/browser.min.js"></script>
-			<script src="{{ site.landing_path }}/assets/js/breakpoints.min.js"></script>
-			<script src="{{ site.landing_path }}/assets/js/util.js"></script>
-			<script src="{{ site.landing_path }}/assets/js/main.js"></script>
+		<!-- Three -->
+		<section id="three" class="wrapper style1 fade-up">
+			<div class="inner">
+				<h2>Contact us</h2>
+				<p>
+					If you would like to write an article or need an
+					a smart contract expert contact us
+				</p>
 
-			{% include newsletter.html %}
-	</body>
+
+
+				<a href="mailto:team@smartcontract.tips?subject=[SCT]%20Contact%20request" class="button submit"
+					target="_blank">
+					Send Message
+				</a>
+
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer" class="wrapper style1-alt">
+		<div class="inner">
+			<ul class="menu">
+				<li>&copy; Davide Carboni. All rights reserved.</li>
+				<li><a href="/privacy">Privacy policy.</a></li>
+				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="{{ site.landing_path }}/assets/js/jquery.min.js"></script>
+	<script src="{{ site.landing_path }}/assets/js/jquery.scrollex.min.js"></script>
+	<script src="{{ site.landing_path }}/assets/js/jquery.scrolly.min.js"></script>
+	<script src="{{ site.landing_path }}/assets/js/browser.min.js"></script>
+	<script src="{{ site.landing_path }}/assets/js/breakpoints.min.js"></script>
+	<script src="{{ site.landing_path }}/assets/js/util.js"></script>
+	<script src="{{ site.landing_path }}/assets/js/main.js"></script>
+
+	{% include newsletter.html %}
+</body>
+
 </html>
