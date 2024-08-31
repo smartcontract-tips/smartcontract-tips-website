@@ -1,10 +1,10 @@
 ---
-title: "**Web3: Gli Hack Più Rilevanti del 2024**"
+title: "Web3: Gli Hack Più Rilevanti del 2024"
 date: 2024-08-31
 image: /pics/posts/2024-08-31-web3-gli-hack-/cover.png
 tags: ["web3", "hack", "security", "defi", "2024"]
 excerpt: "Il testo esamina le principali vulnerabilità e gli hack più comuni nell'ecosistema Web3 nel 2024, tra cui la manipolazione dei Price Oracle, il furto di chiavi private e hash, la manipolazione di pre..."
-category: news
+category: survey
 layout: post
 ---
 
