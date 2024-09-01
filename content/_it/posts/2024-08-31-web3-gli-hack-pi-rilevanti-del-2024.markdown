@@ -28,7 +28,7 @@ Allo stato dell'arte, il tema della sicurezza in Web3 ha mostrato un'evoluzione 
 Concetti e Categorie sugli Hacks nel Web3 
 -----------
 
-Il testo analizza le principali vulnerabilità e attacchi informatici nel contesto della tecnologia Web3 per il 2024. Vengono esaminati vari tipi di attacchi, il loro impatto finanziario e le misure preventive suggerite per migliorare la sicurezza delle applicazioni decentralizzate. Ecco una tassonomia che rappresenta categorie di attacchi, impatto e contromisure possibili:
+Ecco di seguito le principali vulnerabilità e attacchi informatici nel contesto della tecnologia Web3 per il 2024. Vengono esaminati vari tipi di attacchi, il loro impatto finanziario e le misure preventive suggerite per migliorare la sicurezza delle applicazioni decentralizzate. Ecco una tassonomia che rappresenta categorie di attacchi, impatto e contromisure possibili:
 
 | Categoria di Attacco                | Descrizione                                              | Impatto Finanziario            | Contromisure Possibili                       |
 |-------------------------------------|----------------------------------------------------------|--------------------------------|---------------------------------------------|
