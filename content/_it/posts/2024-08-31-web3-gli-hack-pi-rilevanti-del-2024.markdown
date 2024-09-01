@@ -3,13 +3,13 @@ title: "Web3: Gli Hack Più Rilevanti del 2024"
 date: 2024-08-31
 image: /pics/posts/2024-08-31-web3-gli-hack-/cover.png
 tags: ["web3", "hack", "security", "defi", "2024"]
-excerpt: "Il testo esamina le principali vulnerabilità e gli hack più comuni nell'ecosistema Web3 nel 2024, tra cui la manipolazione dei Price Oracle, il furto di chiavi private e hash, la manipolazione di pre..."
+excerpt: "Esaminiamo le principali vulnerabilità e gli hack più comuni nell'ecosistema Web3 nel 2024, tra cui la manipolazione dei Price Oracle, il furto di chiavi private e hash, la manipolazione di pre..."
 category: survey
 layout: post
 ---
 
 
-Il testo esamina le principali vulnerabilità e gli hack più comuni nell'ecosistema Web3 nel 2024, tra cui la manipolazione dei Price Oracle, il furto di chiavi private e hash, la manipolazione di premi, problemi di controllo accessi e funzionalità insufficienti, errori di logica nei contratti smart, e attacchi di tipo governance. Vengono evidenziati anche gli strumenti e le pratiche migliori per migliorare la sicurezza, come l'auditing dei contratti smart, l'uso di strumenti di sicurezza automatizzati e portafogli multi-firma, e la necessità di collaborazione intersettoriale per affrontare le minacce emergenti.
+Esaminiamo le principali vulnerabilità e gli hack più comuni nell'ecosistema Web3 nel 2024, tra cui la manipolazione dei Price Oracle, il furto di chiavi private e hash, la manipolazione di premi, problemi di controllo accessi e funzionalità insufficienti, errori di logica nei contratti smart, e attacchi di tipo governance. Vengono evidenziati anche gli strumenti e le pratiche migliori per migliorare la sicurezza, come l'auditing dei contratti smart, l'uso di strumenti di sicurezza automatizzati e portafogli multi-firma, e la necessità di collaborazione intersettoriale per affrontare le minacce emergenti.
 
 "Web3: Gli Hack più Rilevanti del 2024" 
 -----------
