@@ -12,9 +12,15 @@ layout: post
 
 Cos'è l'OP_CAT?
 --------
-La proposta OP_CAT, assegnata come BIP 347, è un'innovazione di Blockstream per superare le limitazioni degli script Bitcoin. Introduce i "covenants", strumenti che consentono di predefinire e controllare l'uso dei fondi in transazioni future, migliorando quindi la sicurezza e la flessibilità dei contratti intelligenti. La nuova implementazione di OP_CAT promette di evitare le vulnerabilità di sicurezza precedenti, facilitando la creazione di contratti più complessi e resilienti. Questa proposta rappresenta un significativo passo avanti per Bitcoin, ampliando le funzionalità avanzate della rete senza compromettere la sua decentralizzazione e sicurezza.
 
-OP_CAT è una proposta avanzata da Blockstream, recentemente assegnata come Bitcoin Improvement Proposal (BIP) numero 347. Questa iniziativa mira a superare le limitazioni attuali del linguaggio di programmazione della rete Bitcoin, noto come Bitcoin Script.
+La proposta BIP che include `OP_CAT` è **BIP 114**, conosciuta come **OP_CHECKTEMPLATEVERIFY (CTV)**. Sebbene `OP_CAT` non sia direttamente il soggetto principale della proposta, BIP 114 ha incluso la discussione su opcodes disabilitati come `OP_CAT`, e come potrebbero essere riabilitati o sostituiti in futuro per migliorare le capacità di scripting di Bitcoin.
+
+Alcune discussioni su `OP_CAT` sono anche emerse in proposte come BIP 119, che ha esplorato l'introduzione di covenants, e in discussioni tecniche sulla possibilità di riabilitare o migliorare questo opcode per supportare funzionalità più avanzate, come concatenare dati all'interno degli script di Bitcoin【14†source】【16†source】.
+
+In generale, `OP_CAT` fa parte di un insieme di opcodes che potrebbero essere riproposti o modificati in contesti legati a covenants e script più complessi.
+
+La proposta OP_CAT in Tapscript , assegnata come BIP 347, è un'innovazione di Blockstream per superare le limitazioni degli script Bitcoin. Introduce i "covenants", strumenti che consentono di predefinire e controllare l'uso dei fondi in transazioni future, migliorando quindi la sicurezza e la flessibilità dei contratti intelligenti. La nuova implementazione di OP_CAT promette di evitare le vulnerabilità di sicurezza precedenti, facilitando la creazione di contratti più complessi e resilienti. Questa proposta rappresenta un significativo passo avanti per Bitcoin, ampliando le funzionalità avanzate della rete senza compromettere la sua decentralizzazione e sicurezza.
+
 
 Contesto e Motivazioni
 -------
