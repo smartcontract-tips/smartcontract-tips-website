@@ -8,7 +8,7 @@ category: news
 layout: post
 ---
 
-
+![cover](/pics/posts/2024-09-06-proposta-opcat/cover.png)
 
 La proposta OP_CAT, assegnata come BIP 347, è un'innovazione di Blockstream per superare le limitazioni degli script Bitcoin. Introduce i "covenants", strumenti che consentono di predefinire e controllare l'uso dei fondi in transazioni future, migliorando quindi la sicurezza e la flessibilità dei contratti intelligenti. La nuova implementazione di OP_CAT promette di evitare le vulnerabilità di sicurezza precedenti, facilitando la creazione di contratti più complessi e resilienti. Questa proposta rappresenta un significativo passo avanti per Bitcoin, ampliando le funzionalità avanzate della rete senza compromettere la sua decentralizzazione e sicurezza.
 
