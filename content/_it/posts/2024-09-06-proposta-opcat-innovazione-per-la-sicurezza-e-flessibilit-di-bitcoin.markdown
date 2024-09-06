@@ -153,4 +153,7 @@ La proposta OP_CAT rappresenta un passo significativo verso l'evoluzione della r
 **Links**
 
 
-- [Blockstream](https://blog.blockstream.com/op_cat-the-purr-fect-solution-for-covenants/)
+Per imparare di più sui **Bitcoin Covenants**, ti consiglio di consultare il sito [Bitcoin Covenants Wiki](https://covenants.info/). È una risorsa collaborativa che offre una panoramica completa sui vari casi d'uso e le proposte di modifica del consenso relative ai covenants in Bitcoin. Questo sito è particolarmente utile per chi vuole approfondire come i covenants possono essere utilizzati per migliorare la sicurezza e la scalabilità di Bitcoin.
+
+In alternativa, puoi esplorare [Bitcoin Optech](https://bitcoinops.org/en/topics/covenants/), che fornisce una spiegazione tecnica di come i covenants possono limitare gli output di una transazione per impedire che vengano spesi in script non autorizzati. È una buona risorsa se ti interessa comprendere gli aspetti tecnici e le proposte più recenti.
+
