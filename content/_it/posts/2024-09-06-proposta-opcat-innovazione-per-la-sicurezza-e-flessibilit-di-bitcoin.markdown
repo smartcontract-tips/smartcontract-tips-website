@@ -10,18 +10,19 @@ layout: post
 
 ![cover](/pics/posts/2024-09-06-proposta-opcat/cover.png)
 
-La proposta OP_CAT, assegnata come BIP 347, è un'innovazione di Blockstream per superare le limitazioni degli script Bitcoin. Introduce i "covenants", strumenti che consentono di predefinire e controllare l'uso dei fondi in transazioni future, migliorando quindi la sicurezza e la flessibilità dei contratti intelligenti. La nuova implementazione di OP_CAT promette di evitare le vulnerabilità di sicurezza precedenti, facilitando la creazione di contratti più complessi e resilienti. Questa proposta rappresenta un significativo passo avanti per Bitcoin, ampliando le funzionalità avanzate della rete senza compromettere la sua decentralizzazione e sicurezza.
-
 Cos'è l'OP_CAT?
 --------
+La proposta OP_CAT, assegnata come BIP 347, è un'innovazione di Blockstream per superare le limitazioni degli script Bitcoin. Introduce i "covenants", strumenti che consentono di predefinire e controllare l'uso dei fondi in transazioni future, migliorando quindi la sicurezza e la flessibilità dei contratti intelligenti. La nuova implementazione di OP_CAT promette di evitare le vulnerabilità di sicurezza precedenti, facilitando la creazione di contratti più complessi e resilienti. Questa proposta rappresenta un significativo passo avanti per Bitcoin, ampliando le funzionalità avanzate della rete senza compromettere la sua decentralizzazione e sicurezza.
 
 OP_CAT è una proposta avanzata da Blockstream, recentemente assegnata come Bitcoin Improvement Proposal (BIP) numero 347. Questa iniziativa mira a superare le limitazioni attuali del linguaggio di programmazione della rete Bitcoin, noto come Bitcoin Script.
 
-### **Contesto e Motivazioni**
+Contesto e Motivazioni
+-------
 
 Bitcoin Script, il linguaggio utilizzato per la creazione di contratti intelligenti sulla rete Bitcoin, ha delle limitazioni intrinseche. Tra queste, un modello di esecuzione lineare, una scarsa visibilità sui dati delle transazioni e l'assenza di funzionalità aritmetiche di base. Queste limitazioni impediscono la gestione complessa delle transazioni e la creazione di contratti intelligenti avanzati. OP_CAT mira a colmare queste lacune introducendo i cosiddetti "covenants".
 
-### **Covenants: Cosa Sono e Come Funzionano**
+Covenants: Cosa Sono e Come Funzionano
+-------
 
 I covenants rappresentano strumenti che permettono di predefinire come i fondi possano essere spesi in future transazioni. Questo sistema non solo aumenta la sicurezza — prevenendo l'uso improprio dei fondi — ma offre anche flessibilità. Consentendo scenari di utilizzo come i vaults per la protezione dei fondi, i covenants ampliano le capacità dei contratti intelligenti su Bitcoin. 
 
@@ -31,9 +32,11 @@ I covenants rappresentano strumenti che permettono di predefinire come i fondi p
 2. **Flessibilità:** Permettono la creazione di contratti più complessi, come vaults, che aggiungono un ulteriore livello di protezione.
 3. **Visibilità dei Dati di Transazione:** Migliorano la visibilità sui dati delle transazioni, consentendo condizioni di spesa più elaborate.
 
-### **OP_CAT in Dettaglio**
+OP_CAT in Dettaglio
+-------
 
-#### **Funzionalità Principali:**
+
+**Funzionalità Principali:**
 
 1. **Concatenazione di Elementi dello Stack:** OP_CAT permette di concatenare due elementi presenti nello stack dei dati di Script. Questo è utile per combinare diverse informazioni all'interno di uno script.
    
@@ -55,14 +58,10 @@ I covenants rappresentano strumenti che permettono di predefinire come i fondi p
 2. **Strutture di Vault:** Permette l'implementazione di vaults per la protezione dei fondi, offrendo meccanismi per il recupero in caso di compromissione della chiave.
 3. **Merkle Trees per Script:** Abilita la verificazione dei dati tramite Merkle Trees, migliorando l'integrità dei dati senza aggiungere complessità eccessiva alla blockchain.
 
-### **Conclusioni**
+Conclusioni
+-----------
 
 La proposta OP_CAT rappresenta un passo significativo verso l'evoluzione della rete Bitcoin, migliorando la sua sicurezza e flessibilità. Introdurre i covenants potrebbe contribuire a trasformare la funzionalità dei contratti intelligenti su Bitcoin, allineandosi con l'idea originale di una rete sicura e decentralizzata. Tuttavia, la comunità Bitcoin dovrà valutare attentamente questa proposta per garantire che i cambiamenti non compromettano la sicurezza e la decentralizzazione della rete.
-
-
-
-
-
 
 **Links**
 
