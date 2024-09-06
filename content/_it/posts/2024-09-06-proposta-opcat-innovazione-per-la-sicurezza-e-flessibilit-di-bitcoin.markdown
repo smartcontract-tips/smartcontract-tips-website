@@ -1,10 +1,10 @@
----
-title: "Proposta OP_CAT: Innovazione per la Sicurezza e Flessibilità di Bitcoin"
+--- 
 date: 2024-09-06
+title: Proposta OP_CAT. Innovazione per la Sicurezza e Flessibilità di Bitcoin
 image: /pics/posts/2024-09-06-proposta-opcat/cover.png
-tags: ["bitcoin", "op_cat", "covenant", "contract-intelligent", "blockstream"]
-excerpt: "La proposta OP_CAT, assegnata come BIP 347, è un'innovazione di Blockstream per superare le limitazioni degli script Bitcoin. Introduce i "covenants", strumenti che consentono di predefinire e contr..."
-category: news
+tags: ["bitcoin", "op_cat", "covenant", "smart-contract", "blockstream"]
+excerpt: "La proposta OP_CAT, assegnata come BIP 347, è un'innovazione di Blockstream per superare le limitazioni degli script Bitcoin. Introduce i covenants, strumenti che consentono di predefinire e contr..."
+category: what_is
 layout: post
 ---
 
