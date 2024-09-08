@@ -1,5 +1,5 @@
 ---
-title: "Prepararsi per i Cambiamenti di Granite"
+title: "Optimism EVM: Prepararsi per il Granite upgrade"
 date: 2024-09-08
 image: /pics/posts/2024-09-08-prepararsi-per/cover.png
 tags: ["upgrade-proposal", "granite", "protocol-upgrade", "optimism", "security"]
