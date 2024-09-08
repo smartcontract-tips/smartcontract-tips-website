@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', handleResize);
 */
 
+/*
   // Funzione per controllare se il TOC è in sovrapposizione con altri elementi
   const toggleTOCVisibility = (entries) => {
     entries.forEach(entry => {
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Crea un observer per monitorare la visibilità del TOC
   const observer = new IntersectionObserver(toggleTOCVisibility);
   observer.observe(toc);
+*/
 
   headers.forEach(header => {
     const link = document.createElement('a');
