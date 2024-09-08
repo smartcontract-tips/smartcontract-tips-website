@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const toc = document.getElementById('toc');
 
   // Funzione per controllare la larghezza della finestra e nascondere il div "toc" se la larghezza è inferiore a 1350px
+  /** 
   const handleResize = () => {
     if (window.innerWidth < 1350) {
       toc.style.display = 'none';
@@ -13,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Aggiungi un listener per l'evento di ridimensionamento della finestra
   window.addEventListener('resize', handleResize);
-
+*/
 
   // Funzione per controllare se il TOC è in sovrapposizione con altri elementi
   const toggleTOCVisibility = (entries) => {
