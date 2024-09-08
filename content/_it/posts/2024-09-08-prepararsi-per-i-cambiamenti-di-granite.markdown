@@ -3,9 +3,7 @@ title: "Prepararsi per i Cambiamenti di Granite"
 date: 2024-09-08
 image: /pics/posts/2024-09-08-prepararsi-per/cover.png
 tags: ["upgrade-proposal", "granite", "protocol-upgrade", "optimism", "security"]
-excerpt: "Prepararsi per i Cambiamenti di Granite
-
-La proposta di aggiornamento Granite della rete OP risponde a una serie di vulnerabilità di sicurezza identificate durante audit di terze parti condotti da S..."
+excerpt: "Prepararsi per i Cambiamenti di Granite. La proposta di aggiornamento Granite della rete OP risponde a una serie di vulnerabilità di sicurezza identificate durante audit di terze parti condotti da S..."
 category: news
 layout: post
 ---
@@ -13,6 +11,8 @@ layout: post
 
 
 Prepararsi per i Cambiamenti di Granite
+
+![cover](/pics/posts/2024-09-08-prepararsi-per/cover.png)
 
 La proposta di aggiornamento Granite della rete OP risponde a una serie di vulnerabilità di sicurezza identificate durante audit di terze parti condotti da Spearbit, Cantina e Code4rena. Sebbene nessuna vulnerabilità sia stata sfruttata e i beni degli utenti non siano mai stati a rischio, viene attivato un meccanismo fallback per garantire stabilità mentre le falle vengono risolte. L'aggiornamento include miglioramenti ai contratti smart e una hardfork L2 per ottimizzare stabilità e performance del sistema di fault proof.
 
@@ -57,4 +57,4 @@ Il Proposta di Aggiornamento #10, noto come Granite Network Upgrade, mira a riso
 
 
 - [Upgrade Proposal #10: Granite Network Upgrade - Protocol Upgrade - Optimism Collective](https://gov.optimism.io/t/upgrade-proposal-10-granite-network-upgrade/8733)
-- [Preparing for Granite Breaking Changes | Optimism Docs](https://docs.optimism.io/builders/notices/granite-changes)
+- [Preparing for Granite Breaking Changes. Optimism Docs](https://docs.optimism.io/builders/notices/granite-changes)
