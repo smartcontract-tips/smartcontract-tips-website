@@ -66,3 +66,4 @@ Un'importante vulnerabilità nella libreria crittografica di Infineon ha reso i 
 
 - [YubiKeys are vulnerable to cloning attacks thanks to newly discovered side channel. Ars Technica](https://arstechnica.com/security/2024/09/yubikeys-are-vulnerable-to-cloning-attacks-thanks-to-newly-discovered-side-channel/)
 - [Security Advisory YSA-2024-03. Yubico](https://www.yubico.com/support/security-advisories/ysa-2024-03/)
+- [Detailed Hack Report from NinjaLabs](https://ninjalab.io/wp-content/uploads/2024/09/20240903_eucleak.pdf)
