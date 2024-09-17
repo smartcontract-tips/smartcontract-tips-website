@@ -17,7 +17,7 @@ Cos'è un passkey e come funziona il protocollo?
 
 ### Cos'è una passkey?
 
-Una passkey rappresenta una nuova modalità di accesso a servizi online, progettata per essere più sicura e user-friendly rispetto alle tradizionali password. Utilizzando la crittografia a chiave pubblica, le passkeys eliminano la necessità di ricordare o di inserire password complesse, riducendo il rischio di attacchi phishing e altre forme di compromissione. Quando un utente si registra per un servizio che utilizza questa tecnologia, il dispositivo crea un paio di chiavi, una pubblica e una privata, garantendo così una maggiore sicurezza dei dati e un'esperienza di accesso semplificata.
+Una passkey rappresenta una nuova modalità di accesso a servizi online, progettata per essere più sicura e user-friendly rispetto alle tradizionali password. Utilizzando la crittografia a chiave pubblica, le passkeys eliminano la necessità di ricordare o di inserire password complesse, riducendo il rischio di attacchi phishing e altre forme di compromissione. Quando un utente si registra per un servizio che utilizza questa tecnologia, il dispositivo [crea un paio di chiavi, una pubblica e una privata](/articoli/dalla-cifratura-simmetrica-alla-crittografia-a-chiave-pubblica/), garantendo così una maggiore sicurezza dei dati e un'esperienza di accesso semplificata.
 
 ### Come funzionano le passkeys?
 
