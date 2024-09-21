@@ -20,7 +20,14 @@
   }  
 }
 
-
+.site-title {
+  content: url('/logos/logo-white-new-sct.png'); 
+  width: 150px;
+  @media screen and (min-width: 600px) {
+    content: url('/logos/logo-white-new-sct-wide.png');
+    width: 300px;
+  }
+}
 
 
 .info-box {
@@ -94,7 +101,6 @@
 <header class="my-header site-header">
     <a 
         class="site-title" 
-        style="content: url('/logos/logo_basic_alpha_white.png'); width: 300px;"
         rel="author" 
         href="/">{{ site.title | escape }}
     </a>
