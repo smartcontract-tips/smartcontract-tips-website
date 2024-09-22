@@ -9,7 +9,7 @@ category: Mid
 tags: [stablecoin]
 permalink: "/articoli/guida-stablecoin-cosa-sono-a-cosa-servono-paypal/"
 excerpt: Stablecoin cosa sono? Per quale caratteristica le stablecoin si differenziano dalle altre criptovalute? Da chi è emessa la stablecoin usdc. Di seguito una guida completa.
-
+author: davide
 image: /featured_images/copertinaguida.png
 
 ---
