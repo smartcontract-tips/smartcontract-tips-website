@@ -3,7 +3,7 @@ title: "NTT rivela l'importanza della witness encryption per zero-knowledge proo
 date: 2024-09-21
 image: /pics/posts/2024-09-21-ntt-rivela-lim/cover.webp
 tags: ["zero-knowledge-proof", "zkp", "witness-encryption", "resettable-statistical-zero-knowledge", "cryptographic-protocol", "data-security"]
-excerpt: "NTT Corporation ha raggiunto un importante traguardo nel campo delle zero-knowledge proofs, dimostrando per la prima volta l'indispensabilità della witness encryption per la costruzione di resettabl..."
+excerpt: "Zero knowledge proof news: NTT Corporation ha raggiunto un importante traguardo nel campo delle zero-knowledge proofs, dimostrando per la prima volta l'indispensabilità della witness encryption per la costruzione di resettable statistical zero-knowledge arguments. "
 category: news
 layout: post
 ---
