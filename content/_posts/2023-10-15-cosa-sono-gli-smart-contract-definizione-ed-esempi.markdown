@@ -2,7 +2,7 @@
 layout: post
 title: Cosa sono gli smart contract, definizione ed esempi
 date: 2023-10-15
-last_modified: 2024-07-01
+last_modified: 2024-09-28
 type: post
 category: Mid
 tags: [smart-contract]
@@ -21,6 +21,18 @@ La prima menzione al termine *Smart Contract* la dobbiamo a Nick Szabo nel lonta
 > *A smart contract is a computerized transaction protocol that executes the terms of a contract. The general objectives of smart contract design are to satisfy common contractual conditions (such as payment terms, liens, confidentiality, and even enforcement), minimize exceptions both malicious and accidental, and minimize the need for trusted intermediaries. Related economic goals include lowering fraud loss, arbitration and enforcement costs, and other transaction costs
 [Nick Szabo](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html)*
 
+
+
+## L'analogia della vending machine
+
+Immagina di trovarti davanti a un distributore automatico. Inserisci il denaro, premi un pulsante per il tuo snack preferito e voilà, ecco il tuo spuntino. Non c'è bisogno di un commesso o di un intermediario; la macchina gestisce tutto automaticamente. Questa semplice transazione automatica è un ottimo modo per capire gli smart contract.
+
+Un contratto intelligente, o smart contract appunto, funziona proprio come l'analogia del distributore automatico, ma invece di distribuire snack, gestisce e applica gli accordi tra le parti attraverso la tecnologia blockchain.
+
+![vending machine](/pics/posts/vending-machine.jpeg)
+
+
+## Un nome non proprio azzeccato.
 
 Come vedremo di seguito, la prassi e l'implementazione del concetto di smart contract ha raggiunto una grande popolarità con la nascita della rete Ethereum, nata proprio con lo scopo di permettere agli utenti di scrivere e mettere in esecuzione sui nodi della blockchain del codice contenente delle business logic arbitrarie.
 
