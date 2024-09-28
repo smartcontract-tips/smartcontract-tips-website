@@ -19,6 +19,11 @@ Utilizziamo i seguenti tipi di cookie sul nostro Sito:
 
 - **Cookie strettamente necessari:** Questi cookie sono essenziali per consentire il funzionamento del Sito e non possono essere disabilitati nei nostri sistemi. Di solito vengono impostati solo in risposta a azioni da te effettuate, come la richiesta di servizi, l'impostazione delle tue preferenze sulla privacy, l'accesso o la compilazione di moduli.
 
+- *Utilizziamo google.com per alcuni font usati nel sito*
+- *Utilizziamo font-awesome per le icone usate nel sito*
+- *Utilizziamo MathJax per le formule matematiche usate nel sito*
+- *Utilizziamo Octomail per le newsletter usate nel sito*
+- *Utilizziamo Cookie Consent per la gestione dei cookie*
 
 - **Cookie di prestazione:** Questi cookie ci aiutano a migliorare le prestazioni del nostro Sito, raccogliendo informazioni su come i visitatori lo utilizzano. Tutte le informazioni raccolte da questi cookie sono aggregate e quindi anonime.
 
