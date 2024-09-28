@@ -16,7 +16,7 @@ Sky, precedentemente noto come MakerDAO, sta riconsiderando i suoi piani per l'o
 -----------
 
 **Fatto e contesto**  
-Sky, precedentemente noto come MakerDAO, ha deciso di riconsiderare il proprio piano di esclusione di Wrapped Bitcoin (WBTC) a seguito di un intenso dibattito pubblico. Il 19 settembre 2024, la piattaforma aveva votato per rimuovere il supporto per WBTC a causa di preoccupazioni legate alla sua custodia, di recente affidata a un'impresa in joint venture con BiTGlobal, un ente associato a Justin Sun.
+Sky, precedentemente noto come MakerDAO, ha deciso di riconsiderare [il proprio piano di esclusione di Wrapped Bitcoin](https://smartcontract.tips/it/post/cambio-di-custodia-di-wbtc-rilancia-interesse-su-alternative-defi) a seguito di un intenso dibattito pubblico. Il 19 settembre 2024, la piattaforma aveva votato per rimuovere il supporto per WBTC a causa di preoccupazioni legate alla sua custodia, di recente affidata a un'impresa in joint venture con BiTGlobal, un ente associato a Justin Sun.
 
 **Attori coinvolti**  
 Il CEO di BitGo, Mike Belshe, ha preso parte a discussioni cruciali nella comunità di Sky per chiarire i timori riguardanti la custodia di WBTC. **Grazie ai suoi interventi**, Sky ha acquisito maggiore fiducia nella gestione corrente di WBTC. Nonostante la controversia legata a Justin Sun, Belshe ha rassicurato che alcun cambiamento unilaterale a queste pratiche potrà avvenire senza un preavviso di 60 giorni.
@@ -53,3 +53,5 @@ Sky (MakerDAO) sta rivalutando i suoi piani di offboarding per il WBTC dopo aver
 
 
 - [Articolo su daily coin](https://dailycoin.com/sky-makerdao-rethinks-bitgo-wbtc-offboarding-after-risk-assurances/)
+
+- [Cambio di Custodia di WBTC Rilancia Interesse su Alternative DeFi](https://smartcontract.tips/it/post/cambio-di-custodia-di-wbtc-rilancia-interesse-su-alternative-defi)
