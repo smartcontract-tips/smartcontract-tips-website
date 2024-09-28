@@ -72,9 +72,13 @@ I Non Fungible Token (NFT) sono oggetti digitali unici e collezionabili, essi ha
 ### Esempio di smart contract: l'escrow
 
 La logica di escrow è ben nota nel mondo delle vendite immobiliari, almeno nel mondo anglosassone e un po' meno da noi. Ma il concetto è quello del deposito a garanzia con un agente terzo, banca o notaio, che ha il compito di eseguire il pagamento solo se sono soddisfatti i requisiti dell'affare.
-Gli smart contract permettono di eseguire questa logica quando i pagamenti sono effettuati con cripto valute. Qui un [esempio di applicazione degli smart contract alla logica di escrow](https://uniscrow.com).
+
+L'escrow è una logica di fiducia in cui una terza parte neutrale trattiene fondi o beni fino a quando tutte le condizioni di un accordo tra due parti non sono soddisfatte. Una volta che entrambe le parti adempiono ai loro obblighi, la terza parte rilascia i fondi o i beni al destinatario designato. Questo meccanismo assicura che nessuna delle parti possa essere svantaggiata nel processo di transazione.
 
 
+Gli smart contract permettono di eseguire questa logica senza utilizzare la figura dell'intemediario, e quando i pagamenti sono effettuati con cripto valute. Qui un [esempio di applicazione degli smart contract alla logica di escrow](https://uniscrow.com).
+
+![escrow](/pics/posts/escrow-sequence.png)
 
 
 ## Gli smart contract in Ethereum e gli smart contract Turing-complete
@@ -122,7 +126,7 @@ Il linguaggio macchina finale eseguito dalla EVM sarebbe costituito solo da nume
 
 Tra questi linguaggi di alto livello, quello che va per la maggiore su Ethereum è il linguaggio Solidity ed un semplice contratto potrebbe essere scritto come segue:
 
-```
+```rust
 pragma solidity >=0.4.0 <0.6.0;
 contract SimpleStorage {
    uint storedData;
