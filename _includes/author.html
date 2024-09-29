@@ -1,4 +1,4 @@
-<h2>{{ include.name }}</h2>
+<h2>Contatta l'autore: {{ include.name }}</h2>
 <img 
     src="{{ include.picture }}" 
     style="width: 125px; border-radius: 50%; margin-bottom: 30px;"/>
@@ -15,7 +15,7 @@
 </a>
 <br><br>
 <div>
-    <h2>Contatta l'autore per chiedere una consulenza.</h2>
+    
     <form id="requestForm">
         <label for="email">Tuo Indirizzo Email (per essere ricontattato):</label><br>
         <input type="email" id="email" name="email" required style="width: 70%; min-height: 2em;"><br><br>
@@ -23,7 +23,7 @@
         <label for="message">Messaggio:</label><br>
         <textarea id="message" name="message" rows="6" cols="40" style="width: 70%;" required></textarea><br><br>
         <a href="/privacy" target="_blank">Ho preso visione della privacy policy</a>
-        <button type="submit">Invia</button>
+        <button type="submit" style="border: 0; height: 2.5em; width: 10em;background-color: blue; color: aliceblue; border-radius: 20px;">Invia</button>
     </form>
 </div>
 
