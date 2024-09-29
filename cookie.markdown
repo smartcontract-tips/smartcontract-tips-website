@@ -5,38 +5,61 @@ permalink: /cookie/
 ---
 
 
-**Ultimo aggiornamento:** 08/07/2024
+**Ultimo aggiornamento:** 08/09/2024
 
-Questa Cookie Policy spiega cosa sono i cookie e come li utilizziamo sul nostro sito web ("il Sito"). Vi invitiamo a leggere attentamente questa politica per comprendere quali tipi di cookie utilizziamo, le informazioni che raccogliamo utilizzando i cookie e come tali informazioni vengono utilizzate.
+Questa Cookie Policy spiega quali sono i cookie e come li utilizziamo sul nostro sito web ("il Sito"). 
 
 **1. Cosa sono i cookie?**
 
-I cookie sono piccoli file di testo che vengono memorizzati sul tuo dispositivo (computer, tablet, smartphone) quando visiti un sito web. I cookie consentono al sito di riconoscere il tuo dispositivo e ricordare le tue preferenze o azioni nel corso del tempo.
+Per una descrizione completa di cosa sono i cookie ti invitiamo a leggere questa guida
 
-**2. Tipi di cookie utilizzati**
+[HTTP Cookie - English](https://en.wikipedia.org/wiki/HTTP_cookie)
 
-Utilizziamo i seguenti tipi di cookie sul nostro Sito:
+[HTTP Cookie - Italiano](https://it.wikipedia.org/wiki/Cookie)
+
+**2. Tipi di cookie**
+
+Una breve spiegazione dei vari tipi di cookie che potremmo usare.
 
 - **Cookie strettamente necessari:** Questi cookie sono essenziali per consentire il funzionamento del Sito e non possono essere disabilitati nei nostri sistemi. Di solito vengono impostati solo in risposta a azioni da te effettuate, come la richiesta di servizi, l'impostazione delle tue preferenze sulla privacy, l'accesso o la compilazione di moduli.
 
-- *Utilizziamo google.com per alcuni font usati nel sito*
-- *Utilizziamo font-awesome per le icone usate nel sito*
-- *Utilizziamo MathJax per le formule matematiche usate nel sito*
-- *Utilizziamo Octomail per le newsletter usate nel sito*
-- *Utilizziamo Cookie Consent per la gestione dei cookie*
 
 - **Cookie di prestazione:** Questi cookie ci aiutano a migliorare le prestazioni del nostro Sito, raccogliendo informazioni su come i visitatori lo utilizzano. Tutte le informazioni raccolte da questi cookie sono aggregate e quindi anonime.
 
-*Utilizziamo Umami.is per l'analitycs del sito*
 
 - **Cookie di funzionalità:** Questi cookie permettono al Sito di fornire funzionalità avanzate e personalizzate. Possono essere impostati da noi o da fornitori terzi i cui servizi abbiamo aggiunto alle nostre pagine.
 
-*Al momento non utilizziamo questo tipo di cookie.*
 
 - **Cookie di targeting:** Questi cookie possono essere impostati attraverso il nostro Sito dai nostri partner pubblicitari. Possono essere utilizzati da queste società per costruire un profilo dei tuoi interessi e mostrarti annunci pertinenti su altri siti.
 
-*Al momento non utilizziamo questo tipo di cookie.*
 
+**Cookie al momento utilizzati**
+
+
+
+| **Tipo di Cookie**               | **Cookie Utilizzati**                             | **Ragione del Cookie**               |
+|-----------------------------------|---------------------------------------------------|--------------------------------------|
+| Cookie strettamente necessari     | google.com                                        | Font per il sito                     |
+| Cookie strettamente necessari     | font-awesome                                      | Icone per il sito                    |
+| Cookie strettamente necessari     | MathJax                                           | Formule matematiche                  |
+| Cookie strettamente necessari     | Octomail                                          | Newsletter                           |
+| Cookie strettamente necessari     | Cookie Consent                                    | Gestione dei cookie                  |
+| Cookie di prestazione             | Umami.is                                          | Analytics del sito                   |
+| Cookie di funzionalità            | Al momento non utilizziamo questo tipo di cookie. | Non usato                            |
+| Cookie di targeting               | Al momento non utilizziamo questo tipo di cookie. | Non usato                            |
+
+
+
+| **Type of Cookie**               | **Cookies Used**                                  | **Reason for Cookie**               |
+|-----------------------------------|---------------------------------------------------|-------------------------------------|
+| Strictly Necessary Cookies       | google.com                                        | Fonts for the website               |
+| Strictly Necessary Cookies       | font-awesome                                      | Icons for the website               |
+| Strictly Necessary Cookies       | MathJax                                           | Mathematical formulas               |
+| Strictly Necessary Cookies       | Octomail                                          | Newsletters                         |
+| Strictly Necessary Cookies       | Cookie Consent                                    | Cookie management                   |
+| Performance Cookies              | Umami.is                                          | Site analytics                      |
+| Functionality Cookies            | We are not currently using this type of cookie.   | Not used                            |
+| Targeting Cookies                | We are not currently using this type of cookie.   | Not used                            |
 
 
 **3. Gestione dei cookie**

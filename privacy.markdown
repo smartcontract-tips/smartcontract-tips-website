@@ -4,7 +4,7 @@ title: Privacy
 permalink: /privacy/
 ---
 
-(aggiornata al 12/12/2023)
+(aggiornata al 12/1092/2024)
 
 Questa Privacy Policy è resa ai sensi dell’art. 13 del Regolamento Europeo n. 679/2016 e si applica esclusivamente a tutti i Dati raccolti attraverso il Sito web smartcontract.tips. La presente Privacy Policy è soggetta ad aggiornamenti che verranno pubblicati puntualmente sul Sito web. La presente Privacy Policy e la Cookie Policy, stabiliscono le basi sulle quali verranno elaborati i Dati personali dell’Utente.
 
@@ -80,7 +80,7 @@ I Dati sono trattati presso la sede operativa del Titolare. Per ulteriori inform
 
 ### FORM DI CONTATTO
 
-L’Utente, compilando con i propri Dati il Form di contatto, acconsente al loro utilizzo per rispondere alle richieste di informazioni, o di qualunque altra finalità indicata dall’intestazione del modulo. Dati Personali raccolti mediante Form di contatto: Email, Nome
+L’Utente, compilando con i propri Dati il Form di contatto, acconsente al loro utilizzo per rispondere alle richieste di informazioni, o di qualunque altra finalità indicata dall’intestazione del modulo. Dati Personali raccolti mediante Form di contatto: **Email**.
 
 ### GESTIONE INDIRIZZI EMAIL
 
