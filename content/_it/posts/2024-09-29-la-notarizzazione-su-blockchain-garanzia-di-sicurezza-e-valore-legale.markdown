@@ -1,17 +1,19 @@
 ---
 title: "La Notarizzazione su Blockchain: Tecnica, Garanzia di Sicurezza e Valore Legale"
 date: 2024-09-29
-image: /pics/posts/2024-09-29-la-notarizzazione-su-blockchain-garanzia-di-sicurezza-e-valore-legale/cover.png
+image: /pics/posts/2024-09-29-la-notarizzazione-su-blockchain-garanzia-di-sicurezza-e-valore-legale/cover.jpeg
 tags: ["notarizzazione", "blockchain", "autenticità", "documento", "hash"]
 excerpt: "La notarizzazione su Blockchain garantisce l'**immutabilità** e l'autenticità dei documenti, registrando un hash univoco che testimonia l'esistenza di un file a una certa data. Questa tecnologia offre un **valore legale** grazie alla sua trasparenza nella verifica, eliminando la necessità di intermediari e riducendo i costi di gestione."
 category: survey
+author: davide
 layout: post
 ---
 
 
-
-
 L'argomento di cui vogliamo parlare è la notarizzazione di documenti attraverso la tecnologia Blockchain. Questo processo consente di autenticare, certificare e garantire l'integrità di documenti digitali, sfruttando l'hashing per creare impronte digitali uniche che attestano l'immutabilità dei dati registrati. **La notarizzazione su Blockchain offre la prova di esistenza e autenticità di un documento in un determinato momento, rendendo impossibile qualsiasi successivo cambiamento senza che ciò venga rilevato.** 
+
+![cover](/pics/posts/2024-09-29-la-notarizzazione-su-blockchain-garanzia-di-sicurezza-e-valore-legale/cover.jpeg)
+
 
 
 Una Panoramica sull'argomento
@@ -52,6 +54,7 @@ Il processo di notarizzazione basato su blockchain segue i seguenti passaggi:
 
 ![bpmn](/pics/posts/2024-09-29-la-notarizzazione-su-blockchain-garanzia-di-sicurezza-e-valore-legale/bpmn.png)
 
+*Source: [Proof of Docs - Tomato Srl](https://tomatosrl.com/pod.html)*
 
 
 
