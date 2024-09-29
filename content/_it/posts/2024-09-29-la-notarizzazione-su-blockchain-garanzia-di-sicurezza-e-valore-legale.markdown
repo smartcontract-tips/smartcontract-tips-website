@@ -1,5 +1,5 @@
 ---
-title: "La Notarizzazione su Blockchain: Garanzia di Sicurezza e Valore Legale"
+title: "La Notarizzazione su Blockchain: Tecnica, Garanzia di Sicurezza e Valore Legale"
 date: 2024-09-29
 image: /pics/posts/2024-09-29-la-notarizzazione-su-blockchain-garanzia-di-sicurezza-e-valore-legale/cover.png
 tags: ["notarizzazione", "blockchain", "autenticità", "documento", "hash"]
@@ -11,7 +11,7 @@ layout: post
 
 
 
-L'argomento di cui vogliamo parlare è la notarizzazione di documenti attraverso la tecnologia Blockchain. Questo processo consente di autenticare, certificare e garantire l'integrità di documenti digitali, sfruttando l'hashing per creare impronte digitali uniche che attestano l'immutabilità dei dati registrati. **La notarizzazione su Blockchain offre la prova di esistenza e autenticità di un documento in un determinato momento, rendendo impossibile qualsiasi successivo cambiamento senza che ciò venga rilevato.** Viene messo in evidenza anche il valore legale della notarizzazione, poiché molte normative si stanno adattando a riconoscerne l'efficacia, stabilendo così un parallelo tra i tradizionali servizi notarili e le tecnologie decentralizzate. Inoltre, è evidente che l'adozione di tali tecnologie porta vantaggi come la riduzione dei costi, maggiore trasparenza e tracciabilità, arricchendo le pratiche di digitalizzazione nei contesti aziendali e legali.
+L'argomento di cui vogliamo parlare è la notarizzazione di documenti attraverso la tecnologia Blockchain. Questo processo consente di autenticare, certificare e garantire l'integrità di documenti digitali, sfruttando l'hashing per creare impronte digitali uniche che attestano l'immutabilità dei dati registrati. **La notarizzazione su Blockchain offre la prova di esistenza e autenticità di un documento in un determinato momento, rendendo impossibile qualsiasi successivo cambiamento senza che ciò venga rilevato.** 
 
 
 Una Panoramica sull'argomento
@@ -29,7 +29,7 @@ Ci sono molteplici vantaggi legati all'adozione della notarizzazione su blockcha
 
 L'implementazione della tecnologia blockchain nel processo di notarizzazione potrebbe trasformare significativamente il ruolo dei notai e dei professionisti legali. **È evidente che la blockchain presenta una serie di vantaggi rispetto ai tradizionali metodi notarili**, come la velocità e la costante disponibile accessibilità ai documenti. Nonostante ciò, i notai potrebbero continuare a svolgere un ruolo importante nella validazione e nel riconoscimento legale di tali documenti, integrandosi con la tecnologia blockchain per offrire un servizio più completo. In un futuro prossimo, è prevedibile una coesistenza tra la tecnologia decentralizzata e la professione notarile, mentre si esplora il potenziale della blockchain per semplificare e rendere più efficienti i processi tradizionali.
 
-Il protocollo di notarizzazione
+Il processo di notarizzazione
 -----------
 
 Il processo di notarizzazione basato su blockchain segue i seguenti passaggi:
@@ -55,7 +55,7 @@ Il processo di notarizzazione basato su blockchain segue i seguenti passaggi:
 
 
 
-Implementazione su Ethereum
+Esempio: Implementazione su Ethereum
 -----------
 
 Notarizzare un documento utilizzando la rete Ethereum è un processo che sfrutta la tecnologia della blockchain per garantire l'integrità e l'autenticità del documento senza rivelarne il contenuto. Ecco un esempio pratico di come si potrebbe fare:
