@@ -29,9 +29,26 @@ Le dichiarazioni
 -----------
 Riportiamo di seguito alcune dichiarazioni relative alla notizia.
 
-**Il Wall Street Journal riporta che i pirati informatici legati al governo cinese, noti come Salt Typhoon, hanno ottenuto accesso per mesi alle infrastrutture di rete degli operatori statunitensi AT&T e Verizon utilizzate per le richieste di wiretapping.** Questo è considerato un rischio significativo per la sicurezza nazionale. Un rappresentante del governo degli Stati Uniti ha descritto l'attacco come “storicamente significativo e preoccupante”. 
+**Il Wall Street Journal riporta che i pirati informatici legati al governo cinese, noti come Salt Typhoon, hanno ottenuto accesso per mesi alle infrastrutture di rete degli operatori statunitensi AT&T e Verizon utilizzate per le richieste di wiretapping.** 
+Questo è considerato un rischio significativo per la sicurezza nazionale. Un rappresentante del governo degli Stati Uniti ha descritto l'attacco come 
 
-Chris Smith di BGR ha affermato che “se Apple dovesse implementare backdoors nei suoi software, questa funzionalità non rimarrebbe segreta", sottolineando che "i pirati informatici darebbero la caccia a tale accesso appena reso pubblico". Inoltre, ha notato che "il furto di dati ha colpito anche persone legittime, le cui comunicazioni sarebbero state altrimenti protette”. 
+> storicamente significativo e preoccupante. 
+
+Chris Smith di BGR ha affermato che 
+> se Apple dovesse implementare backdoors nei suoi software, questa funzionalità non rimarrebbe segreta 
+
+sottolineando che 
+> i pirati informatici darebbero la caccia a tale accesso appena reso pubblico. Il furto di dati ha colpito anche persone legittime, le cui comunicazioni sarebbero state altrimenti protette. 
+
+Secondo l'esperto di sicurezza Peter Kacherginsky
+
+> This is equivalent to the compromise of Bitcoin, Ethereum, and Solana chains all at the same time. Yep, even with hacks that we learn about every day, web3 is doing just fine
+
+In passato, riguardo la possibilità di inserire delle backdoor nei sistemi operativi iOS, Apple si era già espressa per bocca di Tim Cook 
+
+> I don’t believe the trade-off here is privacy versus national security. We’re America. We should have both.
+
+
 
 **In conclusione, la situazione attuale dimostra come le proposte di backdoor per la crittografia possano portare a violazioni della sicurezza a livello massiccio.**
 
