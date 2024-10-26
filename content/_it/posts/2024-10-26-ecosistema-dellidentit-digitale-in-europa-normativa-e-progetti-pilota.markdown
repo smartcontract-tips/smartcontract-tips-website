@@ -1,5 +1,5 @@
 ---
-title: "Ecosistema dell'Identità Digitale in Europa: Normativa e Wallet italiano"
+title: "Ecosistema dell'Identità Digitale in Europa: EUDI Wallet e IT Wallet italiano"
 date: 2024-10-26
 image: /pics/posts/2024-10-26-ecosistema-dellidentit-digitale-in-europa-normativa-e-progetti-pilota/cover.png
 tags: ["eu-digital-identity-wallet", "eidas-regulation", "digital-identity", "trust-services", "cross-border"]
@@ -11,24 +11,31 @@ layout: post
 ![cover](/pics/posts/2024-10-26-ecosistema-dellidentit-digitale-in-europa-normativa-e-progetti-pilota/cover.png)
 
 
-Trattiamo dell'introduzione e dell'implementazione del **Regolamento sull'Identità Digitale Europea (EUDI)** e del suo strumento principale, l'**EU Digital Identity Wallet**. L'obiettivo centrale è creare un sistema di identificazione digitale che consenta ai cittadini e alle imprese dell'Unione Europea di accedere in modo sicuro e conveniente a servizi pubblici e privati online, garantendo un controllo completo sui dati personali condivisi. L'implementazione prevede l'integrazione di diversi **piloti di prova** volti a raccogliere feedback e perfezionare il sistema, con un'attenzione particolare alla **interoperabilità** tra i vari Stati membri e alla protezione dei dati personali. **Entro 24 mesi dall'adozione degli Atti di Esecuzione, tutti gli Stati membri dovranno fornire le EU Digital Identity Wallet** ai propri cittadini, promuovendo così un ambiente digitale più coeso e sicuro all'interno dell'Unione.
+Trattiamo dell'introduzione e dell'implementazione del **Regolamento sull'Identità Digitale Europea (EUDI)** e del suo strumento principale, l'**EU Digital Identity Wallet**. L'obiettivo centrale è creare un sistema di identificazione digitale che consenta ai cittadini e alle imprese dell'Unione Europea di accedere in modo sicuro e conveniente a servizi pubblici e privati online, garantendo un controllo completo sui dati personali condivisi. 
+
 
 
 Panoramica sulla European Digital Identity Regulation
 ---------
 
-La European Digital Identity Regulation, nota come eIDAS 2.0, mira a stabilire un framework per una identità digitale sicura e universale per i cittadini e le imprese dell'UE. **Entro 24 mesi dalla adozione degli atti di esecuzione, ogni Stato membro dovrà fornire ai suoi cittadini un EU Digital Identity Wallet**, permettendo accesso a servizi pubblici e privati sia online che offline. Questa regolamentazione modificherà l'attuale eIDAS, ampliando le funzionalità e l'interoperabilità dell'identità digitale, affrontando le lacune esistenti e promuovendo un sistema di identificazione più integrato e accessibile. Gli utenti avranno il pieno controllo sui dati condivisi e potranno dimostrare la loro identità senza dover rivelare informazioni personali superflue. **La regolamentazione stabilisce anche requisiti di certificazione e standard di riferimento per garantire la sicurezza e la protezione dei dati**.
+La European Digital Identity Regulation, nota come eIDAS 2.0, mira a stabilire un framework per una identità digitale sicura e universale per i cittadini e le imprese dell'UE. **Entro 24 mesi dalla adozione degli atti di esecuzione, ogni Stato membro dovrà fornire ai suoi cittadini un EU Digital Identity Wallet**, permettendo accesso a servizi pubblici e privati sia online che offline. Questa regolamentazione modificherà l'attuale eIDAS, ampliando le funzionalità e l'interoperabilità dell'identità digitale, affrontando le lacune esistenti e promuovendo un sistema di identificazione più integrato e accessibile. 
+
+Gli utenti avranno il pieno controllo sui dati condivisi e potranno dimostrare la loro identità senza dover rivelare informazioni personali superflue. **La regolamentazione stabilisce anche requisiti di certificazione e standard di riferimento per garantire la sicurezza e la protezione dei dati**.
 
 
 Il Contesto del Portafoglio Digitale Europeo
 ------------
 
-Il Portafoglio Digitale Europeo rappresenta una soluzione innovativa per l'identificazione e l'autenticazione dei cittadini e delle imprese europee. La creazione di questo sistema tiene in considerazione la crescente digitalizzazione dei servizi pubblici e privati, in particolare post-pandemia. La Commissione Europea sta implementando questa iniziativa attraverso progetti pilota su larga scala, con l'obiettivo di sviluppare specifiche tecniche e garantire una distribuzione sicura della tecnologia. Come affermato dal documento della Commissione, **"l'EU Digital Identity Wallet è progettato come un metodo conveniente e sicuro per autenticare la propria identità"**, permettendo agli utenti di gestire informazioni sensibili in modo più efficace rispetto a tradizionali password e documenti fisici.
+Il Portafoglio Digitale Europeo rappresenta una soluzione innovativa per l'identificazione e l'autenticazione dei cittadini e delle imprese europee. La creazione di questo sistema tiene in considerazione la crescente digitalizzazione dei servizi pubblici e privati, in particolare post-pandemia. 
+
+La Commissione Europea sta implementando questa iniziativa attraverso progetti pilota su larga scala, con l'obiettivo di sviluppare specifiche tecniche e garantire una distribuzione sicura della tecnologia. Come affermato dal documento della Commissione, **"l'EU Digital Identity Wallet è progettato come un metodo conveniente e sicuro per autenticare la propria identità"**, permettendo agli utenti di gestire informazioni sensibili in modo più efficace rispetto a tradizionali password e documenti fisici.
 
 Normativa e Standardizzazione
 -----------
 
-La regolamentazione che accompagna il Portafoglio Digitale Europeo è delineata nel Regolamento (UE) 2024/1183, anche noto come eIDAS 2.0. Questa normativa richiede che gli Stati membri forniscano i portafogli digitali ai cittadini entro 24 mesi dopo l'adozione degli atti di esecuzione, i quali stabiliranno specifiche tecniche e procedure di certificazione. Il Regolamento mira a superare le lacune dei sistemi di identificazione passati, garantendo accesso e controllo completo sui dati personali da parte degli utenti. Un elemento cruciale è la **"certificazione dei Portafogli Digitali”**, come indicato dalla Commissione, la quale è essenziale per stabilire un ambiente di fiducia nelle interazioni digitali tra Stati membri.
+La regolamentazione che accompagna il Portafoglio Digitale Europeo è delineata nel Regolamento (UE) 2024/1183, anche noto come eIDAS 2.0. Questa normativa richiede che gli Stati membri forniscano i portafogli digitali ai cittadini entro 24 mesi dopo l'adozione degli atti di esecuzione, i quali stabiliranno specifiche tecniche e procedure di certificazione. 
+
+Il Regolamento mira a superare le lacune dei sistemi di identificazione passati, garantendo accesso e controllo completo sui dati personali da parte degli utenti. Un elemento cruciale è la **"certificazione dei Portafogli Digitali”**, come indicato dalla Commissione, la quale è essenziale per stabilire un ambiente di fiducia nelle interazioni digitali tra Stati membri.
 
 
 
@@ -52,10 +59,10 @@ La regolamentazione che accompagna il Portafoglio Digitale Europeo è delineata 
    - **Norme e specifiche per la certificazione:** Entro il 21 novembre 2024, la Commissione stabilirà, attraverso atti di esecuzione, un elenco di norme di riferimento e, se necessario, specifiche e procedure per la certificazione dei portafogli europei di identità digitale.
 
 
-Com'è viene recepita la norma dall'Italia?
+IT Wallet: l'Italia ha un suo wallet di identità, prima ancora che esista quello europeo. 
 -----------
 
-
+Non è chiaro a chi scrive il perché ma l'Italia ha sviluppato in modo separato il suo wallet detto IT Wallet e naturalmente il guaio è che la sua funzionalità è limitata a cittadini ed operatori italiani. Resta evidentemente auspicabile l'obiettivo di integrare IT Wallet e EUDI Wallet, facendo in modo che il primo sia compatibile con lo standard europeo.
 
 Il Sistema IT Wallet è stato istituito dal decreto-legge n. 19 del 2 marzo 2024 (decreto Pnrr), che aggiunge al Codice dell’Amministrazione Digitale (Cad) l’articolo 64-quater, definendo ufficialmente il Sistema di portafoglio digitale italiano.
 
@@ -91,8 +98,6 @@ Il Sistema IT Wallet è stato istituito dal decreto-legge n. 19 del 2 marzo 2024
 - **Metà 2021:** L'Unione Europea avvia il progetto per l’European Digital Identity (EUDI) Wallet, il futuro sistema di identità digitale europeo che verrà integrato con l’IT Wallet italiano.
 
 Questa sequenza di annunci e decreti ha generato voci (poi smentite) su una possibile sostituzione dello SPID con l’IT Wallet, in realtà pensato per essere complementare e innovativo per l’identità digitale.
-
-Non è chiaro a chi scrive il perché ma l'Italia ha sviluppato in modo separato il suo wallet detto IT Wallet e naturalmente il guaio è che la sua funzionalità è limitata a cittadini ed operatori italiani. Resta evidentemente auspicabile l'obiettivo di integrare IT Wallet e EUDI Wallet, facendo in modo che il primo sia compatibile con lo standard europeo.
 
 
 
