@@ -100,6 +100,9 @@ Il Sistema IT Wallet è stato istituito dal decreto-legge n. 19 del 2 marzo 2024
 Questa sequenza di annunci e decreti ha generato voci (poi smentite) su una possibile sostituzione dello SPID con l’IT Wallet, in realtà pensato per essere complementare e innovativo per l’identità digitale.
 
 
+![it wallet roadmap](/pics/posts/2024-10-26-ecosistema-dellidentit-digitale-in-europa-normativa-e-progetti-pilota/it-wallet.png)
+
+
 
 **Domande e risposte sulla Digital Identity Wallet dell'UE**
 -----------
