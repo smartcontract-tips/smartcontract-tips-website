@@ -126,3 +126,4 @@ Nell'ambito della sua implementazione, l'Unione Europea ha avviato diversi proge
 - [The European Digital Identity Regulation (eIDAS 2): Framework and Insights](https://www.european-digital-identity-regulation.com/)
 - [eIDAS Regulation - Shaping Europe’s digital future](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)
 - [REGOLAMENTO (UE) 2024/1183 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO dell’11 aprile 2024](https://eur-lex.europa.eu/legal-content/IT/TXT/HTML/?uri=OJ:L_202401183)
+- [IT Wallet - Agid](https://www.agid.gov.it/en/it-wallet)
