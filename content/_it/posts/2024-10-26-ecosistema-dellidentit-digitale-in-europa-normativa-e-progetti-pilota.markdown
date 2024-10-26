@@ -1,5 +1,5 @@
 ---
-title: "Ecosistema dell'Identità Digitale in Europa: Normativa e Progetti Pilota"
+title: "Ecosistema dell'Identità Digitale in Europa: Normativa e Wallet italiano"
 date: 2024-10-26
 image: /pics/posts/2024-10-26-ecosistema-dellidentit-digitale-in-europa-normativa-e-progetti-pilota/cover.png
 tags: ["eu-digital-identity-wallet", "eidas-regulation", "digital-identity", "trust-services", "cross-border"]
@@ -55,6 +55,8 @@ La regolamentazione che accompagna il Portafoglio Digitale Europeo è delineata 
 Com'è viene recepita la norma dall'Italia?
 -----------
 
+
+
 Il Sistema IT Wallet è stato istituito dal decreto-legge n. 19 del 2 marzo 2024 (decreto Pnrr), che aggiunge al Codice dell’Amministrazione Digitale (Cad) l’articolo 64-quater, definendo ufficialmente il Sistema di portafoglio digitale italiano.
 
    - **Struttura dell’IT Wallet:** Il Sistema IT-Wallet è composto da:
@@ -62,6 +64,35 @@ Il Sistema IT Wallet è stato istituito dal decreto-legge n. 19 del 2 marzo 2024
      - Soluzioni di portafoglio digitale private, disponibili tramite accreditamento dell’AgID, come previsto dal comma 3.
    - **Sviluppo e gestione dell’infrastruttura:** PagoPA e l'Istituto Poligrafico e Zecca dello Stato sono incaricati di realizzare e gestire l'infrastruttura organizzativa e tecnologica per il Sistema IT Wallet, garantendo la disponibilità del portafoglio pubblico e dei servizi per i fornitori di portafogli privati.
    - **Finanziamento:** Gli oneri per la progettazione, realizzazione e messa a disposizione dell'infrastruttura tecnologica per il Sistema IT Wallet ammontano a 102 milioni di euro per gli anni 2024, 2025 e 2026.
+
+
+### **Cronologia e Roadmap dell'IT Wallet Italiano**
+
+1. **Lancio Iniziale dell’IT Wallet**  
+   - **23 ottobre 2024:** Lancio dell’IT Wallet per i primi **50.000 utenti**.
+   - **6 novembre 2024:** Rilascio esteso a **250.000 utenti**.
+   - **30 novembre 2024:** Ulteriore espansione con rilascio per **1.000.000 di utenti**.
+   - **4 dicembre 2024:** Disponibilità completa per la digitalizzazione dei documenti per tutti i cittadini italiani.
+
+2. **Sviluppi futuri (2025 e oltre)**  
+   - **2025:** L’IT Wallet sarà ampliato per consentire la digitalizzazione di ulteriori documenti, tra cui:
+     - Patente di guida
+     - Carta d'identità
+     - Tessera elettorale
+     - Altri attestati ufficiali
+
+3. **Integrazione con il progetto europeo**
+   - **2026:** L'IT Wallet sarà integrato con l’**European Digital Identity (EUDI) Wallet**, attualmente in sviluppo a livello europeo.
+
+### **Origine e Contesto dell’IT Wallet**
+
+- **Maggio 2023:** Il Dipartimento per la Trasformazione Digitale annuncia ufficialmente il rilascio dell’IT Wallet, avviando i preparativi.
+- **Ottobre 2022:** Un decreto introduce nuove modalità di utilizzo della Carta d'Identità Elettronica (CIE), rendendola più semplice e funzionale, con un'usabilità simile a quella di SPID.
+- **Metà 2021:** L'Unione Europea avvia il progetto per l’European Digital Identity (EUDI) Wallet, il futuro sistema di identità digitale europeo che verrà integrato con l’IT Wallet italiano.
+
+Questa sequenza di annunci e decreti ha generato voci (poi smentite) su una possibile sostituzione dello SPID con l’IT Wallet, in realtà pensato per essere complementare e innovativo per l’identità digitale.
+
+Non è chiaro a chi scrive il perché ma l'Italia ha sviluppato in modo separato il suo wallet detto IT Wallet e naturalmente il guaio è che la sua funzionalità è limitata a cittadini ed operatori italiani. Resta evidentemente auspicabile l'obiettivo di integrare IT Wallet e EUDI Wallet, facendo in modo che il primo sia compatibile con lo standard europeo.
 
 
 
@@ -80,11 +111,6 @@ Nell'ambito della sua implementazione, l'Unione Europea ha avviato diversi proge
 **Chi potrà creare dei wallet?** Ogni Stato membro sarà responsabile della creazione e dell'emissione di wallet digitali ai propri cittadini, garantendo che questi siano interoperabili e conformi agli standard stabiliti dal Regolamento eIDAS 2.
 
 **Ci saranno opportunità per le PMI?** Sì, le PMI avranno opportunità significative grazie a eIDAS 2, in quanto potranno utilizzare i wallet digitali per semplificare processi come l'apertura di conti bancari, la gestione dei pagamenti e l'accesso a servizi pubblici, aumentando così l'efficienza operativa e favorendo l'accesso a nuovi mercati.
-
-Conclusioni
------------
-L'introduzione dell'EU Digital Identity Wallet rappresenta un passo significativo verso una **identificazione digitale sicura e user-friendly** in tutta Europa, permettendo agli utenti di gestire le proprie informazioni personali in modo autonomo. Questo sistema non solo facilita l'accesso a servizi pubblici e privati attraverso un'unica piattaforma, ma garantisce anche la protezione della privacy degli utenti, limitando la condivisione di dati sensibili. Con l'obiettivo di unificazione e interoperabilità, gli EU Digital Identity Wallets si prospettano come strumenti fondamentali per il **rafforzamento della fiducia nelle transazioni digitali**.
-
 
 
 
