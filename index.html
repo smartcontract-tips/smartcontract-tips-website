@@ -60,195 +60,202 @@ permalink: /
 			<div class="cards-container">
 				<!-- Card 1 -->
 
-				{% include 
-					card.html image='/talking-about-smart-contracts.jpeg' 
-					
-					title='Cosa sono gli smart contract, definizione ed esempi' 
-					
-					url='/articoli/cosa-sono-gli-smart-contract-definizione-ed-esempi/'  
-					
-					excerpt='Gli smart contract sono una nuova categoria di programmi software legati alle criptovalute. Come funzionano' 
+				{% include
+				card.html image='/talking-about-smart-contracts.jpeg'
+
+				title='Cosa sono gli smart contract, definizione ed esempi'
+
+				url='/articoli/cosa-sono-gli-smart-contract-definizione-ed-esempi/'
+
+				excerpt='Gli smart contract sono una nuova categoria di programmi software legati alle criptovalute.
+				Come funzionano'
 				%}
 
 
-				{% include card.html 
-					
-					image='/featured_images/DALL%C2%B7E2023-10-1921.26.58-Photoin16_9formatofavastdigitallandscapewithpatternsrepresentingencrypteddata.AmagnifyingglasshoversrevealingthewordsZeroKnowl.png' 
-					
-					title='Zero-knowledge proof: cosa sono e perché sono importanti.' 
-					
-					url='/articoli/zero-knowledge-proof-cosa-sono-e-perch-sono-cos-importanti/'  
-					
-					excerpt='Le Zero Knowledge Proof (ZKP) consentono di dimostrare il possesso di dati senza svelarne il contenuto e senza scambiare alcuna informazione riservata' 
+				{% include card.html
+
+				image='/featured_images/DALL%C2%B7E2023-10-1921.26.58-Photoin16_9formatofavastdigitallandscapewithpatternsrepresentingencrypteddata.AmagnifyingglasshoversrevealingthewordsZeroKnowl.png'
+
+				title='Zero-knowledge proof: cosa sono e perché sono importanti.'
+
+				url='/articoli/zero-knowledge-proof-cosa-sono-e-perch-sono-cos-importanti/'
+
+				excerpt='Le Zero Knowledge Proof (ZKP) consentono di dimostrare il possesso di dati senza svelarne il
+				contenuto e senza scambiare alcuna informazione riservata'
 				%}
-
-				{% include card.html 
-					
-					image='/featured_images/copertinaguida.png' 
-					
-					title='Una (poi non così) piccola guida alle Stablecoin' 
-					
-					url='/articoli/guida-stablecoin-cosa-sono-a-cosa-servono-paypal/'  
-					
-					excerpt='Le stablecoin sono probabilmente una killer application delle blockchain, sembra che la
-					scena sia già' 
-				%}
-
-				{% assign posts = site['it'] | reverse %}
-				{% for post in posts limit:5 %}
-					{% if post.image %}
-						{% assign image_url = post.image %} 
-						{% else %}
-						{% assign image_url = "/blog.png" %}
-					{% endif %}
-
-					{% include card.html image=image_url title=post.title url=post.url  excerpt=post.excerpt %}
-				{% endfor %}
-
-
-				<br>
-
 			</div><!-- END Cards container -->
-			<div class="inner">
-				<blockquote>
-					Smart contracts on Ethereum are worse
-					than even non-financial commercial code;
-					as of May 2016, Ethereum contracts averaged
-					100 obvious bugs per 1000 lines of code.
-					For comparison, Microsoft code averages
-					15 bugs per 1000 lines, NASA code around 0 per 500,000
-					lines. (Excerpt from chapter 10 of Attack of the 50 Foot Blockchain by David Gerard)
-				</blockquote>
-			</div>
-
-		</section>
-
-		<!-- One -->
-		<section id="one" class="wrapper style2 spotlights">
-
-			<section>
+			<section id="articles" class="wrapper style2 fade-up">
+				<div class="content" style="padding: 20px;">
+					<div class="inner" >
+						<h2>Articoli recenti</h2>
+						{% assign posts = site['it'] | reverse %}
+						{% for post in posts limit:10 %}
+						<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+						
+						{{ post.excerpt | strip_html | truncatewords:36 }}<br><br>
+						<small>{{ post.date | date: "%d %B %Y" }}</small>
+						<hr>
+						{% endfor %}
 
 
-				<div class="content">
-					<div class="inner">
-						<h2>I nostri sponsor</h2>
-						<p> Grazie alle aziende partner e al supporto del quadratic funding della comunità
-							italiana Spaghett.eth il nostro sito viene aggiornato con nuovi contenuti ogni settimana.
-							Se vuoi unirti ai nostri sponsor contattaci oppure
-							<a style="color: orange;" href="https://www.buymeacoffee.com/smartcontract.tips"
-								target="_blank" rel="noreferrer noopener">
-								<i class="fa-solid fa-mug-hot"></i>
-								Buy me a coffee
-							</a>
-						</p>
-
-						<div>
-
-
-							<a href="https://www.uniscrow.com" target="_blank" rel="noreferrer noopener">
-								UNISCROW
-							</a>
-							<br />
-
-
-
-
-
-							<a href="https://radixgroup.org" target="_blank" rel="noreferrer noopener">
-								RADIX SRL
-							</a><br />
-
-							<a href="https://qf.spaghett-eth.com/#/leaderboards/0x96FBFf5171C38e8dbdEB1E8F559b94436A14529b/networks/arbitrum"
-								target="_blank" rel="noreferrer noopener">
-								SPAGHETT.ETH
-							</a><br />
-
-
-
-
-						</div>
+						<br>
 					</div>
+				</div>
 			</section>
 
-		</section>
-
-		<!-- Two -->
-		<section id="two" class="wrapper style3 fade-up">
-			<div class="inner">
-				<h2>Cosa facciamo</h2>
-				<p>
-					Siamo qui per aiutarvi a creare, verificare
-					e migliorare la sicurezza dei vostri
-					smart contract attraverso un audit professionale e approfondito.
-				</p>
-
-				<div class="features">
-					<section>
-						<span class="icon solid major fa-code"></span>
-						<h3>Best Practice del Codice</h3>
-						<p>Nel mondo dello sviluppo di dApps e smart contract, l'adozione di best practice di codifica è
-							fondamentale. Una scrittura codice chiara e ben documentata non solo facilita la
-							manutenzione e l'aggiornamento delle applicazioni, ma riduce anche il rischio di errori e
-							vulnerabilità.</p>
-					</section>
-					<section>
-						<span class="icon solid major fa-lock"></span>
-						<h3>Analisi di Incidenti di Sicurezza</h3>
-						<p>Studiare gli incidenti di sicurezza passati è un passo vitale per migliorare le pratiche di
-							sicurezza nelle dApps. L'analisi dettagliata di attacchi e violazioni aiuta a comprendere le
-							tecniche utilizzate dai malintenzionati e a identificare le aree vulnerabili.</p>
-					</section>
-					<section>
-						<span class="icon solid major fa-cog"></span>
-						<h3>Approfondimento sugli Standard</h3>
-						<p>Gli standard di sicurezza giocano un ruolo cruciale nello sviluppo di smart contract. Con
-							l'evoluzione continua della tecnologia blockchain, è fondamentale rimanere aggiornati sugli
-							ultimi standard e protocolli.</p>
-					</section>
-					<section>
-						<span class="icon solid major fa-desktop"></span>
-						<h3>Tutorial e Corsi</h3>
-						<p>L'educazione e la formazione continua sono componenti chiave per mantenere un alto livello di
-							sicurezza nelle dApps. Sono disponibili numerosi tutorial e corsi online che coprono vari
-							aspetti dello sviluppo di smart contract.</p>
-					</section>
-					<section>
-						<span class="icon solid major fa-link"></span>
-						<h3>Condivisione e Feed di Alert</h3>
-						<p>Mantenere una rete di comunicazione attiva e informata è essenziale nella comunità di
-							sviluppo di dApps. La condivisione di informazioni, come alert di sicurezza e aggiornamenti
-							su vulnerabilità recentemente scoperte, aiuta a prevenire la diffusione di attacchi.</p>
-					</section>
-					<section>
-						<span class="icon major fa-gem"></span>
-						<h3>Servizi Premium attraverso la Rete dei Partner</h3>
-						<p>Collaborare con una rete di partner affidabili può migliorare significativamente la sicurezza
-							delle dApps. Attraverso servizi premium come audit di sicurezza professionali, consulenze
-							esperte e accesso a strumenti di monitoraggio avanzati, gli sviluppatori possono beneficiare
-							di una maggiore protezione.</p>
-					</section>
+			<section id="quote" class="wrapper style1 fade-up">
+				<div class="inner">
+					<blockquote>
+						Smart contracts on Ethereum are worse
+						than even non-financial commercial code;
+						as of May 2016, Ethereum contracts averaged
+						100 obvious bugs per 1000 lines of code.
+						For comparison, Microsoft code averages
+						15 bugs per 1000 lines, NASA code around 0 per 500,000
+						lines. (Excerpt from chapter 10 of Attack of the 50 Foot Blockchain by David Gerard)
+					</blockquote>
 				</div>
-			</div>
-		</section>
 
-		<!-- Three -->
-		<section id="three" class="wrapper style1 fade-up">
-			<div class="inner">
-				<h2>Contattaci</h2>
-				<p>
-					Se vuoi scrivere un articolo oppure hai bisogno di
-					un esperto di smart contract contattaci
-				</p>
+			</section>
+
+			<!-- One -->
+			<section id="one" class="wrapper style2 spotlights">
+
+				<section>
 
 
+					<div class="content">
+						<div class="inner">
+							<h2>I nostri sponsor</h2>
+							<p> Grazie alle aziende partner e al supporto del quadratic funding della comunità
+								italiana Spaghett.eth il nostro sito viene aggiornato con nuovi contenuti ogni
+								settimana.
+								Se vuoi unirti ai nostri sponsor contattaci oppure
+								<a style="color: orange;" href="https://www.buymeacoffee.com/smartcontract.tips"
+									target="_blank" rel="noreferrer noopener">
+									<i class="fa-solid fa-mug-hot"></i>
+									Buy me a coffee
+								</a>
+							</p>
 
-				<a href="mailto:team@smartcontract.tips?subject=[SCT]%20Contact%20request" class="button submit"
-					target="_blank">
-					Send Message
-				</a>
+							<div>
 
-			</div>
-		</section>
+
+								<a href="https://www.uniscrow.com" target="_blank" rel="noreferrer noopener">
+									UNISCROW
+								</a>
+								<br />
+
+
+
+
+
+								<a href="https://radixgroup.org" target="_blank" rel="noreferrer noopener">
+									RADIX SRL
+								</a><br />
+
+								<a href="https://qf.spaghett-eth.com/#/leaderboards/0x96FBFf5171C38e8dbdEB1E8F559b94436A14529b/networks/arbitrum"
+									target="_blank" rel="noreferrer noopener">
+									SPAGHETT.ETH
+								</a><br />
+
+
+
+
+							</div>
+						</div>
+				</section>
+
+			</section>
+
+			<!-- Two -->
+			<section id="two" class="wrapper style3 fade-up">
+				<div class="inner">
+					<h2>Cosa facciamo</h2>
+					<p>
+						Siamo qui per aiutarvi a creare, verificare
+						e migliorare la sicurezza dei vostri
+						smart contract attraverso un audit professionale e approfondito.
+					</p>
+
+					<div class="features">
+						<section>
+							<span class="icon solid major fa-code"></span>
+							<h3>Best Practice del Codice</h3>
+							<p>Nel mondo dello sviluppo di dApps e smart contract, l'adozione di best practice di
+								codifica è
+								fondamentale. Una scrittura codice chiara e ben documentata non solo facilita la
+								manutenzione e l'aggiornamento delle applicazioni, ma riduce anche il rischio di errori
+								e
+								vulnerabilità.</p>
+						</section>
+						<section>
+							<span class="icon solid major fa-lock"></span>
+							<h3>Analisi di Incidenti di Sicurezza</h3>
+							<p>Studiare gli incidenti di sicurezza passati è un passo vitale per migliorare le pratiche
+								di
+								sicurezza nelle dApps. L'analisi dettagliata di attacchi e violazioni aiuta a
+								comprendere le
+								tecniche utilizzate dai malintenzionati e a identificare le aree vulnerabili.</p>
+						</section>
+						<section>
+							<span class="icon solid major fa-cog"></span>
+							<h3>Approfondimento sugli Standard</h3>
+							<p>Gli standard di sicurezza giocano un ruolo cruciale nello sviluppo di smart contract. Con
+								l'evoluzione continua della tecnologia blockchain, è fondamentale rimanere aggiornati
+								sugli
+								ultimi standard e protocolli.</p>
+						</section>
+						<section>
+							<span class="icon solid major fa-desktop"></span>
+							<h3>Tutorial e Corsi</h3>
+							<p>L'educazione e la formazione continua sono componenti chiave per mantenere un alto
+								livello di
+								sicurezza nelle dApps. Sono disponibili numerosi tutorial e corsi online che coprono
+								vari
+								aspetti dello sviluppo di smart contract.</p>
+						</section>
+						<section>
+							<span class="icon solid major fa-link"></span>
+							<h3>Condivisione e Feed di Alert</h3>
+							<p>Mantenere una rete di comunicazione attiva e informata è essenziale nella comunità di
+								sviluppo di dApps. La condivisione di informazioni, come alert di sicurezza e
+								aggiornamenti
+								su vulnerabilità recentemente scoperte, aiuta a prevenire la diffusione di attacchi.</p>
+						</section>
+						<section>
+							<span class="icon major fa-gem"></span>
+							<h3>Servizi Premium attraverso la Rete dei Partner</h3>
+							<p>Collaborare con una rete di partner affidabili può migliorare significativamente la
+								sicurezza
+								delle dApps. Attraverso servizi premium come audit di sicurezza professionali,
+								consulenze
+								esperte e accesso a strumenti di monitoraggio avanzati, gli sviluppatori possono
+								beneficiare
+								di una maggiore protezione.</p>
+						</section>
+					</div>
+				</div>
+			</section>
+
+			<!-- Three -->
+			<section id="three" class="wrapper style1 fade-up">
+				<div class="inner">
+					<h2>Contattaci</h2>
+					<p>
+						Se vuoi scrivere un articolo oppure hai bisogno di
+						un esperto di smart contract contattaci
+					</p>
+
+
+
+					<a href="mailto:team@smartcontract.tips?subject=[SCT]%20Contact%20request" class="button submit"
+						target="_blank">
+						Send Message
+					</a>
+
+				</div>
+			</section>
 
 	</div>
 
@@ -274,24 +281,25 @@ permalink: /
 
 	{% include newsletter.html %}
 
-<!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
-<script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.2.0/cookie-consent.js" charset="UTF-8"></script>
-<script type="text/javascript" charset="UTF-8">
-document.addEventListener('DOMContentLoaded', function () {
-cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palette":"light","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"smartcontract.tips ","website_privacy_policy_url":"https://smartcontract.tips/cookie/"});
-});
-</script>
+	<!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+	<script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.2.0/cookie-consent.js"
+		charset="UTF-8"></script>
+	<script type="text/javascript" charset="UTF-8">
+		document.addEventListener('DOMContentLoaded', function () {
+			cookieconsent.run({ "notice_banner_type": "simple", "consent_type": "express", "palette": "light", "language": "en", "page_load_consent_levels": ["strictly-necessary"], "notice_banner_reject_button_hide": false, "preferences_center_close_button_hide": false, "page_refresh_confirmation_buttons": false, "website_name": "smartcontract.tips ", "website_privacy_policy_url": "https://smartcontract.tips/cookie/" });
+		});
+	</script>
 
-<noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/">TermsFeed</a></noscript>
-<!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
-
-
-
+	<noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/">TermsFeed</a></noscript>
+	<!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
 
 
-<!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
 
-<a href="#" id="open_preferences_center">Update cookies preferences</a>
+
+
+	<!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
+
+	<a href="#" id="open_preferences_center">Update cookies preferences</a>
 </body>
 
 </html>
