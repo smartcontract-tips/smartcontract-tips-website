@@ -88,6 +88,7 @@ permalink: /
 				<div class="content" style="padding: 20px;">
 					<div class="inner" >
 						<h2>Articoli recenti</h2>
+						<br><hr>
 						{% assign posts = site['it'] | reverse %}
 						{% for post in posts limit:10 %}
 						<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
