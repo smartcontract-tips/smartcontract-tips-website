@@ -18,6 +18,22 @@ La ragione per cui Polymarket ha previsto meglio di molti analisti politici risi
 
 Inoltre, la trasparenza della blockchain permette di osservare e analizzare il comportamento degli utenti, rendendo il mercato più resistente a manipolazioni, anche se talvolta vi sono tentativi di influenzare i prezzi tramite operazioni massicce. Questo approccio si è rivelato, nel complesso, più accurato rispetto a sondaggi tradizionali e analisi politiche, specialmente in eventi complessi come le elezioni.
 
+
+Chi ha investito su Polymarket?
+-----------
+
+Tra i nomi di spicco, Peter Thiel ha sostenuto finanziariamente Polymarket attraverso il suo fondo di venture capital, Founders Fund. Nel maggio 2024, Polymarket ha raccolto 45 milioni di dollari in un round di finanziamento di Serie B guidato da Founders Fund, con la partecipazione di altri investitori come 1confirmation, ParaFi, Vitalik Buterin, Dragonfly e Kevin Hartz.  Questo investimento ha contribuito a consolidare la posizione di Polymarket nel settore dei mercati predittivi basati su blockchain. 
+
+Oltre al Founders Fund di Peter Thiel, Polymarket ha attratto investimenti da diverse figure di rilievo nel settore tecnologico e cripto. Tra gli altri investitori di spicco ci sono:
+
+- **1confirmation**: un fondo di venture capital focalizzato su investimenti in criptovalute e tecnologie blockchain.
+- **ParaFi Capital**: un fondo di investimento che si concentra su asset digitali e finanza decentralizzata (DeFi).
+- **Vitalik Buterin**: co-fondatore di Ethereum, noto per il suo ruolo di primo piano nello sviluppo della blockchain.
+- **Dragonfly Capital**: un fondo globale di venture capital che investe in progetti e aziende di criptovalute.
+- **Kevin Hartz**: co-fondatore di Eventbrite e investitore in startup tecnologiche di successo.
+
+
+
 Controversie e Sfide Regolatorie di Polymarket
 -----------
 Polymarket ha affrontato diverse controversie legate alla conformità normativa e alle accuse di manipolazione del mercato. Nel gennaio 2022, la Commodity Futures Trading Commission (CFTC) degli Stati Uniti ha multato Polymarket per 1,4 milioni di dollari, accusandola di operare un mercato di opzioni binarie non registrato e di non aver rispettato le normative vigenti. La CFTC ha inoltre ordinato alla piattaforma di cessare le operazioni relative a mercati non conformi al Commodity Exchange Act. 
