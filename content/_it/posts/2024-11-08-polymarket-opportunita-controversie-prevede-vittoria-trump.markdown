@@ -2,7 +2,7 @@
 title: "Polymarket: Opportunità e Controversie del Prediction Market su Blockchain che ha previsto la Vittoria di Trump"
 date: 2024-11-08
 image: /pics/posts/2024-11-08-polymarket-opportunita-controversie-prevede-vittoria-trump/cover.jpeg
-tags: ["trump", "prediction-market, "us-elections"]
+tags: ["trump", "prediction-market", "us-elections"]
 excerpt: "Polymarket rappresenta un esempio innovativo di prediction market basato su blockchain, dimostrando l'efficacia della tecnologia nella previsione di eventi complessi che in occasione delle elezioni USA ha 'funzionato' meglio di molti analisti blasonati"
 category: news
 layout: post
