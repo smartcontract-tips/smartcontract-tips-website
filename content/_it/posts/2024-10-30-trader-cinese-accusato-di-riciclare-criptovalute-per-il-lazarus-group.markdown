@@ -1,5 +1,5 @@
 ---
-title: "**Trader cinese accusato di riciclare criptovalute per il Lazarus Group.**"
+title: "Trader cinese accusato di riciclare criptovalute per il Lazarus Group"
 date: 2024-10-30
 image: /pics/posts/2024-10-30-trader-cinese-accusato-di-riciclare-criptovalute-per-il-lazarus-group/cover.png
 tags: ["chinese-trader", "lazarus-group", "hacked-crypto", "yicong-wang", "crypto"]
