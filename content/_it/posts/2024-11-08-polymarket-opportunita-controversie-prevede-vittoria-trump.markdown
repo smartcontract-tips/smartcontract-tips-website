@@ -6,6 +6,7 @@ tags: ["trump", "prediction-market", "us-elections"]
 excerpt: "Polymarket rappresenta un esempio innovativo di prediction market basato su blockchain, dimostrando l'efficacia della tecnologia nella previsione di eventi complessi che in occasione delle elezioni USA ha 'funzionato' meglio di molti analisti blasonati"
 category: news
 layout: post
+author: davide
 ---
 
 Come Funziona Polymarket e Perché È Più Efficace degli Analisti Tradizionali
