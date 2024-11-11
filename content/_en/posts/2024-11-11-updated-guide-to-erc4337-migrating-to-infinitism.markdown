@@ -3,10 +3,8 @@ title: "Migrating to Infinitism: An Updated Guide to ERC-4337 Implementation"
 date: 2024-11-08
 image: /pics/posts/2024-11-11-updated-guide-to-erc4337-migrating-to-infinitism/cover.png
 tags: ["erc-4337", "abstract-account", "account-abstraction","tutorial"]
-excerpt: "The original article - Harnessing ERC-4337: A Step-by-Step Guide to Implementing Ethereum's Account Revolution" (ERC-4337 Guide Stackup) - has been updated to reflect important changes in the ERC-4337 ecosystem."
-
+excerpt: "The original article - Harnessing ERC-4337: A Step-by-Step Guide to Implementing Ethereum's Account Revolution (ERC-4337 Guide Stackup) - has been updated to reflect important changes in the ERC-4337 ecosystem"
 layout: post
-
 ---
 
 The original article "Harnessing ERC-4337: A Step-by-Step Guide to Implementing Ethereum's Account Revolution" ([ERC-4337 Guide Stackup](https://smartcontract.tips/articoli/erc-4337-tutorial-a-step-by-step-guide-to-implementing-ethereums-account-abstraction/)) has been updated to reflect important changes in the ERC-4337 ecosystem.
@@ -50,7 +48,7 @@ Replace the previous Stackup configuration with Infinitism's setup:
 
 The deployment process now uses Infinitism's contracts directly:
 
-```solidity
+```javascript
 // SimpleAccount.sol
 import "@account-abstraction/contracts/core/BaseAccount.sol";
 import "@account-abstraction/contracts/samples/SimpleAccount.sol";
@@ -60,7 +58,7 @@ contract MyAccount is SimpleAccount {
 }
 ```
 
-``` solidity
+```javascript
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.23;
 
@@ -336,7 +334,7 @@ yarn add @account-abstraction/sdk @account-abstraction/contracts
 ```
 
 2. Update contract imports:
-```solidity
+```javascript
 // Old
 import "@stackup/contracts/account/SimpleAccount.sol";
 // New

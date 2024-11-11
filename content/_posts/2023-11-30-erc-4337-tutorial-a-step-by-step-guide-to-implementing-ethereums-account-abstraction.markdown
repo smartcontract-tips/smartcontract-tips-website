@@ -6,7 +6,7 @@ date: 2023-11-30
 type: post
 lang: EN
 category: Advanced
-tags: [ERC-4337, Account Abstraction]
+tags: [erc-4337, account-abstraction]
 related: true
 author: davide
 permalink: "/articoli/erc-4337-tutorial-a-step-by-step-guide-to-implementing-ethereums-account-abstraction/"
