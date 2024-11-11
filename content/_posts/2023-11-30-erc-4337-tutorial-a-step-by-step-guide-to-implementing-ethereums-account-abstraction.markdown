@@ -15,8 +15,7 @@ excerpt: "Welcome to the second part of our exploration into Ethereum''s groundb
 image: featured_images/upload_19a05114a19f6c48e9d4fc3e47e9a56d.png
 ---
 
-This is an article for advanced readers, for a quick understanding of 
-[Account Abstraction refer to our introductive article](/articoli/erc-4337-revolutionizing-ethereums-account-management/) "ERC-4337: Revolutionizing Ethereum's Account Management"
+<p class="is-style-info">This article has been superseded by a new <a href="/en/post/updated-guide-to-erc4337-migrating-to-infinitism" title="Migrating to Infinitism: An Updated Guide and Tutorial to ERC-4337 Implementation"> tutorial on erc-4337 based on Infinitism </a>. </p>
 
 Introduction
 ------------

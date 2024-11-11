@@ -1,5 +1,5 @@
 ---
-title: "Migrating to Infinitism: An Updated Guide to ERC-4337 Implementation"
+title: "Migrating to Infinitism: An Updated Guide and Tutorial to ERC-4337 Implementation"
 date: 2024-11-08
 image: /pics/posts/2024-11-11-updated-guide-to-erc4337-migrating-to-infinitism/cover.png
 tags: ["erc-4337", "abstract-account", "account-abstraction","tutorial"]
