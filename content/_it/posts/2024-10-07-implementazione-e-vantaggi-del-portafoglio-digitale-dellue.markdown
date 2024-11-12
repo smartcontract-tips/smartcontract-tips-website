@@ -8,9 +8,6 @@ category: protocol_explained
 layout: post
 ---
 
-![cover](/pics/posts/2024-10-07-implementazione-e-vantaggi-del-portafoglio-digitale-dellue/cover.png)
-
-
 Cos'è l'EU Digital Identity Wallet
 ---------
 

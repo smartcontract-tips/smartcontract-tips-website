@@ -37,6 +37,10 @@ layout: default
 
   <div id="toc"></div>
 
+  {% if page.image %}
+  <img src="{{ page.image }}"></img>
+  <hr><br>
+  {% endif %}  
   
   <div class="post-content">
     {{ content }}

@@ -8,7 +8,6 @@ category: protocol_explained
 layout: post
 ---
 
-![cover](/pics/posts/2024-09-17-passkey-la-nuo/cover.png)
 
 Il protocollo è il Web Authentication (WebAuthn), un sistema che utilizza la crittografia a chiave pubblica per migliorare la sicurezza degli accessi online. Invece di fare affidamento su username e password, WebAuthn crea una coppia di chiavi: una chiave pubblica, memorizzata sui server del servizio, e una chiave privata, conservata sul dispositivo dell'utente. Quando si effettua il login, viene generata una sfida a cui il dispositivo risponde utilizzando la chiave privata, senza trasferire informazioni sensibili. Questo approccio riduce il rischio di phishing e furto di dati, rendendo l’accesso più intuitivo e sicuro rispetto alle password tradizionali.
 

@@ -8,7 +8,7 @@ category: news
 layout: post
 ---
 
-![cover](/pics/posts/2024-09-15-nuova-vulnerab/cover.png)
+
 
 Le YubiKeys, dispositivi hardware ampiamente utilizzati per l'autenticazione a due fattori, sono recentemente state scoperte vulnerabili ad attacchi di clonazione a causa di un canale laterale crittografico precedentemente sconosciuto. Ricercatori hanno individuato questo difetto nel microcontrollore utilizzato, rendendo possibile la clonazione dei dispositivi quando un attaccante riesce ad ottenerne l'accesso fisico temporaneo. Yubico, il produttore, ha emesso un avviso e ha implementato aggiornamenti nei modelli successivi per correggere questa vulnerabilità.
 

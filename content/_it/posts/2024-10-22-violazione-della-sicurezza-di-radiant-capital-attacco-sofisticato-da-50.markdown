@@ -8,7 +8,7 @@ category: hack_explained
 layout: post
 ---
 
-![cover](/pics/posts/2024-10-22-violazione-della-sicurezza-di-radiant-capital-attacco-sofisticato-da-50/cover.png)
+
 
 Il tipo di hack descritto è un attacco di **malware injecting** a livello dei dispositivi. Gli attaccanti hanno compromesso i dispositivi di almeno tre sviluppatori di Radiant utilizzando malware sofisticato, il quale ha permesso loro di firmare transazioni fraudolente che apparivano legittime. **I dispositivi compromessi presentavano segnali di errore comuni, rendendo difficile rilevare l'infiltrazione.** Questa tecnica ha consentito agli attaccanti di ottenere approvazioni multi-firma senza destare sospetti e di drenare circa $50 milioni USD dai mercati.
 

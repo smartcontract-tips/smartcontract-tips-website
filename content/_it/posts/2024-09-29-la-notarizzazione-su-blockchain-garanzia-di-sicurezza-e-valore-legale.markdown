@@ -12,9 +12,6 @@ layout: post
 
 L'argomento di cui vogliamo parlare è la notarizzazione di documenti attraverso la tecnologia Blockchain. Questo processo consente di autenticare, certificare e garantire l'integrità di documenti digitali, sfruttando l'hashing per creare impronte digitali uniche che attestano l'immutabilità dei dati registrati. **La notarizzazione su Blockchain offre la prova di esistenza e autenticità di un documento in un determinato momento, rendendo impossibile qualsiasi successivo cambiamento senza che ciò venga rilevato.** 
 
-![cover](/pics/posts/2024-09-29-la-notarizzazione-su-blockchain-garanzia-di-sicurezza-e-valore-legale/cover.jpeg)
-
-
 
 Una Panoramica sull'argomento
 ---------

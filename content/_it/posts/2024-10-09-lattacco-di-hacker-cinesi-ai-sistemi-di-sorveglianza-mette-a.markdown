@@ -10,7 +10,6 @@ layout: post
 
 Il web3 non se la passa bene in quanto a sicurezza ma cosa vogliamo dire del web2 e delle reti che tutti usiamo nella nostra quotidianità.
 
-![cover with spy booth from banksy](/pics/posts/2024-10-09-lattacco-di-hacker-cinesi-ai-sistemi-di-sorveglianza-mette-a/spy-booth-banksy.jpg)
 
 L'accesso da parte di attaccanti cinesi ai sistemi di intercettazione telefonica (wiretapping) di AT&T e Verizon ha messo in evidenza i pericoli insiti nell'implementazione di backdoor nelle tecnologie di crittografia. **Questa grave violazione della sicurezza, protrattasi per mesi, dimostra come le backdoor destinate a fini di sorveglianza possano facilmente trasformarsi in vulnerabilità sfruttabili da agenti malevoli**. Le richieste di accesso legittimo da parte delle forze dell'ordine, sebbene comprensibili, rischiano di compromettere la sicurezza degli utenti, rendendo i sistemi crittografici più suscettibili a futuri attacchi.
 

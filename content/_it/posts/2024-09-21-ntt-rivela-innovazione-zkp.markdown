@@ -8,7 +8,7 @@ category: news
 layout: post
 ---
 
-![cover](/pics/posts/2024-09-21-ntt-rivela-lim/cover.webp)
+
 
 NTT Corporation ha raggiunto un importante traguardo nel campo delle zero-knowledge proofs, dimostrando per la prima volta l'indispensabilità della witness encryption per la costruzione di resettable statistical zero-knowledge arguments. Questo risultato, presentato alla 44a Annual International Cryptology Conference, apre nuove strade per l'applicazione pratica delle zero-knowledge proofs in settori come la finanza e la salute. La tecnologia consente di dimostrare la validità di un'affermazione senza rivelare informazioni riservate, contribuendo così a una maggiore protezione della privacy.
 

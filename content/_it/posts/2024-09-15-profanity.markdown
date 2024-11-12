@@ -8,7 +8,6 @@ category: hack_explained
 layout: post
 ---
 
-![cover](/pics/posts/2024-09-15-profanity/cover.png)
 
 La vulnerabilità descritta nel contesto di Profanity, uno strumento per la generazione di indirizzi vanity di Ethereum, è una tecnica di <brute-force> per il recupero delle chiavi private associate a indirizzi generati dall'applicazione. Questo exploit sfrutta l'uso di un vettore casuale a 32 bit per seminare chiavi private a 256 bit, rendendo possibile il recupero delle chiavi private partendo dall'indirizzo vanity. Attraverso questo metodo, risulta possibile calcolare in modo efficiente le chiavi private di portafogli a rischio, potenzialmente causando una violazione della sicurezza dei fondi in essi custoditi.
 

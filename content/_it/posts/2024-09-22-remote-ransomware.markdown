@@ -8,7 +8,6 @@ category: hack_explained
 layout: post
 ---
 
-![cover](/pics/posts/2024-09-22-remote-ransomware/cover.webp)
 
 L'articolo descrive il "remote ransomware", una forma complessa di ransomware che utilizza endpoint compromessi per criptare i dati su tutta la rete di una vittima. Gli attaccanti prendono controllo di un endpoint collegato alla rete e lo usano per criptare i dati su altri dispositivi della stessa rete, evitando i sistemi di sicurezza del dispositivo bersaglio. Questo tipo di attacco è pericoloso perché può propagarsi rapidamente e sfruttare dispositivi non gestiti all'interno della rete. Il "remote ransomware" bypassa le difese tradizionali concentrandosi sul comportamento dell'encryption piuttosto che sulla presenza di codice malevolo.
 

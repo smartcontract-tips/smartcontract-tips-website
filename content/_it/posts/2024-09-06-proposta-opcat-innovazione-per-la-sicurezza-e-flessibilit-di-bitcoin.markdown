@@ -8,7 +8,7 @@ category: what_is
 layout: post
 ---
 
-![cover](/pics/posts/2024-09-06-proposta-opcat/cover.png)
+
 
 Cos'è l'OP_CAT?
 --------
