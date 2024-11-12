@@ -10,7 +10,7 @@ tags: [NFT, Tokens, ERC-404, ERC]
 ---
 Il post introduce ERC-404, uno standard di token sperimentale su Ethereum che unisce le caratteristiche dei token fungibili e non fungibili in "semi-fungibili". Questa innovazione apre nuove possibilità in vari settori come l'arte, l'immobiliare e il gaming, facilitando la proprietà frazionata e migliorando la liquidità degli NFT. Viene discusso il potenziale di ERC-404 attraverso esempi come Pandora e DeFrogs, evidenziando le opportunità e le sfide, tra cui questioni tecniche, di sicurezza e regolamentari. Il testo sottolinea l'importanza della collaborazione comunitaria per superare queste sfide e realizzare il potenziale degli token semi-fungibili.
 
-![cover](/assets/images/erc-404-cover.png)
+
 
 ## Cosa significa "Hybrid Token Standard": Fungibile e Infungibile allo stesso tempo?
 

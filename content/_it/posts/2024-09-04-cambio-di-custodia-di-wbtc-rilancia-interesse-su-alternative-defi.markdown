@@ -8,7 +8,7 @@ category: news
 layout: post
 ---
 
-![cover](/pics/posts/2024-09-04-cambio-di-cust/cover.png)
+
 
 Il mondo delle criptovalute è nuovamente agitato dalle controversie riguardanti il WBTC (Wrapped Bitcoin). Negli ultimi giorni, la decisione di BitGo di trasferire la custodia del WBTC a BitGlobal, un'entità guidata dalla figura controversa di Justin Sun, ha suscitato notevoli preoccupazioni. Tale cambio di custodia ha portato MakerDAO a prendere le distanze dal WBTC e ha riacceso l'interesse per alternative decentralizzate. Analizziamo le implicazioni di questa mossa e le possibili soluzioni disponibili per gli investitori nel panorama DeFi.
 

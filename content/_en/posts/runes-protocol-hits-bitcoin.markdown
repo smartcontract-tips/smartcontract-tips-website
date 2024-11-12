@@ -13,7 +13,7 @@ tags:
   - erc20
 excerpt: "The Runes Protocol emerges as a groundbreaking development in the world of Bitcoin, introducing a new fungible token standard that enhances the capabilities of the Bitcoin network. This protocol enables the creation and management of tokens directly on Bitcoin's blockchain, expanding the utility of Bitcoin far beyond its traditional uses."
 ---
-![cover](/pics/hackmd.io/rysUSeJMA.png)
+
 
 The Runes Protocol emerges as a groundbreaking development in the world of Bitcoin, introducing a new fungible token standard that enhances the capabilities of the Bitcoin network. This protocol enables the creation and management of tokens directly on Bitcoin's blockchain, expanding the utility of Bitcoin far beyond its traditional uses.
 

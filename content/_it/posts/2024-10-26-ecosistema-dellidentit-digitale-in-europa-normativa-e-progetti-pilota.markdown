@@ -8,7 +8,7 @@ category: survey
 layout: post
 ---
 
-![cover](/pics/posts/2024-10-26-ecosistema-dellidentit-digitale-in-europa-normativa-e-progetti-pilota/cover.png)
+
 
 
 Trattiamo dell'introduzione e dell'implementazione del **Regolamento sull'Identità Digitale Europea (EUDI)** e del suo strumento principale, l'**EU Digital Identity Wallet**. L'obiettivo centrale è creare un sistema di identificazione digitale che consenta ai cittadini e alle imprese dell'Unione Europea di accedere in modo sicuro e conveniente a servizi pubblici e privati online, garantendo un controllo completo sui dati personali condivisi. 

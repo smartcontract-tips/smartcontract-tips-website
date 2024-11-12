@@ -19,7 +19,7 @@ tags:
 
 Imagine you’re at a fancy party with two millionaires, Alice and Bob. They want to know who’s richer but without spilling the beans about their actual fortunes. This puzzle, known as the Millionaire Problem, is a classic brain-teaser in the world of cryptography, dreamt up by Andrew Yao back in 1982.
 
-![cover](/pics/posts/millionaire-problem/cover.webp)
+
 
 ## The Basic Idea
 

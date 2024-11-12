@@ -8,7 +8,7 @@ category: news
 layout: post
 ---
 
-![cover](/pics/posts/2024-10-30-trader-cinese-accusato-di-riciclare-criptovalute-per-il-lazarus-group/cover.png)
+
 
 Un recente scandalo nel mondo delle criptovalute ha coinvolto Yicong Wang, un trader OTC cinese accusato di assistere il Lazarus Group, un noto gruppo di hacker nordcoreano. **ZachXBT**, un investigatore della blockchain, ha rivelato dettagli inquietanti su come Wang abbia facilitato il riciclaggio di milioni di dollari rubati tramite sofisticati sistemi di scambio. Le sue operazioni illecite sono collegate a vari attacchi informatici che hanno fruttato enormi somme da diverse piattaforme crypto, rendendolo un personaggio chiave nel panorama criminale digitale.
 

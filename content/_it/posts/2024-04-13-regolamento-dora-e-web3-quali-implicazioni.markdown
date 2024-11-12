@@ -18,7 +18,7 @@ image: /pics/fmt-16-9/dora.png
 
 *Leggi di seguito per approfondire* 
 
-![cover](/pics/fmt-16-9/dora.png)
+
 
 ## Il Regolamento DORA e gli asset crittografici
 
