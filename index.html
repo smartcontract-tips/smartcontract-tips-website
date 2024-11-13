@@ -94,7 +94,7 @@ permalink: /
 						<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
 						<i class="fa-regular fa-calendar"></i> &nbsp; <small>{{ post.date | date: "%d %B %Y" }}</small><br>
 						{{ post.excerpt | strip_html | truncatewords:36 }}<br>
-						[...]<br>
+						<br>
 						
 						{% endfor %}
 
