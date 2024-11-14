@@ -12,7 +12,7 @@ category: In-Depth
 tags: []
 permalink: "/articoli/hardhat-truffle-e-foundry-unesplorazione-completa-dei-principali-framework-di-sviluppo-web3/"
 description: web3 framework, comparison of web3 frameworks, hardhat vs. foundry
-image: featured_images/Screenshot2023-09-27at01.20.42.png
+image: /featured_images/Screenshot2023-09-27at01.20.42.png
 ---
 L'emergere di web3 framework pensati per facilitare la creazione di [smart contract](/articoli/cosa-sono-gli-smart-contract-definizione-ed-esempi/) e DApp ha trasformato l'esperienza degli sviluppatori. A guidare il gruppo ci sono HardHat, Truffle e Foundry. Questa guida approfondita esplora la loro evoluzione, le funzionalità tecniche e i casi d'uso pratici.
 

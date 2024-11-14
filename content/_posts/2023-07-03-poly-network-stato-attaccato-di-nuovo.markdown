@@ -17,7 +17,7 @@ excerpt: 'Il 2 luglio è avvenuto un attacco alla piattaforma di bridge cross-ch
   di sfruttamento finanziario decentralizzato (DeFi) dopo che gli attaccanti sono
   riusciti a manipolare una funzione di contratto intelligente nel protocollo di bridge
   cross-chain, aggiungendo che sospenderebbero temporaneamente i servizi.'
-image: featured_images/polynetwork.png
+image: /featured_images/polynetwork.png
 ---
 Il 2 luglio è avvenuto un attacco alla piattaforma di bridge cross-chain Poly Network, nel quale ulteriori dettagli stanno emergendo: un hacker è riuscito a emettere miliardi di token dal nulla per trarne profitto.
 

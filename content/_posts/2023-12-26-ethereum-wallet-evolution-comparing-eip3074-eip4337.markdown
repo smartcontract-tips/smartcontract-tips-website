@@ -13,7 +13,7 @@ tags:
 
 excerpt: Account Abstraction in Ethereum brings programmability to five key functionalities traditionally hardcoded in Externally Owned Accounts. Here a comparison among the two standards EIP 3074 and EIP 4337.
 permalink: "/articoli/ethereums-wallet-evolution-comparing-eip-3074-and-erc-4337/"
-image: featured_images/Screenshot-2023-12-26-alle-11.59.12.png
+image: /featured_images/Screenshot-2023-12-26-alle-11.59.12.png
 ---
 
 

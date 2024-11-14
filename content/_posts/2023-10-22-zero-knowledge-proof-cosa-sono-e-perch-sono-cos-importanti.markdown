@@ -8,7 +8,7 @@ related: true
 category: Mid
 tags: [zkp, cryptography, zero knowledge, zksnark]
 permalink: "/articoli/zero-knowledge-proof-cosa-sono-e-perch-sono-cos-importanti/"
-image: featured_images/DALL·E2023-10-1921.26.58-Photoin16_9formatofavastdigitallandscapewithpatternsrepresentingencrypteddata.AmagnifyingglasshoversrevealingthewordsZeroKnowl.png
+image: /featured_images/DALL·E2023-10-1921.26.58-Photoin16_9formatofavastdigitallandscapewithpatternsrepresentingencrypteddata.AmagnifyingglasshoversrevealingthewordsZeroKnowl.png
 ---
 
 Zero Knowledge Proof (ZKP) è una sigla che racchiude le tecniche crittografiche che consentono di dimostrare il possesso di dati senza svelarne il contenuto. Ciò significa che due parti possono verificare la veridicità di un'affermazione senza doversi scambiare alcuna informazione riservata. Un po' come la combinazione  della valigetta, ma nel mondo digitale.
