@@ -31,10 +31,8 @@ permalink: /
 			<nav>
 				<ul>
 					<li><a href="#intro">Benvenuto</a></li>
-					<li><a href="authors">Chi</a></li>
 					<li><a href="#two">Cosa</a></li>
 					<li><a href="#three">Contatti</a></li>
-					<li><a href="articoli">Articoli</a></li>
 					<li><a href="index-en.html">English 🇬🇧 </a></li>
 				</ul>
 			</nav>
@@ -45,15 +43,14 @@ permalink: /
 	<div id="wrapper">
 
 		<!-- Intro -->
+		<!-- Intro -->
 		<section id="intro" class="wrapper style1 fullscreen fade-up">
 			<div style="position: absolute; top: 0; right: 0; padding: 10px;">
-				<a href="index.html">IT 🇮🇹 </a>
-				&nbsp;&nbsp;
-				<a href="index-en.html">EN 🇬🇧 </a>
+				<a href="/"> smartcontract.tips </a>
 			</div>
 			<div class="inner">
-				<h1>Smart Contract Tips</h1>
-
+				<h1></h1>
+				
 			</div>
 
 
@@ -88,7 +85,7 @@ permalink: /
 				<div class="content" style="padding: 20px;">
 					<div class="inner" >
 						<h2>Articoli recenti</h2>
-						<br><hr>
+						<hr>
 						{% assign posts = site['it'] | reverse %}
 						{% for post in posts limit:10 %}
 						<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
