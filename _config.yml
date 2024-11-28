@@ -64,6 +64,9 @@ collections:
     people: true
     output: true 
     permalink: /:collection/:slug
+  lezioni_crittografia:
+    output: true 
+    permalink: /:collection/:slug
 
 
 defaults:

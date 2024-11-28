@@ -1,0 +1,72 @@
+---
+layout: default
+---
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="post-date" style="color: grey;"><i class="fa-regular fa-calendar"></i>
+   published &nbsp; {{ page.date | date: "%d %B %Y" }}
+  </div>
+ 
+
+  {% if page.last_modified %}
+  <div class="post-date" style="color: grey;"><i class="fa-regular fa-calendar"></i>
+    last modified &nbsp; {{ page.last_modified | date: "%d %B %Y" }}
+   </div>
+  {% endif %}
+
+  {% if page.author %}
+  <div>by <a href="#author">{{ page.author }}</a> </div>
+  {% endif %}
+  
+  <br>
+
+  <div style="color: darkgrey;">
+    {%- for tag in page.tags -%}
+      <i class="fa-solid fa-tag"></i> &nbsp; {{ tag }} &nbsp;
+    {%- endfor -%}
+  </div>
+  <br>
+
+  {% if page.translation %}
+  <div>This article has a translation: {{ page.translation }}</div>
+  <hr><br>
+  {% endif %}
+
+  <div id="toc"></div>
+
+  {% if page.image %}
+  <img src="{{ page.image }}"></img>
+  <hr><br>
+  {% endif %}  
+  
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  {% comment %}
+  <!-- Show related pages on a page  -->
+  {% endcomment %}
+  {% if page.id %}
+    <div class="related-posts">
+      <h3>See also</h3>
+      {% include related.html %}
+    </div>
+  {% endif %}
+
+  <div class="cta">
+    <h3>Jobs in Web3</h3>
+    <img src="/pics/posts/blockchain-developer/image.webp" class="cta-image"></img>
+    <p>Looking for a blockchain developer role? </p>
+    <a class="cta-button" href="/get-a-job-in-web3">Read more...</a>
+  </div>  
+
+  <div style="background-color: antiquewhite; padding: 30px;" id="author">
+    {% assign author = site.authors | where: 'authorId', page.author | first %}
+    {% if author %}
+      {% include author.html name=author.name picture=author.picture web=author.web linkedin=author.linkedin bio=author.bio %}
+    {% endif %}
+  </div>
+</article>
