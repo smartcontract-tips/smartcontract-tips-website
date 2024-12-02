@@ -4,24 +4,13 @@ title: "Multicall functions in Smart Contracts"
 date: 2024-03-14 
 type: post
 
-category: In-Depth
+category: tips
 
 tags: [solidity, multicall]
 image: /pics/posts/etherscan-multicall.png
 ---
-In the Ethereum blockchain, a multicall transaction is a way to execute multiple function calls across different smart contracts within a single transaction. This can significantly save on gas fees and reduce network congestion by batching together many actions into one. 
+In the Ethereum blockchain, a multicall transaction is a **way to execute multiple function calls across different smart contracts within a single transaction**. This can significantly **save on gas** fees and reduce network congestion by batching together many actions into one. 
 
-## Multicalls
-
-If you have ventured to check the blockchain explorer for a Uniswap transaction you might have notices that the name of the function is an obscure ```multicall```.
-
-![etherscan screenshot](/pics/posts/etherscan-multicall.png)
-
-
-
-A multicall transaction is a way to execute multiple function calls across different smart contracts within a single transaction. This can significantly save on gas fees and reduce network congestion by batching together many actions into one.
-
-In the Ethereum blockchain, a multicall transaction is a way to execute multiple function calls across different smart contracts within a single transaction. This can significantly save on gas fees and reduce network congestion by batching together many actions into one. The Multicall pattern is especially useful for decentralized applications (dApps) that need to interact with several contracts simultaneously.
 
 To illustrate, I'll provide a simple example with two smart contracts, `A` and `B`, each having a function: `A.f()` and `B.g()`. Let's assume these functions just emit an event to keep it simple. 
 
@@ -65,13 +54,19 @@ To execute both `A.f()` and `B.g()` in a single transaction, you would typically
 
 ## Make the Multicall finally
 
-To demonstrate how a multicall works in practice, I'll create a simple Multicall contract example. This contract will allow us to execute multiple calls to different contracts (`A` and `B` from the previous example) within a single Ethereum transaction. 
+To demonstrate how a multicall works in practice, I'll create a **simple Multicall contract example**. This contract will allow us to execute multiple calls to different contracts (`A` and `B` from the previous example) within a single Ethereum transaction. 
 
 First, let's recap the setup: we have two contracts, `A` and `B`, each with a function (`f()` in `A` and `g()` in `B`) that we want to call together in a single transaction.
 
 The Multicall contract works by accepting a list of calls, where each call is specified by the target contract's address and the call data (i.e., the encoded function call). The contract then iterates over this list, executing each call one by one. 
 
 Here is a simple implementation of a Multicall contract:
+
+
+
+You can open the code directly in Remix<a href="https://remix.ethereum.org/smartcontract-tips/smartcontract-tips-website/blob/main/snippets/multicall.sol" target="_blank"> 
+<i class="fa fa-external-link" aria-hidden="true"></i></a>
+
 
 ```js
 // SPDX-License-Identifier: MIT
