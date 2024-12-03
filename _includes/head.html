@@ -8,7 +8,7 @@
 
 
     {%- feed_meta -%}
-    {%- if jekyll.environment == 'production' -%}
+    {%- if jekyll.environment != 'test' -%}
       <script defer src="https://eu.umami.is/script.js" data-website-id="3f363256-ccba-47e6-b575-8a46686833b2" data-cookie-consent="tracking"></script>
     {%- endif -%}
   
