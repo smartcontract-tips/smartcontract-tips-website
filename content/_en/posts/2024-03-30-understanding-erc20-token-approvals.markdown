@@ -11,8 +11,6 @@ excerpt: At the heart of ERC20's innovation are the concepts of token approvals 
 
 image: /pics/fmt-16-9/erc20-token-approvals.png
 ---
-![cover erc20 approvals](/pics/fmt-16-9/erc20-token-approvals.png)
-
 
 The ERC20 token standard has become a cornerstone of Ethereum's vast ecosystem, enabling the creation and exchange of interoperable tokens with standardized functionalities. At the heart of ERC20's innovation are the concepts of token approvals and allowances, which facilitate a wide range of decentralized applications. However, with this flexibility comes a spectrum of security considerations. This article delves into the mechanics of ERC20 approvals, the reasons behind their widespread adoption, the risks involved, and the best practices for mitigating these risks.
 
@@ -20,6 +18,8 @@ The ERC20 token standard has become a cornerstone of Ethereum's vast ecosystem, 
 
 ### Token Approvals:
 In the ERC20 standard, the `approve` function enables token holders to authorize another address—typically a smart contract—to spend a specified amount of their tokens. This permission mechanism is pivotal for executing various decentralized operations without transferring token ownership.
+
+![infographic](/pics/posts/2024-03-30-understanding-erc20/napkin-infographic-1.svg)
 
 The ERC20 standard enables token holders to grant permission to other addresses, allowing them to transfer a specified token amount on their behalf. This authorization is facilitated through the use of the `approve` function:
 ```c
