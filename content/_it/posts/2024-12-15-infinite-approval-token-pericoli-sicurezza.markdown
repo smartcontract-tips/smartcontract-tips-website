@@ -3,8 +3,10 @@ title: "I Rischi alla Sicurezza con l'Infinite Approval negli Scambi di Token"
 date: 2024-12-15
 image: /pics/posts/2024-12-15-infinite-approval-token-pericoli-sicurezza/cover.webp
 tags: ["erc20", "erc721", "smart-contract", "approval", "token", "flash-loan", "hack"]
+excerpt: "Concedere autorizzazioni illimitate ai token espone l'utente a rischi significativi. Se uno smart contract approvato viene compromesso o presenta vulnerabilità, un attaccante potrebbe utilizzare quell'autorizzazione per trasferire o sottrarre tutti i token approvati. Inoltre, in alcuni casi, gli sviluppatori possono inserire codice malevolo nel contratto, sfruttando queste autorizzazioni per eseguire operazioni non autorizzate"
 layout: post
 ---
+
 
 ## Cosa sono le infinite token approvals?
 
