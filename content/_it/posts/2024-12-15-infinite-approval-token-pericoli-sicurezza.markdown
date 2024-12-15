@@ -10,19 +10,34 @@ layout: post
 
 ## Cosa sono le infinite token approvals?
 
-Le **infinite token approvals** sono autorizzazioni che un utente concede a uno smart contract per gestire i propri token in modo illimitato. Quando interagisci con una dApp (decentralized application), spesso [ti viene richiesto di approvare che lo smart contract](/en/post/understanding-erc20-token-approvals) associato possa spendere o trasferire i tuoi token per eseguire determinate operazioni. Per semplificare l’esperienza utente, molte dApp richiedono un'autorizzazione "infinita", cioè che consente allo smart contract di gestire un numero illimitato dei tuoi token senza bisogno di approvazioni ripetute. Questo approccio è comune perché elimina la necessità di autorizzazioni successive, rendendo le interazioni più fluide. Tuttavia, una volta concessa, questa autorizzazione rimane valida finché non viene revocata manualmente. Sebbene sembri pratico, l'autorizzazione illimitata può comportare rischi significativi se lo smart contract approvato viene compromesso o utilizzato in modo malevolo. In sintesi, le infinite token approvals sono una funzionalità progettata per migliorare l'usabilità delle dApp, ma a scapito della sicurezza.
+Le **infinite token approvals** sono autorizzazioni che un utente concede a uno smart contract per gestire i propri token in modo illimitato. Quando interagisci con una dApp (decentralized application), spesso [ti viene richiesto di approvare che lo smart contract](/en/post/understanding-erc20-token-approvals) associato possa spendere o trasferire i tuoi token per eseguire determinate operazioni. 
+
+Per semplificare l’esperienza utente, molte dApp richiedono un'autorizzazione "infinita", cioè che consente allo smart contract di gestire un numero illimitato dei tuoi token senza bisogno di approvazioni ripetute. Questo approccio è comune perché elimina la necessità di autorizzazioni successive, rendendo le interazioni più fluide. Tuttavia, una volta concessa, questa autorizzazione rimane valida finché non viene revocata manualmente. 
+
+
+Sebbene sembri pratico, l'autorizzazione illimitata può comportare rischi significativi se lo smart contract approvato viene compromesso o utilizzato in modo malevolo. In sintesi, le infinite token approvals sono una funzionalità progettata per migliorare l'usabilità delle dApp, ma a scapito della sicurezza.
 
 
 
 ## Quali rischi comportano le autorizzazioni illimitate?
 
-Concedere autorizzazioni illimitate ai token espone l'utente a rischi significativi. Se uno smart contract approvato viene compromesso o presenta vulnerabilità, un attaccante potrebbe utilizzare quell'autorizzazione per trasferire o sottrarre tutti i token approvati. Inoltre, in alcuni casi, gli sviluppatori possono inserire codice malevolo nel contratto, sfruttando queste autorizzazioni per eseguire operazioni non autorizzate. Un altro rischio deriva dall’impossibilità di monitorare continuamente lo stato degli smart contract. Un contratto che oggi è affidabile potrebbe diventare pericoloso in futuro se il suo controllo passa a un’entità malevola. Le autorizzazioni illimitate sono un obiettivo particolarmente appetibile per gli hacker, poiché non richiedono ulteriori conferme da parte dell’utente, rendendo le transazioni fraudolente praticamente automatiche. Infine, molti utenti concedono tali autorizzazioni senza comprenderne appieno le implicazioni, aumentando il rischio di attacchi o perdite accidentali.
+Concedere autorizzazioni illimitate ai token espone l'utente a rischi significativi. Se uno smart contract approvato viene compromesso o presenta vulnerabilità, un attaccante potrebbe utilizzare quell'autorizzazione per trasferire o sottrarre tutti i token approvati. 
+
+Inoltre, in alcuni casi, gli sviluppatori possono inserire codice malevolo nel contratto, sfruttando queste autorizzazioni per eseguire operazioni non autorizzate. Un altro rischio deriva dall’impossibilità di monitorare continuamente lo stato degli smart contract. 
+
+Un contratto che oggi è affidabile potrebbe diventare pericoloso in futuro se il suo controllo passa a un’entità malevola. Le autorizzazioni illimitate sono un obiettivo particolarmente appetibile per gli hacker, poiché non richiedono ulteriori conferme da parte dell’utente, rendendo le transazioni fraudolente praticamente automatiche. 
+
+Infine, molti utenti concedono tali autorizzazioni senza comprenderne appieno le implicazioni, aumentando il rischio di attacchi o perdite accidentali.
 
 
 
 ## Come si possono revocare le autorizzazioni?
 
-Revocare le autorizzazioni illimitate è essenziale per proteggere i tuoi token. Per farlo, puoi utilizzare strumenti dedicati come [Revoke.cash](https://revoke.cash), [Etherscan Token Approval Checker](https://etherscan.io/tokenapprovalchecker) o altre piattaforme simili. Questi strumenti ti consentono di connettere il tuo wallet, analizzare le autorizzazioni esistenti e revocare quelle non necessarie. Una volta connesso il tuo wallet, l'applicazione elencherà gli smart contract che hanno accesso ai tuoi token, indicando il tipo di autorizzazione concessa. Puoi quindi selezionare quelle indesiderate e revocarle, pagando una piccola commissione di gas sulla blockchain. È consigliabile controllare regolarmente il tuo wallet, specialmente dopo aver interagito con nuove dApp. Inoltre, una buona pratica è limitare le autorizzazioni ai token strettamente necessari per ogni operazione, evitando di concedere accessi illimitati. Questo approccio ti consente di mantenere un maggiore controllo sui tuoi asset e riduce il rischio di attacchi.
+Revocare le autorizzazioni illimitate è essenziale per proteggere i tuoi token. Per farlo, puoi utilizzare strumenti dedicati come [Revoke.cash](https://revoke.cash), [Etherscan Token Approval Checker](https://etherscan.io/tokenapprovalchecker) o altre piattaforme simili. Questi strumenti ti consentono di connettere il tuo wallet, analizzare le autorizzazioni esistenti e revocare quelle non necessarie. 
+
+Una volta connesso il tuo wallet, l'applicazione elencherà gli smart contract che hanno accesso ai tuoi token, indicando il tipo di autorizzazione concessa. Puoi quindi selezionare quelle indesiderate e revocarle, pagando una piccola commissione di gas sulla blockchain. È consigliabile controllare regolarmente il tuo wallet, specialmente dopo aver interagito con nuove dApp. 
+
+Inoltre, una buona pratica è limitare le autorizzazioni ai token strettamente necessari per ogni operazione, evitando di concedere accessi illimitati. Questo approccio ti consente di mantenere un maggiore controllo sui tuoi asset e riduce il rischio di attacchi.
 
 
 
