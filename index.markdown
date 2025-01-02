@@ -149,27 +149,26 @@ permalink: /
 <hr/>
 <br/><br/>
 
-  <ul style="list-style-type: none">
+  
+  <ul class="preview-container">
     {% for post in articles %}
       <!-- Let's limit to a subset of all -->
       {% if forloop.index <= 10 %} 
         <li>
-          <div class="container">
-            <div class="right-column">
-              <a class="post-title" href="{{ post.url }}" >
-                    {{ post.title }}
-              </a>
-              <div class="post-date"><i class="fa-regular fa-calendar"></i>
-              {{ post.date | date: "%d %B %Y" }}</div>
-              <p>{{ post.excerpt | strip_html | truncatewords:50 }}</p>
-              {% if site.enable_categories == true %}
-                  <a href="javascript:categoryClick('{{ cat }}')">
-                    <span class="label">{{ post.category }}</span> 
-                  </a>
-              {% endif %}   
-              <!-- Qui puoi aggiungere altro contenuto se necessario -->
-            </div>     
+        <div class="preview">
+          <img src="{{ post.image }}" alt="preview Image" class="preview-image">
+          <div class="preview-content">
+          <a class="post-title" href="{{ post.url }}" >
+              <h2 class="preview-title">
+                        {{ post.title }}
+              </h2>
+          </a>
+            <div class="preview-meta"><i class="fa-regular fa-calendar"></i>
+                  {{ post.date | date: "%d %B %Y" }}
+            </div>
+            <p class="preview-excerpt">{{ post.excerpt | strip_html | truncatewords:50 }}</p>
           </div>
+        </div>
         </li>
       {% endif %}
     {% endfor %}  

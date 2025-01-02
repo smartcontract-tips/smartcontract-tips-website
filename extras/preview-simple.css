@@ -1,0 +1,72 @@
+/* Contenitore principale per gli articoli */
+  .preview-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px; /* Larghezza massima per centratura */
+    margin: 0 auto;   /* Centrato nella pagina */
+    list-style: none;
+  }
+  
+  /* Stile per ogni articolo */
+  .preview {
+    display: flex;
+    flex-direction: row;
+    background: #fff;              /* Sfondo bianco */
+    border: 1px solid #ddd;        /* Bordo grigio chiaro */
+    border-radius: 8px;            /* Angoli arrotondati */
+    overflow: hidden;              /* Evita overflow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+  }
+  
+  /* Stile per l'immagine */
+  .preview-image {
+    flex: 0 0 250px; /* Dimensione fissa di 150px */
+    width: 250px;
+    height: auto;
+    object-fit: cover; /* Adatta l'immagine senza distorsioni */
+  }
+  
+  /* Contenitore per il contenuto dell'articolo */
+  .preview-content {
+    flex: 1;                       /* Riempie lo spazio rimanente */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;       /* Allinea verticalmente il contenuto */
+  }
+  
+  /* Titolo dell'articolo */
+  .preview-title {
+    font-size: 18px;   /* Dimensione del testo */
+    margin: 0 0 10px;  /* Margine inferiore per separazione */
+    color: #333;       /* Colore del testo scuro */
+  }
+  
+  /* Informazioni sull'autore e data */
+  .preview-meta {
+    font-size: 14px;   /* Testo più piccolo */
+    color: #777;       /* Colore grigio scuro */
+    margin-bottom: 10px;
+  }
+  
+  /* Estratto dell'articolo */
+  .preview-excerpt {
+    font-size: 16px;
+    color: #555;       /* Colore grigio medio */
+    margin: 0;
+  }
+  
+  /* Media query per schermi piccoli */
+  @media (max-width: 600px) {
+    .preview {
+      flex-direction: column; /* Imposta layout verticale */
+    }
+  
+    .preview-image {
+      width: 100%;  /* L'immagine occupa tutta la larghezza */
+      height: auto;
+    }
+  }
+  
