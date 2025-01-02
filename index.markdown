@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
-permalink: /blog
+permalink: /
 ---
 
 # Articoli / Articles
@@ -129,17 +129,22 @@ permalink: /blog
         {% assign categories_array = categories_array | push: post.category | uniq %}
 {% endfor %}
 
-<!--Output the categories-->
-{%- for category in categories_array -%}
-  {%- if category -%}
-  <button style="border: none; background-color: rgb(30,128,20); color: white;" onclick="categoryClick('{{ category }}')">
-    {{ category }}</button> &nbsp;
-  {%- endif -%}
-{%- endfor -%}
+<!-- CATEGORIES SECTION -->
 
-<button 
-  style="border: none; background-color: rgb(128,20,20); color: white;" onclick="categoryClick('All')">All
-</button>
+
+{% if site.enable_categories == true %}
+  {%- for category in categories_array -%}
+    {%- if category -%}
+    <button style="border: none; background-color: rgb(30,128,20); color: white;" onclick="categoryClick('{{ category }}')">
+      {{ category }}</button> &nbsp;
+    {%- endif -%}
+  {%- endfor -%}
+
+  <button 
+    style="border: none; background-color: rgb(128,20,20); color: white;" onclick="categoryClick('All')">All
+  </button>
+{% endif %}
+<!-- END OF CATEGORIES SECTION -->
 
 <hr/>
 <br/><br/>
@@ -157,9 +162,11 @@ permalink: /blog
               <div class="post-date"><i class="fa-regular fa-calendar"></i>
               {{ post.date | date: "%d %B %Y" }}</div>
               <p>{{ post.excerpt | strip_html | truncatewords:50 }}</p>
+              {% if site.enable_categories == true %}
                   <a href="javascript:categoryClick('{{ cat }}')">
                     <span class="label">{{ post.category }}</span> 
-                  </a>   
+                  </a>
+              {% endif %}   
               <!-- Qui puoi aggiungere altro contenuto se necessario -->
             </div>     
           </div>

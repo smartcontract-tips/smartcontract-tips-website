@@ -29,6 +29,8 @@ url: "https://smartcontract.tips" # the base hostname & protocol for your site, 
 twitter_username: digitaldavide
 github_username:  ddbit
 
+# this is my personal hack on category flag
+enable_categories: false
 
 
 # Build settings
@@ -43,6 +45,7 @@ plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-sitemap
+
 
 
 landing_path: landing
