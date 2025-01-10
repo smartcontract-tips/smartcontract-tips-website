@@ -18,6 +18,7 @@ Questo suggerisce che i progettisti di smart contract non sempre applicano le be
 
 ![image of reentrancy timeline](/pics/posts/2025-01-08-web3-security-2024-in-retrospective/reentrancy-timeline.png)
 
+<hr>
 
 Entità dei danni causati
 ------------------------
@@ -25,6 +26,8 @@ Entità dei danni causati
 Il 2024 è andato meglio degli anni precedenti. **E questa è una buona notizia**. Rispetto ai disastrosi anni 2021 e 2022, c'è stato un **miglioramento**, ma la quantità di denaro violato è ancora alta e il lavoro per rafforzare la sicurezza deve sicuramente continuare.
 
 ![image of volumes by the year](/pics/posts/2025-01-08-web3-security-2024-in-retrospective/volume-by-year.png)
+
+<hr>
 
 Taglia degli attacchi
 -------------------------
@@ -37,6 +40,8 @@ I dati mostrano il **valore mediano** degli importi violati per anno, e ci offro
 
 
 ![image of median hack by the year](/pics/posts/2025-01-08-web3-security-2024-in-retrospective/median-by-year.png)
+
+<hr>
 
 
 
@@ -57,6 +62,10 @@ Il grafico mostra la distribuzione delle tecniche di attacco informatico nel 202
 
 ### Altri Attacchi
    - Le altre tecniche, come **Access Control Exploit (7.9%)**, **Claim Contract Flashloan Exploit (4.5%)**, e **Storage Slot Exploit (6.4%)**, pur essendo significative, rappresentano una porzione inferiore del totale. Questi attacchi, seppur rilevanti, non sono altrettanto diffusi o dannosi come quelli legati alla gestione delle chiavi private e al phishing.
+
+
+<hr>
+
 
 
 Le tecniche di attacco più frequenti
