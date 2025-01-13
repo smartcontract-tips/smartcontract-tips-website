@@ -37,8 +37,3 @@ gem 'jekyll-gist'
 
 gem 'jekyll-sitemap'
 
-
-gem "webrick", "~> 1.8"
-
-gem "csv"
-gem "base64"

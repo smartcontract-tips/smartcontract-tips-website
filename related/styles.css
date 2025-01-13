@@ -12,7 +12,7 @@
     z-index: 1000;     /* Assicura che il div sia sopra agli altri elementi della pagina */
 }
 
-@media screen and (max-width: 1859px) {
+@media screen and (max-width: 1340px) {
     .related-posts {
         position: relative;
         max-width: 100%;

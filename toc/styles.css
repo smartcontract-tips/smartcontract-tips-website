@@ -11,7 +11,7 @@
   max-height: 800px;
 }
 
-@media screen and (max-width: 1699px){
+@media screen and (max-width: 1339px){
   #toc {
     position: relative;
     max-width: 100%;
