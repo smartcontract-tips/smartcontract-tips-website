@@ -12,7 +12,7 @@ Proviamo a fare un bilancio dell'anno 2024 appena trascorso in termini di violaz
 Vecchi vizi
 -----------
 
-Partiamo da una tecnica di attacco vecchia come il mondo web3, la reentrancy. Nonostante il grave hack del DAO nel 2016, che ha messo in evidenza la vulnerabilità della **reentrancy**, l'errore continua a essere commesso ancora dopo 8 anni da quell'evento.
+Partiamo da una tecnica di attacco vecchia come il mondo web3, la reentrancy. Nonostante il grave hack del DAO nel 2016, che ha messo in evidenza [la vulnerabilità della **reentrancy**](/articoli/il-registro-swc-cos-e-chi-lha-creato/), l'errore continua a essere commesso ancora dopo 8 anni da quell'evento.
 
 Questo suggerisce che i progettisti di smart contract non sempre applicano le best practices di sicurezza o non effettuano controlli adeguati. In altre parole, non c'è una piena adozione delle lezioni apprese dal passato, forse a causa di una **mancanza di consapevolezza** o di **indifferenza alla sicurezza**.
 
