@@ -6,7 +6,7 @@ layout: default
 permalink: /
 ---
 
-# Articoli / Articles
+# Articles
 
 
 <script>
