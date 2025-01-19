@@ -9,54 +9,6 @@ permalink: /
 # Articles
 
 
-<script>
-  function categoryClick(category) {
-    // Ottieni l'URL di base senza query string
-    var baseUrl = window.location.href.split('?')[0];
-    
-    // Define the parameter name and value you want to add
-    var paramName = 'cat';
-    var paramValue = category;
-    
-    // Construct the new URL with the parameter
-    var newUrl = category=="All" ? `${baseUrl}` : `${baseUrl}?${paramName}=${paramValue}`;
-    
-    // Change the location of the window to reload and add the parameter
-    window.location.href = newUrl;
-  }
-
-  // Funzione che filtra gli elementi <li> basandosi sul parametro 'cat' della query string
-  function filterListItemsByCategory() {
-    // Ottieni il valore del parametro 'cat' dalla query string
-    const urlSearchParams = new URLSearchParams(window.location.search);
-    const category = urlSearchParams.get('cat');
-
-    // Verifica se il parametro 'cat' è presente
-    if (!category) {
-      console.log("Il parametro 'cat' non è presente nella query string.");
-      return;
-    }
-
-    // Trova tutti gli elementi <li> nel DOM che contengono un div con class="label"
-    const listItems = document.querySelectorAll('li');
-
-    // Itera sugli elementi <li> e mostra/nasconde basandosi sulla corrispondenza con 'cat'
-    listItems.forEach(li => {
-      const labelDiv = li.querySelector('.label');
-      if (labelDiv && labelDiv.textContent.trim() === category) {
-        li.style.display = ''; // Mostra l'elemento <li>
-      } else {
-        li.style.display = 'none'; // Nasconde l'elemento <li>
-      }
-    });
-  }
-
-  // Assicurati che lo script si esegua dopo il caricamento del DOM
-  document.addEventListener('DOMContentLoaded', filterListItemsByCategory);  
-
-
-
-</script>
 
 <style>
     .post-date {
