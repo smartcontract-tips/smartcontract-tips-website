@@ -7,6 +7,9 @@ permalink: /
 ---
 
 # Articles
+<script src="index.js"></script>
+<a id='lang'></a>
+<a href="#" onclick="toggleLanguageElements()">Toggle</a>
 
 
 
@@ -105,8 +108,8 @@ permalink: /
   <ul class="preview-container">
     {% for post in articles %}
       <!-- Let's limit to a subset of all -->
-      {% if forloop.index <= 10 %} 
-        <li>
+      {% if forloop.index <= 50 %} 
+        <li class="lang-{{ post.url | | slice: 1, 2 }}">
         <div class="preview">
           <img src="{{ post.image }}" alt="preview Image" class="preview-image">
           <div class="preview-content">

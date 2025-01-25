@@ -11,10 +11,26 @@
   max-height: 800px;
 }
 
-@media screen and (max-width: 1339px){
+#toc::before {
+  content: "Contents";
+  position: absolute;
+  top: -20px; /* Adjust to position above the div */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #611ba3; /* Optional: background for the title */
+  color: #fff; /* Title text color */
+  padding: 2px 5px; /* Optional: padding for better visibility */
+  font-size: 14px; /* Title font size */
+  border-radius: 3px; /* Optional: rounded corners */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+
+@media screen and (max-width: 1859px){
   #toc {
     position: relative;
     max-width: 100%;
+    width: 100%;
     top: 0;       /* Resetta la distanza dal bordo superiore */
     left: 0;     /* Resetta la distanza dal bordo destro */
     margin-bottom: 2em;
