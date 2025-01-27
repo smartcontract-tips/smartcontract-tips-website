@@ -6,7 +6,11 @@ layout: default
 permalink: /
 ---
 
-# Articles
+<p id="intro">
+
+</p>
+
+
 <script src="index.js"></script>
 <a id='lang'></a>
 <a href="#" onclick="toggleLanguageElements()">Toggle</a>
