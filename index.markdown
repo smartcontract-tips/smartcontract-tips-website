@@ -112,7 +112,7 @@ permalink: /
   <ul class="preview-container">
     {% for post in articles %}
       <!-- Let's limit to a subset of all -->
-      {% if forloop.index <= 50 %} 
+      {% if forloop.index <= 30 %} 
         <li class="lang-{{ post.url | | slice: 1, 2 }}">
         <div class="preview">
           <img src="{{ post.image }}_preview.png" alt="preview Image" class="preview-image">

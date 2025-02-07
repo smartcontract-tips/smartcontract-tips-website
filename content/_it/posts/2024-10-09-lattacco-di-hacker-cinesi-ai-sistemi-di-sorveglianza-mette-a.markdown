@@ -1,7 +1,7 @@
 ---
 title: "L'attacco di hacker cinesi ai sistemi di sorveglianza mette a rischio la sicurezza nazionale degli Stati Uniti."
 date: 2024-10-09
-image: /pics/posts/2024-10-09-lattacco-di-hacker-cinesi-ai-sistemi-di-sorveglianza-mette-a/spy-booth-banksy.jpg
+image: /pics/posts/2024-10-09-lattacco-di-hacker-cinesi-ai-sistemi-di-sorveglianza-mette-a/cover.jpg
 tags: ["encryption", "backdoor", "china", "wiretap", "security"]
 excerpt: "**La recente compromissione dei sistemi di wiretapping di AT&T e Verizon da parte di hacker cinesi evidenzia i pericoli degli accessi backdoor all'encryption.** La scoperta di questo attacco mette in discussione le richieste di creare backdoor per la law enforcement, dimostrando che tali vulnerabilità possono essere sfruttate anche da attori malintenzionati, rendendo meno sicure le comunicazioni di tutti."
 category: news
