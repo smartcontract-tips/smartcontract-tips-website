@@ -1,4 +1,7 @@
-/* Contenitore principale per gli articoli */
+/* Contenitore principale per gli articoli l'altezza max deve 
+essere fissa, ad esempio 200px*/
+
+
   .preview-container {
     display: flex;
     flex-direction: column;
@@ -7,6 +10,7 @@
     max-width: 1200px; /* Larghezza massima per centratura */
     margin: 0 auto;   /* Centrato nella pagina */
     list-style: none;
+
   }
   
   /* Stile per ogni articolo */
@@ -18,6 +22,9 @@
     border-radius: 8px;            /* Angoli arrotondati */
     overflow: hidden;              /* Evita overflow */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+    max-height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   /* Stile per l'immagine */
@@ -56,6 +63,11 @@
     font-size: 16px;
     color: #555;       /* Colore grigio medio */
     margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Numero massimo di linee da mostrare */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   /* Media query per schermi piccoli */

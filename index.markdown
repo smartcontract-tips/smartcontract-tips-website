@@ -115,7 +115,7 @@ permalink: /
       {% if forloop.index <= 50 %} 
         <li class="lang-{{ post.url | | slice: 1, 2 }}">
         <div class="preview">
-          <img src="{{ post.image }}" alt="preview Image" class="preview-image">
+          <img src="{{ post.image }}_preview.png" alt="preview Image" class="preview-image">
           <div class="preview-content">
           <a class="post-title" href="{{ post.url }}" >
               <h2 class="preview-title">
