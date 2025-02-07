@@ -12,6 +12,13 @@ essere fissa, ad esempio 200px*/
     list-style: none;
 
   }
+
+  .preview-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   
   /* Stile per ogni articolo */
   .preview {
@@ -23,8 +30,6 @@ essere fissa, ad esempio 200px*/
     overflow: hidden;              /* Evita overflow */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera */
     max-height: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
   
   /* Stile per l'immagine */
@@ -46,8 +51,8 @@ essere fissa, ad esempio 200px*/
   
   /* Titolo dell'articolo */
   .preview-title {
-    font-size: 18px;   /* Dimensione del testo */
-    margin: 0 0 10px;  /* Margine inferiore per separazione */
+    font-size: 1em;   /* Dimensione del testo */
+    margin: 0;  /* Margine inferiore per separazione */
     color: #333;       /* Colore del testo scuro */
   }
   
@@ -74,11 +79,18 @@ essere fissa, ad esempio 200px*/
   @media (max-width: 600px) {
     .preview {
       flex-direction: column; /* Imposta layout verticale */
+      max-height: none; /* Rimuove l'altezza massima */
     }
   
     .preview-image {
       width: 100%;  /* L'immagine occupa tutta la larghezza */
       height: auto;
     }
+    .preview-title, .preview-excerpt {
+      display: block;
+      max-height: none; /* Rimuove l'altezza massima */
+      overflow: visible; /* Rende visibile tutto il contenuto */
+      white-space: normal; /* Permette al testo di andare a capo */
+    }
+
   }
-  

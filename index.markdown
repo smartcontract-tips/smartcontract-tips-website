@@ -113,21 +113,22 @@ permalink: /
     {% for post in articles %}
       <!-- Let's limit to a subset of all -->
       {% if forloop.index <= 30 %} 
-        <li class="lang-{{ post.url | | slice: 1, 2 }}">
-        <div class="preview">
-          <img src="{{ post.image }}_preview.png" alt="preview Image" class="preview-image">
-          <div class="preview-content">
-          <a class="post-title" href="{{ post.url }}" >
-              <h2 class="preview-title">
-                        {{ post.title }}
-              </h2>
-          </a>
-            <div class="preview-meta"><i class="fa-regular fa-calendar"></i>
-                  {{ post.date | date: "%d %B %Y" }}
+        <li class="lang-{{ post.url | slice: 1, 2 }}">
+            <div class="preview">
+                <img src="{{ post.image }}_preview.png" alt="preview Image" class="preview-image">
+                <div class="preview-content">
+                    <a class="post-title" href="{{ post.url }}">
+                        <h2 class="preview-title">
+                            {{ post.title }}
+                        </h2>
+                    </a>
+                    <div class="preview-meta">
+                        <i class="fa-regular fa-calendar"></i>
+                        {{ post.date | date: "%d %B %Y" }}
+                    </div>
+                    <p class="preview-excerpt">{{ post.excerpt | strip_html | truncatewords:50 }}</p>
+                </div>
             </div>
-            <p class="preview-excerpt">{{ post.excerpt | strip_html | truncatewords:50 }}</p>
-          </div>
-        </div>
         </li>
       {% endif %}
     {% endfor %}  
