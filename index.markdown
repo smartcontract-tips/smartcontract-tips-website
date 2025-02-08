@@ -12,6 +12,9 @@ permalink: /
 
 
 <script src="index.js"></script>
+<script src="search.js"></script>
+
+
 <a id='lang'></a>
 <a href="#" onclick="toggleLanguageElements()">Toggle</a>
 
@@ -78,37 +81,70 @@ permalink: /
 
 </style>
 
+<style>
+.left-column {
+    display: none; /* Hide by default */
+}
+</style>
+
+<style>
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 300px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #5e42a6;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color:rgb(58, 10, 69);
+}
+</style>
+
+
 
 {% assign articles = site.posts | concat: site['it'] | concat: site['en'] | sort: 'date' | reverse %}
 
-<!-- create categories array-->
-{% assign categories_array = "" | split:"|" %}
 
-{% for post in articles %}
-        {% assign categories_array = categories_array | push: post.category | uniq %}
-{% endfor %}
+<!-- Search Form -->
+<form id="search-form" class="search-form">
+    <input class="search-input" type="text" id="search-input" placeholder="Enter keyword" required>
+    <button type="submit" class="search-button">Search</button>
+</form>
 
-<!-- CATEGORIES SECTION -->
+<script>
+document.getElementById('search-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const keyword = document.getElementById('search-input').value;
+    window.location.href = `/results?q=${encodeURIComponent(keyword)}`;
+});
+</script>
 
 
-{% if site.enable_categories == true %}
-  {%- for category in categories_array -%}
-    {%- if category -%}
-    <button style="border: none; background-color: rgb(30,128,20); color: white;" onclick="categoryClick('{{ category }}')">
-      {{ category }}</button> &nbsp;
-    {%- endif -%}
-  {%- endfor -%}
 
-  <button 
-    style="border: none; background-color: rgb(128,20,20); color: white;" onclick="categoryClick('All')">All
-  </button>
-{% endif %}
-<!-- END OF CATEGORIES SECTION -->
+
+
 
 <hr/>
 <br/><br/>
-
-  
   <ul class="preview-container">
     {% for post in articles %}
       <!-- Let's limit to a subset of all -->
@@ -135,27 +171,3 @@ permalink: /
     {% endfor %}  
   </ul>
 
-<div>
-  <h2>Search more ...</h2>
-  <form id="searchForm">
-    <input type="text" id="searchInput" placeholder="Enter search terms" required>
-    <button type="submit">Search</button>
-  </form>
-
-  <script>
-    // Domain for site-specific search
-    const domain = 'smartcontract.tips';
-
-    // Attach event listener to the form
-    document.getElementById('searchForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent form submission
-
-      // Get the search terms
-      const searchTerms = document.getElementById('searchInput').value;
-
-      // Redirect to Google search with site filter
-      const googleSearchUrl = `https://www.google.com/search?q=site:${domain}+${encodeURIComponent(searchTerms)}`;
-      window.open(googleSearchUrl, '_blank');
-    });
-  </script>
-</div>

@@ -28,7 +28,7 @@
                                 <br/><br/><img src='{{ site.url }}{{ site.baseurl }}{{ post.image }}' ><br/><br/>
                         ]]>
                         {% endif %}
-                    {{ post.excerpt | truncate: 80 | xml_escape }}
+                    {{ post.excerpt | truncate: 200 | xml_escape }}
                     </description>
 				{% endif %}
 				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
