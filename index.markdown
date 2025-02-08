@@ -127,6 +127,7 @@ permalink: /
                         {{ post.date | date: "%d %B %Y" }}
                     </div>
                     <p class="preview-excerpt">{{ post.excerpt | strip_html | truncatewords:50 }}</p>
+                    <input type="hidden" name="post-tags" value="{{ post.tags | join: ', ' }}">
                 </div>
             </div>
         </li>
