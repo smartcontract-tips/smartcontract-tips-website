@@ -18,7 +18,11 @@ permalink: /
 <a id='lang'></a>
 <a href="#" onclick="toggleLanguageElements()">Toggle</a>
 
-
+<style>
+  .wrapper {
+    max-width: 100%;
+  }
+</style>
 
 <style>
     .post-date {
