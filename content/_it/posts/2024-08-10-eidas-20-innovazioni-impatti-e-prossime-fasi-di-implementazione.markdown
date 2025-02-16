@@ -6,9 +6,6 @@ tags: [eidas-2.0,revisione-regolamento,identità-digitale]
 excerpt: "eIDAS 2.0 è l'aggiornamento della regolamentazione europea eIDAS (electronic IDentification, Authentication and trust Services), originariamente introdotta nel 2014. eIDAS è stata creata per stabilire un quadro legale per i servizi di identificazione elettronica e i servizi fiduciari nell'Unione Europea, con l'obiettivo di garantire che le identità digitali e i servizi di fiducia possano essere utilizzati in modo sicuro e interoperabile in tutta Europa."
 ---
 
-
-![cover image](/pics/posts/2024-08-10-eidas-20/cover.png)
-
 ## Introduzione
 
 **eIDAS 2.0: Innovazione e Futuro della Trasformazione Digitale**

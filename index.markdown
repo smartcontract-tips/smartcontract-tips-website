@@ -20,7 +20,7 @@ permalink: /
 
 <style>
   .wrapper {
-    max-width: 100%;
+    max-width: 80%;
   }
 </style>
 
