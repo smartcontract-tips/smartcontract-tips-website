@@ -12,9 +12,9 @@ Siamo tutti coscienti che il computer quantistico stravolgerà molte delle convi
 
 Sfogliando wikipedia troviamo alcune pagine dedicate al tema:
 
-1.  [No-cloning](https://href.li/?https://it.wikipedia.org/wiki/Teorema_di_no-cloning_quantistico "Teorema di no-cloning quantistico"): l'[informazione quantistica](https://href.li/?https://it.wikipedia.org/wiki/Informazione_quantistica "Informazione quantistica") non può essere **copiata** con fedeltà assoluta, e quindi neanche **letta** con fedeltà assoluta. ([William Wootters](https://href.li/?https://it.wikipedia.org/w/index.php?title=William_Wootters&action=edit&redlink=1 "William Wootters (la pagina non esiste)"), [1982](https://href.li/?https://it.wikipedia.org/wiki/1982 "1982")).
-2.  L'[informazione quantistica](https://href.li/?https://it.wikipedia.org/wiki/Informazione_quantistica "Informazione quantistica") può invece essere **trasferita** con fedeltà assoluta, a patto che l'originale venga distrutto nel processo.
-3.  **Ogni misura** compiuta su di un sistema quantistico **distrugge** la maggior parte dell'informazione, lasciandolo in uno [stato base](https://href.li/?https://it.wikipedia.org/wiki/Stato_quantico "Stato quantico"). L'informazione distrutta non può essere recuperata.
+1.  [No-cloning](https://it.wikipedia.org/wiki/Teorema_di_no-cloning_quantistico "Teorema di no-cloning quantistico"): l'[informazione quantistica](https://it.wikipedia.org/wiki/Informazione_quantistica) non può essere **copiata** con fedeltà assoluta, e quindi neanche **letta** con fedeltà assoluta. , "1982".
+2.  L'[informazione quantistica](https://it.wikipedia.org/wiki/Informazione_quantistica "Informazione quantistica") può invece essere **trasferita** con fedeltà assoluta, a patto che l'originale venga distrutto nel processo.
+3.  **Ogni misura** compiuta su di un sistema quantistico **distrugge** la maggior parte dell'informazione, lasciandolo in uno [stato base](https://it.wikipedia.org/wiki/Stato_quantico). L'informazione distrutta non può essere recuperata.
 
 
 Il fatto che l'informazione possa essere trasferita in modo fedele solo se l'originale viene distrutto mi pare un principio sul quale nel futuro forse potremmo costruire il **Bitcoin quantistico**. Il double spending praticamente risolto senza avere nessuna blockchain in giro, l'universo fa la proof-of-work grazie alle leggi naturali del mondo atomico.
@@ -85,7 +85,7 @@ In realtà solo 15 e 21 sono stati fattorizzati con l'algoritmo di Shor, e su 21
 
 Da notare come per passare da 15 = 3 x 5 a 21 = 3 x 7 ci siano voluti 11 anni. Però si sa, questi processi non sono lineari. Basta una trovata geniale e qui ci troviamo RSA-2048 craccato in dieci minuti. 
 
-Secondo alcune opinioni [qualificate](https://href.li/?https://www.youtube.com/watch?v=wWHAs--HA1c)
+Secondo alcune opinioni [qualificate](https://www.youtube.com/watch?v=wWHAs--HA1c)
 
 > "It is likely that a quantum computer will break RSA2048 in a matter of hours by 2030 and with an investment on $1B"
 
@@ -106,7 +106,7 @@ Al contrario l'algoritmo di hashing SHA-256 non sembra essere vulnerabile. Magar
 
 ## Microsoft, Maiorana e i Topocomputer
 
-Nel 1937, **Ettore Majorana** ipotizzò l'esistenza di una particella che fosse il proprio **antiparticolo**. Nel 2001, il fisico teorico russo **Alexei Kitaev** propose che i **fermioni di Majorana** potessero manifestarsi ai bordi di un **nanofilo superconduttore** (cioè un filo che trasporta corrente senza resistenza elettrica).
+Nel 1937, **Ettore Majorana** ipotizzò l'esistenza di una particella che fosse la propria **antiparticella**. Nel 2001, il fisico teorico russo **Alexei Kitaev** propose che i **fermioni di Majorana** potessero manifestarsi ai bordi di un **nanofilo superconduttore** (cioè un filo che trasporta corrente senza resistenza elettrica).
 
 I fermioni di Majorana emergono solo in condizioni estremamente ristrette. Quando un **nanofilo semiconduttore** (ad esempio, realizzato in **antimoniuro di indio - InSb**) viene collegato a un **materiale superconduttore** (come il **niobio**), si osserva un cosiddetto **picco di conduttanza a zero bias** sotto particolari campi magnetici e condizioni di carica elettrica. Questo segnale è la principale indicazione della presenza dei Majorana.
 
@@ -156,11 +156,11 @@ Otto Qubits sembrano un innocuo prototipo, ma se fosse confermato sarebbe verame
 
 Per fortuna non tutto è perduto. Infatti esistono già dei sistemi di cifratura che sembrano robusti alla computazione quantistica.
 
-[Lattice systems](https://href.li/?https://en.wikipedia.org/wiki/Lattice-based_cryptography): basati su combinazioni lineari di vettori non sui vestitini al lattice ... qui mi fermo.
+[Lattice systems](https://en.wikipedia.org/wiki/Lattice-based_cryptography) o reticoli: basati su combinazioni lineari di vettori.
 
-[McEliece cryptosystems](https://href.li/?https://en.wikipedia.org/wiki/McEliece_cryptosystem): basati su teoria dei codici, che richiederebbe di riesumare i nostri ricordi di Comunicazioni Elettriche del quarto anno di ingegneria elettronica
+[McEliece cryptosystems](https://en.wikipedia.org/wiki/McEliece_cryptosystem): basati su teoria dei codici, che richiederebbe di riesumare i nostri ricordi di Comunicazioni Elettriche del quarto anno di ingegneria elettronica
 
-[Hash based cryptography](https://href.li/?https://en.wikipedia.org/wiki/Hash-based_cryptography): raccomandati dalla Commissione Europea come sistemi di protezione post-quantum
+[Hash based cryptography](https://en.wikipedia.org/wiki/Hash-based_cryptography): raccomandati dalla Commissione Europea come sistemi di protezione post-quantum
 
 
 ### **La standardizzazione del NIST e la crittografia post-quantistica**  
