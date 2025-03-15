@@ -143,7 +143,7 @@ Ecco cosa significa ogni componente:
 - **44'**: Indica il "purpose" (scopo) secondo lo standard BIP44.
 - **0'**: Rappresenta il coin type per Bitcoin (0 per Bitcoin).
 - **0'**: È l’account, tipicamente il primo account (account 0).
-- **0**: Indica il tipo di indirizzo, dove 0 sta per gli indirizzi di ricezione (mentre 1 sarebbe per i cambiamenti).
+- **0**: Indica il tipo di indirizzo, dove 0 sta per gli indirizzi di ricezione (mentre 1 sarebbe per i resti).
 
 A questo punto, i singoli indirizzi vengono derivati aggiungendo l’indice dell’indirizzo (ad esempio, 0, 1, 2, …), ottenendo percorsi come:
 
@@ -164,14 +164,14 @@ Vediamo il significato di ciascuna parte:
 - **44'**: Indica lo standard BIP44.
 - **0'**: Coin type per Bitcoin (0 per Bitcoin).
 - **0'**: Primo account (account 0).
-- **1**: Questo indice indica la "catena di cambiamento", in contrapposizione a **0** che viene usato per gli indirizzi di ricezione.
+- **1**: Questo indice indica la "resto", in contrapposizione a **0** che viene usato per gli indirizzi di ricezione.
 
-Per derivare i singoli indirizzi di cambio, si aggiunge l'indice dell'indirizzo alla fine del percorso. Ad esempio:
-- Primo indirizzo di cambio: `m/44'/0'/0'/1/0`
-- Secondo indirizzo di cambio: `m/44'/0'/0'/1/1`
+Per derivare i singoli indirizzi di resto, si aggiunge l'indice dell'indirizzo alla fine del percorso. Ad esempio:
+- Primo indirizzo di resto: `m/44'/0'/0'/1/0`
+- Secondo indirizzo di resto: `m/44'/0'/0'/1/1`
 - E così via.
 
-Utilizzando questo percorso durante il processo di ripristino manuale, il wallet software dovrebbe essere in grado di scansionare e riconoscere correttamente gli indirizzi di cambio associati al tuo wallet legacy.
+Utilizzando questo percorso durante il processo di ripristino manuale, il wallet software dovrebbe essere in grado di scansionare e riconoscere correttamente gli indirizzi di resto associati al tuo wallet legacy.
 
 Indirizzi Segwit
 ---------------
